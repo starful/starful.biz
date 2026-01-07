@@ -13,5 +13,6 @@ __pycache__/
 .DS_Store
 *.zip
 *.tar.gz
-app/content/*.md
+app/contents/*.md
 command.txt
+script/
