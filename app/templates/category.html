@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{ category.title }}の職種一覧 | Starful</title>
+<meta name="description" content="{{ category.title }}分野の様々なキャリアオプションをご覧ください。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="header-section">
+    <a href="/" style="color: var(--accent); display: inline-block; margin-bottom: 20px; font-weight: 600;">&larr; すべてのカテゴリに戻る</a>
+    <h1 style="font-size: 2.5rem; letter-spacing: -1px;">{{ category.title }}</h1>
+    <p class="hero-desc">{{ category.description }}</p>
+</div>
+
+<div class="grid-frame">
+    <div class="bento-grid">
+        {% if items %}
+            {% for item in items %}
+                <a href="/career/{{ item.id }}" class="card card-small">
+                    <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    <img src="{{ item.thumbnail }}" class="mini-thumb" alt="{{ item.title }}">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                </a>
+            {% endfor %}
+        {% else %}
+            <p style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-sub);">
+                このカテゴリにはまだ職種が登録されていません。
+            </p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

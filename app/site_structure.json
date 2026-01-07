@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "slug": "engineering",
+      "title": "Engineering",
+      "description": "Backend, Frontend, DevOps",
+      "image": "/static/img/eng.jpg",
+      "grid_size": "size-2x2",
+      "card_type": "big"
+    },
+    {
+      "slug": "ai-data",
+      "title": "AI & Data",
+      "description": "ML, LLM, Data Science",
+      "image": "/static/img/ai.jpg",
+      "grid_size": "size-1x2",
+      "card_type": "big"
+    },
+    {
+      "slug": "design",
+      "title": "Design",
+      "description": "UI/UX, Product Design, Graphic",
+      "image": "/static/img/design.jpg",
+      "grid_size": "size-2x1",
+      "card_type": "big"
+    },
+    {
+      "slug": "marketing",
+      "title": "Marketing",
+      "description": "Growth, Content Strategy",
+      "image": "/static/img/marketing.jpg",
+      "grid_size": "size-2x1",
+      "card_type": "big"
+    },
+    {
+      "slug": "cloud-infra",
+      "title": "Cloud & Infra",
+      "description": "AWS, Azure, SRE",
+      "image": "/static/img/cloud.jpg",
+      "grid_size": "size-2x1",
+      "card_type": "big"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Starful - 90以上の職種からあなたのキャリアを見つける</title>
+<meta name="description" content="エンジニアリング、デザイン、マーケティング、AIなど、多様なキャリア分野を探求し、あなたの理想のキャリアパスを見つけましょう。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block body_class %}starful-home{% endblock %}
+
+{% block content %}
+<div class="header-section">
+    <div class="logo">Starful<span>.</span></div>
+    <p class="hero-desc">興味のある分野を選択し、様々なキャリアパスを探しましょう。</p>
+    
+    <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" class="search-input" placeholder="職種やスキルを検索 (例: クラウド, マーケティング)">
+    </div>
+</div>
+
+<div class="grid-frame">
+    <div class="bento-grid">
+        
+        {% for category in categories %}
+            <a href="/category/{{ category.slug }}" class="card card-{{ category.card_type }} {{ category.grid_size }}">
+                
+                {% if category.card_type == 'big' %}
+                    <img src="{{ category.image }}" class="card-big-bg" alt="{{ category.title }}">
+                    <div class="card-overlay"></div>
+                    <div class="card-big-content">
+                        <h3>{{ category.title }}</h3>
+                        <p>{{ category.description }}</p>
+                    </div>
+                {% else %}
+                    <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                    {% if category.thumbnail %}
+                        <img src="{{ category.thumbnail }}" class="mini-thumb" alt="{{ category.title }}">
+                    {% endif %}
+                    <h3>{{ category.title }}</h3>
+                    <p>{{ category.description }}</p>
+                {% endif %}
+
+            </a>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

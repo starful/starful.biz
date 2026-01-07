@@ -1,0 +1,17 @@
+# 가상환경 폴더
+venv/
+.venv/
+
+# 파이썬 캐시 파일
+__pycache__/
+*.pyc
+
+# 민감한 환경 변수 파일
+.env
+
+# MacOS 시스템 파일
+.DS_Store
+*.zip
+*.tar.gz
+app/content/*.md
+command.txt

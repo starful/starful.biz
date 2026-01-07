@@ -1,0 +1,48 @@
+:root {
+    --bg-body: #F2F2F7;
+    --bg-frame: #FFFFFF;
+    --bg-card-gray: #F5F5F7;
+    --text-main: #1D1D1F;
+    --text-sub: #86868B;
+    --radius-frame: 32px;
+    --radius-card: 20px;
+    --accent: #0071E3;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Noto Sans JP", sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    overflow-x: hidden;
+    padding-bottom: 80px;
+}
+a { text-decoration: none; color: inherit; }
+.header-section { text-align: center; padding: 60px 20px 40px; max-width: 800px; margin: 0 auto; }
+.logo { font-weight: 800; font-size: 1.8rem; margin-bottom: 10px; letter-spacing: -1px; }
+.logo span { color: var(--accent); }
+.hero-desc { color: var(--text-sub); margin-bottom: 30px; }
+.search-container { position: relative; max-width: 500px; margin: 0 auto; }
+.search-input { width: 100%; padding: 16px 20px 16px 50px; border-radius: 50px; border: 1px solid rgba(0,0,0,0.1); background: white; font-size: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); outline: none; transition: 0.3s; }
+.search-input:focus { box-shadow: 0 4px 20px rgba(0, 113, 227, 0.2); border-color: var(--accent); }
+.search-icon { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--text-sub); }
+.grid-frame { background-color: var(--bg-frame); max-width: 1280px; margin: 0 auto; padding: 24px; border-radius: var(--radius-frame); box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05); }
+.bento-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 20px; grid-auto-flow: dense; }
+.card { border-radius: var(--radius-card); position: relative; overflow: hidden; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); z-index: 2; }
+.card-big { color: white; background-color: #333; }
+.card-big-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; z-index: 0; }
+.card:hover .card-big-bg { transform: scale(1.05); }
+.card-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%); z-index: 1; }
+.card-big-content { position: relative; z-index: 2; padding: 24px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; }
+.card-big h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+.card-big p { font-size: 0.95rem; opacity: 0.95; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+.card-small { background-color: var(--bg-card-gray); padding: 20px; color: var(--text-main); border: 1px solid rgba(0,0,0,0.03); }
+.mini-thumb { width: 48px; height: 48px; border-radius: 12px; object-fit: cover; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); background-color: #ddd; }
+.card-small h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
+.card-small p { font-size: 0.85rem; color: var(--text-sub); }
+.arrow-icon { position: absolute; top: 20px; right: 20px; color: #D1D1D6; font-size: 0.9rem; }
+.size-2x2 { grid-column: span 2; grid-row: span 2; }
+.size-2x1 { grid-column: span 2; }
+.size-1x2 { grid-row: span 2; }
+@media (max-width: 1024px) { .bento-grid { grid-template-columns: repeat(2, 1fr); } .size-2x2 { grid-row: span 1; height: 250px; } .grid-frame { padding: 15px; } }
+@media (max-width: 600px) { .bento-grid { grid-template-columns: 1fr; } .size-2x2, .size-2x1, .size-1x2 { grid-column: span 1; grid-row: span 1; height: 220px; } .search-container { width: 100%; } }

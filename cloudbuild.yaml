@@ -1,0 +1,42 @@
+# cloudbuild.yaml
+
+steps:
+  # 1. Docker 이미지 빌드
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'build-app'
+    args: [
+      'build',
+      '--cache-from', 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:latest',
+      '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:latest',
+      '.'
+    ]
+
+  # 2. 빌드된 이미지를 Artifact Registry에 푸시
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'push-app'
+    args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:latest']
+    waitFor: ['build-app']
+
+  # 3. 이미지를 사용하여 Cloud Run에 배포
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'deploy-app'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      # [수정됨] Cloud Run 서비스 이름을 'starful-biz'로 지정
+      - 'starful-biz'
+      - '--image'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:latest'
+      - '--region'
+      - '${_REGION}'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+    waitFor: ['push-app']
+
+# -------------------------------------------------------------
+# 변수 설정
+# -------------------------------------------------------------
+substitutions:
+  _REGION: 'us-central1'
