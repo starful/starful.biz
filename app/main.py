@@ -5,6 +5,7 @@ import json # json 라이브러리 추가
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse 
 
 # --- 설정 및 경로 정의 ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -97,3 +98,19 @@ async def career_detail(request: Request, item_id: str):
         "item": post.metadata,
         "content": content_html
     })
+
+@app.get("/about")
+async def about_page(request: Request):
+    return templates.TemplateResponse("about.html", {"request": request})
+
+@app.get("/privacy")
+async def privacy_page(request: Request):
+    return templates.TemplateResponse("privacy.html", {"request": request})
+
+@app.get('/ads.txt', response_class=FileResponse)
+async def ads_txt():
+    return os.path.join(STATIC_DIR, "ads.txt")
+
+@app.get('/robots.txt', response_class=FileResponse)
+async def robots_txt():
+    return os.path.join(STATIC_DIR, "robots.txt")

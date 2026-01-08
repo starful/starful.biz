@@ -2,54 +2,88 @@
 
 {% block head %}
 <title>{{ item.title }} | Starful キャリア情報</title>
-<meta name="description" content="{{ item.description }}">
+<meta name="description" content="{{ item.meta_description }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-<style>
-    .detail-container {
-        max-width: 800px;
-        margin: 60px auto;
-        padding: 40px;
-        background: #fff;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-    .detail-container h1 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        margin-bottom: 10px;
-    }
-    .detail-container .item-desc {
-        font-size: 1.1rem;
-        color: var(--text-sub);
-        margin-bottom: 40px;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 20px;
-    }
-    .markdown-content {
-        line-height: 1.8;
-    }
-    .markdown-content h2 {
-        font-size: 1.8rem;
-        margin-top: 40px;
-    }
-    .back-link {
-        display: inline-block;
-        margin-bottom: 30px;
-        font-weight: 600;
-        color: var(--accent);
-    }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<!-- 상세 페이지 전용 CSS 파일 링크 -->
+<link rel="stylesheet" href="/static/css/detail.css?v=1.2">
 {% endblock %}
 
+<!-- body에 전용 클래스 추가 -->
+{% block body_class %}detail-page{% endblock %}
+
 {% block content %}
-<main class="detail-container">
+<header class="detail-hero">
     <a href="/category/{{ item.category }}" class="back-link"><i class="fa-solid fa-arrow-left"></i> {{ item.category | capitalize }}一覧に戻る</a>
     <h1>{{ item.title }}</h1>
-    <p class="item-desc">{{ item.description }}</p>
+    <p>{{ item.meta_description }}</p>
+</header>
+
+<main class="detail-container">
+    <div class="summary-box">
+        <h3><i class="fa-solid fa-lightbulb" style="color: #f5c518;"></i> このガイドで学べること</h3>
+        <ul>
+            <li><i class="fa-solid fa-check"></i> 職務の主な役割と責任範囲</li>
+            <li><i class="fa-solid fa-check"></i> 必要とされる専門スキルとキャリアパス</li>
+            <li><i class="fa-solid fa-check"></i> 将来性と面接で問われる重要ポイント</li>
+        </ul>
+    </div>
 
     <article class="markdown-content">
         {{ content | safe }}
     </article>
+
+    <section class="related-jobs-section">
+        <h2>関連性の高いキャリア</h2>
+        <div class="related-jobs-container">
+            {% if item.related_jobs %}
+                {% for job_slug in item.related_jobs %}
+                    <a href="/career/{{ job_slug }}" class="card card-small">
+                        <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                        <h3>{{ job_slug.replace('_', ' ') | title }}</h3>
+                        <p>ガイドを見る</p>
+                    </a>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
 </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Accordion functionality
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+
+    // Tab functionality
+    const tabContainer = document.querySelector('.skills-section');
+    if (tabContainer) {
+        const tabs = tabContainer.querySelectorAll('.tab-button');
+        const contents = tabContainer.querySelectorAll('.skill-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                this.classList.add('active');
+                const targetContent = document.getElementById(this.dataset.tab);
+                if(targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
+});
+</script>
 {% endblock %}

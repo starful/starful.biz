@@ -18,33 +18,93 @@
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
         <input type="text" class="search-input" placeholder="職種やスキルを検索 (例: クラウド, マーケティング)">
     </div>
+
+    <!-- [추가] 추천 검색어 태그 -->
+    <div class="suggestion-tags">
+        <a href="#">AI</a>
+        <a href="#">Frontend</a>
+        <a href="#">Product Manager</a>
+        <a href="#">UI/UX</a>
+        <a href="#">DevOps</a>
+    </div>
 </div>
 
 <div class="grid-frame">
     <div class="bento-grid">
-        
-        {% for category in categories %}
-            <a href="/category/{{ category.slug }}" class="card card-{{ category.card_type }} {{ category.grid_size }}">
-                
-                {% if category.card_type == 'big' %}
-                    <img src="{{ category.image }}" class="card-big-bg" alt="{{ category.title }}">
-                    <div class="card-overlay"></div>
-                    <div class="card-big-content">
-                        <h3>{{ category.title }}</h3>
-                        <p>{{ category.description }}</p>
-                    </div>
-                {% else %}
-                    <i class="fa-solid fa-arrow-right arrow-icon"></i>
-                    {% if category.thumbnail %}
-                        <img src="{{ category.thumbnail }}" class="mini-thumb" alt="{{ category.title }}">
-                    {% endif %}
-                    <h3>{{ category.title }}</h3>
-                    <p>{{ category.description }}</p>
-                {% endif %}
+        <a href="/category/engineering" class="card card-big size-2x2">
+            <img src="/static/img/eng.jpg" class="card-big-bg" alt="Engineering">
+            <div class="card-overlay"></div>
+            <div class="card-big-content"><h3>Engineering</h3><p>Backend, Frontend, DevOps</p></div>
+        </a>
 
-            </a>
-        {% endfor %}
+        <a href="/category/ai-data" class="card card-big size-1x2">
+            <img src="/static/img/ai.jpg" class="card-big-bg" alt="AI & Data">
+            <div class="card-overlay"></div>
+            <div class="card-big-content"><h3>AI & Data</h3><p>ML, LLM, Data Science</p></div>
+        </a>
 
+        <a href="#" class="card card-small">
+            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+            <img src="/static/img/backend.jpg" class="mini-thumb" alt="Backend">
+            <h3>Backend Dev</h3><p>Go, Java</p>
+        </a>
+
+        <a href="#" class="card card-small">
+            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+            <img src="/static/img/frontend.jpg" class="mini-thumb" alt="Frontend">
+            <h3>Frontend</h3><p>React, Next.js</p>
+        </a>
+
+        <a href="#" class="card card-small">
+            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+            <img src="/static/img/security.jpg" class="mini-thumb" alt="Security">
+            <h3>Security</h3><p>CISO, Blue Team</p>
+        </a>
+
+        <a href="/category/design" class="card card-big size-2x1">
+            <img src="/static/img/design.jpg" class="card-big-bg" alt="Design">
+            <div class="card-overlay"></div>
+            <div class="card-big-content"><h3>Design</h3><p>UI/UX, Product Design, Graphic</p></div>
+        </a>
+
+        <a href="#" class="card card-small">
+            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+            <img src="/static/img/sales.jpg" class="mini-thumb" alt="Sales">
+            <h3>Sales</h3><p>B2B, Inside Sales</p>
+        </a>
+
+        <a href="/category/marketing" class="card card-big size-2x1">
+            <img src="/static/img/marketing.jpg" class="card-big-bg" alt="Marketing">
+            <div class="card-overlay"></div>
+            <div class="card-big-content"><h3>Marketing</h3><p>Growth, Content Strategy</p></div>
+        </a>
+
+        <a href="/category/cloud-infra" class="card card-big size-2x1">
+            <img src="/static/img/cloud.jpg" class="card-big-bg" alt="Cloud & Infra">
+            <div class="card-overlay"></div>
+            <div class="card-big-content"><h3>Cloud & Infra</h3><p>AWS, Azure, SRE</p></div>
+        </a>
     </div>
 </div>
+
+<!-- [추가] 사이트 목적 섹션 -->
+<div class="site-purpose-section">
+    <h2>Starfulについて</h2>
+    <p>
+        Starfulは、多様化する現代のキャリアパスに関する情報を分かりやすく整理し、誰もが自身の可能性を最大限に引き出せるようなキャリアを見つける手助けをすることを目的としています。エンジニアリングからデザイン、マーケティングに至るまで、幅広い分野の職種について詳しく解説していきます。
+    </p>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const preparingLinks = document.querySelectorAll('a[href="#"]');
+        preparingLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                alert('コンテンツを準備中です。まもなく公開予定ですので、しばらくお待ちください。');
+            });
+        });
+    });
+</script>
 {% endblock %}

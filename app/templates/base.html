@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css?v=1.0">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8780435268193938"
+     crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/static/css/style.css?v=1.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     {% block head %}{% endblock %}
@@ -14,6 +18,18 @@
     {% block content %}{% endblock %}
 
     <footer class="main-footer" style="text-align: center; padding: 40px 20px; margin-top: 80px; border-top: 1px solid #e5e5e5;">
+        <div class="footer-links" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="/about" style="color: var(--text-sub); font-weight: 500;">運営者情報</a>
+            <a href="/privacy" style="color: var(--text-sub); font-weight: 500;">プライバシーポリシー</a>
+            <!-- ▼▼▼ 이 부분만 수정되었습니다 ▼▼▼ -->
+            <a href="https://script.google.com/macros/s/AKfycbyCLnBhulwNFERwnPIbuR_NyiXLeh_sKU05FVi0wSZGwl65B_xzFXU-YbDzLfLg3GcT3w/exec" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               style="color: var(--text-sub); font-weight: 500;">
+               お問い合わせ
+            </a>
+            <!-- ▲▲▲ 수정 완료 ▲▲▲ -->
+        </div>
         <div class="footer-container">
             <div class="footer-info">
                 <p style="color: #86868B; font-size: 0.85rem;">&copy; 2026 Starful | あなたのキャリアナビゲーター</p>
