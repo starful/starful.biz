@@ -3,42 +3,72 @@
     {
       "slug": "engineering",
       "title": "Engineering",
-      "description": "Backend, Frontend, DevOps",
+      "description": "次世代の技術を構築し、デジタル世界の核となるエンジニアの道。",
       "image": "/static/img/eng.jpg",
-      "grid_size": "size-2x2",
-      "card_type": "big"
+      "size": "bento-big"
     },
     {
       "slug": "ai-data",
       "title": "AI & Data",
-      "description": "ML, LLM, Data Science",
+      "description": "データの力で未来を予測し、AIと共に新たな価値を創出する。",
       "image": "/static/img/ai.jpg",
-      "grid_size": "size-1x2",
-      "card_type": "big"
+      "size": "bento-small"
     },
     {
       "slug": "design",
       "title": "Design",
-      "description": "UI/UX, Product Design, Graphic",
+      "description": "美しさと機能性を融合させ、最高の体験を設計する。",
       "image": "/static/img/design.jpg",
-      "grid_size": "size-2x1",
-      "card_type": "big"
+      "size": "bento-small"
     },
     {
       "slug": "marketing",
       "title": "Marketing",
-      "description": "Growth, Content Strategy",
+      "description": "戦略的な思考で価値を届け、ビジネスの成長を加速させる。",
       "image": "/static/img/marketing.jpg",
-      "grid_size": "size-2x1",
-      "card_type": "big"
+      "size": "bento-wide"
     },
     {
       "slug": "cloud-infra",
       "title": "Cloud & Infra",
-      "description": "AWS, Azure, SRE",
+      "description": "進化し続けるクラウド基盤을支えるスペシャリストの道。",
       "image": "/static/img/cloud.jpg",
-      "grid_size": "size-2x1",
-      "card_type": "big"
+      "size": "bento-small"
+    },
+    {
+      "slug": "product-management",
+      "title": "Product",
+      "description": "ビジョンを形にし、チームを勝利へ導くプロダクトリーダー。",
+      "image": "/static/img/product.jpg",
+      "size": "bento-small"
+    },
+    {
+      "slug": "cyber-security",
+      "title": "Security",
+      "description": "デジタル資産を守り、安全なサイバー空間を構築する防衛線。",
+      "image": "/static/img/security.jpg",
+      "size": "bento-wide"
+    },
+    {
+      "slug": "sales-bizdev",
+      "title": "Business",
+      "description": "新たな市場を切り拓き、持続可能なパートナーシップを築く。",
+      "image": "/static/img/business.jpg",
+      "size": "bento-small"
+    },
+    {
+      "slug": "customer-success",
+      "title": "Success",
+      "description": "顧客の成功を第一に考え、LTV（顧客生涯価値）を最大化する。",
+      "image": "/static/img/success.jpg",
+      "size": "bento-small"
+    },
+    {
+      "slug": "content-strategy",
+      "title": "Creative",
+      "description": "言葉と映像でストーリーを紡ぎ、ブランドの個性を表現する。",
+      "image": "/static/img/creative.jpg",
+      "size": "bento-big"
     }
   ]
 }

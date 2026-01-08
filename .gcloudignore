@@ -1,26 +1,11 @@
-# Python build artifacts
+.git
+.gitignore
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environment
-.venv/
 venv/
+.venv/
 env/
-ENV/
-
-# Git folder
-.git/
-
-# IDE config folders
-.vscode/
-.idea/
-
-# macOS file
-.DS_Store
-
-# Cloud Build logs
-cloudbuild.yaml
-
-# Local environment variables
 .env
+*.pyc
+*.pyo
+*.pyd
+.DS_Store

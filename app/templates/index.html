@@ -1,110 +1,71 @@
 {% extends "base.html" %}
 
-{% block head %}
-<title>Starful - 90以上の職種からあなたのキャリアを見つける</title>
-<meta name="description" content="エンジニアリング、デザイン、マーケティング、AIなど、多様なキャリア分野を探求し、あなたの理想のキャリアパスを見つけましょう。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-{% endblock %}
-
-{% block body_class %}starful-home{% endblock %}
-
 {% block content %}
-<div class="header-section">
-    <div class="logo">Starful<span>.</span></div>
-    <p class="hero-desc">興味のある分野を選択し、様々なキャリアパスを探しましょう。</p>
+<!-- Hero Section -->
+<header class="hero-section fade-in-element">
+    <div class="logo">Starful.</div>
+    <h1 class="hero-title">理想のキャリアを、<br>その手に。</h1>
+    <p class="hero-desc">90以上の職種ガイドが、あなたの次のステップを導きます。</p>
     
     <div class="search-container">
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" class="search-input" placeholder="職種やスキルを検索 (例: クラウド, マーケティング)">
+        <input type="text" class="search-input" placeholder="職種、スキル、キーワードで検索...">
     </div>
+</header>
 
-    <!-- [추가] 추천 검색어 태그 -->
-    <div class="suggestion-tags">
-        <a href="#">AI</a>
-        <a href="#">Frontend</a>
-        <a href="#">Product Manager</a>
-        <a href="#">UI/UX</a>
-        <a href="#">DevOps</a>
+<!-- Bento Grid Layout -->
+<main class="bento-grid">
+    {% for category in categories %}
+    <a href="/category/{{ category.slug }}" class="bento-item {{ category.size }} fade-in-element">
+        <div class="item-img">
+            <img src="{{ category.image }}" alt="{{ category.title }}" loading="lazy">
+        </div>
+        <div class="item-info">
+            <h3>{{ category.title }}</h3>
+            <p>{{ category.description }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</main>
+
+<!-- Site Info Section (About) -->
+<section class="about-section fade-in-element">
+    <div class="about-container">
+        <div class="about-header">
+            <span>About Starful</span>
+            <h2>キャリアの羅針盤として。</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-column">
+                <p>Starfulは、急速に変化する現代の労働市場において、個人が自らの可能性を最大限に引き出せるよう支援することを目的としています。</p>
+            </div>
+            <div class="about-column">
+                <p>エンジニアリングからデザイン、ビジネスまで、多岐にわたる職種のリアルな姿を体系化し、誰もが迷わず理想のキャリアパスを見つけられる場を提供します。</p>
+            </div>
+        </div>
+        <div class="about-stats">
+            <div class="stat-item">
+                <div class="stat-num">90+</div>
+                <div class="stat-label">職種ガイド</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">24/7</div>
+                <div class="stat-label">アップデート</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">Free</div>
+                <div class="stat-label">オープンアクセス</div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
-<div class="grid-frame">
-    <div class="bento-grid">
-        <a href="/category/engineering" class="card card-big size-2x2">
-            <img src="/static/img/eng.jpg" class="card-big-bg" alt="Engineering">
-            <div class="card-overlay"></div>
-            <div class="card-big-content"><h3>Engineering</h3><p>Backend, Frontend, DevOps</p></div>
-        </a>
-
-        <a href="/category/ai-data" class="card card-big size-1x2">
-            <img src="/static/img/ai.jpg" class="card-big-bg" alt="AI & Data">
-            <div class="card-overlay"></div>
-            <div class="card-big-content"><h3>AI & Data</h3><p>ML, LLM, Data Science</p></div>
-        </a>
-
-        <a href="#" class="card card-small">
-            <i class="fa-solid fa-arrow-right arrow-icon"></i>
-            <img src="/static/img/backend.jpg" class="mini-thumb" alt="Backend">
-            <h3>Backend Dev</h3><p>Go, Java</p>
-        </a>
-
-        <a href="#" class="card card-small">
-            <i class="fa-solid fa-arrow-right arrow-icon"></i>
-            <img src="/static/img/frontend.jpg" class="mini-thumb" alt="Frontend">
-            <h3>Frontend</h3><p>React, Next.js</p>
-        </a>
-
-        <a href="#" class="card card-small">
-            <i class="fa-solid fa-arrow-right arrow-icon"></i>
-            <img src="/static/img/security.jpg" class="mini-thumb" alt="Security">
-            <h3>Security</h3><p>CISO, Blue Team</p>
-        </a>
-
-        <a href="/category/design" class="card card-big size-2x1">
-            <img src="/static/img/design.jpg" class="card-big-bg" alt="Design">
-            <div class="card-overlay"></div>
-            <div class="card-big-content"><h3>Design</h3><p>UI/UX, Product Design, Graphic</p></div>
-        </a>
-
-        <a href="#" class="card card-small">
-            <i class="fa-solid fa-arrow-right arrow-icon"></i>
-            <img src="/static/img/sales.jpg" class="mini-thumb" alt="Sales">
-            <h3>Sales</h3><p>B2B, Inside Sales</p>
-        </a>
-
-        <a href="/category/marketing" class="card card-big size-2x1">
-            <img src="/static/img/marketing.jpg" class="card-big-bg" alt="Marketing">
-            <div class="card-overlay"></div>
-            <div class="card-big-content"><h3>Marketing</h3><p>Growth, Content Strategy</p></div>
-        </a>
-
-        <a href="/category/cloud-infra" class="card card-big size-2x1">
-            <img src="/static/img/cloud.jpg" class="card-big-bg" alt="Cloud & Infra">
-            <div class="card-overlay"></div>
-            <div class="card-big-content"><h3>Cloud & Infra</h3><p>AWS, Azure, SRE</p></div>
-        </a>
+<!-- Final Footer -->
+<footer class="final-footer fade-in-element">
+    <div class="footer-links">
+        <a href="/about">運営者情報</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="https://script.google.com/macros/s/AKfycbyCLnBhulwNFERwnPIbuR_NyiXLeh_sKU05FVi0wSZGwl65B_xzFXU-YbDzLfLg3GcT3w/exec" target="_blank">お問い合わせ</a>
     </div>
-</div>
-
-<!-- [추가] 사이트 목적 섹션 -->
-<div class="site-purpose-section">
-    <h2>Starfulについて</h2>
-    <p>
-        Starfulは、多様化する現代のキャリアパスに関する情報を分かりやすく整理し、誰もが自身の可能性を最大限に引き出せるようなキャリアを見つける手助けをすることを目的としています。エンジニアリングからデザイン、マーケティングに至るまで、幅広い分野の職種について詳しく解説していきます。
-    </p>
-</div>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const preparingLinks = document.querySelectorAll('a[href="#"]');
-        preparingLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                alert('コンテンツを準備中です。まもなく公開予定ですので、しばらくお待ちください。');
-            });
-        });
-    });
-</script>
+    <div class="copyright">&copy; 2026 Starful. Crafted for your future.</div>
+</footer>
 {% endblock %}

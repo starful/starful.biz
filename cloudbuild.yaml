@@ -1,18 +1,24 @@
 steps:
-  # [수정] 1. Docker 이미지 빌드 (캐시 사용) 및 푸시
-  # push 단계는 아래 'images' 블록에 의해 자동으로 처리됩니다.
+  # 1. Docker 이미지 빌드
   - name: 'gcr.io/cloud-builders/docker'
     id: 'build-app'
     args: [
       'build',
-      # [핵심] 이전 빌드의 'latest' 태그 이미지를 캐시로 사용하도록 지시
-      '--cache-from', 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:latest',
+      '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:$BUILD_ID',
       '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:latest',
       '.'
     ]
 
-  # [수정] 2. 이미지를 사용하여 Cloud Run에 배포
-  # waitFor는 push 단계가 없어졌으므로 build-app을 기다립니다.
+  # 2. 빌드된 이미지를 Artifact Registry에 푸시 (배포 전 반드시 필요)
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'push-app'
+    args: [
+      'push', 
+      'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:$BUILD_ID'
+    ]
+    waitFor: ['build-app']
+
+  # 3. 푸시된 이미지를 사용하여 Cloud Run에 배포
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     id: 'deploy-app'
     entrypoint: gcloud
@@ -21,18 +27,13 @@ steps:
       - 'deploy'
       - 'starful-biz'
       - '--image'
-      - 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:latest'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:$BUILD_ID'
       - '--region'
-      - '${_REGION}'
+      - 'us-central1'
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
-    waitFor: ['build-app']
+    waitFor: ['push-app']
 
-# [추가] 빌드가 성공하면 이 이미지를 자동으로 Artifact Registry에 푸시합니다.
-# 이렇게 하면 별도의 'docker push' 단계가 필요 없어집니다.
 images:
-  - 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:latest'
-
-substitutions:
-  _REGION: 'us-central1'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:$BUILD_ID'
