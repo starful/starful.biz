@@ -10,10 +10,15 @@
 <header class="hero-section fade-in-element">
     <div class="logo">Starful.</div>
     <h1 class="hero-title">理想のキャリアを、<br>その手に。</h1>
-    <p class="hero-desc">90以上の職種ガイドが、あなたの次のステップを導きます。</p>
+    <p class="hero-desc">あなたの次のステップを導く、多様な職種ガイド。</p>
     
+    <!-- [수정] 검색창을 form 태그로 감싸고, input에 name 속성 추가 -->
     <div class="search-container">
-        <input type="text" class="search-input" placeholder="職種、スキル、キーワードで検索...">
+        <form action="/search" method="get" style="width: 100%;">
+            <input type="text" name="q" class="search-input" placeholder="職種、スキル、キーワードで検索..." required>
+            <!-- 검색 버튼을 추가하고 싶다면 아래 주석을 해제하세요 -->
+            <button type="submit" style="display:none;">Search</button>
+        </form>
     </div>
 </header>
 
