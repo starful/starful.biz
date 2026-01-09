@@ -1,178 +1,224 @@
+/* app/static/css/detail.css */
+
+/* --- Detail Page Specific Styles --- */
+
+/* body에 detail-page 클래스가 붙을 때만 적용 */
 body.detail-page {
-    background-color: #fff;
+    background-color: var(--bg);
 }
 
+/* --- Detail Hero Section (Banner with Image) --- */
 .detail-hero {
-    background: linear-gradient(180deg, var(--bg-body) 0%, #fff 100%);
-    padding: 60px 20px 50px;
+    position: relative;
+    padding: 180px 24px 80px; /* 상하 여백 늘림 */
     text-align: center;
-    border-bottom: 1px solid var(--border-color);
+    color: #fff; /* 기본 텍스트 흰색 */
+    overflow: hidden;
+    background-color: var(--text-main); /* 이미지 없을 때 대비 */
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.detail-hero .hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.5; /* 이미지 투명도 조절 */
+}
+
+.detail-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 2;
+}
+
+.detail-hero .content-wrapper {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .detail-hero .back-link {
-    color: var(--accent);
+    color: rgba(255,255,255,0.8);
     font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     display: inline-block;
     transition: opacity 0.3s ease;
+    font-size: 1.1rem;
 }
 .detail-hero .back-link:hover {
-    opacity: 0.8;
+    opacity: 1;
+    color: var(--accent);
 }
 .detail-hero h1 {
-    font-size: 3.2rem;
-    letter-spacing: -1.5px;
-    margin-bottom: 16px;
-    color: var(--text-main);
-    font-weight: 800;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
+    font-weight: 900;
+    line-height: 1.1;
 }
 .detail-hero p {
-    font-size: 1.15rem;
-    color: var(--text-sub);
-    max-width: 650px;
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.9);
+    max-width: 700px;
     margin: 0 auto;
     line-height: 1.7;
+    font-weight: 500;
 }
 
+/* --- Main Content Container --- */
 .detail-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 80px 24px 120px;
 }
 
+/* --- Summary Box --- */
 .summary-box {
-    background: #F9F9FB;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-card);
-    padding: 32px;
-    margin-bottom: 60px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 40px;
+    margin-bottom: 80px;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 .summary-box h3 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
     display: flex;
     align-items: center;
     gap: 12px;
     font-weight: 700;
-}
-.summary-box ul { list-style: none; padding-left: 5px; }
-.summary-box li {
-    margin-bottom: 12px;
     color: var(--text-main);
-    font-size: 1.05rem;
+}
+.summary-box ul { list-style: none; padding-left: 0; }
+.summary-box li {
+    margin-bottom: 15px;
+    color: var(--text-main);
+    font-size: 1.1rem;
     display: flex;
-    align-items: center;
-    gap: 12px;
+    align-items: flex-start; /* 텍스트 상단 정렬 */
+    gap: 15px;
+    line-height: 1.6;
 }
 .summary-box li .fa-check {
-    color: #2ecc71;
-    font-size: 1.2rem;
+    color: var(--accent); /* 체크 아이콘 색상 변경 */
+    font-size: 1.3rem;
+    flex-shrink: 0; /* 아이콘이 줄어들지 않도록 */
+    margin-top: 2px; /* 텍스트와 정렬 */
 }
 
+/* --- Markdown Content Styling --- */
 .markdown-content h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-top: 60px;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 80px;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--card-bg); /* 구분선 색상 변경 */
+    letter-spacing: -0.03em;
 }
 .markdown-content h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 40px;
-    margin-bottom: 16px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
 }
 .markdown-content p, .markdown-content li {
     line-height: 1.9;
-    font-size: 1.05rem;
-    color: #333;
-    margin-bottom: 16px;
+    font-size: 1.15rem;
+    color: var(--text-main);
+    margin-bottom: 20px;
 }
-.markdown-content ul { padding-left: 25px; }
+.markdown-content ul { padding-left: 30px; list-style: disc; }
+.markdown-content ol { padding-left: 30px; list-style: decimal; }
 .markdown-content a {
     color: var(--accent);
     text-decoration: underline;
     font-weight: 500;
 }
-
 .markdown-content blockquote {
-    margin: 30px 0;
-    padding: 24px;
-    background: #eef7ff;
-    border-left: 5px solid var(--accent);
-    border-radius: 0 12px 12px 0;
-    color: #1c5d99;
-    font-size: 1.05rem;
+    margin: 40px 0;
+    padding: 30px;
+    background: #e9f2ff; /* 밝은 파란색 배경 */
+    border-left: 6px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    color: #1a4d7d;
+    font-size: 1.15rem;
     font-style: italic;
 }
 .markdown-content blockquote p:last-child { margin-bottom: 0; }
 
-.accordion-item {
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s ease;
+/* --- Related Jobs Section --- */
+.related-jobs-section { margin-top: 100px; text-align: center;}
+.related-jobs-section h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+    border-bottom: none;
+    padding-bottom: 0;
+    justify-content: center;
 }
-.accordion-item + .accordion-item { margin-top: 15px; }
-.accordion-item:hover {
-    border-color: var(--accent);
-    box-shadow: 0 4px 15px rgba(0, 113, 227, 0.1);
+.related-jobs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열 그리드 */
+    gap: 24px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.accordion-header {
-    background-color: #fff;
-    padding: 20px 24px;
-    cursor: pointer;
+/* Related Job Card (mini bento style) */
+.related-job-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 30px;
+    text-decoration: none;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    text-align: left;
-    font-size: 1.1rem;
-    font-weight: 600;
+    min-height: 200px;
+    transition: transform 0.3s ease;
+    text-align: left; /* 텍스트 왼쪽 정렬 */
 }
-.accordion-header.active { color: var(--accent); }
-.accordion-header .title { display: flex; align-items: center; gap: 12px; }
-.accordion-header .toggle-icon { transition: transform 0.3s ease; color: var(--text-sub); }
-.accordion-header.active .toggle-icon { transform: rotate(180deg); }
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
-    background-color: #f9f9fb;
+.related-job-card:hover { transform: translateY(-5px); background-color: #e8e8ea; }
+.related-job-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-main);
 }
-.accordion-content .content-inner { padding: 0 24px 24px; }
-
-.skill-tabs { display: flex; border-bottom: 2px solid var(--border-color); margin-bottom: 24px; }
-.tab-button {
-    padding: 14px 24px; cursor: pointer; background: none; border: none;
-    font-size: 1.1rem; font-weight: 600; color: var(--text-sub);
-    border-bottom: 3px solid transparent; margin-bottom: -2px;
-    transition: all 0.3s ease;
-}
-.tab-button:hover { color: var(--text-main); }
-.tab-button.active { color: var(--accent); border-bottom-color: var(--accent); }
-.skill-content { display: none; }
-.skill-content.active { display: block; }
-.skill-item { margin-bottom: 24px; }
-.skill-item h3 { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; margin-bottom: 10px; }
-.skill-item p { margin-left: 32px; margin-bottom: 12px; }
-.skill-tags { margin-left: 32px; display: flex; flex-wrap: wrap; gap: 10px; }
-.skill-tag {
-    background-color: #eef7ff; color: #1c5d99; padding: 6px 14px;
-    border-radius: 20px; font-size: 0.85rem; font-weight: 600;
+.related-job-card p {
+    font-size: 0.95rem;
+    color: var(--text-sub);
+    margin-bottom: 0;
 }
 
-.related-jobs-section { margin-top: 80px; text-align: center;}
-.related-jobs-section h2 { border: none; justify-content: center; margin-bottom: 30px; }
-.related-jobs-container { display: flex; gap: 20px; justify-content: center; }
 
+/* --- Responsive Adjustments for Detail Page --- */
 @media (max-width: 768px) {
-    .detail-hero h1 { font-size: 2.5rem; }
-    .markdown-content h2 { font-size: 1.8rem; }
-    .related-jobs-container { flex-direction: column; }
+    .detail-hero { padding: 120px 20px 60px; min-height: 380px; }
+    .detail-hero h1 { font-size: 2.8rem; }
+    .detail-hero p { font-size: 1.1rem; }
+    .detail-container { padding: 60px 20px; }
+    .summary-box { padding: 30px; margin-bottom: 60px; }
+    .summary-box h3 { font-size: 1.3rem; margin-bottom: 20px; }
+    .summary-box li { font-size: 1rem; }
+    .markdown-content h2 { font-size: 2rem; margin-top: 60px; margin-bottom: 24px; }
+    .markdown-content h3 { font-size: 1.5rem; margin-top: 40px; margin-bottom: 16px; }
+    .markdown-content p, .markdown-content li { font-size: 1rem; margin-bottom: 16px; }
+    .related-jobs-section h2 { font-size: 2.2rem; margin-bottom: 30px; }
+    .related-jobs-container { grid-template-columns: 1fr; }
+    .related-job-card { min-height: auto; }
 }

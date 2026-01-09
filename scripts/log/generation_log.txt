@@ -1,0 +1,268 @@
+2026-01-08 22:41:06,084 - INFO - Generating frontmatter for: Architect
+2026-01-08 22:41:10,347 - INFO - Raw Frontmatter for Architect:
+```json
+{
+  "category": "engineering",
+  "keywords": ["システム設計", "技術戦略", "クラウドアーキテクチャ", "スケーラビリティ", "エンタープライズ", "セキュリティ", "ガバナンス", "ソリューション設計"],
+  "meta_description": "大規模システムの技術選定、設計、実装方針を決定し、プロジェクト全体の技術的成功を導く役割。スケーラビリティ、セキュリティ、コスト効率を考慮した最適なソリューションを提供します。",
+  "related_jobs": ["principal_engineer", "cto", "devops_engineer"],
+  "slug": "architect",
+  "tags": ["AWS", "Azure", "GCP", "マイクロサービス", "DDD", "クラウドネイティブ", "セキュリティ設計", "スケーラブルシステム"],
+  "thumbnail": "/static/img/architect.png",
+  "hero_image": "/static/img/architect_hero.png",
+  "title": "技術的ビジョンを具現化するシステム設計の専門家"
+}
+```
+2026-01-08 22:41:10,348 - INFO - Successfully generated and parsed frontmatter for Architect.
+2026-01-08 22:41:10,348 - INFO - Generating body for: Architect
+2026-01-08 22:41:10,688 - ERROR - Error generating body for Architect: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 49.589723247s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 49
+}
+]
+2026-01-08 22:41:10,688 - ERROR - Failed to generate body for Architect. Skipping.
+2026-01-08 22:41:10,689 - INFO - Generating frontmatter for: Brand Marketer
+2026-01-08 22:41:10,994 - ERROR - Error generating frontmatter for Brand Marketer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 49.248429083s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 49
+}
+]
+2026-01-08 22:41:10,995 - ERROR - Failed to generate valid frontmatter for Brand Marketer. Skipping.
+2026-01-08 22:41:10,995 - INFO - Generating frontmatter for: CRM Marketer
+2026-01-08 22:41:11,305 - ERROR - Error generating frontmatter for CRM Marketer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 48.923491566s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2026-01-08 22:41:11,306 - ERROR - Failed to generate valid frontmatter for CRM Marketer. Skipping.
+2026-01-08 22:41:11,306 - INFO - Generating frontmatter for: New Business Planner
+2026-01-08 22:41:11,609 - ERROR - Error generating frontmatter for New Business Planner: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 48.618388601s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2026-01-08 22:41:11,609 - ERROR - Failed to generate valid frontmatter for New Business Planner. Skipping.
+2026-01-08 22:41:11,610 - INFO - Generating frontmatter for: Operations Planner
+2026-01-08 22:41:11,880 - ERROR - Error generating frontmatter for Operations Planner: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 48.328380621s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2026-01-08 22:41:11,881 - ERROR - Failed to generate valid frontmatter for Operations Planner. Skipping.
+2026-01-08 22:41:11,881 - INFO - Generating frontmatter for: Application Security Engineer
+2026-01-08 22:41:12,223 - ERROR - Error generating frontmatter for Application Security Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 48.054799543s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2026-01-08 22:41:12,224 - ERROR - Failed to generate valid frontmatter for Application Security Engineer. Skipping.
+2026-01-08 22:41:12,224 - INFO - Generating frontmatter for: Backend Architect
+2026-01-08 22:41:28,378 - INFO - Generating frontmatter for: Architect
+2026-01-08 22:41:33,224 - INFO - Raw Frontmatter for Architect:
+```json
+{
+  "category": "engineering",
+  "keywords": ["システム設計", "技術選定", "スケーラビリティ", "クラウドアーキテクチャ", "セキュリティ設計", "技術ロードマップ", "ソリューションアーキテクト", "エンタープライズアーキテクチャ"],
+  "meta_description": "大規模システムの技術的ビジョンを策定し、設計、実装を指導する最高技術責任者的な役割。スケーラビリティ、信頼性、セキュリティを確保し、技術選定とロードマップ作成を通じてビジネス目標達成に貢献します。",
+  "related_jobs": ["lead_engineer", "cto", "principal_engineer"],
+  "slug": "architect",
+  "tags": ["AWS", "Azure", "GCP", "マイクロサービス", "クラウドネイティブ", "DevOps", "DDD", "セキュリティ設計", "パフォーマンスチューニング", "技術戦略"],
+  "thumbnail": "/static/img/architect.png",
+  "hero_image": "/static/img/architect_hero.png",
+  "title": "技術的ビジョンと構造を設計するシステム設計の専門家"
+}
+```
+2026-01-08 22:41:33,224 - INFO - Successfully generated and parsed frontmatter for Architect.
+2026-01-08 22:41:33,225 - INFO - Generating body for: Architect
+2026-01-08 22:42:16,114 - INFO - Successfully generated body for Architect. Character count: 12938
+2026-01-08 22:42:16,116 - INFO - Saved ../app/contents/architect.md
+2026-01-08 22:51:11,781 - INFO - Skipping Architect as ../app/contents/architect.md already exists.
+2026-01-08 22:51:11,781 - INFO - Generating frontmatter for: Brand Marketer
+2026-01-08 22:51:16,122 - INFO - Raw Frontmatter for Brand Marketer:
+```json
+{
+  "category": "marketing",
+  "keywords": [
+    "ブランド戦略",
+    "ブランディング",
+    "市場調査",
+    "消費者インサイト",
+    "マーケティングコミュニケーション",
+    "ブランド認知度",
+    "キャンペーン管理",
+    "ROI分析"
+  ],
+  "meta_description": "ブランドの価値と市場での認知度を最大化するための戦略を立案・実行する専門家。市場分析に基づき、一貫したブランドメッセージと体験を設計し、企業の成長を牽引する。創造性とデータ分析能力が不可欠。",
+  "related_jobs": [
+    "digital_marketing_manager",
+    "content_strategist",
+    "product_marketing_manager"
+  ],
+  "slug": "brand_marketer",
+  "tags": [
+    "ブランド戦略",
+    "市場分析",
+    "消費者行動",
+    "コミュニケーション戦略",
+    "クリエイティブディレクション",
+    "ブランドガイドライン",
+    "KPI設定",
+    "デジタルマーケティング"
+  ],
+  "thumbnail": "/static/img/brand_marketer.png",
+  "hero_image": "/static/img/brand_marketer_hero.png",
+  "title": "ブランド価値を最大化する戦略家"
+}
+```
+2026-01-08 22:51:16,122 - INFO - Successfully generated and parsed frontmatter for Brand Marketer.
+2026-01-08 22:51:16,122 - INFO - Generating body for: Brand Marketer
+2026-01-08 22:52:07,354 - INFO - Successfully generated body for Brand Marketer. Character count: 14872
+2026-01-08 22:52:07,357 - INFO - Saved ../app/contents/brand_marketer.md
+2026-01-08 22:52:22,362 - INFO - Reached the maximum number of files to generate (1). Stopping.
+2026-01-09 18:24:02,157 - INFO - Skipping Architect as ../app/contents/architect.md already exists.
+2026-01-09 18:24:02,158 - INFO - Skipping Brand Marketer as ../app/contents/brand_marketer.md already exists.
+2026-01-09 18:24:02,158 - INFO - Generating frontmatter for: CRM Marketer
+2026-01-09 18:24:07,409 - ERROR - Error generating frontmatter for CRM Marketer: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 2.
+2026-01-09 18:24:07,409 - ERROR - Failed to generate valid frontmatter for CRM Marketer. Skipping.
+2026-01-09 18:24:07,409 - INFO - Generating frontmatter for: New Business Planner
+2026-01-09 18:24:12,115 - INFO - Raw Frontmatter for New Business Planner:
+```json
+{
+  "category": "sales-bizdev",
+  "keywords": ["新規事業開発", "ビジネスプランニング", "市場調査", "戦略立案", "収益化戦略", "イノベーション", "PoC", "事業戦略", "IT戦略"],
+  "meta_description": "新規事業のアイデア創出から計画策定、実行、検証までを主導する役割。市場分析、ビジネスモデル構築、パートナーシップ戦略立案を通じて、企業の成長を牽引する。戦略的思考力と企画力が求められる。",
+  "related_jobs": ["business_development_manager", "product_manager", "management_strategy_planner"],
+  "slug": "new_business_planner",
+  "tags": ["事業戦略", "市場分析", "ビジネスモデルキャンバス", "リーンスタートアップ", "KPI設定", "投資対効果分析", "アライアンス", "イノベーション", "DX"],
+  "thumbnail": "/static/img/new_business_planner.png",
+  "hero_image": "/static/img/new_business_planner_hero.png",
+  "title": "IT時代の成長を担う新規事業企画の役割"
+}
+```
+2026-01-09 18:24:12,115 - INFO - Successfully generated and parsed frontmatter for New Business Planner.
+2026-01-09 18:24:12,116 - INFO - Generating body for: New Business Planner
+2026-01-09 18:25:02,007 - INFO - Successfully generated body for New Business Planner. Character count: 15344
+2026-01-09 18:25:02,009 - INFO - Saved ../app/contents/new_business_planner.md
+2026-01-09 18:25:17,010 - INFO - Reached the maximum number of files to generate (1). Stopping.
+2026-01-09 18:29:39,304 - CREATED: ../app/contents/architect.md
+2026-01-09 18:30:45,978 - CREATED: ../app/contents/brand_marketer.md
+2026-01-09 18:41:36,983 - CREATED: ../app/contents/architect.md
+2026-01-09 18:45:28,658 - CREATED: ../app/contents/architect.md
+2026-01-09 18:46:34,278 - CREATED: ../app/contents/crm_marketer.md
+2026-01-09 18:54:08,949 - CREATED: ../app/contents/new_business_planner.md
+2026-01-09 18:55:15,502 - CREATED: ../app/contents/operations_planner.md
+2026-01-09 18:56:24,935 - CREATED: ../app/contents/application_security_engineer.md
+2026-01-09 18:57:30,565 - CREATED: ../app/contents/backend_architect.md
+2026-01-09 18:58:34,875 - CREATED: ../app/contents/backend_developer.md
+2026-01-09 18:59:36,516 - CREATED: ../app/contents/big_data_engineer.md
+2026-01-09 19:00:41,028 - CREATED: ../app/contents/bi_engineer.md
+2026-01-09 19:01:46,172 - CREATED: ../app/contents/blockchain_developer.md
+2026-01-09 19:02:56,822 - CREATED: ../app/contents/blue_team_engineer.md

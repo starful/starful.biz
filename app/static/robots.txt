@@ -6,3 +6,5 @@ Allow: /
 
 User-agent: AdsBot-Google
 Allow: /
+
+Sitemap: https://starful.biz/sitemap.xml

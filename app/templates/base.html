@@ -3,41 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css?v={{ range(1, 9999) | random }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8780435268193938" crossorigin="anonymous"></script>
+    <!-- CSSファイルを強制的に再読み込みさせるため、バージョン番号を更新します -->
+    <link rel="stylesheet" href="/static/css/style.css?v=4.0"> 
+    <!-- detail.cssはdetail.htmlで個別に読み込むように変更 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Font Awesomeを最新版に更新 -->
     {% block head %}{% endblock %}
 </head>
 <body>
 
     {% block content %}{% endblock %}
 
-    <footer style="padding: 100px 24px; text-align: center; border-top: 1px solid #eee;">
-        <p style="color: #999; font-size: 0.9rem;">&copy; 2026 Starful. Crafted for your future.</p>
-        <div style="margin-top: 20px;">
-            <a href="/about" style="margin: 0 10px; color: #666; text-decoration: none;">About</a>
-            <a href="/privacy" style="margin: 0 10px; color: #666; text-decoration: none;">Privacy</a>
-        </div>
-    </footer>
-
+    <!-- スクロールアニメーション用JavaScript -->
     <script>
-        // Arvora 스타일의 페이드인 애니메이션
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // 一度表示されたら監視を停止
+                    }
+                });
+            }, {
+                threshold: 0.1 // 要素が10%見えたらアニメーション実行
             });
-        }, observerOptions);
 
-        document.querySelectorAll('.fade-in-element').forEach(el => observer.observe(el));
-
-        // 준비중 알림
-        document.querySelectorAll('.preparing').forEach(el => {
-            el.addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('곧 공개될 예정입니다!');
-            });
+            const elementsToAnimate = document.querySelectorAll('.fade-in-element');
+            elementsToAnimate.forEach(el => observer.observe(el));
         });
     </script>
 </body>

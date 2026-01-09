@@ -31,7 +31,7 @@
     {
       "slug": "cloud-infra",
       "title": "Cloud & Infra",
-      "description": "進化し続けるクラウド基盤을支えるスペシャリストの道。",
+      "description": "進化し続けるクラウド基盤を支えるスペシャリストの道。",
       "image": "/static/img/cloud.jpg",
       "size": "bento-small"
     },
@@ -51,21 +51,21 @@
     },
     {
       "slug": "sales-bizdev",
-      "title": "Business",
+      "title": "Business Development",
       "description": "新たな市場を切り拓き、持続可能なパートナーシップを築く。",
       "image": "/static/img/business.jpg",
       "size": "bento-small"
     },
     {
       "slug": "customer-success",
-      "title": "Success",
+      "title": "Customer Success",
       "description": "顧客の成功を第一に考え、LTV（顧客生涯価値）を最大化する。",
       "image": "/static/img/success.jpg",
       "size": "bento-small"
     },
     {
       "slug": "content-strategy",
-      "title": "Creative",
+      "title": "Content Strategy",
       "description": "言葉と映像でストーリーを紡ぎ、ブランドの個性を表現する。",
       "image": "/static/img/creative.jpg",
       "size": "bento-big"
