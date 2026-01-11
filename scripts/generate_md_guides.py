@@ -18,9 +18,9 @@ if not API_KEY:
 
 genai.configure(api_key=API_KEY)
 MODEL_NAME = "gemini-flash-latest"
-OUTPUT_DIR = "../app/contents/"
-CSV_FILE = "data/positions.csv"
-LOG_FILE = "log/generation_log.txt"
+OUTPUT_DIR = "app/contents/"
+CSV_FILE = "scripts/data/positions.csv"
+LOG_FILE = "scripts/log/generation_log.txt"
 
 # --- 생성할 파일의 최대 개수 (10건으로 변경) ---
 num_to_generate = 30

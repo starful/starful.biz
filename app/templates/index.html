@@ -8,19 +8,16 @@
 {% block content %}
 <!-- Hero Section -->
 <header class="hero-section fade-in-element">
-    <a href="/" class="logo">
-        <img src="/static/img/starful.biz_w.png" alt="Starful Logo">
-    </a>
+    <div class="logo">
+        <a href="/">
+            <img src="/static/img/starful.biz_w.png" alt="Starful Logo">
+        </a>
+    </div>
     <h1 class="hero-title">理想のキャリアを、<br>その手に。</h1>
-    <p class="hero-desc">あなたの次のステップを導く、多様な職種ガイド。</p>
+    <p class="hero-desc">90以上の職種ガイドが、あなたの次のステップを導きます。</p>
     
-    <!-- [수정] 검색창을 form 태그로 감싸고, input에 name 속성 추가 -->
     <div class="search-container">
-        <form action="/search" method="get" style="width: 100%;">
-            <input type="text" name="q" class="search-input" placeholder="職種、スキル、キーワードで検索..." required>
-            <!-- 검색 버튼을 추가하고 싶다면 아래 주석을 해제하세요 -->
-            <button type="submit" style="display:none;">Search</button>
-        </form>
+        <input type="text" class="search-input" placeholder="職種、スキル、キーワードで検索...">
     </div>
 </header>
 
@@ -56,17 +53,15 @@
                 <p>エンジニアリングからデザイン、ビジネスまで、多岐にわたる職種のリアルな姿を体系化し、誰もが迷わず理想のキャリアパスを見つけられる場を提供します。</p>
             </div>
         </div>
-        <!-- [수정된 부분] 통계 데이터를 동적으로 표시합니다 -->
+        <!-- ❗️[FIX] 이 부분을 원래의 고정 값으로 수정했습니다. -->
         <div class="about-stats">
             <div class="stat-item">
-                <!-- 총 가이드 개수를 표시합니다 -->
-                <div class="stat-num">{{ stats.total_guides }}</div>
+                <div class="stat-num">90+</div>
                 <div class="stat-label">職種ガイド</div>
             </div>
             <div class="stat-item">
-                <!-- 최종 갱신일을 표시합니다 (날짜가 길어질 수 있어 폰트 사이즈 조정) -->
-                <div class="stat-num" style="font-size: 2.8rem; letter-spacing: -0.04em;">{{ stats.last_updated }}</div>
-                <div class="stat-label">最終更新日</div>
+                <div class="stat-num">24/7</div>
+                <div class="stat-label">アップデート</div>
             </div>
             <div class="stat-item">
                 <div class="stat-num">Free</div>

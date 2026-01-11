@@ -7,6 +7,32 @@
 <link rel="stylesheet" href="/static/css/detail.css?v=1.0"> 
 {% endblock %}
 
+<!-- ✨ [SEO] 상세 페이지용 오픈 그래프 태그 설정 -->
+{% block og_title %}{{ item.title }} | Starful{% endblock %}
+{% block og_description %}{{ item.meta_description }}{% endblock %}
+{% if item.hero_image and item.hero_image != '/static/img/default_hero.jpg' %}
+{% block og_image %}{{ request.url.scheme }}://{{ request.url.netloc }}{{ item.hero_image }}{% endblock %}
+{% endif %}
+
+<!-- ✨ [SEO] 직업 정보에 대한 구조화된 데이터(JSON-LD) 추가 -->
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Occupation",
+  "name": "{{ item.title }}",
+  "description": "{{ item.meta_description }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ request.url }}"
+  },
+  "image": "{{ self.og_image() }}",
+  "keywords": "{{ item.keywords | join(', ') if item.keywords else item.title }}"
+}
+</script>
+{% endblock %}
+
+
 <!-- bodyに専用クラスを追加 -->
 {% block body_class %}detail-page{% endblock %}
 
