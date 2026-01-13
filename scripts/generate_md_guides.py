@@ -23,7 +23,7 @@ CSV_FILE = "scripts/data/positions.csv"
 LOG_FILE = "scripts/log/generation_log.txt"
 
 # --- 생성할 파일의 최대 개수 (10건으로 변경) ---
-num_to_generate = 30
+num_to_generate = 15
 
 # 디렉토리 생성
 os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
