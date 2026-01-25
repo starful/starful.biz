@@ -114,7 +114,7 @@ def get_item_metadata(item_id: str):
 def get_items_by_category(category_slug: str):
     """特定のカテゴリに属するコンテンツリストをファイルシステムから読み込みます。"""
     items = []
-    print(f"DEBUG: Attempting to load items for category: {category_slug} from {CONTENTS_DIR}")
+    # print(f"DEBUG: Attempting to load items for category: {category_slug} from {CONTENTS_DIR}")
     for filename in sorted(os.listdir(CONTENTS_DIR)):
         if filename.endswith(".md"):
             filepath = os.path.join(CONTENTS_DIR, filename)
@@ -122,10 +122,7 @@ def get_items_by_category(category_slug: str):
                 post = parse_md_with_json_frontmatter(filepath)
                 
                 if post and post.metadata: 
-                    # [수정 없음] post.metadata에서 바로 category를 가져오도록 변경
-                    # 이제 post.metadata는 중첩되지 않은 올바른 딕셔너리여야 합니다.
                     item_category = post.metadata.get('category') 
-                    print(f"DEBUG: Loaded {filename}. Parsed Metadata: {post.metadata}. Extracted category: {item_category}") 
                     
                     if item_category == category_slug: 
                         item_data = post.metadata
@@ -133,20 +130,18 @@ def get_items_by_category(category_slug: str):
                         if 'thumbnail' not in item_data or not item_data['thumbnail']:
                             item_data['thumbnail'] = '/static/img/placeholder.jpg'
                         items.append(item_data)
-                        print(f"DEBUG: Matched item {item_data['id']} for category {category_slug}")
-                    else:
-                        print(f"DEBUG: {filename} category '{item_category}' does not match target '{category_slug}'")
-                else:
-                    print(f"DEBUG: {filename} has no valid metadata parsed.")
+                # else:
+                #     print(f"DEBUG: {filename} has no valid metadata parsed.")
             except Exception as e:
                 print(f"ERROR: Failed to load or parse frontmatter for {filename}: {e}")
-    print(f"DEBUG: Found {len(items)} items for category {category_slug}.")
+    # print(f"DEBUG: Found {len(items)} items for category {category_slug}.")
     return items
 
-# ✨ [SEO] 사이트맵 생성을 위해 모든 콘텐츠 ID를 가져오는 함수 추가
 def get_all_item_ids():
     """contents 디렉토리의 모든 마크다운 파일 ID 목록을 반환합니다."""
     ids = []
+    if not os.path.exists(CONTENTS_DIR):
+        return ids
     for filename in sorted(os.listdir(CONTENTS_DIR)):
         if filename.endswith(".md"):
             ids.append(filename.replace('.md', ''))
@@ -187,10 +182,8 @@ async def career_detail(request: Request, item_id: str):
     if not post or not post.metadata:
         raise HTTPException(status_code=500, detail="Failed to parse content metadata for detail page")
     
-    # ❗️[FIX] 마크다운 변환 시 'tables' 확장 기능을 활성화합니다.
     content_html = markdown.markdown(post.content, extensions=['tables'])
 
-    # カテゴリ詳細情報を取得してテンプレートに渡す
     category_slug = post.metadata.get('category')
     category_details = get_category_details(category_slug)
     if category_details:
@@ -198,20 +191,17 @@ async def career_detail(request: Request, item_id: str):
     else:
         post.metadata['category_title'] = category_slug.capitalize()
 
-    # hero_image 필드가 없으면 thumbnail 또는 기본값 설정
     if 'hero_image' not in post.metadata or not post.metadata['hero_image']:
         if 'thumbnail' in post.metadata and post.metadata['thumbnail'] != '/static/img/placeholder.jpg':
             post.metadata['hero_image'] = post.metadata['thumbnail']
         else:
-            post.metadata['hero_image'] = '/static/img/default_hero.jpg' # 기본 히어로 이미지 경로
+            post.metadata['hero_image'] = '/static/img/default_hero.jpg'
     
-    # 関連職種のデータを取得
     related_jobs_data = []
     if 'related_jobs' in post.metadata and isinstance(post.metadata['related_jobs'], list):
         for related_job_id in post.metadata['related_jobs']:
             related_item_meta = get_item_metadata(related_job_id)
             if related_item_meta:
-                # 関連キャリアカードに必要な情報만 전달
                 related_jobs_data.append({
                     'id': related_job_id,
                     'title': related_item_meta.get('title', related_job_id.replace('_', ' ').title()),
@@ -234,22 +224,30 @@ async def about_page(request: Request):
 async def privacy_page(request: Request):
     return templates.TemplateResponse("privacy.html", {"request": request})
 
-# ✨ [SEO] 사이트맵 XML을 생성하는 엔드포인트 추가
 @app.get("/sitemap.xml")
 async def sitemap(request: Request):
     """동적으로 sitemap.xml을 생성합니다."""
-    # 중요: 'your-domain.com'을 실제 서비스 도메인으로 변경해야 합니다.
-    base_url = "https://starful.biz" 
+    # 중요: 실제 서비스 도메인으로 변경해야 합니다.
+    base_url = str(request.base_url)
+    if base_url.endswith('/'):
+        base_url = base_url[:-1]
+
+    all_categories = get_categories()
+    all_item_ids = get_all_item_ids()
     
-    all_ids = get_all_item_ids()
-    
-    # Jinja2 템플릿을 사용하여 XML을 렌더링
-    content = templates.get_template("sitemap.xml").render(
-        request=request, 
-        base_url=base_url,
-        item_ids=all_ids
-    )
-    return Response(content=content, media_type="application/xml")
+    try:
+        content = templates.get_template("sitemap.xml").render(
+            request=request, 
+            base_url=base_url,
+            categories=all_categories,
+            item_ids=all_item_ids
+        )
+        return Response(content=content, media_type="application/xml")
+    except Exception as e:
+        # 템플릿 렌더링 중 오류 발생 시 500 에러와 함께 로그를 남깁니다.
+        print(f"Error rendering sitemap: {e}")
+        raise HTTPException(status_code=500, detail="Error generating sitemap.")
+
 
 @app.get('/ads.txt', response_class=FileResponse)
 async def ads_txt():

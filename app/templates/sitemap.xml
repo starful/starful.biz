@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- 
-      이 파일은 main.py에 의해 동적으로 생성됩니다.
-      url_data 리스트에는 loc, lastmod, changefreq, priority 정보가 포함됩니다.
-    -->
-    {% for url in url_data %}
     <url>
-        <loc>{{ url.loc }}</loc>
-        <lastmod>{{ url.lastmod }}</lastmod>
-        <changefreq>{{ url.changefreq }}</changefreq>
-        <priority>{{ url.priority }}</priority>
+        <loc>{{ base_url }}/</loc>
+        <lastmod>2026-01-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>{{ base_url }}/about</loc>
+        <lastmod>2026-01-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>{{ base_url }}/privacy</loc>
+        <lastmod>2026-01-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    {% for category in categories %}
+    <url>
+        <loc>{{ base_url }}/category/{{ category.slug }}</loc>
+        <lastmod>2026-01-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    {% endfor %}
+    {% for item_id in item_ids %}
+    <url>
+        <loc>{{ base_url }}/career/{{ item_id }}</loc>
+        <lastmod>2026-01-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     {% endfor %}
 </urlset>
