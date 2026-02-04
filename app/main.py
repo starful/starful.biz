@@ -256,3 +256,8 @@ async def ads_txt():
 @app.get('/robots.txt', response_class=FileResponse)
 async def robots_txt():
     return os.path.join(STATIC_DIR, "robots.txt")
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    # app/static/img/favicon.png 파일을 반환합니다.
+    return FileResponse(os.path.join(STATIC_DIR, "img", "starful.biz_h.png"))
