@@ -4,61 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8780435268193938" crossorigin="anonymous"></script>
-    
-    <!-- CSSファイルを強制的に再読み込みさせるため、バージョン番号を更新します -->
-    <link rel="stylesheet" href="/static/css/style.css?v=4.0"> 
+    <link rel="stylesheet" href="/static/css/style.css?v=11.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- ✨ 파비콘 링크 추가 -->
-    <link rel="icon" href="/favicon.ico" type="image/png">
-    <link rel="apple-touch-icon" href="{{ url_for('static', path='img/favicon.png') }}">
-    
     {% block head %}{% endblock %}
-
-    <!-- ✨ [SEO] 캐노니컬, 오픈 그래프, 트위터 카드 태그 추가 -->
-    <link rel="canonical" href="{{ request.url }}">
-
-    {% set page_title = "Starful - 理想のキャリアを見つけよう" %}
-    {% set page_description = "エンジニアリング、デザイン、マーケティング、AIなど、多様なキャリア分野を探求し、あなたの理想のキャリアパスを見つけましょう。" %}
-    <!-- 중요: default_og.png 라는 이름의 기본 공유 이미지를 /static/img/ 폴더에 만들어두세요. -->
-    {% set page_image = request.url_for('static', path='img/default_og.png') %}
-
-    <meta property="og:title" content="{% block og_title %}{{ page_title }}{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}{{ page_description }}{% endblock %}">
-    <meta property="og:image" content="{% block og_image %}{{ page_image }}{% endblock %}">
-    <meta property="og:url" content="{{ request.url }}">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Starful">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% block twitter_title %}{{ self.og_title() }}{% endblock %}">
-    <meta name="twitter:description" content="{% block twitter_description %}{{ self.og_description() }}{% endblock %}">
-    <meta name="twitter:image" content="{% block twitter_image %}{{ self.og_image() }}{% endblock %}">
-    
-    <!-- ✨ [SEO] 구조화된 데이터를 위한 블록 추가 -->
-    {% block structured_data %}{% endblock %}
-
 </head>
-<body class="{% block body_class %}{% endblock %}">
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <!-- 문자가 아닌 로고 이미지 사용 -->
+            <a href="/" class="nav-logo">
+                <img src="/static/img/logo.png" alt="Starful" style="height: 32px;" onerror="this.style.display='none'; this.parentNode.innerText='STARFUL'">
+            </a>
+            <div class="nav-links">
+                <a href="/about">運営者情報</a>
+                <a href="/privacy">ポリシー</a>
+            </div>
+        </div>
+    </nav>
 
     {% block content %}{% endblock %}
 
-    <!-- スクロールアニメーション用JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // 一度表示されたら監視を停止
-                    }
-                });
-            }, {
-                threshold: 0.1 // 要素が10%見えたらアニメーション実行
-            });
-
-            const elementsToAnimate = document.querySelectorAll('.fade-in-element');
-            elementsToAnimate.forEach(el => observer.observe(el));
-        });
-    </script>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="/about">運営者情報 (About)</a>
+            <a href="/privacy">プライバシーポリシー</a>
+            <a href="https://script.google.com/macros/s/AKfycbyCLnBhulwNFERwnPIbuR_NyiXLeh_sKU05FVi0wSZGwl65B_xzFXU-YbDzLfLg3GcT3w/exec" target="_blank">お問い合わせ</a>
+        </div>
+        <p style="color: #bbb; font-size: 0.85rem;">&copy; 2026 Starful. Crafted for your future career.</p>
+    </footer>
 </body>
 </html>

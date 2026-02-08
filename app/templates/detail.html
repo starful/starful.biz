@@ -1,95 +1,111 @@
 {% extends "base.html" %}
 
 {% block head %}
-<title>{{ item.title }} | Starful キャリア情報</title>
+<title>{{ item.title }} | Starful</title>
 <meta name="description" content="{{ item.meta_description }}">
-<!-- 詳細ページ専用CSSを読み込みます -->
-<link rel="stylesheet" href="/static/css/detail.css?v=1.0"> 
 {% endblock %}
-
-<!-- ✨ [SEO] 상세 페이지용 오픈 그래프 태그 설정 -->
-{% block og_title %}{{ item.title }} | Starful{% endblock %}
-{% block og_description %}{{ item.meta_description }}{% endblock %}
-{% if item.hero_image and item.hero_image != '/static/img/default_hero.jpg' %}
-{% block og_image %}{{ request.url.scheme }}://{{ request.url.netloc }}{{ item.hero_image }}{% endblock %}
-{% endif %}
-
-<!-- ✨ [SEO] 직업 정보에 대한 구조화된 데이터(JSON-LD) 추가 -->
-{% block structured_data %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Occupation",
-  "name": "{{ item.title }}",
-  "description": "{{ item.meta_description }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ request.url }}"
-  },
-  "image": "{{ self.og_image() }}",
-  "keywords": "{{ item.keywords | join(', ') if item.keywords else item.title }}"
-}
-</script>
-{% endblock %}
-
-
-<!-- bodyに専用クラスを追加 -->
-{% block body_class %}detail-page{% endblock %}
 
 {% block content %}
-<!-- Detail Hero Section -->
-<header class="detail-hero fade-in-element">
-    {% if item.hero_image and item.hero_image != '/static/img/default_hero.jpg' and item.hero_image != '/static/img/placeholder.jpg' %}
-    <img src="{{ item.hero_image }}" alt="{{ item.title }}" class="hero-bg-img" loading="lazy">
-    <div class="hero-overlay"></div>
-    {% else %}
-    <!-- hero_imageがない場合は、CSSで設定された背景色を使用 -->
-    {% endif %}
-
-    <div class="content-wrapper">
-        <a href="/category/{{ item.category }}" class="back-link"><i class="fa-solid fa-arrow-left"></i> {{ item.category_title }}一覧に戻る</a>
-        <h1>{{ item.title }}</h1>
-        <p>{{ item.meta_description }}</p>
-    </div>
-</header>
-
-<main class="detail-container">
-    <!-- Summary Box -->
-    <div class="summary-box fade-in-element">
-        <h3><i class="fa-solid fa-lightbulb" style="color: var(--accent);"></i> このガイドで学べること</h3>
-        <ul>
-            <li><i class="fa-solid fa-check"></i> 職務の主な役割と責任範囲</li>
-            <li><i class="fa-solid fa-check"></i> 必要とされる専門スキルとキャリアパス</li>
-            <li><i class="fa-solid fa-check"></i> 将来性と面接で問われる重要ポイント</li>
-        </ul>
-    </div>
-
-    <!-- Markdown Content -->
-    <article class="markdown-content fade-in-element">
-        {{ content | safe }}
-    </article>
-
-    <!-- Related Jobs Section -->
-    <section class="related-jobs-section fade-in-element">
-        <h2>関連性の高いキャリア</h2>
-        <div class="related-jobs-container">
-            {% if related_jobs_data %}
-                {% for job in related_jobs_data %}
-                    <a href="/career/{{ job.id }}" class="related-job-card">
-                        <h3>{{ job.title }}</h3>
-                        <p>{{ job.description }}</p>
-                    </a>
-                {% endfor %}
-            {% else %}
-                <p style="grid-column: 1 / -1; text-align: center; color: var(--text-sub); font-size: 1.1rem; padding: 20px;">
-                    関連キャリアはまだありません。
-                </p>
-            {% endif %}
+<main style="width: 100%;">
+    <!-- 1. 히어로 섹션 (짤림 방지 적용) -->
+    <header style="background: #fff; border-bottom: 1px solid #eee; padding: 80px 0 40px;">
+        <div style="max-width: 780px; margin: 0 auto; padding: 0 20px;">
+            <span style="color: var(--accent); font-weight: 800; font-size: 0.9rem; display: block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">
+                {{ category_title }} GUIDE
+            </span>
+            <h1 style="font-size: clamp(1.8rem, 7vw, 3.2rem); font-weight: 800; line-height: 1.25; margin: 0; color: #1d1d1f;">
+                {{ item.title }}
+            </h1>
+            <p style="color: #666; font-size: 1.2rem; margin-top: 25px; line-height: 1.6; font-weight: 400;">
+                {{ item.meta_description }}
+            </p>
         </div>
-    </section>
+    </header>
+
+    <div class="detail-body">
+        <!-- 2. 상단 광고 슬롯 (너비 강제 확보) -->
+        <div class="ad-slot">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-8780435268193938"
+                 data-ad-slot="3923725999"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- 3. 핵심 요약 카드 -->
+        <div style="background: #f9f9fb; border-radius: 20px; padding: 30px; margin: 40px 0; border: 1px solid #efeff4;">
+            <h3 style="margin-top:0; font-size: 1.3rem; font-weight: 800;">
+                <i class="fa-solid fa-bolt" style="color: #ffcc00; margin-right: 8px;"></i> ク이ックサ마리
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 20px 0 0;">
+                <li style="display: flex; gap: 10px; margin-bottom: 12px;">
+                    <i class="fa-solid fa-circle-check" style="color:var(--accent); margin-top:5px;"></i>
+                    <span><strong>ミッション:</strong> {{ item.title }}의 핵심 역할과 기술적 가치</span>
+                </li>
+                <li style="display: flex; gap: 10px;">
+                    <i class="fa-solid fa-circle-check" style="color:var(--accent); margin-top:5px;"></i>
+                    <span><strong>将来性:</strong> 지속적인 수요와 커리어 확장 가능성</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 4. 마크다운 본문 (JS로 표 짤림 방지 처리됨) -->
+        <article id="content-main">
+            {{ content | safe }}
+        </article>
+
+        <!-- 5. 하단 광고 슬롯 -->
+        <div class="ad-slot">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%;"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-8780435268193938"
+                 data-ad-slot="3923725999"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- 6. 관련 직업 추천 -->
+        <section style="margin-top: 100px;">
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; border-left: 6px solid var(--accent); padding-left: 20px;">
+                関連性の高いキャリア
+            </h3>
+            <div class="main-grid">
+                {% for job in related_jobs_data %}
+                <a href="/career/{{ job.id }}" class="content-card" style="height: 240px;">
+                    <div class="card-bg">
+                        <img src="{{ job.thumbnail }}" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop'">
+                    </div>
+                    <div class="card-overlay"></div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.2rem;">{{ job.title }}</h3>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
 </main>
 
 <script>
-// 詳細ページのJavaScriptは変更なし（アコーディオン・タブ機能は現在のマークダウンにはないため）
+/**
+ * 마크다운에서 생성된 표(table)들이 화면을 뚫고 나가지 않도록 
+ * 자동으로 스크롤 가능한 div로 감싸주는 스크립트입니다.
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    const tables = document.querySelectorAll('#content-main table');
+    tables.forEach(table => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-wrapper';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+    });
+});
 </script>
 {% endblock %}

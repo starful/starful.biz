@@ -3,6 +3,7 @@ import frontmatter
 import markdown
 import json 
 import re 
+from datetime import datetime
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
@@ -14,206 +15,152 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 CONTENTS_DIR = os.path.join(BASE_DIR, "contents")
 STRUCTURE_FILE = os.path.join(BASE_DIR, "site_structure.json")
+DEFAULT_PLACEHOLDER = "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop"
 
 app = FastAPI()
-
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=TEMPLATE_DIR)
 
-
-# --- 서버 시작시에 JSON 파일을 미리 로드 ---
+# --- 서버 시작시에 JSON 데이터 로드 ---
 try:
     with open(STRUCTURE_FILE, 'r', encoding='utf-8') as f:
         SITE_DATA = json.load(f)
-except FileNotFoundError:
-    print(f"警告: '{STRUCTURE_FILE}' ファイルが見つかりません。メインページが空になる可能性があります。")
+except Exception:
     SITE_DATA = {"categories": []}
 
-
-# --- [수정] JSON Frontmatter를 직접 파싱하는 함수 ---
+# --- 마크다운 파서 (JSON Frontmatter 대응 및 중첩 방지) ---
 def parse_md_with_json_frontmatter(filepath):
-    """
-    MD ファイルから ---json...--- ブロックを探し、JSON Frontmatterと本文コンテンツをパースします。
-    """
     with open(filepath, 'r', encoding='utf-8') as f:
         content_raw = f.read()
-
-    # ---jsonで始まり ---で終わるJSON Frontmatterブロックを正規表現で探します。
     match = re.match(r'---json\s*(\{.*\})\s*---(.*)', content_raw, re.DOTALL)
-
     parsed_metadata = {}
-    body_content = content_raw # 기본적으로 전체 내용을 본문으로 설정
-
+    body_content = content_raw
     if match:
         json_str = match.group(1).strip()
-        body_content = match.group(2).strip() # 본문은 --- 이후부터 시작
+        body_content = match.group(2).strip()
         try:
             parsed_metadata = json.loads(json_str)
-        except json.JSONDecodeError as e:
-            print(f"ERROR: JSONDecodeError parsing frontmatter for {filepath}: {e}\nProblematic JSON:\n{json_str}")
-            # 파싱 실패 시, 메타데이터는 비어있고 본문은 원래 내용 그대로
-            parsed_metadata = {}
-    else:
-        # ---json 블록이 없는 경우, 기존 frontmatter.load()를 시도하여 YAML 등을 처리 (Fallback)
-        try:
-            post_fallback = frontmatter.load(content_raw)
-            if post_fallback and post_fallback.metadata:
-                parsed_metadata = post_fallback.metadata
-            body_content = post_fallback.content # fallback 시에는 본문도 다시 할당
-        except Exception as e:
-            print(f"ERROR: Failed to parse any frontmatter for {filepath} with default handler: {e}")
-            parsed_metadata = {} # fallback 실패 시에도 빈 메타데이터
-
-    # [최종 수정] frontmatter.Post 객체 생성 시 parsed_metadata를 직접 할당하여 중첩 방지
-    # frontmatter.Post는 metadata 인자에 딕셔너리를 직접 받습니다.
-    # 기존 코드에서 metadata=metadata 형태로 전달했는데, 로그에 중첩이 보인 것은 매우 특이합니다.
-    # 명확하게 Post 객체의 .metadata 속성에 직접 딕셔너리를 할당하는 것으로 변경합니다.
-    post_obj = frontmatter.Post(body_content, metadata=parsed_metadata)
+        except: parsed_metadata = {}
     
-    # 만약 어떤 이유로 post_obj.metadata가 중첩되어 있다면, 여기서 강제로 풀어줍니다.
-    # 이는 방어적인 코드입니다.
+    post_obj = frontmatter.Post(body_content, metadata=parsed_metadata)
+    # 중첩된 metadata 구조 방어 로직
     if post_obj.metadata and 'metadata' in post_obj.metadata and isinstance(post_obj.metadata['metadata'], dict):
         post_obj.metadata = post_obj.metadata['metadata']
-
     return post_obj
 
-
-# --- 헬퍼 함수들에서 parse_md_with_json_frontmatter 사용 ---
-
+# --- 데이터 헬퍼 함수들 ---
 def get_categories():
-    """メモリにロードされたデータからカテゴリリストを返します。"""
-    categories_with_image_status = []
-    for cat in SITE_DATA.get("categories", []):
-        cat_copy = cat.copy()
-        if cat_copy.get('image') and cat_copy['image'] != '/static/img/placeholder.jpg':
-            cat_copy['has_image'] = True
-        else:
-            cat_copy['has_image'] = False
-            cat_copy['image'] = '/static/img/placeholder.jpg'
-        categories_with_image_status.append(cat_copy)
-    return categories_with_image_status
-
-def get_category_details(slug: str):
-    """メモリにロードされたデータから特定のカテゴリの詳細情報を見つけます。"""
-    for cat in get_categories():
-        if cat.get('slug') == slug:
-            return cat
-    return None
+    return SITE_DATA.get("categories", [])
 
 def get_item_metadata(item_id: str):
-    """特定のアイテムのメタデータを取得します。"""
     filepath = os.path.join(CONTENTS_DIR, f"{item_id}.md")
     if os.path.exists(filepath):
-        post = parse_md_with_json_frontmatter(filepath)
-        if post and post.metadata: 
-            if 'thumbnail' not in post.metadata or not post.metadata['thumbnail']:
-                post.metadata['thumbnail'] = '/static/img/placeholder.jpg'
-            return post.metadata
+        return parse_md_with_json_frontmatter(filepath).metadata
     return None
 
+
 def get_items_by_category(category_slug: str):
-    """特定のカテゴリに属するコンテンツリストをファイルシステムから読み込みます。"""
     items = []
-    # print(f"DEBUG: Attempting to load items for category: {category_slug} from {CONTENTS_DIR}")
+    if not os.path.exists(CONTENTS_DIR): return items
     for filename in sorted(os.listdir(CONTENTS_DIR)):
         if filename.endswith(".md"):
-            filepath = os.path.join(CONTENTS_DIR, filename)
-            try:
-                post = parse_md_with_json_frontmatter(filepath)
-                
-                if post and post.metadata: 
-                    item_category = post.metadata.get('category') 
-                    
-                    if item_category == category_slug: 
-                        item_data = post.metadata
-                        item_data['id'] = filename.replace('.md', '')
-                        if 'thumbnail' not in item_data or not item_data['thumbnail']:
-                            item_data['thumbnail'] = '/static/img/placeholder.jpg'
-                        items.append(item_data)
-                # else:
-                #     print(f"DEBUG: {filename} has no valid metadata parsed.")
-            except Exception as e:
-                print(f"ERROR: Failed to load or parse frontmatter for {filename}: {e}")
-    # print(f"DEBUG: Found {len(items)} items for category {category_slug}.")
+            post = parse_md_with_json_frontmatter(os.path.join(CONTENTS_DIR, filename))
+            if post.metadata.get('category') == category_slug:
+                item_data = post.metadata
+                item_data['id'] = filename.replace('.md', '')
+                # 이미지가 없거나 placeholder.jpg인 경우 교체
+                if not item_data.get('thumbnail') or 'placeholder.jpg' in item_data.get('thumbnail'):
+                    item_data['thumbnail'] = DEFAULT_PLACEHOLDER
+                items.append(item_data)
     return items
 
 def get_all_item_ids():
-    """contents 디렉토리의 모든 마크다운 파일 ID 목록을 반환합니다."""
-    ids = []
-    if not os.path.exists(CONTENTS_DIR):
-        return ids
-    for filename in sorted(os.listdir(CONTENTS_DIR)):
-        if filename.endswith(".md"):
-            ids.append(filename.replace('.md', ''))
-    return ids
+    if not os.path.exists(CONTENTS_DIR): return []
+    return [f.replace('.md', '') for f in os.listdir(CONTENTS_DIR) if f.endswith('.md')]
+
+# --- 메인 라우팅 섹션 ---
 
 @app.get("/")
 async def home(request: Request):
-    """メインページ: JSONファイルに定義されたカテゴリリストを表示します。"""
+    """메인 페이지: 카테고리별 그룹화 리스트 + 자동 통계"""
     categories_data = get_categories()
+    grouped_items = []
+    total_count = 0
+    
+    for cat in categories_data:
+        cat_copy = cat.copy()
+        items = get_items_by_category(cat_copy['slug'])
+        if items:
+            cat_copy['job_items'] = items # 템플릿 예약어 충돌 방지
+            grouped_items.append(cat_copy)
+            total_count += len(items)
+
+    # 날짜 및 통계 계산
+    last_updated = datetime.now().strftime('%Y-%m-%d')
+    all_ids = get_all_item_ids()
+    if all_ids:
+        latest_time = 0
+        for iid in all_ids:
+            p = os.path.join(CONTENTS_DIR, f"{iid}.md")
+            if os.path.exists(p):
+                mt = os.path.getmtime(p)
+                if mt > latest_time: latest_time = mt
+        if latest_time > 0:
+            last_updated = datetime.fromtimestamp(latest_time).strftime('%Y-%m-%d')
+
     return templates.TemplateResponse("index.html", {
         "request": request,
-        "categories": categories_data
-    })
-
-@app.get("/category/{category_slug}")
-async def category_page(request: Request, category_slug: str):
-    """カテゴリ別リストページ: そのカテゴリの職種リストを表示します。"""
-    category_details = get_category_details(category_slug)
-    if not category_details:
-        raise HTTPException(status_code=404, detail="Category not found")
-        
-    items_in_category = get_items_by_category(category_slug)
-    
-    return templates.TemplateResponse("category.html", {
-        "request": request,
-        "category": category_details,
-        "items": items_in_category
+        "grouped_items": grouped_items,
+        "total_count": total_count,
+        "last_updated": last_updated
     })
 
 @app.get("/career/{item_id}")
 async def career_detail(request: Request, item_id: str):
-    """詳細ページ: 特定の職種の詳細情報を表示します。"""
+    """상세 가이드 페이지"""
     filepath = os.path.join(CONTENTS_DIR, f"{item_id}.md")
-    if not os.path.exists(filepath):
-        raise HTTPException(status_code=404, detail="Content not found")
-        
+    if not os.path.exists(filepath): raise HTTPException(status_code=404)
+    
     post = parse_md_with_json_frontmatter(filepath)
-    if not post or not post.metadata:
-        raise HTTPException(status_code=500, detail="Failed to parse content metadata for detail page")
-    
     content_html = markdown.markdown(post.content, extensions=['tables'])
-
-    category_slug = post.metadata.get('category')
-    category_details = get_category_details(category_slug)
-    if category_details:
-        post.metadata['category_title'] = category_details.get('title', category_slug.capitalize())
-    else:
-        post.metadata['category_title'] = category_slug.capitalize()
-
-    if 'hero_image' not in post.metadata or not post.metadata['hero_image']:
-        if 'thumbnail' in post.metadata and post.metadata['thumbnail'] != '/static/img/placeholder.jpg':
-            post.metadata['hero_image'] = post.metadata['thumbnail']
-        else:
-            post.metadata['hero_image'] = '/static/img/default_hero.jpg'
     
-    related_jobs_data = []
-    if 'related_jobs' in post.metadata and isinstance(post.metadata['related_jobs'], list):
-        for related_job_id in post.metadata['related_jobs']:
-            related_item_meta = get_item_metadata(related_job_id)
-            if related_item_meta:
-                related_jobs_data.append({
-                    'id': related_job_id,
-                    'title': related_item_meta.get('title', related_job_id.replace('_', ' ').title()),
-                    "description": related_item_meta.get('meta_description', '詳細を見る'),
-                    'thumbnail': related_item_meta.get('thumbnail', '/static/img/placeholder.jpg')
-                })
+    # 카테고리 타이틀 찾기
+    cat_title = "Career Guide"
+    for c in get_categories():
+        if c['slug'] == post.metadata.get('category'):
+            cat_title = c['title']
+            break
+
+    related_jobs = []
+    for rid in post.metadata.get('related_jobs', []):
+        rmeta = get_item_metadata(rid)
+        if rmeta:
+            rmeta['id'] = rid
+            related_jobs.append(rmeta)
 
     return templates.TemplateResponse("detail.html", {
         "request": request,
         "item": post.metadata,
         "content": content_html,
-        "related_jobs_data": related_jobs_data
+        "related_jobs_data": related_jobs,
+        "category_title": cat_title
+    })
+
+@app.get("/search")
+async def search(request: Request, q: str = ""):
+    """검색 결과 페이지"""
+    results = []
+    if q:
+        for iid in get_all_item_ids():
+            meta = get_item_metadata(iid)
+            if meta and (q.lower() in meta.get('title','').lower() or q.lower() in meta.get('meta_description','').lower()):
+                meta['id'] = iid
+                results.append(meta)
+    return templates.TemplateResponse("search_results.html", {
+        "request": request, 
+        "query": q, 
+        "items": results,
+        "results_count": len(results)
     })
 
 @app.get("/about")
@@ -224,30 +171,25 @@ async def about_page(request: Request):
 async def privacy_page(request: Request):
     return templates.TemplateResponse("privacy.html", {"request": request})
 
+# --- 시스템 파일 및 SEO 라우팅 ---
+
 @app.get("/sitemap.xml")
 async def sitemap(request: Request):
-    """동적으로 sitemap.xml을 생성합니다."""
-    # 중요: 실제 서비스 도메인으로 변경해야 합니다.
-    base_url = str(request.base_url)
-    if base_url.endswith('/'):
-        base_url = base_url[:-1]
-
-    all_categories = get_categories()
-    all_item_ids = get_all_item_ids()
+    """동적 sitemap.xml 생성"""
+    base_url = str(request.base_url).rstrip('/')
+    item_ids = get_all_item_ids()
     
-    try:
-        content = templates.get_template("sitemap.xml").render(
-            request=request, 
-            base_url=base_url,
-            categories=all_categories,
-            item_ids=all_item_ids
-        )
-        return Response(content=content, media_type="application/xml")
-    except Exception as e:
-        # 템플릿 렌더링 중 오류 발생 시 500 에러와 함께 로그를 남깁니다.
-        print(f"Error rendering sitemap: {e}")
-        raise HTTPException(status_code=500, detail="Error generating sitemap.")
-
+    # sitemap 템플릿이 없을 경우를 대비한 문자열 생성 방식
+    xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    # 메인 페이지
+    xml_content += f'  <url><loc>{base_url}/</loc><priority>1.0</priority></url>\n'
+    # 상세 페이지들
+    for iid in item_ids:
+        xml_content += f'  <url><loc>{base_url}/career/{iid}</loc><priority>0.8</priority></url>\n'
+    xml_content += '</urlset>'
+    
+    return Response(content=xml_content, media_type="application/xml")
 
 @app.get('/ads.txt', response_class=FileResponse)
 async def ads_txt():
@@ -259,5 +201,5 @@ async def robots_txt():
 
 @app.get("/favicon.ico", include_in_schema=False)
 async def favicon():
-    # app/static/img/favicon.png 파일을 반환합니다.
-    return FileResponse(os.path.join(STATIC_DIR, "img", "starful.biz_h.png"))
+    # 로고를 파비콘으로 사용
+    return FileResponse(os.path.join(STATIC_DIR, "img", "logo.png"))

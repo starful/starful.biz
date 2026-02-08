@@ -1,62 +1,13 @@
 {% extends "base.html" %}
-
-{% block head %}
-<title>運営者情報 | Starful</title>
-<meta name="description" content="キャリア情報サイトStarfulの運営者情報ページです。">
-<link rel="stylesheet" href="/static/css/detail.css?v=1.2">
-<style>
-    .about-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 30px;
-    }
-    .about-table th, .about-table td {
-        border: 1px solid #e5e5e5;
-        padding: 15px;
-        text-align: left;
-    }
-    .about-table th {
-        background-color: #f9f9fb;
-        width: 30%;
-        font-weight: 600;
-    }
-</style>
-{% endblock %}
-
-{% block body_class %}detail-page{% endblock %}
-
 {% block content %}
-<header class="detail-hero">
-    <h1>運営者情報</h1>
-    <p>当サイトの運営者情報です。</p>
-</header>
-
-<main class="detail-container">
-    <table class="about-table">
-        <tbody>
-            <tr>
-                <th>サイト名</th>
-                <td>Starful</td>
-            </tr>
-            <tr>
-                <th>運営者</th>
-                <td>starful.biz</td>
-            </tr>
-            <tr>
-                <th>連絡先</th>
-                <td><a href="/contact">お問い合わせフォーム</a>よりご連絡ください。</td>
-            </tr>
-            <tr>
-                <th>プライバシーポリシー</th>
-                <td><a href="/privacy">こちら</a>のページをご参照ください。</td>
-            </tr>
-        </tbody>
+<main class="detail-body">
+    <h1 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 40px;">運営者情報</h1>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 40px;">
+        <tr style="border-bottom: 1px solid #eee;"><th style="padding: 15px; text-align: left; background: #f9f9fb; width: 30%;">サイト名</th><td style="padding: 15px;">Starful</td></tr>
+        <tr style="border-bottom: 1px solid #eee;"><th style="padding: 15px; text-align: left; background: #f9f9fb;">運営者</th><td style="padding: 15px;">starful.biz</td></tr>
+        <tr style="border-bottom: 1px solid #eee;"><th style="padding: 15px; text-align: left; background: #f9f9fb;">目的</th><td style="padding: 15px;">ITキャリア情報の体系化と提供</td></tr>
     </table>
-
-    <article class="markdown-content">
-        <h2>サイトの目的</h2>
-        <p>Starfulは、多様化する現代のキャリアパスに関する情報を分かりやすく整理し、誰もが自身の可能性を最大限に引き出せるようなキャリアを見つける手助けをすることを目的としています。</p>
-        <p>エンジニアリング、デザイン、マーケティングからAI、データサイエンスに至るまで、幅広い分野の職種について、具体的な仕事内容、必要なスキル、将来性などを詳しく解説していきます。</p>
-    </article>
+    <h2>サイトの目的</h2>
+    <p>Starfulは, 多様化する現代のキャリアパスに関する情報を分かりやすく整理し, 誰もが自身の可能性を最大限に引き出せるようなキャリアを見つける手助けをすることを目的としています.</p>
 </main>
 {% endblock %}

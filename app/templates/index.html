@@ -1,83 +1,91 @@
 {% extends "base.html" %}
 
-{% block head %}
-<title>Starful - 理想のキャリアを見つけよう</title>
-<meta name="description" content="エンジニアリング、デザイン、マーケティング、AIなど、多様なキャリア分野を探求し、あなたの理想のキャリアパスを見つけましょう。">
-{% endblock %}
-
 {% block content %}
-<!-- Hero Section -->
-<header class="hero-section fade-in-element">
-    <div class="logo">
-        <a href="/">
-            <img src="/static/img/starful.biz_w.png" alt="Starful Logo">
-        </a>
+<header class="header">
+    <div class="logo-area">
+        <a href="/"><img src="/static/img/logo.png" alt="Starful" style="height: 50px; margin-bottom: 20px;" onerror="this.style.display='none'"></a>
     </div>
-    <h1 class="hero-title">理想のキャリアを、<br>その手に。</h1>
-    <p class="hero-desc">90以上の職種ガイドが、あなたの次のステップを導きます。</p>
-    
+    <h1>理想のキャリアを、<br>もっとスマートに。</h1>
+    <p>90以上の職種ガイドから、あなたに最適な道を見つけてください。</p>
+
+    <!-- 통계 바 일본어화 -->
+    <div class="stats-bar">
+        <div class="stat-item"><span class="stat-label">職種ガイド</span><span class="stat-value">{{ total_count }}件</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-label">最終更新日</span><span class="stat-value">{{ last_updated }}</span></div>
+    </div>
+
+    <!-- 카테고리 탭 필터 -->
+    <div class="category-tabs-container">
+        <div class="category-tabs">
+            <button class="tab-btn active" data-filter="all">全て</button>
+            {% for category in grouped_items %}
+            <button class="tab-btn" data-filter="{{ category.slug }}">{{ category.title }}</button>
+            {% endfor %}
+        </div>
+    </div>
+
     <div class="search-container">
-        <input type="text" class="search-input" placeholder="職種、スキル、キーワードで検索...">
+        <form action="/search" method="GET">
+            <input type="text" name="q" class="search-input" placeholder="職種、スキル、キーワードで検索...">
+        </form>
     </div>
 </header>
 
-<!-- Bento Grid Layout -->
-<main class="bento-grid">
-    {% for category in categories %}
-    <a href="/category/{{ category.slug }}" class="bento-item {{ category.size }} fade-in-element {% if category.image %}has-image{% endif %}">
-        {% if category.image %}
-        <div class="item-img">
-            <img src="{{ category.image }}" alt="{{ category.title }}" loading="lazy">
-        </div>
-        {% endif %}
-        <div class="item-info">
-            <h3>{{ category.title }}</h3>
-            <p>{{ category.description }}</p>
-        </div>
-    </a>
+<div class="container">
+    {% for category in grouped_items %}
+        <section class="filter-section" id="section-{{ category.slug }}" style="margin-bottom: 60px;">
+            <h2 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+                <span style="width: 5px; height: 25px; background: var(--accent); border-radius: 10px;"></span>
+                {{ category.title }}
+            </h2>
+
+            <div class="main-grid">
+                {% for item in category.job_items %}
+                    {% if loop.index == 4 %}
+                    <div class="ad-card">
+                        <ins class="adsbygoogle" style="display:block;width:100%;height:320px;" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-8780435268193938" data-ad-slot="3923725999"></ins>
+                        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                    </div>
+                    {% endif %}
+
+                    <a href="/career/{{ item.id }}" class="content-card">
+                        <div class="card-bg">
+                            <img src="{{ item.thumbnail }}" 
+                                alt="{{ item.title }}" 
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop';">
+                        </div>
+                        <div class="card-overlay"></div>
+                        <div class="card-body">
+                            {% if item.tags %}<span class="category-tag">{{ item.tags[0] }}</span>{% endif %}
+                            <h3>{{ item.title }}</h3>
+                            <p>{{ item.meta_description }}</p>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
     {% endfor %}
-</main>
+</div>
 
-<!-- Site Info Section (About) -->
-<section class="about-section fade-in-element">
-    <div class="about-container">
-        <div class="about-header">
-            <span>Starfulについて</span>
-            <h2>キャリアの羅針盤として。</h2>
-        </div>
-        <div class="about-content">
-            <div class="about-column">
-                <p>Starfulは、急速に変化する現代の労働市場において、個人が自らの可能性を最大限に引き出せるよう支援することを目的としています。</p>
-            </div>
-            <div class="about-column">
-                <p>エンジニアリングからデザイン、ビジネスまで、多岐にわたる職種のリアルな姿を体系化し、誰もが迷わず理想のキャリアパスを見つけられる場を提供します。</p>
-            </div>
-        </div>
-        <!-- ❗️[FIX] 이 부분을 원래의 고정 값으로 수정했습니다. -->
-        <div class="about-stats">
-            <div class="stat-item">
-                <div class="stat-num">90+</div>
-                <div class="stat-label">職種ガイド</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num">24/7</div>
-                <div class="stat-label">アップデート</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num">Free</div>
-                <div class="stat-label">オープンアクセス</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Final Footer -->
-<footer class="final-footer fade-in-element">
-    <div class="footer-links">
-        <a href="/about">運営者情報</a>
-        <a href="/privacy">プライバシーポリシー</a>
-        <a href="https://script.google.com/macros/s/AKfycbyCLnBhulwNFERwnPIbuR_NyiXLeh_sKU05FVi0wSZGwl65B_xzFXU-YbDzLfLg3GcT3w/exec" target="_blank">お問い合わせ</a>
-    </div>
-    <div class="copyright">&copy; 2026 Starful. Crafted for your future.</div>
-</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.filter-section');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const filter = tab.getAttribute('data-filter');
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            sections.forEach(section => {
+                if (filter === 'all' || section.id === 'section-' + filter) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
 {% endblock %}
