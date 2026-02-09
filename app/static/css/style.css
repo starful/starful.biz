@@ -160,3 +160,17 @@ th { background: #f9f9fb; font-weight: 700; }
     .detail-body h2 { font-size: 1.6rem; }
     .content-card { height: 300px; }
 }
+/* 광고 슬롯이 찌그러지는 것을 방지 */
+.ad-slot-wrapper, .ad-card {
+    display: block !important;
+    clear: both;
+    text-align: center;
+    overflow: hidden;
+    /* 광고가 로드되기 전 자리를 차지하게 함 */
+    min-height: 280px; 
+}
+
+/* 구글 내부 태그가 너비를 인식하도록 함 */
+ins.adsbygoogle[data-ad-status="unfilled"] {
+    display: none !important; /* 광고가 없으면 공간 삭제 (선택사항) */
+}

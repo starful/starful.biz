@@ -39,12 +39,17 @@
                 <span style="width: 5px; height: 25px; background: var(--accent); border-radius: 10px;"></span>
                 {{ category.title }}
             </h2>
-
+ 
             <div class="main-grid">
                 {% for item in category.job_items %}
                     {% if loop.index == 4 %}
                     <div class="ad-card">
-                        <ins class="adsbygoogle" style="display:block;width:100%;height:320px;" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-8780435268193938" data-ad-slot="3923725999"></ins>
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-format="fluid"
+                            data-ad-layout-key="-fb+5w+4e-db+86"
+                            data-ad-client="ca-pub-8780435268193938"
+                            data-ad-slot="3923725999"></ins>
                         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                     </div>
                     {% endif %}

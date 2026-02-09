@@ -3,80 +3,215 @@
 {% block head %}
 <title>{{ item.title }} | Starful</title>
 <meta name="description" content="{{ item.meta_description }}">
+
+<style>
+    /* --- 기초 레이아웃 설정 (짤림 방지 핵심) --- */
+    :root {
+        --article-width: 780px; /* PC 가독성 최적 너비 */
+    }
+
+    body {
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* 가로 스크롤 절대 방지 */
+    }
+
+    /* --- [Header] 타이포그래피 --- */
+    .detail-header {
+        max-width: var(--article-width);
+        margin: 0 auto;
+        padding: 80px 24px 40px;
+        box-sizing: border-box;
+    }
+    .detail-header .breadcrumb {
+        color: var(--accent);
+        font-weight: 800;
+        font-size: 0.9rem;
+        display: block;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .detail-header h1 {
+        font-size: clamp(2rem, 7vw, 3.2rem);
+        font-weight: 800;
+        line-height: 1.25;
+        margin: 0;
+        color: #1d1d1f;
+        /* 제목 짤림 방지 */
+        word-break: break-all;
+        overflow-wrap: break-word;
+    }
+    .detail-header .lead-text {
+        color: #666;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        margin-top: 25px;
+        font-weight: 400;
+    }
+
+    /* --- [Content Body] 가독성 시스템 --- */
+    .detail-body {
+        max-width: var(--article-width);
+        margin: 0 auto;
+        padding: 0 24px 100px;
+        box-sizing: border-box;
+        font-size: 1.18rem;
+        line-height: 2.1; /* PC 가독성 핵심: 넉넉한 행간 */
+        color: #2c2c2e;
+        /* 본문 짤림 방지 */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
+    }
+
+    /* 제목 스타일 (h2, h3) */
+    .detail-body h2 {
+        font-size: 2.1rem;
+        font-weight: 800;
+        margin: 80px 0 35px;
+        padding-bottom: 15px;
+        border-bottom: 4px solid #f2f2f2;
+        position: relative;
+        letter-spacing: -0.04em;
+    }
+    .detail-body h2::after {
+        content: ''; position: absolute; bottom: -4px; left: 0;
+        width: 100px; height: 4px; background: var(--accent);
+    }
+    .detail-body h3 { font-size: 1.6rem; font-weight: 700; margin: 50px 0 24px; }
+    .detail-body p { margin-bottom: 35px; }
+
+    /* --- [Summary Card] 요약 박스 --- */
+    .summary-card {
+        background: #f9f9fb;
+        border-radius: 24px;
+        padding: 40px;
+        margin: 40px 0 60px;
+        border: 1px solid #efeff4;
+        border-left: 8px solid var(--accent);
+    }
+    .summary-card h3 { margin: 0 0 20px 0 !important; font-size: 1.3rem; }
+    .summary-card ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+    .summary-card li { margin-bottom: 12px; display: flex; gap: 12px; font-size: 1.05rem; }
+    .summary-card li i { color: var(--accent); margin-top: 6px; }
+
+    /* --- [TOC] 자동 목차 --- */
+    .toc-container {
+        background: #fff;
+        border: 1px solid #e5e5e7;
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 60px;
+    }
+    .toc-title { font-weight: 800; margin-bottom: 15px; font-size: 1rem; }
+    #toc-list { list-style: none; padding: 0; margin: 0; }
+    #toc-list li { margin-bottom: 8px; }
+    #toc-list a { color: #666; text-decoration: none; font-size: 0.95rem; }
+    .toc-h3 { padding-left: 20px; font-size: 0.9rem !important; }
+
+    /* --- [Table] 모바일 대응 표 디자인 --- */
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        margin: 40px 0;
+        border-radius: 16px;
+        border: 1px solid #e5e5e7;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px; /* 내용 찌그러짐 방지 */
+    }
+    th, td {
+        padding: 20px;
+        text-align: left;
+        border-bottom: 1px solid #efeff4;
+    }
+    th { background: #f9f9fb; font-weight: 700; color: #1d1d1f; }
+    tr:last-child td { border-bottom: none; }
+
+    /* --- [Ad Slot] 400 에러 방지 순정 코드 스타일 --- */
+    .ad-slot-detail {
+        width: 100%;
+        margin: 40px 0;
+        min-height: 280px;
+        text-align: center;
+        background: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* --- 모바일 대응 (반응형 보정) --- */
+    @media (max-width: 768px) {
+        .detail-header { padding: 60px 20px 30px; }
+        .detail-body { padding: 0 20px 80px; font-size: 1.1rem; line-height: 1.85; }
+        .detail-body h2 { font-size: 1.7rem; }
+        .summary-card { padding: 25px; border-radius: 16px; }
+    }
+</style>
 {% endblock %}
 
 {% block content %}
-<main style="width: 100%;">
-    <!-- 1. 히어로 섹션 (짤림 방지 적용) -->
-    <header style="background: #fff; border-bottom: 1px solid #eee; padding: 80px 0 40px;">
-        <div style="max-width: 780px; margin: 0 auto; padding: 0 20px;">
-            <span style="color: var(--accent); font-weight: 800; font-size: 0.9rem; display: block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">
-                {{ category_title }} GUIDE
-            </span>
-            <h1 style="font-size: clamp(1.8rem, 7vw, 3.2rem); font-weight: 800; line-height: 1.25; margin: 0; color: #1d1d1f;">
-                {{ item.title }}
-            </h1>
-            <p style="color: #666; font-size: 1.2rem; margin-top: 25px; line-height: 1.6; font-weight: 400;">
-                {{ item.meta_description }}
-            </p>
-        </div>
+<main style="width: 100%; overflow-x: hidden;">
+    <!-- Header -->
+    <header class="detail-header">
+        <span class="breadcrumb">{{ category_title }} GUIDE</span>
+        <h1>{{ item.title }}</h1>
+        <p class="lead-text">{{ item.meta_description }}</p>
     </header>
 
     <div class="detail-body">
-        <!-- 2. 상단 광고 슬롯 (너비 강제 확보) -->
-        <div class="ad-slot">
+        <!-- ❗️[상단 광고] 400 에러 방지를 위해 data-ad-format="auto" 사용 -->
+        <div class="ad-slot-detail">
             <ins class="adsbygoogle"
                  style="display:block; width:100%;"
-                 data-ad-layout="in-article"
-                 data-ad-format="fluid"
                  data-ad-client="ca-pub-8780435268193938"
                  data-ad-slot="3923725999"
+                 data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <!-- 3. 핵심 요약 카드 -->
-        <div style="background: #f9f9fb; border-radius: 20px; padding: 30px; margin: 40px 0; border: 1px solid #efeff4;">
-            <h3 style="margin-top:0; font-size: 1.3rem; font-weight: 800;">
-                <i class="fa-solid fa-bolt" style="color: #ffcc00; margin-right: 8px;"></i> ク이ックサ마리
-            </h3>
-            <ul style="list-style: none; padding: 0; margin: 20px 0 0;">
-                <li style="display: flex; gap: 10px; margin-bottom: 12px;">
-                    <i class="fa-solid fa-circle-check" style="color:var(--accent); margin-top:5px;"></i>
-                    <span><strong>ミッション:</strong> {{ item.title }}의 핵심 역할과 기술적 가치</span>
-                </li>
-                <li style="display: flex; gap: 10px;">
-                    <i class="fa-solid fa-circle-check" style="color:var(--accent); margin-top:5px;"></i>
-                    <span><strong>将来性:</strong> 지속적인 수요와 커리어 확장 가능성</span>
-                </li>
+        <!-- 퀵 사마리 박스 -->
+        <div class="summary-card">
+            <h3><i class="fa-solid fa-bolt-lightning" style="color: #ffcc00;"></i> クイックサ마리</h3>
+            <ul>
+                <li><i class="fa-solid fa-circle-check"></i> <span><strong>主な役割:</strong> {{ item.title }}の核心的価値と業務範囲</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span><strong>必須スキル:</strong> 市場で最も求められる技術的専門性</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span><strong>将来性:</strong> キャリアの拡張性と今後の成長予測</span></li>
             </ul>
         </div>
 
-        <!-- 4. 마크다운 본문 (JS로 표 짤림 방지 처리됨) -->
+        <!-- 자동 목차 생성 영역 -->
+        <nav class="toc-container">
+            <div class="toc-title">この記事の目次</div>
+            <ul id="toc-list"></ul>
+        </nav>
+
+        <!-- 마크다운 본문 (JS로 표 스크롤 처리됨) -->
         <article id="content-main">
             {{ content | safe }}
         </article>
 
-        <!-- 5. 하단 광고 슬롯 -->
-        <div class="ad-slot">
+        <!-- [하단 광고] -->
+        <div class="ad-slot-detail">
             <ins class="adsbygoogle"
                  style="display:block; width:100%;"
-                 data-ad-format="autorelaxed"
                  data-ad-client="ca-pub-8780435268193938"
-                 data-ad-slot="3923725999"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+                 data-ad-slot="3923725999"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <!-- 6. 관련 직업 추천 -->
+        <!-- 관련 직업 추천 -->
         <section style="margin-top: 100px;">
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; border-left: 6px solid var(--accent); padding-left: 20px;">
-                関連性の高いキャリア
-            </h3>
-            <div class="main-grid">
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; border-left: 6px solid var(--accent); padding-left: 20px;">関連性の高い職種ガイド</h3>
+            <div class="main-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
                 {% for job in related_jobs_data %}
                 <a href="/career/{{ job.id }}" class="content-card" style="height: 240px;">
                     <div class="card-bg">
@@ -84,7 +219,7 @@
                     </div>
                     <div class="card-overlay"></div>
                     <div class="card-body">
-                        <h3 style="font-size: 1.2rem;">{{ job.title }}</h3>
+                        <h3 style="font-size: 1.25rem;">{{ job.title }}</h3>
                     </div>
                 </a>
                 {% endfor %}
@@ -94,12 +229,26 @@
 </main>
 
 <script>
-/**
- * 마크다운에서 생성된 표(table)들이 화면을 뚫고 나가지 않도록 
- * 자동으로 스크롤 가능한 div로 감싸주는 스크립트입니다.
- */
 document.addEventListener('DOMContentLoaded', function() {
-    const tables = document.querySelectorAll('#content-main table');
+    const content = document.getElementById('content-main');
+    const tocList = document.getElementById('toc-list');
+    const headings = content.querySelectorAll('h2, h3');
+    
+    // 1. 목차 생성
+    headings.forEach((heading, index) => {
+        const id = 'anchor-' + index;
+        heading.setAttribute('id', id);
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.setAttribute('href', '#' + id);
+        a.textContent = heading.textContent;
+        if (heading.tagName === 'H3') a.classList.add('toc-h3');
+        li.appendChild(a);
+        tocList.appendChild(li);
+    });
+
+    // 2. 마크다운 표(table) 자동 래핑 (짤림 방지)
+    const tables = content.querySelectorAll('table');
     tables.forEach(table => {
         const wrapper = document.createElement('div');
         wrapper.className = 'table-wrapper';
