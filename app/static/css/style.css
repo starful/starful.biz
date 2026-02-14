@@ -174,3 +174,93 @@ th { background: #f9f9fb; font-weight: 700; }
 ins.adsbygoogle[data-ad-status="unfilled"] {
     display: none !important; /* 광고가 없으면 공간 삭제 (선택사항) */
 }
+
+/* --- 퀵 사마리 박스 디자인 개선 --- */
+.summary-card {
+    background: #f8f9fa;
+    border-radius: 24px;
+    padding: 35px 40px;
+    margin: 40px 0;
+    border: 1px solid #edf2f7;
+    /* 왼쪽 포인트 바를 좀 더 세련되게 수정 */
+    border-left: 6px solid var(--accent); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.summary-card h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 25px !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.summary-card ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.summary-card li {
+    display: flex; /* 아이콘과 텍스트 분리 */
+    align-items: flex-start; /* 텍스트가 길어져도 상단 정렬 */
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.7; /* 행간 확보 */
+    color: #4a5568;
+}
+
+/* 마지막 요소 마진 제거 */
+.summary-card li:last-child {
+    margin-bottom: 0;
+}
+
+/* 체크 아이콘 스타일링 */
+.summary-card li i {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-top: 3px; /* 텍스트 첫 줄과 높이 맞춤 */
+    flex-shrink: 0; /* 아이콘 크기 고정 */
+}
+
+/* 강조 텍스트 */
+.summary-card li strong {
+    color: #2d3748;
+    white-space: nowrap; /* 제목 부분은 줄바꿈 방지 */
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .summary-card {
+        padding: 25px;
+        border-radius: 20px;
+    }
+    .summary-card li {
+        font-size: 1.05rem;
+        gap: 12px;
+    }
+}
+
+/* 광고 카드 컨테이너 */
+.ad-card {
+    grid-column: span 1;
+    height: 340px; /* 다른 직업 카드와 동일한 높이로 고정 (중요) */
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important; /* 여백 제거 */
+}
+
+/* 광고 태그 강제 확장 */
+.ad-card ins.adsbygoogle {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+}
