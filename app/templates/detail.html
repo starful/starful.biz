@@ -5,16 +5,15 @@
 <meta name="description" content="{{ item.meta_description }}">
 
 <style>
-    /* --- 기초 레이아웃 설정 (짤림 방지 핵심) --- */
+    /* --- 기초 레이아웃 & 짤림 방지 --- */
     :root {
-        --article-width: 780px; /* PC 가독성 최적 너비 */
+        --article-width: 780px; /* PC 가독성 황금 너비 */
     }
 
     body {
         background-color: #ffffff;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; /* 가로 스크롤 절대 방지 */
+        margin: 0; padding: 0;
+        overflow-x: hidden; /* 가로 스크롤 원천 차단 */
     }
 
     /* --- [Header] 타이포그래피 --- */
@@ -39,8 +38,7 @@
         line-height: 1.25;
         margin: 0;
         color: #1d1d1f;
-        /* 제목 짤림 방지 */
-        word-break: break-all;
+        word-break: break-all; /* 일본어/한국어 짤림 방지 */
         overflow-wrap: break-word;
     }
     .detail-header .lead-text {
@@ -58,19 +56,17 @@
         padding: 0 24px 100px;
         box-sizing: border-box;
         font-size: 1.18rem;
-        line-height: 2.1; /* PC 가독성 핵심: 넉넉한 행간 */
+        line-height: 2.1; /* 장문을 위한 넉넉한 행간 */
         color: #2c2c2e;
-        /* 본문 짤림 방지 */
         word-wrap: break-word;
-        overflow-wrap: break-word;
         word-break: break-all;
     }
 
-    /* 제목 스타일 (h2, h3) */
+    /* 제목 스타일 */
     .detail-body h2 {
         font-size: 2.1rem;
         font-weight: 800;
-        margin: 80px 0 35px;
+        margin: 90px 0 35px;
         padding-bottom: 15px;
         border-bottom: 4px solid #f2f2f2;
         position: relative;
@@ -91,11 +87,12 @@
         margin: 40px 0 60px;
         border: 1px solid #efeff4;
         border-left: 8px solid var(--accent);
+        box-sizing: border-box;
     }
     .summary-card h3 { margin: 0 0 20px 0 !important; font-size: 1.3rem; }
     .summary-card ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
-    .summary-card li { margin-bottom: 12px; display: flex; gap: 12px; font-size: 1.05rem; }
-    .summary-card li i { color: var(--accent); margin-top: 6px; }
+    .summary-card li { margin-bottom: 12px; display: flex; gap: 12px; font-size: 1.05rem; align-items: flex-start; }
+    .summary-card li i { color: var(--accent); margin-top: 6px; flex-shrink: 0; }
 
     /* --- [TOC] 자동 목차 --- */
     .toc-container {
@@ -123,29 +120,24 @@
     table {
         width: 100%;
         border-collapse: collapse;
-        min-width: 600px; /* 내용 찌그러짐 방지 */
+        min-width: 600px;
     }
-    th, td {
-        padding: 20px;
-        text-align: left;
-        border-bottom: 1px solid #efeff4;
-    }
+    th, td { padding: 20px; text-align: left; border-bottom: 1px solid #efeff4; }
     th { background: #f9f9fb; font-weight: 700; color: #1d1d1f; }
-    tr:last-child td { border-bottom: none; }
 
-    /* --- [Ad Slot] 400 에러 방지 순정 코드 스타일 --- */
+    /* --- [Ad Slot] availableWidth=0 에러 방지용 컨테이너 --- */
     .ad-slot-detail {
-        width: 100%;
+        width: 100% !important;
+        max-width: 100%;
         margin: 40px 0;
-        min-height: 280px;
+        min-height: 280px; /* 자리 미리 확보 */
         text-align: center;
         background: #fafafa;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
+        overflow: hidden;
     }
 
-    /* --- 모바일 대응 (반응형 보정) --- */
+    /* --- 모바일 대응 --- */
     @media (max-width: 768px) {
         .detail-header { padding: 60px 20px 30px; }
         .detail-body { padding: 0 20px 80px; font-size: 1.1rem; line-height: 1.85; }
@@ -165,62 +157,32 @@
     </header>
 
     <div class="detail-body">
-        <!-- ❗️[상단 광고] 400 에러 방지를 위해 data-ad-format="auto" 사용 -->
-        <div class="ad-slot-detail">
-                        <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-format="fluid"
-                            data-ad-layout-key="-fb+5w+4e-db+86"
-                            data-ad-client="ca-pub-8780435268193938"
-                            data-ad-slot="3923725999"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
+        
         <!-- 퀵 사마리 박스 -->
         <div class="summary-card">
-            <h3><i class="fa-solid fa-bolt-lightning" style="color: #ffcc00;"></i> クイックサマリー</h3>
+            <h3 style="margin-top:0;"><i class="fa-solid fa-bolt-lightning" style="color: #ffcc00;"></i> クイックサマリー</h3>
             <ul>
-                <li>
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span><strong>主な役割:</strong> モバイルの未来を創るAndroidアプリ開発のスペシャリストの核心的価値と業務範囲</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span><strong>必須スキル:</strong> 市場で最も求められる技術的専門性</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span><strong>将来性:</strong> キャリアの拡張性と今後の成長予測</span>
-                </li>
+                <li><i class="fa-solid fa-circle-check"></i> <span><strong>主な役割:</strong> {{ item.title }}の核心的価値と業務範囲</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span><strong>必須スキル:</strong> 市場で最も求められる技術的専門性</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span><strong>将来性:</strong> キャリアの拡張性と今後の成長予測</span></li>
             </ul>
         </div>
 
-        <!-- 자동 목차 생성 영역 -->
+        <!-- 자동 목차 -->
         <nav class="toc-container">
-            <div class="toc-title">この記事の目次</div>
+            <div class="toc-title">INDEX</div>
             <ul id="toc-list"></ul>
         </nav>
 
-        <!-- 마크다운 본문 (JS로 표 스크롤 처리됨) -->
+        <!-- 마크다운 본문 (JS가 표 스크롤 박스를 자동으로 생성함) -->
         <article id="content-main">
             {{ content | safe }}
         </article>
 
-        <!-- [하단 광고] -->
-        <div class="ad-slot-detail">
-                        <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-format="fluid"
-                            data-ad-layout-key="-fb+5w+4e-db+86"
-                            data-ad-client="ca-pub-8780435268193938"
-                            data-ad-slot="3923725999"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
         <!-- 관련 직업 추천 -->
         <section style="margin-top: 100px;">
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; border-left: 6px solid var(--accent); padding-left: 20px;">関連性の高い職種ガイド</h3>
-            <div class="main-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; border-left: 6px solid var(--accent); padding-left: 20px;">関連性の高い職種</h3>
+            <div class="main-grid">
                 {% for job in related_jobs_data %}
                 <a href="/career/{{ job.id }}" class="content-card" style="height: 240px;">
                     <div class="card-bg">
@@ -240,21 +202,25 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const content = document.getElementById('content-main');
+    
+    // 1. 목차 생성 로직
     const tocList = document.getElementById('toc-list');
     const headings = content.querySelectorAll('h2, h3');
-    
-    // 1. 목차 생성
-    headings.forEach((heading, index) => {
-        const id = 'anchor-' + index;
-        heading.setAttribute('id', id);
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.setAttribute('href', '#' + id);
-        a.textContent = heading.textContent;
-        if (heading.tagName === 'H3') a.classList.add('toc-h3');
-        li.appendChild(a);
-        tocList.appendChild(li);
-    });
+    if (headings.length === 0) {
+        document.querySelector('.toc-container').style.display = 'none';
+    } else {
+        headings.forEach((heading, index) => {
+            const id = 'anchor-' + index;
+            heading.setAttribute('id', id);
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.setAttribute('href', '#' + id);
+            a.textContent = heading.textContent;
+            if (heading.tagName === 'H3') a.classList.add('toc-h3');
+            li.appendChild(a);
+            tocList.appendChild(li);
+        });
+    }
 
     // 2. 마크다운 표(table) 자동 래핑 (짤림 방지)
     const tables = content.querySelectorAll('table');
@@ -264,6 +230,28 @@ document.addEventListener('DOMContentLoaded', function() {
         table.parentNode.insertBefore(wrapper, table);
         wrapper.appendChild(table);
     });
+
+    // 3. Adsense 'availableWidth=0' 해결을 위한 안전 호출 스크립트
+    function initAdsOnReady() {
+        const ads = document.querySelectorAll('.adsbygoogle:not([data-adsbygoogle-status="done"])');
+        ads.forEach(ad => {
+            // 부모의 너비가 확보될 때까지 기다렸다가 호출
+            let checkWidth = setInterval(function() {
+                if (ad.offsetWidth > 0) {
+                    try {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) { console.error("AdSense error:", e); }
+                    clearInterval(checkWidth);
+                }
+            }, 100);
+            // 3초 후 시도 중단
+            setTimeout(() => clearInterval(checkWidth), 3000);
+        });
+    }
+
+    // 페이지 로드 및 0.5초 지연 후 호출 (레이아웃 안정화 대기)
+    initAdsOnReady();
+    window.addEventListener('load', () => setTimeout(initAdsOnReady, 500));
 });
 </script>
 {% endblock %}

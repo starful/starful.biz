@@ -244,10 +244,10 @@ ins.adsbygoogle[data-ad-status="unfilled"] {
     }
 }
 
-/* 광고 카드 컨테이너 */
+/* 광고 카드 디자인 강제 통일 */
 .ad-card {
     grid-column: span 1;
-    height: 340px; /* 다른 직업 카드와 동일한 높이로 고정 (중요) */
+    height: 340px; /* content-card의 height와 반드시 일치시킬 것 */
     background: #fff;
     border-radius: 20px;
     border: 1px solid #eee;
@@ -255,12 +255,28 @@ ins.adsbygoogle[data-ad-status="unfilled"] {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    padding: 0 !important; /* 여백 제거 */
 }
 
-/* 광고 태그 강제 확장 */
+/* 광고 내부 요소가 꽉 차게 */
 .ad-card ins.adsbygoogle {
-    display: block !important;
     width: 100% !important;
     height: 100% !important;
+    display: block !important;
+}
+
+/* 상세 페이지 광고 슬롯 안정화 */
+.ad-slot-detail {
+    clear: both;
+    margin: 40px auto;
+    text-align: center;
+    overflow: hidden;
+    /* 짤림 방지 핵심 */
+    box-sizing: border-box; 
+}
+
+/* 광고 태그가 너비를 무시하지 않도록 설정 */
+.ad-slot-detail ins.adsbygoogle {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
 }

@@ -3,16 +3,25 @@
 {% block content %}
 <header class="header">
     <div class="logo-area">
-        <a href="/"><img src="/static/img/logo.png" alt="Starful" style="height: 50px; margin-bottom: 20px;" onerror="this.style.display='none'"></a>
+        <!-- 문자가 아닌 로고 이미지 사용 -->
+        <a href="/">
+            <img src="/static/img/logo.png" alt="Starful" style="height: 50px; margin-bottom: 20px;" onerror="this.style.display='none';">
+        </a>
     </div>
     <h1>理想のキャリアを、<br>もっとスマートに。</h1>
     <p>90以上の職種ガイドから、あなたに最適な道を見つけてください。</p>
 
-    <!-- 통계 바 일본어화 -->
+    <!-- 통계 바 (일본어) -->
     <div class="stats-bar">
-        <div class="stat-item"><span class="stat-label">職種ガイド</span><span class="stat-value">{{ total_count }}件</span></div>
+        <div class="stat-item">
+            <span class="stat-label">職種ガイド</span>
+            <span class="stat-value">{{ total_count }}件</span>
+        </div>
         <div class="stat-divider"></div>
-        <div class="stat-item"><span class="stat-label">最終更新日</span><span class="stat-value">{{ last_updated }}</span></div>
+        <div class="stat-item">
+            <span class="stat-label">最終更新日</span>
+            <span class="stat-value">{{ last_updated }}</span>
+        </div>
     </div>
 
     <!-- 카테고리 탭 필터 -->
@@ -25,44 +34,56 @@
         </div>
     </div>
 
+    <!-- 검색창 -->
     <div class="search-container">
         <form action="/search" method="GET">
-            <input type="text" name="q" class="search-input" placeholder="職種、スキル、キーワードで検索...">
+            <input type="text" name="q" class="search-input" placeholder="職種、スキル、キーワードで検索..." value="{{ query if query else '' }}">
         </form>
     </div>
 </header>
 
 <div class="container">
     {% for category in grouped_items %}
-        <section class="filter-section" id="section-{{ category.slug }}" style="margin-bottom: 60px;">
-            <h2 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+        <!-- ❗️부모 반복문의 인덱스를 미리 저장하여 에러를 방지합니다 -->
+        {% set outer_index = loop.index %}
+
+        <section class="filter-section" id="section-{{ category.slug }}" style="margin-bottom: 80px;">
+            <h2 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 30px; display: flex; align-items: center; gap: 12px;">
                 <span style="width: 5px; height: 25px; background: var(--accent); border-radius: 10px;"></span>
                 {{ category.title }}
             </h2>
- 
+
             <div class="main-grid">
                 {% for item in category.job_items %}
-                    {% if loop.index == 4 %}
+                    
+                    <!-- ❗️광고 로직: 상위 2개 카테고리 섹션의 4번째 칸에만 광고 삽입 (400 에러 방지용 개수 제한) -->
+                    {% if loop.index == 4 and outer_index <= 2 %}
                     <div class="ad-card">
                         <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-format="rectangle"
-                            data-ad-layout-key="-fb+5w+4e-db+86"
-                            data-ad-client="ca-pub-8780435268193938"
-                            data-ad-slot="3923725999"></ins>
-                        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                             style="display:block; width:100%; height:340px;"
+                             data-ad-format="fluid"
+                             data-ad-layout-key="-fb+5w+4e-db+86"
+                             data-ad-client="ca-pub-8780435268193938"
+                             data-ad-slot="3923725999"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                     </div>
                     {% endif %}
 
+                    <!-- 직업 가이드 카드 -->
                     <a href="/career/{{ item.id }}" class="content-card">
                         <div class="card-bg">
-                            <img src="{{ item.thumbnail }}" 
-                                alt="{{ item.title }}" 
-                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop';">
+                            <!-- 로컬 이미지가 없으면 직업 기반의 동적 이미지로 대체 -->
+                            <img src="/static/img/{{ item.id }}.png" 
+                                 alt="{{ item.title }}" 
+                                 onerror="this.onerror=null; this.src='https://loremflickr.com/800/600/technology,{{ item.id }}';">
                         </div>
                         <div class="card-overlay"></div>
                         <div class="card-body">
-                            {% if item.tags %}<span class="category-tag">{{ item.tags[0] }}</span>{% endif %}
+                            {% if item.tags %}
+                            <span class="category-tag">{{ item.tags[0] }}</span>
+                            {% endif %}
                             <h3>{{ item.title }}</h3>
                         </div>
                     </a>
@@ -72,15 +93,21 @@
     {% endfor %}
 </div>
 
+<!-- 탭 필터링 스크립트 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const tabs = document.querySelectorAll('.tab-btn');
     const sections = document.querySelectorAll('.filter-section');
+
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const filter = tab.getAttribute('data-filter');
+
+            // 버튼 활성화 상태 변경
             tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
+
+            // 섹션 필터링 애니메이션 없이 즉시 처리
             sections.forEach(section => {
                 if (filter === 'all' || section.id === 'section-' + filter) {
                     section.style.display = 'block';
