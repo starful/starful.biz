@@ -3,7 +3,28 @@
 {% block head %}
 <title>{{ item.title }} | Starful</title>
 <meta name="description" content="{{ item.meta_description }}">
-
+<!-- detail.html의 block head에 추가 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ item.title }}",
+  "description": "{{ item.meta_description }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Starful"
+  },
+  "image": "{{ item.thumbnail }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Starful",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://starful.biz/static/img/logo.png"
+    }
+  }
+}
+</script>
 <style>
     /* --- 기초 레이아웃 & 짤림 방지 --- */
     :root {
