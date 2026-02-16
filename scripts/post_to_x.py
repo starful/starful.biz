@@ -65,9 +65,9 @@ def get_random_job():
     # 2. 설명 결정 (meta_description이 없으면 본문에서 추출)
     job_desc = metadata.get("meta_description", "")
     if not job_desc or len(job_desc) < 5:
-        # 본문에서 HTML 태그나 마크다운 기호 제외하고 순수 텍스트만 추출
+        # 마크다운 기호 제거 후 순수 텍스트만 추출
         clean_body = re.sub(r'[#*`>-]', '', body).strip()
-        job_desc = clean_body[:100] # 첫 100자 사용
+        job_desc = clean_body[:100]
         
     # 3. 태그 결정
     tags = metadata.get("tags", [])
@@ -81,11 +81,11 @@ def get_random_job():
     }
 
 def post_tweet():
-    """정보량이 풍부한 트윗을 게시합니다."""
+    """100% 일본어 정보 트윗을 게시합니다."""
     try:
         job = get_random_job()
         
-        # 트윗 구성
+        # 트윗 구성 (모든 문구 일본어 확인 완료)
         tweet_text = (
             f"＼今日の職種分析 🚀／\n\n"
             f"📌 【{job['title']}】\n\n"
@@ -93,15 +93,15 @@ def post_tweet():
             f"{job['desc'][:85]}...\n\n"
             f"🛠 注目スキル\n"
             f"▸ {job['tags']}\n\n"
-            f"🔗 キャ리아の詳細はサイトでチェック！\n"
+            f"🔗 キャリアの詳細はサイトでチェック！\n"
             f"{job['url']}\n\n"
             f"#キャリア #転職 #エンジニア #Starful"
         )
 
         auth.create_tweet(text=tweet_text)
-        print(f"✅ 게시 성공: {job['title']}")
+        print(f"✅ 投稿成功: {job['title']}")
     except Exception as e:
-        print(f"❌ 오류 발생: {e}")
+        print(f"❌ エラー発生: {e}")
 
 if __name__ == "__main__":
     post_tweet()
