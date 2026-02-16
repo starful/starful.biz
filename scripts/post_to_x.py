@@ -1,7 +1,8 @@
 import os
 import random
 import tweepy
-import frontmatter
+import json
+import re
 from dotenv import load_dotenv
 
 # 로컬 환경용 .env 로드
@@ -20,6 +21,27 @@ auth = tweepy.Client(
     access_token_secret=os.getenv("X_ACCESS_SECRET")
 )
 
+def parse_markdown_json(file_path):
+    """---json 형식을 포함한 마크다운을 파싱합니다."""
+    with open(file_path, 'r', encoding='utf-8') as f:
+        raw_content = f.read()
+    
+    # ---json { ... } --- 패턴 추출
+    match = re.match(r'---json\s*(\{.*?\})\s*---(.*)', raw_content, re.DOTALL)
+    
+    metadata = {}
+    body_content = raw_content
+    
+    if match:
+        json_str = match.group(1).strip()
+        body_content = match.group(2).strip()
+        try:
+            metadata = json.loads(json_str)
+        except:
+            metadata = {}
+            
+    return metadata, body_content
+
 def get_random_job():
     """마크다운 파일에서 상세 데이터를 추출합니다."""
     if not os.path.exists(CONTENTS_DIR):
@@ -32,45 +54,50 @@ def get_random_job():
     target_file = random.choice(files)
     file_path = os.path.join(CONTENTS_DIR, target_file)
     
-    with open(file_path, 'r', encoding='utf-8') as f:
-        post = frontmatter.load(f)
+    # 특수 파서 사용
+    metadata, body = parse_markdown_json(file_path)
     
     slug = target_file.replace(".md", "")
     
-    # 데이터 추출 및 가공
-    job_title = post.get("title", slug.replace('_', ' ').title())
-    job_desc = post.get("meta_description", "")
-    tags = post.get("tags", [])
+    # 1. 제목 결정
+    job_title = metadata.get("title") or slug.replace('_', ' ').title()
     
-    # 상위 3개 태그만 추출하여 문자열로 변환
+    # 2. 설명 결정 (meta_description이 없으면 본문에서 추출)
+    job_desc = metadata.get("meta_description", "")
+    if not job_desc or len(job_desc) < 5:
+        # 본문에서 HTML 태그나 마크다운 기호 제외하고 순수 텍스트만 추출
+        clean_body = re.sub(r'[#*`>-]', '', body).strip()
+        job_desc = clean_body[:100] # 첫 100자 사용
+        
+    # 3. 태그 결정
+    tags = metadata.get("tags", [])
     tag_str = " / ".join(tags[:4]) if tags else "IT・Creative"
     
     return {
         "title": job_title,
-        "desc": job_desc,
+        "desc": job_desc.replace('\n', ' '),
         "tags": tag_str,
         "url": f"{BASE_URL}{slug}"
     }
 
 def post_tweet():
-    """정보량이 풍부한 일본어 트윗을 게시합니다."""
+    """정보량이 풍부한 트윗을 게시합니다."""
     try:
         job = get_random_job()
         
-        # 트윗 구성 (정보량 극대화 스타일)
+        # 트윗 구성
         tweet_text = (
             f"＼今日の職種分析 🚀／\n\n"
             f"📌 【{job['title']}】\n\n"
             f"💡 どんな仕事？\n"
-            f"{job['desc'][:60]}...\n\n"
+            f"{job['desc'][:85]}...\n\n"
             f"🛠 注目スキル\n"
             f"▸ {job['tags']}\n\n"
-            f"🔗 キャリアの詳細はサイトでチェック！\n"
+            f"🔗 キャ리아の詳細はサイトでチェック！\n"
             f"{job['url']}\n\n"
             f"#キャリア #転職 #エンジニア #Starful"
         )
 
-        # 280자(일본어 기준 140자) 제한 확인 (Tweepy가 자동으로 처리하지만 가독성 위해 조절)
         auth.create_tweet(text=tweet_text)
         print(f"✅ 게시 성공: {job['title']}")
     except Exception as e:
