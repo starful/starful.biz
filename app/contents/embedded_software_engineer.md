@@ -29,9 +29,19 @@
   ],
   "thumbnail": "/static/img/embedded_software_engineer.png",
   "hero_image": "/static/img/embedded_software_engineer_hero.png",
-  "title": "ハードウェアを動かす、組み込みシステムの設計と開発"
+  "title": "【2026最新】組み込みエンジニアの年収・将来性は？未経験からの転職ロードマップを徹底解説"
 }
 ---
+
+
+## 💰 日本での推定年収（doda・OpenWork参照）
+
+| 経験年数 | 年収範囲 (万円) | 特徴 |
+| :--- | :--- | :--- |
+| ジュニア (0-3年) | 350 〜 500 | C言語やC++の基礎、既存製品の改修やデバッグが中心。未経験採用も活発。 |
+| ミドル (3-7年) | 500 〜 800 | 基本設計やハードウェアとの連携、RTOSの実装を担当。市場価値が急上昇する層。 |
+| シニア (7年以上/リード) | 800 〜 1,200+ | アーキテクチャ設計やPM、IoT・AI統合を主導。大手メーカーや外資系では1,000万超も。 |
+
 # [完全ガイド] Embedded Software Engineer: ハードウェアを動かす、組み込みシステムの設計と開発
 
 ## 1️⃣ Embedded Software Engineerとは？

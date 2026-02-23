@@ -32,9 +32,19 @@
   ],
   "thumbnail": "/static/img/web_performance_engineer.png",
   "hero_image": "/static/img/web_performance_engineer_hero.png",
-  "title": "ウェブ高速化のプロフェッショナル"
+  "title": "ウェブパフォーマンスエンジニアの年収・将来性は？未経験からのロードマップを徹底解説"
 }
 ---
+
+
+## 💰 日本での推定年収（doda・OpenWork参照）
+
+| 経験年数 | 年収範囲 (万円) | 特徴 |
+| :--- | :--- | :--- |
+| ジュニア (0-3年) | 400 - 600 | Lighthouse等の計測ツールの活用、フロントエンドの基本的な高速化実装を担当。 |
+| ミドル (3-7年) | 600 - 900 | Core Web Vitalsの改善、CDNの最適化、バックエンドを含めたボトルネックの特定と解決。 |
+| シニア (7年以上/リード) | 900 - 1,500+ | 全社的な技術戦略の策定、大規模トラフィック環境の最適化、パフォーマンスとビジネスKPIの紐付け。 |
+
 # [完全ガイド] Web Performance Engineer: ウェブ高速化のプロフェッショナル
 
 ## 1️⃣ Web Performance Engineerとは？
