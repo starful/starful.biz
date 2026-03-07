@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{% block title %}{% endblock %} Starful">
-<meta property="og:description" content="{% block meta_desc %}{% endblock %}">
-<meta property="og:url" content="{{ request.url }}">
-<meta name="twitter:card" content="summary_large_image">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8780435268193938" crossorigin="anonymous"></script>    <link rel="stylesheet" href="/static/css/style.css?v=11.0">
+    
+    <!-- SEO & SNS Meta Tags (위치 수정 완료) -->
+    <title>{% block title %}{% endblock %} Starful | 理想のキャリア図鑑</title>
+    <meta name="description" content="{% block meta_desc %}90種類以上の職種ガイドから、あなたに最適な道を見つける。IT・デザイン・ビジネスの最新トレンドと、キャリア設計に役立つヒントを毎日発信。{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% block og_title %}{% endblock %} Starful">
+    <meta property="og:description" content="{% block og_desc %}{% endblock %}">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:image" content="https://starful.biz/static/img/logo.png"> <!-- 공유 시 보일 로고 -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- 캐노니컬 태그: 중복 콘텐츠 방지 및 SEO 점수 집중 -->
+    <link rel="canonical" href="{{ request.url }}">
+
+    <!-- 구글 애드센스 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8780435268193938" crossorigin="anonymous"></script>    
+    
     <!-- Google tag (gtag.js) - GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NG8ZM4WWV2"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NG8ZM4WWV2');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NG8ZM4WWV2');
     </script>
+
+    <link rel="stylesheet" href="/static/css/style.css?v=12.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     {% block head %}{% endblock %}
 </head>
 <body>
     <nav class="top-nav">
         <div class="nav-container">
-            <!-- 문자가 아닌 로고 이미지 사용 -->
             <a href="/" class="nav-logo">
                 <img src="/static/img/logo.png" alt="Starful" style="height: 32px;" onerror="this.style.display='none'; this.parentNode.innerText='STARFUL'">
             </a>
