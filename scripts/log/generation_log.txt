@@ -1,456 +1,170 @@
-2026-01-08 22:41:06,084 - INFO - Generating frontmatter for: Architect
-2026-01-08 22:41:10,347 - INFO - Raw Frontmatter for Architect:
-```json
-{
-  "category": "engineering",
-  "keywords": ["システム設計", "技術戦略", "クラウドアーキテクチャ", "スケーラビリティ", "エンタープライズ", "セキュリティ", "ガバナンス", "ソリューション設計"],
-  "meta_description": "大規模システムの技術選定、設計、実装方針を決定し、プロジェクト全体の技術的成功を導く役割。スケーラビリティ、セキュリティ、コスト効率を考慮した最適なソリューションを提供します。",
-  "related_jobs": ["principal_engineer", "cto", "devops_engineer"],
-  "slug": "architect",
-  "tags": ["AWS", "Azure", "GCP", "マイクロサービス", "DDD", "クラウドネイティブ", "セキュリティ設計", "スケーラブルシステム"],
-  "thumbnail": "/static/img/architect.png",
-  "hero_image": "/static/img/architect_hero.png",
-  "title": "技術的ビジョンを具現化するシステム設計の専門家"
-}
-```
-2026-01-08 22:41:10,348 - INFO - Successfully generated and parsed frontmatter for Architect.
-2026-01-08 22:41:10,348 - INFO - Generating body for: Architect
-2026-01-08 22:41:10,688 - ERROR - Error generating body for Architect: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
-* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
-Please retry in 49.589723247s. [links {
-  description: "Learn more about Gemini API quotas"
-  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
-}
-, violations {
-  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
-  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
-  quota_dimensions {
-    key: "model"
-    value: "gemini-2.5-flash"
-  }
-  quota_dimensions {
-    key: "location"
-    value: "global"
-  }
-  quota_value: 20
-}
-, retry_delay {
-  seconds: 49
-}
-]
-2026-01-08 22:41:10,688 - ERROR - Failed to generate body for Architect. Skipping.
-2026-01-08 22:41:10,689 - INFO - Generating frontmatter for: Brand Marketer
-2026-01-08 22:41:10,994 - ERROR - Error generating frontmatter for Brand Marketer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
-* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
-Please retry in 49.248429083s. [links {
-  description: "Learn more about Gemini API quotas"
-  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
-}
-, violations {
-  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
-  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
-  quota_dimensions {
-    key: "model"
-    value: "gemini-2.5-flash"
-  }
-  quota_dimensions {
-    key: "location"
-    value: "global"
-  }
-  quota_value: 20
-}
-, retry_delay {
-  seconds: 49
-}
-]
-2026-01-08 22:41:10,995 - ERROR - Failed to generate valid frontmatter for Brand Marketer. Skipping.
-2026-01-08 22:41:10,995 - INFO - Generating frontmatter for: CRM Marketer
-2026-01-08 22:41:11,305 - ERROR - Error generating frontmatter for CRM Marketer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
-* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
-Please retry in 48.923491566s. [links {
-  description: "Learn more about Gemini API quotas"
-  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
-}
-, violations {
-  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
-  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
-  quota_dimensions {
-    key: "model"
-    value: "gemini-2.5-flash"
-  }
-  quota_dimensions {
-    key: "location"
-    value: "global"
-  }
-  quota_value: 20
-}
-, retry_delay {
-  seconds: 48
-}
-]
-2026-01-08 22:41:11,306 - ERROR - Failed to generate valid frontmatter for CRM Marketer. Skipping.
-2026-01-08 22:41:11,306 - INFO - Generating frontmatter for: New Business Planner
-2026-01-08 22:41:11,609 - ERROR - Error generating frontmatter for New Business Planner: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
-* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
-Please retry in 48.618388601s. [links {
-  description: "Learn more about Gemini API quotas"
-  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
-}
-, violations {
-  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
-  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
-  quota_dimensions {
-    key: "model"
-    value: "gemini-2.5-flash"
-  }
-  quota_dimensions {
-    key: "location"
-    value: "global"
-  }
-  quota_value: 20
-}
-, retry_delay {
-  seconds: 48
-}
-]
-2026-01-08 22:41:11,609 - ERROR - Failed to generate valid frontmatter for New Business Planner. Skipping.
-2026-01-08 22:41:11,610 - INFO - Generating frontmatter for: Operations Planner
-2026-01-08 22:41:11,880 - ERROR - Error generating frontmatter for Operations Planner: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
-* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
-Please retry in 48.328380621s. [links {
-  description: "Learn more about Gemini API quotas"
-  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
-}
-, violations {
-  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
-  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
-  quota_dimensions {
-    key: "model"
-    value: "gemini-2.5-flash"
-  }
-  quota_dimensions {
-    key: "location"
-    value: "global"
-  }
-  quota_value: 20
-}
-, retry_delay {
-  seconds: 48
-}
-]
-2026-01-08 22:41:11,881 - ERROR - Failed to generate valid frontmatter for Operations Planner. Skipping.
-2026-01-08 22:41:11,881 - INFO - Generating frontmatter for: Application Security Engineer
-2026-01-08 22:41:12,223 - ERROR - Error generating frontmatter for Application Security Engineer: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
-* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
-Please retry in 48.054799543s. [links {
-  description: "Learn more about Gemini API quotas"
-  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
-}
-, violations {
-  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
-  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
-  quota_dimensions {
-    key: "model"
-    value: "gemini-2.5-flash"
-  }
-  quota_dimensions {
-    key: "location"
-    value: "global"
-  }
-  quota_value: 20
-}
-, retry_delay {
-  seconds: 48
-}
-]
-2026-01-08 22:41:12,224 - ERROR - Failed to generate valid frontmatter for Application Security Engineer. Skipping.
-2026-01-08 22:41:12,224 - INFO - Generating frontmatter for: Backend Architect
-2026-01-08 22:41:28,378 - INFO - Generating frontmatter for: Architect
-2026-01-08 22:41:33,224 - INFO - Raw Frontmatter for Architect:
-```json
-{
-  "category": "engineering",
-  "keywords": ["システム設計", "技術選定", "スケーラビリティ", "クラウドアーキテクチャ", "セキュリティ設計", "技術ロードマップ", "ソリューションアーキテクト", "エンタープライズアーキテクチャ"],
-  "meta_description": "大規模システムの技術的ビジョンを策定し、設計、実装を指導する最高技術責任者的な役割。スケーラビリティ、信頼性、セキュリティを確保し、技術選定とロードマップ作成を通じてビジネス目標達成に貢献します。",
-  "related_jobs": ["lead_engineer", "cto", "principal_engineer"],
-  "slug": "architect",
-  "tags": ["AWS", "Azure", "GCP", "マイクロサービス", "クラウドネイティブ", "DevOps", "DDD", "セキュリティ設計", "パフォーマンスチューニング", "技術戦略"],
-  "thumbnail": "/static/img/architect.png",
-  "hero_image": "/static/img/architect_hero.png",
-  "title": "技術的ビジョンと構造を設計するシステム設計の専門家"
-}
-```
-2026-01-08 22:41:33,224 - INFO - Successfully generated and parsed frontmatter for Architect.
-2026-01-08 22:41:33,225 - INFO - Generating body for: Architect
-2026-01-08 22:42:16,114 - INFO - Successfully generated body for Architect. Character count: 12938
-2026-01-08 22:42:16,116 - INFO - Saved ../app/contents/architect.md
-2026-01-08 22:51:11,781 - INFO - Skipping Architect as ../app/contents/architect.md already exists.
-2026-01-08 22:51:11,781 - INFO - Generating frontmatter for: Brand Marketer
-2026-01-08 22:51:16,122 - INFO - Raw Frontmatter for Brand Marketer:
-```json
-{
-  "category": "marketing",
-  "keywords": [
-    "ブランド戦略",
-    "ブランディング",
-    "市場調査",
-    "消費者インサイト",
-    "マーケティングコミュニケーション",
-    "ブランド認知度",
-    "キャンペーン管理",
-    "ROI分析"
-  ],
-  "meta_description": "ブランドの価値と市場での認知度を最大化するための戦略を立案・実行する専門家。市場分析に基づき、一貫したブランドメッセージと体験を設計し、企業の成長を牽引する。創造性とデータ分析能力が不可欠。",
-  "related_jobs": [
-    "digital_marketing_manager",
-    "content_strategist",
-    "product_marketing_manager"
-  ],
-  "slug": "brand_marketer",
-  "tags": [
-    "ブランド戦略",
-    "市場分析",
-    "消費者行動",
-    "コミュニケーション戦略",
-    "クリエイティブディレクション",
-    "ブランドガイドライン",
-    "KPI設定",
-    "デジタルマーケティング"
-  ],
-  "thumbnail": "/static/img/brand_marketer.png",
-  "hero_image": "/static/img/brand_marketer_hero.png",
-  "title": "ブランド価値を最大化する戦略家"
-}
-```
-2026-01-08 22:51:16,122 - INFO - Successfully generated and parsed frontmatter for Brand Marketer.
-2026-01-08 22:51:16,122 - INFO - Generating body for: Brand Marketer
-2026-01-08 22:52:07,354 - INFO - Successfully generated body for Brand Marketer. Character count: 14872
-2026-01-08 22:52:07,357 - INFO - Saved ../app/contents/brand_marketer.md
-2026-01-08 22:52:22,362 - INFO - Reached the maximum number of files to generate (1). Stopping.
-2026-01-09 18:24:02,157 - INFO - Skipping Architect as ../app/contents/architect.md already exists.
-2026-01-09 18:24:02,158 - INFO - Skipping Brand Marketer as ../app/contents/brand_marketer.md already exists.
-2026-01-09 18:24:02,158 - INFO - Generating frontmatter for: CRM Marketer
-2026-01-09 18:24:07,409 - ERROR - Error generating frontmatter for CRM Marketer: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 2.
-2026-01-09 18:24:07,409 - ERROR - Failed to generate valid frontmatter for CRM Marketer. Skipping.
-2026-01-09 18:24:07,409 - INFO - Generating frontmatter for: New Business Planner
-2026-01-09 18:24:12,115 - INFO - Raw Frontmatter for New Business Planner:
-```json
-{
-  "category": "sales-bizdev",
-  "keywords": ["新規事業開発", "ビジネスプランニング", "市場調査", "戦略立案", "収益化戦略", "イノベーション", "PoC", "事業戦略", "IT戦略"],
-  "meta_description": "新規事業のアイデア創出から計画策定、実行、検証までを主導する役割。市場分析、ビジネスモデル構築、パートナーシップ戦略立案を通じて、企業の成長を牽引する。戦略的思考力と企画力が求められる。",
-  "related_jobs": ["business_development_manager", "product_manager", "management_strategy_planner"],
-  "slug": "new_business_planner",
-  "tags": ["事業戦略", "市場分析", "ビジネスモデルキャンバス", "リーンスタートアップ", "KPI設定", "投資対効果分析", "アライアンス", "イノベーション", "DX"],
-  "thumbnail": "/static/img/new_business_planner.png",
-  "hero_image": "/static/img/new_business_planner_hero.png",
-  "title": "IT時代の成長を担う新規事業企画の役割"
-}
-```
-2026-01-09 18:24:12,115 - INFO - Successfully generated and parsed frontmatter for New Business Planner.
-2026-01-09 18:24:12,116 - INFO - Generating body for: New Business Planner
-2026-01-09 18:25:02,007 - INFO - Successfully generated body for New Business Planner. Character count: 15344
-2026-01-09 18:25:02,009 - INFO - Saved ../app/contents/new_business_planner.md
-2026-01-09 18:25:17,010 - INFO - Reached the maximum number of files to generate (1). Stopping.
-2026-01-09 18:29:39,304 - CREATED: ../app/contents/architect.md
-2026-01-09 18:30:45,978 - CREATED: ../app/contents/brand_marketer.md
-2026-01-09 18:41:36,983 - CREATED: ../app/contents/architect.md
-2026-01-09 18:45:28,658 - CREATED: ../app/contents/architect.md
-2026-01-09 18:46:34,278 - CREATED: ../app/contents/crm_marketer.md
-2026-01-09 18:54:08,949 - CREATED: ../app/contents/new_business_planner.md
-2026-01-09 18:55:15,502 - CREATED: ../app/contents/operations_planner.md
-2026-01-09 18:56:24,935 - CREATED: ../app/contents/application_security_engineer.md
-2026-01-09 18:57:30,565 - CREATED: ../app/contents/backend_architect.md
-2026-01-09 18:58:34,875 - CREATED: ../app/contents/backend_developer.md
-2026-01-09 18:59:36,516 - CREATED: ../app/contents/big_data_engineer.md
-2026-01-09 19:00:41,028 - CREATED: ../app/contents/bi_engineer.md
-2026-01-09 19:01:46,172 - CREATED: ../app/contents/blockchain_developer.md
-2026-01-09 19:02:56,822 - CREATED: ../app/contents/blue_team_engineer.md
-2026-01-09 21:02:14,611 - CREATED: ../app/contents/brand_designer.md
-2026-01-09 21:03:18,180 - CREATED: ../app/contents/business_planner.md
-2026-01-09 21:04:20,702 - CREATED: ../app/contents/chief_data_officer.md
-2026-01-09 21:05:34,178 - CREATED: ../app/contents/chief_information_officer.md
-2026-01-09 21:06:40,430 - CREATED: ../app/contents/ciso.md
-2026-01-09 21:07:45,252 - CREATED: ../app/contents/cloud_application_developer.md
-2026-01-09 21:08:58,795 - CREATED: ../app/contents/cloud_engineer.md
-2026-01-09 21:10:06,582 - CREATED: ../app/contents/cloud_migration_specialist.md
-2026-01-09 21:11:10,358 - CREATED: ../app/contents/cloud_native_engineer.md
-2026-01-09 21:12:17,252 - CREATED: ../app/contents/cloud_security_engineer.md
-2026-01-09 21:13:25,323 - CREATED: ../app/contents/community_manager.md
-2026-01-09 21:14:32,704 - CREATED: ../app/contents/content_designer.md
-2026-01-09 21:15:36,935 - CREATED: ../app/contents/content_marketer.md
-2026-01-09 21:17:12,975 - CREATED: ../app/contents/content_planner.md
-2026-01-09 21:18:20,947 - CREATED: ../app/contents/cto.md
-2026-01-09 21:19:21,782 - CREATED: ../app/contents/data_curator.md
-2026-01-09 21:20:27,427 - CREATED: ../app/contents/data_engineer.md
-2026-01-09 21:21:31,929 - CREATED: ../app/contents/data_governance_specialist.md
-2026-01-09 21:23:18,911 - CREATED: ../app/contents/data_planner.md
-2026-01-09 21:24:28,369 - CREATED: ../app/contents/data_platform_engineer.md
-2026-01-09 21:25:32,274 - CREATED: ../app/contents/data_scientist.md
-2026-01-09 21:26:36,471 - CREATED: ../app/contents/database_administrator.md
-2026-01-09 21:27:44,466 - CREATED: ../app/contents/desktop_application_developer.md
-2026-01-09 21:28:49,524 - CREATED: ../app/contents/design_system_manager.md
-2026-01-09 21:29:49,598 - CREATED: ../app/contents/developer_productivity_engineer.md
-2026-01-09 21:30:55,467 - CREATED: ../app/contents/developer_relations_engineer.md
-2026-01-09 21:32:00,873 - CREATED: ../app/contents/devops_engineer.md
-2026-01-09 21:33:05,586 - CREATED: ../app/contents/digital_marketing_manager.md
-2026-01-09 21:34:16,249 - CREATED: ../app/contents/embedded_software_engineer.md
-2026-01-09 21:35:21,376 - CREATED: ../app/contents/engineering_manager.md
-2026-01-10 08:09:23,064 - CREATED: ../app/contents/architect.md
-2026-01-10 08:10:26,225 - CREATED: ../app/contents/brand_marketer.md
-2026-01-10 08:11:27,862 - CREATED: ../app/contents/crm_marketer.md
-2026-01-10 08:12:33,093 - CREATED: ../app/contents/new_business_planner.md
-2026-01-10 08:13:32,945 - CREATED: ../app/contents/operations_planner.md
-2026-01-10 08:14:38,487 - CREATED: ../app/contents/application_security_engineer.md
-2026-01-10 08:15:40,523 - CREATED: ../app/contents/backend_architect.md
-2026-01-10 08:16:44,590 - CREATED: ../app/contents/backend_developer.md
-2026-01-10 08:17:46,045 - CREATED: ../app/contents/big_data_engineer.md
-2026-01-10 08:18:49,620 - CREATED: ../app/contents/bi_engineer.md
-2026-01-10 08:20:03,040 - CREATED: ../app/contents/blockchain_developer.md
-2026-01-10 08:21:12,263 - CREATED: ../app/contents/blue_team_engineer.md
-2026-01-10 08:22:14,625 - CREATED: ../app/contents/brand_designer.md
-2026-01-10 08:23:13,848 - CREATED: ../app/contents/business_planner.md
-2026-01-10 08:24:16,381 - CREATED: ../app/contents/chief_data_officer.md
-2026-01-10 08:25:18,097 - CREATED: ../app/contents/chief_information_officer.md
-2026-01-10 08:26:18,645 - CREATED: ../app/contents/ciso.md
-2026-01-10 08:27:23,635 - CREATED: ../app/contents/cloud_application_developer.md
-2026-01-10 08:28:32,285 - CREATED: ../app/contents/cloud_engineer.md
-2026-01-10 08:29:39,666 - CREATED: ../app/contents/cloud_migration_specialist.md
-2026-01-10 08:30:46,636 - CREATED: ../app/contents/cloud_native_engineer.md
-2026-01-10 08:31:53,504 - CREATED: ../app/contents/cloud_security_engineer.md
-2026-01-10 08:32:53,621 - CREATED: ../app/contents/community_manager.md
-2026-01-10 08:33:57,920 - CREATED: ../app/contents/content_designer.md
-2026-01-10 08:35:07,670 - CREATED: ../app/contents/content_marketer.md
-2026-01-10 08:37:16,392 - CREATED: ../app/contents/cto.md
-2026-01-10 08:38:15,456 - CREATED: ../app/contents/data-curator.md
-2026-01-10 08:39:18,451 - CREATED: ../app/contents/data_engineer.md
-2026-01-10 08:40:23,868 - CREATED: ../app/contents/data_governance_specialist.md
-2026-01-11 22:16:36,499 - CREATED: ../app/contents/chief_data_officer.md
-2026-01-11 22:17:46,107 - CREATED: ../app/contents/cio.md
-2026-01-11 22:18:53,390 - CREATED: ../app/contents/data_curator.md
-2026-01-11 22:21:16,292 - CREATED: ../app/contents/data_platform_engineer.md
-2026-01-11 22:22:24,145 - CREATED: ../app/contents/data_scientist.md
-2026-01-12 09:29:19,182 - CREATED: app/contents/chief_data_officer.md
-2026-01-12 09:30:23,638 - CREATED: app/contents/content_planner.md
-2026-01-12 09:31:29,117 - CREATED: app/contents/data_planner.md
-2026-01-12 09:32:35,818 - CREATED: app/contents/database_administrator.md
-2026-01-12 09:33:41,202 - CREATED: app/contents/erp_developer.md
-2026-01-12 09:34:43,579 - CREATED: app/contents/finops_engineer.md
-2026-01-12 09:35:51,251 - CREATED: app/contents/frontend_architect.md
-2026-01-12 09:36:51,796 - CREATED: app/contents/frontend_developer.md
-2026-01-12 09:37:54,774 - CREATED: app/contents/full_stack_developer.md
-2026-01-12 09:39:00,485 - CREATED: app/contents/game_artist.md
-2026-01-12 09:40:02,643 - CREATED: app/contents/game_developer.md
-2026-01-12 09:41:11,787 - CREATED: app/contents/game_data_analyst.md
-2026-01-12 09:42:16,810 - CREATED: app/contents/game_planner.md
-2026-01-12 09:43:25,604 - CREATED: app/contents/graphics_engine_developer.md
-2026-01-12 09:44:31,849 - CREATED: app/contents/graphic_designer.md
-2026-01-12 09:45:37,604 - CREATED: app/contents/growth_hacker.md
-2026-01-12 09:46:41,053 - CREATED: app/contents/growth_manager.md
-2026-01-12 09:47:46,011 - CREATED: app/contents/head_of_design.md
-2026-01-12 09:48:48,675 - CREATED: app/contents/head_of_engineering.md
-2026-01-12 09:50:00,027 - CREATED: app/contents/head-of-marketing.md
-2026-01-12 09:51:00,877 - CREATED: app/contents/hybrid_cloud_engineer.md
-2026-01-12 09:52:00,163 - CREATED: app/contents/iac_specialist.md
-2026-01-12 09:53:07,544 - CREATED: app/contents/interaction_designer.md
-2026-01-12 09:54:16,665 - CREATED: app/contents/llm_prompt_engineer.md
-2026-01-12 09:55:25,591 - CREATED: app/contents/marketing_data_analyst.md
-2026-01-12 09:56:25,956 - CREATED: app/contents/metaverse_developer.md
-2026-01-12 09:57:34,267 - CREATED: app/contents/mobile_developer.md
-2026-01-12 09:58:43,013 - CREATED: app/contents/motion_graphic_designer.md
-2026-01-12 09:59:48,767 - CREATED: app/contents/mlops_engineer.md
-2026-01-12 10:00:52,654 - CREATED: app/contents/network_engineer.md
-2026-01-13 20:27:39,492 - CREATED: app/contents/chief_data_officer.md
-2026-01-13 20:28:41,884 - CREATED: app/contents/database_administrator.md
-2026-01-13 20:29:56,403 - CREATED: app/contents/head_of_marketing.md
-2026-01-13 20:31:00,301 - CREATED: app/contents/performance_analyst.md
-2026-01-13 20:32:08,500 - CREATED: app/contents/performance_marketer.md
-2026-01-13 20:33:13,832 - CREATED: app/contents/platform_engineer.md
-2026-01-13 20:34:54,184 - CREATED: app/contents/platform_planner.md
-2026-01-13 20:36:02,589 - CREATED: app/contents/product_manager.md
-2026-01-13 20:37:05,472 - CREATED: app/contents/project_manager.md
-2026-01-13 20:38:13,033 - CREATED: app/contents/prompt_engineer.md
-2026-01-13 20:39:55,142 - CREATED: app/contents/qa_engineer.md
-2026-01-13 20:41:03,952 - CREATED: app/contents/recommendation_system_engineer.md
-2026-01-13 20:42:10,208 - CREATED: app/contents/red_team_engineer.md
-2026-01-13 20:43:19,732 - CREATED: app/contents/research_scientist.md
-2026-01-13 20:44:36,943 - CREATED: app/contents/robotics_software_engineer.md
-2026-01-13 20:45:41,065 - CREATED: app/contents/scrum_master.md
-2026-01-13 20:47:17,721 - CREATED: app/contents/search_ads_specialist.md
-2026-01-13 20:48:24,377 - CREATED: app/contents/security_engineer.md
-2026-01-13 20:49:29,624 - CREATED: app/contents/security_software_engineer.md
-2026-01-13 20:50:36,194 - CREATED: app/contents/seo_specialist.md
-2026-01-13 20:51:43,339 - CREATED: app/contents/serverless_engineer.md
-2026-01-13 20:52:54,229 - CREATED: app/contents/service_designer.md
-2026-01-13 20:53:59,568 - CREATED: app/contents/service_planner.md
-2026-01-13 20:55:07,537 - CREATED: app/contents/site_reliability_engineer.md
-2026-01-13 20:56:13,266 - CREATED: app/contents/social_media_manager.md
-2026-01-13 20:57:20,654 - CREATED: app/contents/sound_designer.md
-2026-01-13 20:58:28,741 - CREATED: app/contents/system_integrator.md
-2026-01-13 20:59:36,232 - CREATED: app/contents/tech_evangelist.md
-2026-01-13 21:00:44,114 - CREATED: app/contents/tech_lead.md
-2026-01-13 21:01:46,683 - CREATED: app/contents/technical_project_manager.md
-2026-01-15 20:58:47,257 - CREATED: app/contents/chief_data_officer.md
-2026-01-15 20:59:53,409 - CREATED: app/contents/database_administrator.md
-2026-01-15 21:00:57,909 - CREATED: app/contents/technical_project_manager.md
-2026-01-15 21:02:08,144 - CREATED: app/contents/technical_operations_manager.md
-2026-01-15 21:03:15,795 - CREATED: app/contents/technical_planner.md
-2026-01-15 21:04:15,222 - CREATED: app/contents/technical_program_manager.md
-2026-01-15 21:05:24,880 - CREATED: app/contents/technical_writer.md
-2026-01-15 21:06:29,980 - CREATED: app/contents/test_automation_engineer.md
-2026-01-15 21:07:37,581 - CREATED: app/contents/ui_ux_designer.md
-2026-01-15 21:08:47,234 - CREATED: app/contents/ui_ux_researcher.md
-2026-01-24 18:22:15,836 - CREATED: app/contents/chief_data_officer.md
-2026-01-24 18:23:51,064 - CREATED: app/contents/dba.md
-2026-01-24 18:24:52,547 - CREATED: app/contents/technical_project_manager.md
-2026-01-24 18:26:00,540 - CREATED: app/contents/ux_planner.md
-2026-01-24 18:27:05,515 - CREATED: app/contents/ux_strategist.md
-2026-01-24 18:28:13,496 - CREATED: app/contents/vice_president_of_engineering.md
-2026-01-24 18:29:12,541 - CREATED: app/contents/web_developer.md
-2026-01-24 18:30:16,227 - CREATED: app/contents/webmaster.md
-2026-01-24 18:31:17,871 - CREATED: app/contents/web_performance_engineer.md
-2026-01-24 18:32:20,778 - CREATED: app/contents/3d_artist.md
-2026-02-04 10:46:05,772 - CREATED: app/contents/chief_data_officer.md
-2026-02-04 10:47:11,754 - CREATED: app/contents/technical_project_manager.md
-2026-02-04 10:48:16,890 - CREATED: app/contents/vpoe.md
-2026-02-04 10:49:30,297 - CREATED: app/contents/web_master.md
-2026-02-13 21:01:08,660 - CREATED: app/contents/chief_data_officer.md
-2026-02-13 21:02:26,285 - CREATED: app/contents/technical_product_manager.md
-2026-02-13 21:03:48,230 - CREATED: app/contents/three_d_modeler.md
-2026-02-13 21:05:10,327 - CREATED: app/contents/agile_coach.md
-2026-02-13 21:06:36,944 - CREATED: app/contents/ai_ethicist.md
-2026-02-13 21:07:50,738 - CREATED: app/contents/ai_product_manager.md
-2026-02-13 21:09:06,754 - CREATED: app/contents/ai_researcher.md
-2026-02-13 21:10:16,562 - CREATED: app/contents/analytics_engineer.md
-2026-02-13 21:11:35,159 - CREATED: app/contents/analytics_manager.md
-2026-02-13 21:12:47,835 - CREATED: app/contents/android_developer.md
-2026-03-03 21:45:49,265 - CREATED: app/contents/chief_digital_officer.md
-2026-03-03 21:46:59,160 - CREATED: app/contents/tech_pm.md
-2026-03-03 21:48:11,045 - CREATED: app/contents/3d_modeler.md
-2026-03-03 21:49:18,732 - CREATED: app/contents/animations_designer.md
-2026-03-03 21:50:31,846 - CREATED: app/contents/api_technical_writer.md
-2026-03-03 21:51:36,482 - CREATED: app/contents/application_architect.md
-2026-03-03 21:52:49,985 - CREATED: app/contents/automation_engineer.md
-2026-03-03 21:54:06,580 - CREATED: app/contents/bi_analyst.md
-2026-03-03 21:55:17,138 - CREATED: app/contents/bi_developer.md
-2026-03-03 21:56:33,730 - CREATED: app/contents/bioinformatics_scientist.md
-2026-03-03 21:57:42,009 - CREATED: app/contents/business_analyst.md
-2026-03-03 21:58:50,026 - CREATED: app/contents/business_development_manager.md
-2026-03-03 22:00:05,087 - CREATED: app/contents/business_systems_analyst.md
-2026-03-03 22:01:16,306 - CREATED: app/contents/cpp_developer.md
-2026-03-03 22:02:34,044 - CREATED: app/contents/chief_product_officer.md
-2026-03-08 10:47:00,569 - CREATED: app/contents/chief_digital_officer.md
-2026-03-08 10:48:10,707 - CREATED: app/contents/cpp_developer.md
-2026-03-08 10:49:21,572 - CREATED: app/contents/cloud_architect.md
-2026-03-08 10:50:29,253 - CREATED: app/contents/cloud_consultant.md
-2026-03-08 10:51:44,415 - CREATED: app/contents/cloud_database_engineer.md
-2026-03-08 10:52:42,699 - CREATED: app/contents/cloud_finops_manager.md
-2026-03-08 10:53:54,265 - CREATED: app/contents/cloud_solutions_architect.md
-2026-03-08 10:55:03,714 - CREATED: app/contents/cloud_support_engineer.md
-2026-03-08 10:56:10,148 - CREATED: app/contents/compiler_engineer.md
-2026-03-08 10:57:23,874 - CREATED: app/contents/compliance_engineer.md
-2026-03-08 10:58:24,395 - CREATED: app/contents/computational_biologist.md
-2026-03-08 10:59:33,310 - CREATED: app/contents/computer_vision_engineer.md
-2026-03-08 11:00:41,099 - CREATED: app/contents/concept_artist.md
-2026-03-08 11:01:48,879 - CREATED: app/contents/content_strategist.md
-2026-03-08 11:02:52,475 - CREATED: app/contents/conversion_rate_optimizer.md
+2026-03-12 22:22:37,927 - CREATED: app/contents/it-architect.md
+2026-03-12 22:26:28,229 - CREATED: app/contents/crm-marketer.md
+2026-03-12 22:26:29,057 - CREATED: app/contents/brand-marketer.md
+2026-03-12 22:26:31,335 - CREATED: app/contents/it-architect.md
+2026-03-12 22:35:35,047 - CREATED: app/contents/brand-marketer.md
+2026-03-12 22:35:42,008 - CREATED: app/contents/crm-marketer.md
+2026-03-12 22:35:43,955 - CREATED: app/contents/it-architect.md
+2026-03-12 22:41:35,086 - CREATED: app/contents/brand_marketer.md
+2026-03-12 22:41:36,727 - CREATED: app/contents/it_architect.md
+2026-03-12 22:41:36,727 - CREATED: app/contents/crm_marketer.md
+2026-03-12 22:46:18,942 - CREATED: app/contents/bi_engineer.md
+2026-03-12 22:46:21,346 - CREATED: app/contents/new_business_planner.md
+2026-03-12 22:46:22,423 - CREATED: app/contents/operations_planner.md
+2026-03-12 22:46:23,389 - CREATED: app/contents/backend_developer.md
+2026-03-12 22:46:24,517 - CREATED: app/contents/big_data_engineer.md
+2026-03-12 22:46:25,391 - CREATED: app/contents/backend_architect.md
+2026-03-12 22:46:27,544 - CREATED: app/contents/architect.md
+2026-03-12 22:46:28,874 - CREATED: app/contents/application_security_engineer.md
+2026-03-12 22:47:10,242 - CREATED: app/contents/cloud_application_developer.md
+2026-03-12 22:47:11,573 - CREATED: app/contents/brand_designer.md
+2026-03-12 22:47:12,800 - CREATED: app/contents/blue_team_engineer.md
+2026-03-12 22:47:12,800 - CREATED: app/contents/blockchain_developer.md
+2026-03-12 22:47:14,029 - CREATED: app/contents/ciso.md
+2026-03-12 22:47:14,850 - CREATED: app/contents/cio.md
+2026-03-12 22:47:14,933 - CREATED: app/contents/business_planner.md
+2026-03-12 22:47:17,993 - CREATED: app/contents/cloud_engineer.md
+2026-03-12 22:47:59,292 - CREATED: app/contents/cloud_migration_specialist.md
+2026-03-12 22:47:59,906 - CREATED: app/contents/content_designer.md
+2026-03-12 22:48:00,213 - CREATED: app/contents/community_manager.md
+2026-03-12 22:48:00,419 - CREATED: app/contents/cloud_security_engineer.md
+2026-03-12 22:48:00,419 - CREATED: app/contents/cloud_native_engineer.md
+2026-03-12 22:48:05,129 - CREATED: app/contents/content_planner.md
+2026-03-12 22:48:06,256 - CREATED: app/contents/content_marketer.md
+2026-03-12 22:48:10,350 - CREATED: app/contents/cto.md
+2026-03-12 22:48:44,962 - CREATED: app/contents/data_curator.md
+2026-03-12 22:48:48,658 - CREATED: app/contents/data_planner.md
+2026-03-12 22:48:48,705 - CREATED: app/contents/data_engineer.md
+2026-03-12 22:48:53,256 - CREATED: app/contents/database_administrator.md
+2026-03-12 22:48:53,769 - CREATED: app/contents/data_scientist.md
+2026-03-12 22:48:56,636 - CREATED: app/contents/data_platform_engineer.md
+2026-03-12 22:48:58,785 - CREATED: app/contents/desktop_application_developer.md
+2026-03-12 22:48:58,858 - CREATED: app/contents/data_governance_specialist.md
+2026-03-12 22:49:35,036 - CREATED: app/contents/developer_relations_engineer.md
+2026-03-12 22:49:36,265 - CREATED: app/contents/design_system_manager.md
+2026-03-12 22:49:44,559 - CREATED: app/contents/devops_engineer.md
+2026-03-12 22:49:45,683 - CREATED: app/contents/engineering_manager.md
+2026-03-12 22:49:45,704 - CREATED: app/contents/digital_marketing_manager.md
+2026-03-12 22:49:46,001 - CREATED: app/contents/developer_productivity_engineer.md
+2026-03-12 22:49:46,715 - CREATED: app/contents/embedded_software_engineer.md
+2026-03-12 22:49:51,315 - CREATED: app/contents/erp_developer.md
+2026-03-12 22:50:24,086 - CREATED: app/contents/frontend_architect.md
+2026-03-12 22:50:24,598 - CREATED: app/contents/finops_engineer.md
+2026-03-12 22:50:30,537 - CREATED: app/contents/game_artist.md
+2026-03-12 22:50:31,356 - CREATED: app/contents/full_stack_developer.md
+2026-03-12 22:50:32,685 - CREATED: app/contents/frontend_developer.md
+2026-03-12 22:50:33,610 - CREATED: app/contents/game_developer.md
+2026-03-12 22:50:45,488 - CREATED: app/contents/game_planner.md
+2026-03-12 22:50:46,510 - CREATED: app/contents/game_data_analyst.md
+2026-03-12 22:51:14,980 - CREATED: app/contents/graphic_designer.md
+2026-03-12 22:51:17,437 - CREATED: app/contents/growth_hacker.md
+2026-03-12 22:51:20,203 - CREATED: app/contents/head_of_design.md
+2026-03-12 22:51:25,935 - CREATED: app/contents/head_of_engineering.md
+2026-03-12 22:51:27,779 - CREATED: app/contents/growth_manager.md
+2026-03-12 22:51:32,388 - CREATED: app/contents/head_of_marketing.md
+2026-03-12 22:51:38,534 - CREATED: app/contents/hybrid_cloud_engineer.md
+2026-03-12 22:51:41,501 - CREATED: app/contents/graphics_engine_developer.md
+2026-03-12 22:52:00,889 - CREATED: app/contents/iac_specialist.md
+2026-03-12 22:52:05,257 - CREATED: app/contents/interaction_designer.md
+2026-03-12 22:52:09,763 - CREATED: app/contents/llm_prompt_engineer.md
+2026-03-12 22:52:19,184 - CREATED: app/contents/metaverse_developer.md
+2026-03-12 22:52:19,900 - CREATED: app/contents/mobile_developer.md
+2026-03-12 22:52:21,231 - CREATED: app/contents/marketing_data_analyst.md
+2026-03-12 22:52:29,734 - CREATED: app/contents/mlops_engineer.md
+2026-03-12 22:52:30,813 - CREATED: app/contents/motion_graphic_designer.md
+2026-03-12 22:52:54,205 - CREATED: app/contents/network_engineer.md
+2026-03-12 22:52:58,919 - CREATED: app/contents/performance_marketer.md
+2026-03-12 22:52:59,152 - CREATED: app/contents/performance_analyst.md
+2026-03-12 22:53:09,975 - CREATED: app/contents/platform_engineer.md
+2026-03-12 22:53:13,354 - CREATED: app/contents/product_manager.md
+2026-03-12 22:53:14,683 - CREATED: app/contents/platform_planner.md
+2026-03-12 22:53:16,736 - CREATED: app/contents/project_manager.md
+2026-03-12 22:53:19,036 - CREATED: app/contents/prompt_engineer.md
+2026-03-12 22:53:44,483 - CREATED: app/contents/qa_engineer.md
+2026-03-12 22:53:48,784 - CREATED: app/contents/recommendation_system_engineer.md
+2026-03-12 22:53:49,011 - CREATED: app/contents/red_team_engineer.md
+2026-03-12 22:54:02,096 - CREATED: app/contents/robotics_software_engineer.md
+2026-03-12 22:54:06,603 - CREATED: app/contents/research_scientist.md
+2026-03-12 22:54:08,446 - CREATED: app/contents/search_ads_specialist.md
+2026-03-12 22:54:09,879 - CREATED: app/contents/scrum_master.md
+2026-03-12 22:54:12,241 - CREATED: app/contents/security_engineer.md
+2026-03-12 22:54:36,096 - CREATED: app/contents/security_software_engineer.md
+2026-03-12 22:54:37,427 - CREATED: app/contents/serverless_engineer.md
+2026-03-12 22:54:44,285 - CREATED: app/contents/seo_specialist.md
+2026-03-12 22:54:52,375 - CREATED: app/contents/service_planner.md
+2026-03-12 22:54:53,091 - CREATED: app/contents/service_designer.md
+2026-03-12 22:54:56,666 - CREATED: app/contents/sound_designer.md
+2026-03-12 22:55:00,627 - CREATED: app/contents/social_media_manager.md
+2026-03-12 22:55:02,233 - CREATED: app/contents/site_reliability_engineer.md
+2026-03-12 22:55:19,818 - CREATED: app/contents/system_integrator.md
+2026-03-12 22:55:30,880 - CREATED: app/contents/tech_lead.md
+2026-03-12 22:55:35,075 - CREATED: app/contents/tech_evangelist.md
+2026-03-12 22:55:44,305 - CREATED: app/contents/technical_operations_manager.md
+2026-03-12 22:55:46,237 - CREATED: app/contents/tech_pm.md
+2026-03-12 22:55:46,545 - CREATED: app/contents/technical_writer.md
+2026-03-12 22:55:53,646 - CREATED: app/contents/technical_planner.md
+2026-03-12 22:55:56,683 - CREATED: app/contents/technical_program_manager.md
+2026-03-12 22:56:06,822 - CREATED: app/contents/test_automation_engineer.md
+2026-03-12 22:56:24,126 - CREATED: app/contents/ui_ux_designer.md
+2026-03-12 22:56:25,455 - CREATED: app/contents/ui_ux_researcher.md
+2026-03-12 22:56:35,083 - CREATED: app/contents/ux_planner.md
+2026-03-12 22:56:39,691 - CREATED: app/contents/web_developer.md
+2026-03-12 22:56:40,202 - CREATED: app/contents/ux_strategist.md
+2026-03-12 22:56:45,323 - CREATED: app/contents/vpoe.md
+2026-03-12 22:56:45,834 - CREATED: app/contents/web_master.md
+2026-03-12 22:56:56,382 - CREATED: app/contents/web_performance_engineer.md
+2026-03-12 22:57:14,097 - CREATED: app/contents/3d_modeler.md
+2026-03-12 22:57:16,968 - CREATED: app/contents/3d_artist.md
+2026-03-12 22:57:22,393 - CREATED: app/contents/agile_coach.md
+2026-03-12 22:57:31,868 - CREATED: app/contents/ai_product_manager.md
+2026-03-12 22:57:33,036 - CREATED: app/contents/ai_ethicist.md
+2026-03-12 22:57:37,853 - CREATED: app/contents/ai_researcher.md
+2026-03-12 22:57:38,579 - CREATED: app/contents/analytics_engineer.md
+2026-03-12 22:57:44,204 - CREATED: app/contents/analytics_manager.md
+2026-03-12 22:58:02,863 - CREATED: app/contents/android_developer.md
+2026-03-12 22:58:07,244 - CREATED: app/contents/api_technical_writer.md
+2026-03-12 22:58:09,289 - CREATED: app/contents/animations_designer.md
+2026-03-12 22:58:18,916 - CREATED: app/contents/automation_engineer.md
+2026-03-12 22:58:24,446 - CREATED: app/contents/application_architect.md
+2026-03-12 22:58:27,047 - CREATED: app/contents/bi_analyst.md
+2026-03-12 22:58:28,441 - CREATED: app/contents/bi_developer.md
+2026-03-12 22:58:34,482 - CREATED: app/contents/bioinformatics_scientist.md
+2026-03-12 22:58:57,113 - CREATED: app/contents/business_development_manager.md
+2026-03-12 22:58:57,830 - CREATED: app/contents/business_analyst.md
+2026-03-12 22:59:03,870 - CREATED: app/contents/business_systems_analyst.md
+2026-03-12 22:59:05,919 - CREATED: app/contents/cpp_developer.md
+2026-03-12 22:59:15,240 - CREATED: app/contents/chief_product_officer.md
+2026-03-12 22:59:17,593 - CREATED: app/contents/chief_data_officer.md
+2026-03-12 22:59:19,332 - CREATED: app/contents/cloud_architect.md
+2026-03-12 22:59:26,297 - CREATED: app/contents/cloud_consultant.md
+2026-03-12 22:59:47,697 - CREATED: app/contents/cloud_database_engineer.md
+2026-03-12 22:59:48,415 - CREATED: app/contents/cloud_finops_manager.md
+2026-03-12 22:59:52,615 - CREATED: app/contents/cloud_solutions_architect.md
+2026-03-12 22:59:57,939 - CREATED: app/contents/cloud_support_engineer.md
+2026-03-12 23:00:07,154 - CREATED: app/contents/compiler_engineer.md
+2026-03-12 23:00:07,564 - CREATED: app/contents/compliance_engineer.md
+2026-03-12 23:00:10,466 - CREATED: app/contents/computational_biologist.md
+2026-03-12 23:00:23,337 - CREATED: app/contents/computer_vision_engineer.md
+2026-03-12 23:00:32,652 - CREATED: app/contents/content_strategist.md
+2026-03-12 23:00:35,212 - CREATED: app/contents/concept_artist.md
+2026-03-12 23:00:44,218 - CREATED: app/contents/conversion_rate_optimizer.md
+2026-03-12 23:00:52,108 - CREATED: app/contents/creative_director.md
+2026-03-12 23:00:56,000 - CREATED: app/contents/customer_success_manager.md
+2026-03-12 23:01:00,505 - CREATED: app/contents/cryptographer.md
+2026-03-12 23:01:01,021 - CREATED: app/contents/creative_technologist.md
+2026-03-12 23:01:22,216 - CREATED: app/contents/cybersecurity_analyst.md
+2026-03-12 23:01:23,241 - CREATED: app/contents/cybersecurity_consultant.md
+2026-03-12 23:01:26,309 - CREATED: app/contents/customer_support_engineer.md
+2026-03-12 23:01:35,939 - CREATED: app/contents/data_analyst.md
+2026-03-12 23:01:48,735 - CREATED: app/contents/data_architect.md
+2026-03-12 23:01:48,741 - CREATED: app/contents/data_quality_analyst.md
+2026-03-12 23:01:51,912 - CREATED: app/contents/data_center_technician.md
+2026-03-12 23:01:53,548 - CREATED: app/contents/data_modeler.md
+2026-03-12 23:02:12,083 - CREATED: app/contents/data_strategist.md
+2026-03-12 23:02:13,719 - CREATED: app/contents/database_developer.md
+2026-03-12 23:02:26,012 - CREATED: app/contents/design_operations_manager.md
+2026-03-12 23:02:29,800 - CREATED: app/contents/data_visualization_engineer.md
+2026-03-12 23:02:40,141 - CREATED: app/contents/developer_advocate.md
+2026-03-12 23:02:40,960 - CREATED: app/contents/director_of_engineering.md
+2026-03-12 23:02:46,270 - CREATED: app/contents/design_technologist.md
+2026-03-12 23:02:46,380 - CREATED: app/contents/director_of_product_management.md

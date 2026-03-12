@@ -1,12 +1,11 @@
 import pandas as pd
 import os
 import google.generativeai as genai
-import time
 import logging
 import json
 import re
 from dotenv import load_dotenv
-from google.generativeai.types import BlockedPromptException
+import concurrent.futures
 
 # --- .env 파일 로드 ---
 load_dotenv()
@@ -14,270 +13,180 @@ load_dotenv()
 # --- 설정 ---
 API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
-    raise ValueError("GEMINI_API_KEY가 .env 파일에 설정되지 않았습니다.")
+    raise ValueError("GEMINI_API_KEYが .env ファイルに設定されていません。")
 
 genai.configure(api_key=API_KEY)
-MODEL_NAME = "gemini-flash-latest"
+MODEL_NAME = "gemini-flash-latest" 
 OUTPUT_DIR = "app/contents/"
-CSV_FILE = "scripts/data/positions.csv"
-LOG_FILE = "scripts/log/generation_log.txt"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CSV_FILE = os.path.join(BASE_DIR, "scripts", "data", "positions.csv")
+LOG_FILE = os.path.join(BASE_DIR, "scripts", "log", "generation_log.txt")
 
-# --- 생성할 파일의 최대 개수 (10건으로 변경) ---
-num_to_generate = 15
+# 🎯 [핵심 설정] 한 번 실행 시 최대로 생성할 파일 개수 (원하는 숫자로 변경하세요)
+MAX_TO_GENERATE = 160
 
-# 디렉토리 생성
+# 병렬 처리할 워커 개수 (유료 API이므로 5~10개 동시 실행 가능)
+MAX_WORKERS = 8 
+
 os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# --- 로깅 설정 (성공 로그만 파일에 기록) ---
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - CREATED: %(message)s',
-    handlers=[
-        logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8')
-    ]
+    handlers=[logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8')]
 )
 
-# Gemini 모델 초기화
 model = genai.GenerativeModel(MODEL_NAME)
 
-# --- Frontmatter 생성용 프롬프트 ---
+# --- Frontmatter 프롬프트 ---
 FRONTMATTER_PROMPT = """
-あなたは、ITおよび技術職務に関するブログ記事の**Markdown Frontmatter (JSON形式のメタデータ)**を生成する専門家です。
-以下の「{position_name}」に関するFrontmatterを、以下の構造を厳守し、**全てのフィールドに適切な内容を完璧に埋めて**日本語で生成してください。
-**絶対に、いかなるフィールドも空にしたり、省略したり、途中で生成を中断したりしないでください。**
-余計な説明やテキストは一切含めないでください。
-
-### 【重要：ロングテールSEO対策】
-タイトル（title）には職種名だけでなく、以下のキーワードを2つ以上組み合わせて、クリック率を高める「ロングテールタイトル」を作成してください。
-キーワード例：[年収, 将来性, 未経験, ロードマップ, スキル, 転職]
-タイトル例：「{position_name}の年収は？将来性と未経験からのロードマップを徹底解説」
+あなたは、ITおよび技術職務に関するブログ記事のMarkdown Frontmatter (JSON形式のメタデータ)を生成する専門家です。
+「{position_name}」に関するFrontmatterを以下の構造を厳守し生成してください。
+【重要】タイトルには職種名だけでなく「年収」「将来性」「未経験」「ロードマップ」などのキーワードを含めたクリックしたくなるロングテールタイトルを作成してください。
 
 ---json
 {{
-  "category": "{{適切なカテゴリ名（例: engineering, ai-data, design, marketing, cloud-infra, product-management, cyber-security, sales-bizdev, customer-success, content-strategyの中から最も適切なものを必ず1つ選択すること）}}",
-  "keywords": [{{職務に関連する主要なキーワードを5〜10個、カンマ区切りで文字列として具体的に記述すること。例: "AI", "機械学習", "データ分析", "Python"}}],
-  "meta_description": "{{職務の定義、主な業務、必要なスキル、キャリアパスを網羅する簡潔な説明（日本語で80〜120字程度で具体的に記述すること）}}",
-  "related_jobs": [{{関連性の高い職務のslugを2〜3個、文字列として記述すること。既存のIT職務名から想像して生成すること。関連職務がない場合は**必ず**「[]」と記述すること。例: ["backend_developer", "security_engineer"]}}],
-  "slug": "{{職務名をケバブケースに変換したユニークなID（例: webmaster, application_security_engineer）。小文字とアンダースコアを使用し、日本語名から正確に生成すること}}",
-  "tags": [{{職務に関連する技術、ツール、概念タグを5〜10個、文字列として記述すること。日本語で具体的に記述すること。例: "Python", "SQL", "AWS", "データ可視化"}}],
+  "category": "{{engineering, ai-data, design, marketing, cloud-infra, product-management, cyber-security, sales-bizdev, customer-success, content-strategyから1つ選択}}",
+  "keywords": [{{キーワードを5〜10個}}],
+  "meta_description": "{{職務のリアルな現実とやりがいを含む魅力的な説明文（100字程度）}}",
+  "related_jobs": [{{関連職務のslugを2〜3個。必ずスネークケース（_）を使用すること。例：["data_scientist", "backend_developer"]}}],
+  "slug": "{{職務名を必ずスネークケース（_）に変換したID。例：crm_marketer}}",
+  "tags": [{{関連タグを5〜10個}}],
   "thumbnail": "/static/img/{{slug}}.png",
   "hero_image": "/static/img/{{slug}}_hero.png",
-  "title": "{{職務の核心的な役割を示す魅力的なサブタイトル（日本語で30字以内）}}"
+  "title": "{{クリック率を高めるロングテールタイトル（日本語30字以内）}}"
 }}
 ---
-
-**重要:** 出力は**上記の`---json`で始まり`---`で終わるJSONブロックのみ**とし、余計な説明やテキストは一切含めないでください。`{{...}}`のプレースホルダーは全て、適切な内容で置き換え、**JSONの構造を完璧に遵守**してください。
 """
 
-# --- 본문 콘텐츠 생성용 프롬프트 ---
+# --- 본문(BODY) 프롬프트 ---
 BODY_PROMPT = """
-# 🎯 ポジション分析プロンプト
+# 🎯 ポジション分析・ディープダイブプロンプト
 
-あなたは**ITおよび技術職務に関する詳細な分析コンテンツを制作する専門ブロガー**です。
-目標は、読者が特定の職務を完璧に理解できるよう、**体系的で視覚的に魅力的なブログ記事**を作成することです。
+あなたは**ITおよび技術職務の現役トップクラス・エキスパート兼、辛口だが愛情のあるキャリアコンサルタント**です。
+今回は「{position_name}」という職種について、単なる辞書的な説明を脱却し、**「現場の泥臭いリアル」「未経験者が知るべき残酷な現実と希望」「プロフェッショナルとしての真の価値」**を、読者が引き込まれるような圧倒的な熱量で執筆してください。
 
-以下の**コンテンツ構造**と**ブログレイアウトガイド**を必ず遵守し、
-要求された「{position_name}」に関する専門的なブログ記事を**日本語で**作成してください。
+【執筆の絶対ルール：SEO最適化と独自性】
+1. **目標文字数**: **日本語で7,000字〜8,000字程度**の超特大ボリュームで執筆すること。AI特有の「薄っぺらい要約」は厳禁。各セクションで実際のプロジェクトにおける失敗談、チーム間の対立、深夜のトラブル対応など、**生々しいエピソード（架空の事例で可）を必ず交えて**文字数と内容の深さを担保してください。
+2. 機械的に生成されたような「1. XXとは？ 2. 業務...」という箇条書きメインの構造は避け、**雑誌の特集記事のような読ませる文章**（見出しH2, H3を活用）を心がけてください。
+3. はてなブログやZenn等でバズるような、視覚的要素（絵文字、太字、引用文 `> `）を積極的に活用してください。
 
----
+---記事の構成ガイド（見出し名は指定通り、または更に魅力的に適宜変更すること）---
 
-## 🧩 作成条件
-- **分量**: **日本語で8,000字〜9,000字程度**。各セクションで詳細な情報を含めつつ、冗長な表現を避けてください。
-- **出力言語**: **日本語**
-- **トーン**: 専門的でありながら親切で理解しやすい口調
-- **スタイル**: 活気があり、視覚的要素（絵文字、強調、引用）を積極的に活用
-- **形式**: はてなブログに最適化された**Markdown**形式
+## 導入：{position_name}という職業の「光と影」
+この職種が現代のIT業界でなぜこれほどまでに求められているのか。世間のキラキラしたイメージとは裏腹に、裏側ではどのような重圧や責任が伴うのかを、読者の心に刺さる言葉で語りかけてください。
 
-# 【最重要指示】
-- **前置きや挨拶、「承知いたしました」のような応答は一切不要です。必ず以下の「ブログレイアウトガイド」で指定されたタイトル形式から出力を開始してください。**
-- **【追加指示】文字数と内容のバランス**: 指定された文字数（9,000〜10,000字）の範囲内で、各セクションの内容を深く掘り下げてください。文字数を満たすためだけの中身のない文章は避け、質の高い情報を凝縮して執筆することが重要です。**特に、各セクションは十分な詳細と例を含め、指定文字数に到達するようにしてください。**
-- **【追加指示】出力の完全性**: レポートは絶対に途中で中断せず、必ず末尾の「#推奨タグ」まで【全ての章を完全な形で出力】してください。**途中で生成が止まることは許容されません。**
+## 💰 リアルな年収相場と、壁を越えるための「残酷な条件」
+ただ年収を書くだけでなく、「なぜその年収で頭打ちになるのか」「シニアになるために乗り越えるべき壁は何か」を熱く解説してください。以下のMarkdownテーブル形式は必ず使用すること。
+| キャリア段階 | 経験年数 | 推定年収 (万円) | 年収の壁を突破するための「リアルな必須条件」 |
+| :--- | :--- | :--- | :--- |
+| ジュニア | 1-3年 | [金額] | 言われたことをこなすだけでなく、[具体例]ができるか |
+| ミドル | 3-7年 | [金額] | チームのボトルネックを特定し、[具体例]を主導できるか |
+| シニア/リード | 7年以上 | [金額] | 経営層と技術の橋渡しを行い、[具体例]の責任を負えるか |
 
----
+## ⏰ {position_name}の「生々しい1日」のスケジュール
+出社から退勤までのタイムスケジュール（例：09:00〜19:00）を時系列で提示してください。
+単なる「会議」「作業」ではなく、**「朝会で昨日のバグの原因を詰められる」「他部署からの無茶振り仕様変更にどう対応するか」「午後イチの集中タイムで発生した本番障害」**など、現場の空気が伝わるストーリー仕立てで詳細に記述してください。
 
-## 🧱 コンテンツ構造（明確化された10個のセクション）
+## ⚖️ この仕事の「天国（やりがい）」と「地獄（きつい現実）」
+読者が最も知りたいリアルな比較です。
+- **【やりがい】**: 苦労が報われる瞬間、社会やユーザーに与えるインパクト。
+- **【きつい部分・泥臭い現実】**: この職種を辞める人がよく挙げる理由、理不尽な板挟み、メンタルを削られる瞬間。
+それぞれ3つずつ具体的なシチュエーションを挙げて、深くえぐり出すように解説してください。
 
-**【構造の遵守を徹底】以下のセクション番号とタイトル、内容の指示を厳守してください。**
-
-1️⃣ **{position_name}とは？**
-- ポジションの重要性を**比喩**を用いて説明し、記事全体の方向性を紹介する。**このセクションでは、職務の背景、現代社会における意義、そして読者の興味を強く引きつけるような導入を、具体的な例を豊富に交えながら、最低でも400字以上で詳細に記述してください。**
-
-***
-
-2️⃣ **💰 推定年収（doda・OpenWork参照データ）**
-- **【重要】** 必ず以下のMarkdownテーブル形式で記述してください（セル内改行禁止）。
-| 経験年数 | 推定年収範囲 (万円) | 特徴 |
-| :--- | :--- | :--- |
-| ジュニア (0-3年) | [金額] | 基礎スキルの習得期 |
-| ミドル (3-7年) | [金額] | 専門性の確立期 |
-| シニア (7年以上) | [金額] | 戦략・マネジメント期 |
-
-***
-
-3️⃣ **主な業務**
-- `{position_name}`が担う**核心的な目標と主要な責任（業務）**を5〜7つの具体的なポイントにまとめて、分かりやすく解説してください。各ポイントには詳細な説明を含めてください。
-
-***
-
-4️⃣ **必要なスキルとツール**
-- **【最重要指示】このセクションは、以下の構成の【Markdownの表形式】で記述してください。**
-- **【厳守】表の各セル内で絶対に改行（\\n）を入れないでください。各行は必ず一行で記述してください。**
-- **各カテゴリについて、最低でも3〜5つの具体的な項目を含めてください。**
-
-**### 🚀 技術スキル（ハードスキル）**
-```markdown
-| スキル | 詳細な説明（具体的な技術名や概念を含む） |
+## 🛠️ 現場で戦うための「ガチ」スキルマップと必須ツール
+教科書通りのスキルではなく、**「実務で本当に差がつくスキル」**を解説してください。
+以下の構成の【Markdownの表形式】を必ず使用すること。（※各セル内で絶対に改行を入れないこと）
+| スキル・ツール名 | 現場での使われ方（「なぜ」必要なのか、具体的なシーン） |
 | :--- | :--- |
-| クラウドコンピューティング | AWS, Azure, GCPなどの主要サービスの知識と設計経験。 |
-| プログラミング言語 | Python, Java, Goなどの言語特性の理解と選定能力。 |
-... (5〜7行程度)
+| [具体例：Docker等] | 開発環境の差異による「私の環境では動きました」という不毛な争いを無くすため。 |
+| [具体例：交渉力] | 無茶な納期要求に対し、技術的負債のリスクを説明しスコープを削るため。 |
 
-### 🤝 組織・管理スキル（ソフトスキル）
-| スキル | 詳細な説明 |
-| :--- | :--- |
-| 戦略的思考 | ビジネス目標と技術戦略をリンクさせる能力。 |
-| コミュニケーション | 非技術者への説明能力と交渉力。 |
-... (3〜5行程度)
+## 🎤 激戦必至！{position_name}の「ガチ面接対策」と模範解答
+実際の現場面接・技術面接で**「面接官が候補者の本質を見抜くために投げかける、意地悪だが重要な質問」**を5つ厳選してください。
+各質問に対し、以下の形式で解説すること。
+- **質問**: [具体的な質問内容]
+- **面接官の意図**: [なぜこれを聞くのか、何を確認したいのか]
+- **NGな回答例**: [落ちる候補者がやりがちな表面的な回答]
+- **評価される模範解答の方向性**: [経験に基づいたSTAR法などを意識した回答の構成案]
 
-### 💻 ツール・サービス
-| ツールカテゴリ | 具体的なツール名と用途 |
-| :--- | :--- |
-| CI/CDツール | Jenkins, GitHub Actionsなどを用いた自動化。 |
-| 監視ツール | Datadog, Prometheusなどによるシステム監視。 |
-... (5〜7行程度)```
-
-***
-
-5️⃣ **{position_name}の協業スタイル**
-- `{position_name}`が連携する**主要な部門や役割**を3〜5つ挙げ、それぞれとの**具体的な連携内容と目的**を詳しく説明してください。
-- **【最重要指示】各部門の説明は、必ず以下のMarkdown構造を厳守してください。説明文と箇条書きリストの間には必ず【空行を1行】挿入してください。**
-    ```markdown
-    ### [連携する部門名]
-    **連携内容と目的:**
-    [ここに部門との連携内容に関する詳細な説明文を記述します。]
-
-    *   **具体的な連携:** [具体的な連携内容を記述]
-    *   **目的:** [連携の目的を記述]
-    ```
-
-***
-
-6️⃣ **キャリアパスと成長の方向性**
-- **【最重要指示】このセクションは、文章での説明ではなく、以下の構成の【Markdownの表形式】でキャリアパスの要点をまとめてください。**
-- **【厳守】表の各セル内で絶対に改行（\\n）を入れないでください。各行は必ず一行で記述してください。**
-    ```markdown
-    | キャリア段階 | 主な役割と責任 | 今後の展望 |
-    | :--- | :--- | :--- |
-    | ジュニア開発者 | 特定の機能の実装、コード品質維持 | 専門性深化、システム理解 |
-    | シニア開発者 | 技術的意思決定、メンバー指導 | 非機能要件設計、アーキテクト候補 |
-    ```
-- **行数は最低5行、各列の内容は具体的な例を含み、簡潔に記述してください。**
-
-***
-
-7️⃣ **{position_name}の将来展望と重要性の高まり**
-- デジタル化や技術の進化に伴い、この職務が将来的にどのように変化し、その重要性がなぜ高まるのかを5〜7つのポイントに分けて詳細に解説してください。具体的なトレンドや技術革新に触れてください。
-
-***
-
-8️⃣ **{position_name}になるための学習方法**
-- `{position_name}`になるために必要なスキルを習得するための具体的な学習方法やリソースを5〜7つの段階またはテーマに分けて詳しく説明してください。
-- **【最重要指示】各学習ステップは、必ず以下のMarkdown構造を厳守してください。見出し(###)とリスト(*)の間には空行を1行入れ、目的とアクションは同じ階層のリストにしてください。**
-    ```markdown
-    ### X. [XXXXXXXX]
-
-    *   **目的:** [XXXXXXX]
-    *   **アクション:**
-        *   **書籍:** [推薦書籍とその理由を記述します。]
-        *   **オンラインコース:** [推薦コースやプラットフォームを記述します。]
-    ```
-
-***
-
-9️⃣ **日本での就職可能な企業**
-- `{position_name}`が活躍できる**日本の企業や業界**を3〜5つ具体的に挙げ、それぞれの企業タイプがこの職務をどのように活用しているかを簡潔に説明してください。
-
-***
-
-🔟 **面接でよくある質問とその対策**
-- **【指示】** 実際の面接で出題されそうな**【技術質問】**の代表的な例を**10〜15個**、箇条書きで提示してください。**行動に関する質問は含めないでください。**
-- **【指示】各質問には、回答のポイントも簡潔に記述してください。**
-
-***
-
-**まとめ**
-- 記事の核心を要約し、職務の**価値と魅力**を強調して締めくくります。読者が行動を起こすきっかけとなるような力強いメッセージで締めてください。
+## 💡 未経験・ジュニアからよくある質問（FAQ）
+「プログラミングスクールを出ただけでなれますか？」「数学の知識はどこまで必要ですか？」など、初心者が抱きがちなリアルな疑問を5つ挙げ、それに対してコンサルタントとしての「本音（時には厳しい事実）」をQ&A形式で回答してください。
 
 ---
-
-## 🪄 ブログレイアウトガイド（Markdown形式を遵守）
-
-- **記事タイトル**:
-`# [完全ガイド] {position_name}: {title_from_frontmatter}` # Frontmatterから生成されたtitleを使用
-
----
-
-## 🏷️ #推奨タグ
-この投稿に適した検索用のタグを5つ提案してください。
-例: `#AR開発 #VR技術 #XRエンジニア #メタバース #技術職務分析`
-
----
-
-## 🌐 出力言語
-**日本語**
+【出力条件（厳守事項）】
+- 前置き、挨拶、「承知いたしました」等のAI的応答は一切不要。
+- 必ずMarkdownのH1タグ `# [完全ガイド] {position_name}: {title_from_frontmatter}` から直接出力を開始すること。
+- **途中で出力を中断せず、最後のFAQまで「必ず」完全な状態で出力しきること。**
 """
 
 def generate_frontmatter(position_name):
-    """Frontmatter를 생성하고 파싱합니다. 실패 시 None을 반환합니다."""
-    full_prompt = FRONTMATTER_PROMPT.format(position_name=position_name)
     try:
         response = model.generate_content(
-            full_prompt,
-            generation_config=genai.types.GenerationConfig(
-                temperature=0.2
-            )
+            FRONTMATTER_PROMPT.format(position_name=position_name),
+            generation_config=genai.types.GenerationConfig(temperature=0.4)
         )
-        generated_text = response.text
-        json_match = re.search(r'(\{.*\})', generated_text, re.DOTALL)
-        if not json_match:
-            return None
-        
-        parsed_json = json.loads(json_match.group(0).strip())
-        
-        required_fields = ["category", "slug", "title"]
-        if any(field not in parsed_json for field in required_fields):
-            return None
-
-        return parsed_json
-    except Exception:
+        json_match = re.search(r'(\{.*\})', response.text, re.DOTALL)
+        if not json_match: return None
+        return json.loads(json_match.group(0).strip())
+    except Exception as e:
+        print(f"[{position_name}] Frontmatter Error: {e}")
         return None
 
 def generate_body(position_name, frontmatter_data):
-    """본문 콘텐츠를 생성합니다. 실패 시 None을 반환합니다."""
     title = frontmatter_data.get('title', "詳細ガイド")
-    full_prompt = BODY_PROMPT.format(position_name=position_name, title_from_frontmatter=title)
     try:
         response = model.generate_content(
-            full_prompt,
+            BODY_PROMPT.format(position_name=position_name, title_from_frontmatter=title),
             generation_config=genai.types.GenerationConfig(
-                temperature=0.3
+                temperature=0.6,
+                max_output_tokens=8192
             )
         )
         return response.text
-    except Exception:
+    except Exception as e:
+        print(f"[{position_name}] Body Error: {e}")
         return None
 
-def main():
-    """메인 실행 함수"""
+def process_single_position(position):
+    """개별 직무에 대한 생성 작업을 수행하는 워커 함수"""
+    print(f"⏳ 開始: {position}")
+    
+    frontmatter = generate_frontmatter(position)
+    if not frontmatter:
+        print(f"❌ 失敗 (Frontmatter): {position}")
+        return False
+        
+    slug = frontmatter.get('slug', position.lower().replace(' ', '_'))
+    output_filepath = os.path.join(OUTPUT_DIR, f"{slug}.md")
+
+    body = generate_body(position, frontmatter)
+    if not body:
+        print(f"❌ 失敗 (本文): {position}")
+        return False
+
+    frontmatter_str = f"---json\n{json.dumps(frontmatter, ensure_ascii=False, indent=2)}\n---\n"
+    
     try:
-        df = pd.read_csv(CSV_FILE)
-    except FileNotFoundError:
+        with open(output_filepath, 'w', encoding='utf-8') as f:
+            f.write(frontmatter_str + body)
+        print(f"✅ 完了: {position}")
+        logging.info(output_filepath)
+        return True
+    except IOError as e:
+        print(f"❌ 失敗 (保存エラー): {position} - {e}")
+        return False
+
+def main():
+    if not os.path.exists(CSV_FILE):
         print(f"エラー: CSVファイル '{CSV_FILE}' が見つかりません。")
         return
 
+    df = pd.read_csv(CSV_FILE)
     positions = df['position_name'].tolist()
     
+    # 생성되지 않은 파일 목록 필터링
     positions_to_generate = []
     for pos in positions:
         slug = pos.replace('/', '_').replace(' ', '_').replace('(', '').replace(')', '').replace(',', '').replace('"', '').lower()
@@ -285,57 +194,29 @@ def main():
         if not os.path.exists(filepath):
             positions_to_generate.append(pos)
     
-    if not positions_to_generate:
-        print("新しいガイドを生成する必要はありません。すべてのファイルが既に存在します。")
+    # 🎯 [핵심 변경사항] 남은 파일 개수와 설정한 최대 건수(MAX_TO_GENERATE) 중 작은 값만큼만 자르기
+    target_positions = positions_to_generate[:MAX_TO_GENERATE]
+    
+    if not target_positions:
+        print("🎉 すべてのファイルが生成済みです。")
         return
 
-    actual_files_to_generate = min(num_to_generate, len(positions_to_generate))
-    generated_count = 0
-
-    print(f"ガイド生成を開始します。ターゲット: {actual_files_to_generate}件")
-
-    for position in positions_to_generate:
-        if generated_count >= num_to_generate:
-            break
-
-        progress_prefix = f"[{generated_count + 1}/{actual_files_to_generate}]"
-        print(f"{progress_prefix} {position} を処理中...", end="", flush=True)
-
-        # 1. Frontmatter 생성
-        frontmatter = generate_frontmatter(position)
-        if not frontmatter:
-            print(" 失敗 (Frontmatter生成エラー)")
-            time.sleep(15)
-            continue
+    print(f"🚀 超高速生成を開始します。ターゲット: {len(target_positions)}件 (同時実行: {MAX_WORKERS}件)")
+    
+    success_count = 0
+    
+    # ThreadPoolExecutor를 사용한 병렬 처리
+    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        results = executor.map(process_single_position, target_positions)
         
-        slug = frontmatter.get('slug', position.lower().replace(' ', '_'))
-        output_filepath = os.path.join(OUTPUT_DIR, f"{slug}.md")
+        for result in results:
+            if result:
+                success_count += 1
 
-        # 2. 본문 생성
-        body = generate_body(position, frontmatter)
-        if not body:
-            print(" 失敗 (本文生成エラー)")
-            time.sleep(15)
-            continue
-
-        # 3. 파일 저장
-        frontmatter_str = f"---json\n{json.dumps(frontmatter, ensure_ascii=False, indent=2)}\n---\n"
-        final_content = frontmatter_str + body
-
-        try:
-            with open(output_filepath, 'w', encoding='utf-8') as f:
-                f.write(final_content)
-            
-            print(" 完了")
-            logging.info(output_filepath) # 성공 로그 기록
-            generated_count += 1
-        except IOError as e:
-            print(f" 失敗 (ファイル保存エラー: {e})")
-
-        time.sleep(15) # API 속도 제한 방지
-
-    print(f"\n生成プロセスが完了しました。{generated_count}件のファイルが作成されました。")
-    print(f"詳細は '{LOG_FILE}' を確認してください。")
+    print(f"\n🎉 すべてのプロセスが完了しました。{success_count}件のファイルが新しく作成されました。")
+    if len(positions_to_generate) > MAX_TO_GENERATE:
+        remaining = len(positions_to_generate) - MAX_TO_GENERATE
+        print(f"📌 残りの生成待ちジョブ数: {remaining}件 (再度スクリプトを実行してください)")
 
 if __name__ == "__main__":
     main()
