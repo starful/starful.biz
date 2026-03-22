@@ -3,19 +3,18 @@
 {% block content %}
 <header class="header">
     <div class="logo-area">
-        <!-- 문자가 아닌 로고 이미지 사용 -->
         <a href="/">
             <img src="/static/img/logo.png" alt="Starful" style="height: 50px; margin-bottom: 20px;" onerror="this.style.display='none';">
         </a>
     </div>
-    <h1>理想のキャリアを、<br>もっとスマートに。</h1>
-    <p>90以上の職種ガイドから、あなたに最適な道を見つけてください。</p>
+    <h1 style="letter-spacing: -0.06em;">IT転職の面接を攻略せよ。<br>職種別ガチ面接対策</h1>
+    <p>頻出質問から模範解答、キラー逆質問まで。実務経験別の面接対策バイブル。</p>
 
-    <!-- 통계 바 (일본어) -->
+    <!-- 통계 바 -->
     <div class="stats-bar">
         <div class="stat-item">
-            <span class="stat-label">職種ガイド</span>
-            <span class="stat-value">{{ total_count }}件</span>
+            <span class="stat-label">面接対策ガイド</span>
+            <span class="stat-value">{{ total_count }}職種</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
@@ -37,26 +36,22 @@
     <!-- 검색창 -->
     <div class="search-container">
         <form action="/search" method="GET">
-            <input type="text" name="q" class="search-input" placeholder="職種、スキル、キーワードで検索..." value="{{ query if query else '' }}">
+            <input type="text" name="q" class="search-input" placeholder="職種、スキル、面接キーワードで検索..." value="{{ query if query else '' }}">
         </form>
     </div>
 </header>
 
 <div class="container">
     {% for category in grouped_items %}
-        <!-- ❗️부모 반복문의 인덱스를 미리 저장하여 에러를 방지합니다 -->
         {% set outer_index = loop.index %}
-
         <section class="filter-section" id="section-{{ category.slug }}" style="margin-bottom: 80px;">
             <h2 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 30px; display: flex; align-items: center; gap: 12px;">
                 <span style="width: 5px; height: 25px; background: var(--accent); border-radius: 10px;"></span>
-                {{ category.title }}
+                {{ category.title }} 面接対策
             </h2>
 
             <div class="main-grid">
                 {% for item in category.job_items %}
-                    
-                    <!-- ❗️광고 로직: 상위 2개 카테고리 섹션의 4번째 칸에만 광고 삽입 (400 에러 방지용 개수 제한) -->
                     {% if loop.index == 4 and outer_index <= 2 %}
                     <div class="ad-card">
                         <ins class="adsbygoogle"
@@ -71,10 +66,8 @@
                     </div>
                     {% endif %}
 
-                    <!-- 직업 가이드 카드 -->
                     <a href="/career/{{ item.id }}" class="content-card">
                         <div class="card-bg">
-                            <!-- 로컬 이미지가 없으면 직업 기반의 동적 이미지로 대체 -->
                             <img src="/static/img/{{ item.id }}.png" 
                                  alt="{{ item.title }}" 
                                  onerror="this.onerror=null; this.src='https://loremflickr.com/800/600/technology,{{ item.id }}';">
@@ -102,12 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const filter = tab.getAttribute('data-filter');
-
-            // 버튼 활성화 상태 변경
             tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-
-            // 섹션 필터링 애니메이션 없이 즉시 처리
             sections.forEach(section => {
                 if (filter === 'all' || section.id === 'section-' + filter) {
                     section.style.display = 'block';

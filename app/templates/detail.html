@@ -3,7 +3,6 @@
 {% block head %}
 <title>{{ item.title }} | Starful</title>
 <meta name="description" content="{{ item.meta_description }}">
-<!-- detail.html의 block head에 추가 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,139 +25,34 @@
 }
 </script>
 <style>
-    /* --- 기초 레이아웃 & 짤림 방지 --- */
-    :root {
-        --article-width: 780px; /* PC 가독성 황금 너비 */
-    }
-
-    body {
-        background-color: #ffffff;
-        margin: 0; padding: 0;
-        overflow-x: hidden; /* 가로 스크롤 원천 차단 */
-    }
-
-    /* --- [Header] 타이포그래피 --- */
-    .detail-header {
-        max-width: var(--article-width);
-        margin: 0 auto;
-        padding: 80px 24px 40px;
-        box-sizing: border-box;
-    }
-    .detail-header .breadcrumb {
-        color: var(--accent);
-        font-weight: 800;
-        font-size: 0.9rem;
-        display: block;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-    .detail-header h1 {
-        font-size: clamp(2rem, 7vw, 3.2rem);
-        font-weight: 800;
-        line-height: 1.25;
-        margin: 0;
-        color: #1d1d1f;
-        word-break: break-all; /* 일본어/한국어 짤림 방지 */
-        overflow-wrap: break-word;
-    }
-    .detail-header .lead-text {
-        color: #666;
-        font-size: 1.25rem;
-        line-height: 1.6;
-        margin-top: 25px;
-        font-weight: 400;
-    }
-
-    /* --- [Content Body] 가독성 시스템 --- */
-    .detail-body {
-        max-width: var(--article-width);
-        margin: 0 auto;
-        padding: 0 24px 100px;
-        box-sizing: border-box;
-        font-size: 1.18rem;
-        line-height: 2.1; /* 장문을 위한 넉넉한 행간 */
-        color: #2c2c2e;
-        word-wrap: break-word;
-        word-break: break-all;
-    }
-
-    /* 제목 스타일 */
-    .detail-body h2 {
-        font-size: 2.1rem;
-        font-weight: 800;
-        margin: 90px 0 35px;
-        padding-bottom: 15px;
-        border-bottom: 4px solid #f2f2f2;
-        position: relative;
-        letter-spacing: -0.04em;
-    }
-    .detail-body h2::after {
-        content: ''; position: absolute; bottom: -4px; left: 0;
-        width: 100px; height: 4px; background: var(--accent);
-    }
+    /* --- 기존 스타일 그대로 유지 --- */
+    :root { --article-width: 780px; }
+    body { background-color: #ffffff; margin: 0; padding: 0; overflow-x: hidden; }
+    .detail-header { max-width: var(--article-width); margin: 0 auto; padding: 80px 24px 40px; box-sizing: border-box; }
+    .detail-header .breadcrumb { color: var(--accent); font-weight: 800; font-size: 0.9rem; display: block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+    .detail-header h1 { font-size: clamp(2rem, 7vw, 3.2rem); font-weight: 800; line-height: 1.25; margin: 0; color: #1d1d1f; word-break: break-all; overflow-wrap: break-word; }
+    .detail-header .lead-text { color: #666; font-size: 1.25rem; line-height: 1.6; margin-top: 25px; font-weight: 400; }
+    .detail-body { max-width: var(--article-width); margin: 0 auto; padding: 0 24px 100px; box-sizing: border-box; font-size: 1.18rem; line-height: 2.1; color: #2c2c2e; word-wrap: break-word; word-break: break-all; }
+    .detail-body h2 { font-size: 2.1rem; font-weight: 800; margin: 90px 0 35px; padding-bottom: 15px; border-bottom: 4px solid #f2f2f2; position: relative; letter-spacing: -0.04em; }
+    .detail-body h2::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100px; height: 4px; background: var(--accent); }
     .detail-body h3 { font-size: 1.6rem; font-weight: 700; margin: 50px 0 24px; }
     .detail-body p { margin-bottom: 35px; }
-
-    /* --- [Summary Card] 요약 박스 --- */
-    .summary-card {
-        background: #f9f9fb;
-        border-radius: 24px;
-        padding: 40px;
-        margin: 40px 0 60px;
-        border: 1px solid #efeff4;
-        border-left: 8px solid var(--accent);
-        box-sizing: border-box;
-    }
+    .summary-card { background: #f9f9fb; border-radius: 24px; padding: 40px; margin: 40px 0 60px; border: 1px solid #efeff4; border-left: 8px solid var(--accent); box-sizing: border-box; }
     .summary-card h3 { margin: 0 0 20px 0 !important; font-size: 1.3rem; }
     .summary-card ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
     .summary-card li { margin-bottom: 12px; display: flex; gap: 12px; font-size: 1.05rem; align-items: flex-start; }
     .summary-card li i { color: var(--accent); margin-top: 6px; flex-shrink: 0; }
-
-    /* --- [TOC] 자동 목차 --- */
-    .toc-container {
-        background: #fff;
-        border: 1px solid #e5e5e7;
-        border-radius: 20px;
-        padding: 30px;
-        margin-bottom: 60px;
-    }
+    .toc-container { background: #fff; border: 1px solid #e5e5e7; border-radius: 20px; padding: 30px; margin-bottom: 60px; }
     .toc-title { font-weight: 800; margin-bottom: 15px; font-size: 1rem; }
     #toc-list { list-style: none; padding: 0; margin: 0; }
     #toc-list li { margin-bottom: 8px; }
     #toc-list a { color: #666; text-decoration: none; font-size: 0.95rem; }
     .toc-h3 { padding-left: 20px; font-size: 0.9rem !important; }
-
-    /* --- [Table] 모바일 대응 표 디자인 --- */
-    .table-wrapper {
-        width: 100%;
-        overflow-x: auto;
-        margin: 40px 0;
-        border-radius: 16px;
-        border: 1px solid #e5e5e7;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.03);
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        min-width: 600px;
-    }
+    .table-wrapper { width: 100%; overflow-x: auto; margin: 40px 0; border-radius: 16px; border: 1px solid #e5e5e7; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
+    table { width: 100%; border-collapse: collapse; min-width: 600px; }
     th, td { padding: 20px; text-align: left; border-bottom: 1px solid #efeff4; }
     th { background: #f9f9fb; font-weight: 700; color: #1d1d1f; }
-
-    /* --- [Ad Slot] availableWidth=0 에러 방지용 컨테이너 --- */
-    .ad-slot-detail {
-        width: 100% !important;
-        max-width: 100%;
-        margin: 40px 0;
-        min-height: 280px; /* 자리 미리 확보 */
-        text-align: center;
-        background: #fafafa;
-        display: block;
-        overflow: hidden;
-    }
-
-    /* --- 모바일 대응 --- */
+    .ad-slot-detail { width: 100% !important; max-width: 100%; margin: 40px 0; min-height: 280px; text-align: center; background: #fafafa; display: block; overflow: hidden; }
     @media (max-width: 768px) {
         .detail-header { padding: 60px 20px 30px; }
         .detail-body { padding: 0 20px 80px; font-size: 1.1rem; line-height: 1.85; }
@@ -172,20 +66,20 @@
 <main style="width: 100%; overflow-x: hidden;">
     <!-- Header -->
     <header class="detail-header">
-        <span class="breadcrumb">{{ category_title }} GUIDE</span>
+        <span class="breadcrumb">{{ category_title }} 面接対策</span>
         <h1>{{ item.title }}</h1>
         <p class="lead-text">{{ item.meta_description }}</p>
     </header>
 
     <div class="detail-body">
         
-        <!-- 퀵 사마리 박스 -->
+        <!-- 퀵 사마리 박스 (면접 특화로 변경) -->
         <div class="summary-card">
-            <h3 style="margin-top:0;"><i class="fa-solid fa-bolt-lightning" style="color: #ffcc00;"></i> クイックサマリー</h3>
+            <h3 style="margin-top:0;"><i class="fa-solid fa-bolt-lightning" style="color: #ffcc00;"></i> 面接攻略のクイックサマリー</h3>
             <ul>
-                <li><i class="fa-solid fa-circle-check"></i> <span><strong>主な役割:</strong> {{ item.title }}の核心的価値と業務範囲</span></li>
-                <li><i class="fa-solid fa-circle-check"></i> <span><strong>必須スキル:</strong> 市場で最も求められる技術的専門性</span></li>
-                <li><i class="fa-solid fa-circle-check"></i> <span><strong>将来性:</strong> キャリアの拡張性と今後の成長予測</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span><strong>面接官の視点:</strong> この職種で最も警戒される地雷と、高く評価されるコアスキル</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span><strong>頻出の技術質問:</strong> 実務未経験からシニア層まで、レベル別に絶対聞かれる技術的深掘り</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span><strong>キラー逆質問:</strong> 面接の最後に「ウチに絶対来てほしい」と思わせる戦略的な逆質問</span></li>
             </ul>
         </div>
 
@@ -195,14 +89,14 @@
             <ul id="toc-list"></ul>
         </nav>
 
-        <!-- 마크다운 본문 (JS가 표 스크롤 박스를 자동으로 생성함) -->
+        <!-- 마크다운 본문 -->
         <article id="content-main">
             {{ content | safe }}
         </article>
 
         <!-- 관련 직업 추천 -->
         <section style="margin-top: 100px;">
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; border-left: 6px solid var(--accent); padding-left: 20px;">関連性の高い職種</h3>
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; border-left: 6px solid var(--accent); padding-left: 20px;">関連する職種の面接対策</h3>
             <div class="main-grid">
                 {% for job in related_jobs_data %}
                 <a href="/career/{{ job.id }}" class="content-card" style="height: 240px;">
@@ -252,11 +146,10 @@ document.addEventListener('DOMContentLoaded', function() {
         wrapper.appendChild(table);
     });
 
-    // 3. Adsense 'availableWidth=0' 해결을 위한 안전 호출 스크립트
+    // 3. Adsense 안전 호출 스크립트
     function initAdsOnReady() {
         const ads = document.querySelectorAll('.adsbygoogle:not([data-adsbygoogle-status="done"])');
         ads.forEach(ad => {
-            // 부모의 너비가 확보될 때까지 기다렸다가 호출
             let checkWidth = setInterval(function() {
                 if (ad.offsetWidth > 0) {
                     try {
@@ -265,12 +158,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     clearInterval(checkWidth);
                 }
             }, 100);
-            // 3초 후 시도 중단
             setTimeout(() => clearInterval(checkWidth), 3000);
         });
     }
 
-    // 페이지 로드 및 0.5초 지연 후 호출 (레이아웃 안정화 대기)
     initAdsOnReady();
     window.addEventListener('load', () => setTimeout(initAdsOnReady, 500));
 });

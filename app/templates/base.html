@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & SNS Meta Tags (위치 수정 완료) -->
-    <title>{% block title %}{% endblock %} Starful | 理想のキャリア図鑑</title>
-    <meta name="description" content="{% block meta_desc %}90種類以上の職種ガイドから、あなたに最適な道を見つける。IT・デザイン・ビジネスの最新トレンドと、キャリア設計に役立つヒントを毎日発信。{% endblock %}">
+    <!-- SEO & SNS Meta Tags -->
+    <title>{% block title %}{% endblock %} Starful | IT面接対策バイブル</title>
+    <meta name="description" content="{% block meta_desc %}IT業界の全職種における面接頻出質問、模範解答、キラー逆質問を完全網羅。未経験からシニア層まで、ITエンジニア・デザイナー・マーケターの転職面接を攻略するためのガチ対策ガイド。{% endblock %}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{% block og_title %}{% endblock %} Starful">
     <meta property="og:description" content="{% block og_desc %}{% endblock %}">
     <meta property="og:url" content="{{ request.url }}">
-    <meta property="og:image" content="https://starful.biz/static/img/logo.png"> <!-- 공유 시 보일 로고 -->
+    <meta property="og:image" content="https://starful.biz/static/img/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     
-    <!-- 캐노니컬 태그: 중복 콘텐츠 방지 및 SEO 점수 집중 -->
-    <link rel="canonical" href="{{ request.url }}">
+    <!-- キャノニカルタグ（検索パラメーター等による重複コンテンツ判定を防止） -->
+    <link rel="canonical" href="{{ request.base_url | string }}{{ request.url.path | trim('/') }}">
 
-    <!-- 구글 애드센스 -->
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8780435268193938" crossorigin="anonymous"></script>    
     
     <!-- Google tag (gtag.js) -->
@@ -26,7 +26,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-7CCENHDZHH');
     </script>
 
