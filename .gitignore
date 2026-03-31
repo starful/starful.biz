@@ -15,3 +15,5 @@ __pycache__/
 *.tar.gz
 command.txt
 script/
+
+firebase-key.json

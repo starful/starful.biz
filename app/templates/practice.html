@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>AI面接官によるSTARR式回答添削 | Starful</title>
+<meta name="description" content="STARRフレームワーク（Situation, Task, Action, Result, Reflection）に基づき、あなたの面接回答をAIが即座に分析。IT転職に特化した具体的なアドバイスと模範解答を提供します。">
+<meta property="og:title" content="AI面接官によるSTARR式回答添削 | Starful">
+<meta property="og:description" content="プロの視点であなたのキャリアエピソードを強化。30秒で終わるAI無料診断。">
+<link rel="canonical" href="https://starful.biz/practice">
+
+<style>
+    :root { --article-width: 900px; --accent: #007aff; }
+    .practice-page { max-width: var(--article-width); margin: 0 auto; padding: 60px 20px 100px; }
+
+    /* --- STARR Guide Section --- */
+    .starr-guide { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 60px; }
+    .guide-item { background: #fff; padding: 20px; border-radius: 20px; border: 1px solid #eee; text-align: center; }
+    .guide-item strong { display: block; font-size: 1.2rem; color: var(--accent); margin-bottom: 8px; }
+    .guide-item span { font-size: 0.8rem; color: #86868b; line-height: 1.4; display: block; }
+
+    /* --- Form Style --- */
+    .starr-card { background: #fff; border-radius: 32px; padding: 40px; border: 1px solid #e5e5e7; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+    .starr-group { margin-bottom: 24px; }
+    .starr-group label { display: flex; align-items: center; gap: 10px; font-weight: 700; margin-bottom: 10px; }
+    .starr-group textarea { width: 100%; padding: 18px; border-radius: 16px; border: 1px solid #d2d2d7; font-size: 1rem; min-height: 100px; resize: vertical; outline: none; transition: border-color 0.3s; }
+    .starr-group textarea:focus { border-color: var(--accent); }
+    .btn-analyze { width: 100%; background: var(--accent); color: white; border: none; padding: 20px; border-radius: 16px; font-size: 1.15rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; }
+
+    /* --- Fullscreen Loading Overlay --- */
+    #loading-overlay { 
+        display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+        background: rgba(255,255,255,0.95); z-index: 9999; 
+        flex-direction: column; align-items: center; justify-content: center;
+    }
+    .spinner { width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid var(--accent); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+    /* --- Result Modal --- */
+    #result-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 10000; backdrop-filter: blur(5px); }
+    .modal-content { 
+        position: relative; background: #fff; width: 90%; max-width: 800px; height: 85vh; 
+        margin: 5vh auto; border-radius: 30px; padding: 40px; overflow-y: auto; 
+        box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    }
+    .close-modal { position: sticky; top: 0; float: right; font-size: 2rem; cursor: pointer; color: #86868b; }
+    .score-banner { background: var(--accent); color: white; padding: 20px; border-radius: 20px; text-align: center; margin-bottom: 30px; }
+    .score-banner h2 { font-size: 2.5rem; margin: 0; }
+    .feedback-item { margin-bottom: 25px; border-bottom: 1px solid #f2f2f2; padding-bottom: 15px; }
+    .feedback-item strong { color: var(--accent); display: block; margin-bottom: 5px; }
+    .best-answer-box { background: #f0f7ff; padding: 30px; border-radius: 20px; border: 2px dashed var(--accent); position: relative; }
+    .copy-btn { position: absolute; top: 15px; right: 15px; background: var(--accent); color: white; border: none; padding: 8px 15px; border-radius: 10px; cursor: pointer; font-size: 0.8rem; }
+
+    @media (max-width: 768px) {
+        .starr-guide { grid-template-columns: 1fr; }
+        .modal-content { padding: 25px; width: 95%; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="practice-page">
+    <div style="text-align: center; margin-bottom: 50px;">
+        <h1 style="font-size: 2.5rem; font-weight: 900;">AI面接官・回答添삭</h1>
+        <p style="color: #666; margin-top: 15px;">あなたのキャリアエピソードを、選考に強い「最強の回答」へ昇華させます。</p>
+    </div>
+
+    <!-- STARR Framework Guide -->
+    <section class="starr-guide">
+        <div class="guide-item"><strong>S</strong><span>Situation<br>背景・状況</span></div>
+        <div class="guide-item"><strong>T</strong><span>Task<br>課題・目標</span></div>
+        <div class="guide-item"><strong>A</strong><span>Action<br>具体的な行動</span></div>
+        <div class="guide-item"><strong>R</strong><span>Result<br>結果・数字</span></div>
+        <div class="guide-item"><strong>R</strong><span>Reflection<br>学び・応用</span></div>
+    </section>
+
+    <!-- Input Form -->
+    <div class="starr-card">
+        <div class="starr-group">
+            <label>💬 あなたのエピソードを入力してください</label>
+            <textarea id="total-input" placeholder="【例】ECサイトの売上を20%向上させた経験、エンジニアとしてバグ解決に貢献した経験など... STARR形式を意識せずに自由に書いてもAIが整理します。" style="min-height: 200px;"></textarea>
+        </div>
+        <p style="font-size: 0.85rem; color: #86868b; margin-bottom: 20px; text-align: center;">
+            <i class="fa-solid fa-circle-info"></i> 本日の残り利用回数: 1일 3회 제한 (IPベース)
+        </p>
+        <button class="btn-analyze" onclick="startAnalysis()">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> AI面接官に診断してもらう
+        </button>
+    </div>
+</div>
+
+<!-- Loading Overlay -->
+<div id="loading-overlay">
+    <div class="spinner"></div>
+    <h3 id="loading-text" style="font-weight: 700;">AI面接官が分析を開始しました...</h3>
+    <p style="color: #86868b; margin-top: 10px;">通常15〜20秒ほどかかります</p>
+</div>
+
+<!-- Result Modal -->
+<div id="result-modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="score-banner">
+            <p style="margin: 0; opacity: 0.8; font-weight: 700;">面接突破予想スコア</p>
+            <h2 id="res-score">0</h2>
+        </div>
+        
+        <h3 style="margin-bottom: 20px;">📌 フィードバック報告書</h3>
+        <div class="feedback-item"><strong>総評</strong><p id="res-summary"></p></div>
+        <div class="feedback-item"><strong>改善アドバイス</strong>
+            <p id="res-details" style="font-size: 0.95rem; line-height: 1.7; color: #444;"></p>
+        </div>
+
+        <div class="best-answer-box">
+            <button class="copy-btn" onclick="copyAnswer()">コピー</button>
+            <h4 style="margin: 0 0 15px 0;"><i class="fa-solid fa-lightbulb"></i> AIが書き換えた最強の回答</h4>
+            <p id="res-improved" style="margin: 0; font-size: 1rem; line-height: 1.8; color: #1d1d1f; white-space: pre-wrap;"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+const loadingMsgs = ["内容を読み取っています...", "STARR構成を分析中...", "改善ポイントを抽出中...", "模範解答を生成しています..."];
+
+async function startAnalysis() {
+    const text = document.getElementById('total-input').value;
+    if (text.length < 20) return alert("回答内容が短すぎます。もう少し詳しく入力してください。");
+
+    // UI: 로딩 시작
+    document.getElementById('loading-overlay').style.display = 'flex';
+    let msgIdx = 0;
+    const msgInterval = setInterval(() => {
+        document.getElementById('loading-text').innerText = loadingMsgs[msgIdx % loadingMsgs.length];
+        msgIdx++;
+    }, 4000);
+
+    try {
+        const response = await fetch('/api/analyze-starr', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ s: text, t: "", a: "", r: "", reflection: "", job_title: "IT Professional" })
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            alert("AI分析の失敗: " + (errorData.detail || "サーバーエラーが発生しました。"));
+            document.getElementById('loading-overlay').style.display = 'none'; // 로딩 끄기
+            return;
+        }
+
+        if (response.status === 429) {
+            const err = await response.json();
+            alert(err.detail);
+            return;
+        }
+
+        if (response.status === 503) {
+            alert("現在、AIサーバーに接続者が多く、処理が遅れています。 10秒後にもう一度お試しください。");
+            return;
+        }
+        const data = await response.json();
+
+        // 데이터 바인딩
+        document.getElementById('res-score').innerText = data.score + " / 100";
+        document.getElementById('res-summary').innerText = data.summary;
+        document.getElementById('res-details').innerHTML = `
+            <b>S:</b> ${data.s_feedback}<br><b>T:</b> ${data.t_feedback}<br>
+            <b>A:</b> ${data.a_feedback}<br><b>R:</b> ${data.r_feedback}
+        `;
+        document.getElementById('res-improved').innerText = data.improved_answer;
+
+        // 모달 열기
+        document.getElementById('result-modal').style.display = 'block';
+    } catch (e) {
+        alert("エラーが発生しました。");
+    } finally {
+        clearInterval(msgInterval);
+        document.getElementById('loading-overlay').style.display = 'none';
+    }
+}
+
+function closeModal() { document.getElementById('result-modal').style.display = 'none'; }
+function copyAnswer() {
+    const text = document.getElementById('res-improved').innerText;
+    navigator.clipboard.writeText(text).then(() => alert("模範解答をコピーしました！"));
+}
+</script>
+{% endblock %}

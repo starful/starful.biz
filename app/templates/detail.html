@@ -3,98 +3,152 @@
 {% block head %}
 <title>{{ item.title }} | Starful</title>
 <meta name="description" content="{{ item.meta_description }}">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "{{ item.title }}",
-  "description": "{{ item.meta_description }}",
-  "author": {
-    "@type": "Organization",
-    "name": "Starful"
-  },
-  "image": "{{ item.thumbnail }}",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Starful",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://starful.biz/static/img/logo.png"
-    }
-  }
-}
-</script>
 <style>
-    /* --- 기존 스타일 그대로 유지 --- */
+    /* --- 기존 스타일 유지 --- */
     :root { --article-width: 780px; }
-    body { background-color: #ffffff; margin: 0; padding: 0; overflow-x: hidden; }
-    .detail-header { max-width: var(--article-width); margin: 0 auto; padding: 80px 24px 40px; box-sizing: border-box; }
-    .detail-header .breadcrumb { color: var(--accent); font-weight: 800; font-size: 0.9rem; display: block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-    .detail-header h1 { font-size: clamp(2rem, 7vw, 3.2rem); font-weight: 800; line-height: 1.25; margin: 0; color: #1d1d1f; word-break: break-all; overflow-wrap: break-word; }
-    .detail-header .lead-text { color: #666; font-size: 1.25rem; line-height: 1.6; margin-top: 25px; font-weight: 400; }
-    .detail-body { max-width: var(--article-width); margin: 0 auto; padding: 0 24px 100px; box-sizing: border-box; font-size: 1.18rem; line-height: 2.1; color: #2c2c2e; word-wrap: break-word; word-break: break-all; }
-    .detail-body h2 { font-size: 2.1rem; font-weight: 800; margin: 90px 0 35px; padding-bottom: 15px; border-bottom: 4px solid #f2f2f2; position: relative; letter-spacing: -0.04em; }
+    body { background-color: #ffffff; margin: 0; padding: 0; }
+    .detail-header { max-width: var(--article-width); margin: 0 auto; padding: 80px 24px 40px; }
+    .detail-header .breadcrumb { color: var(--accent); font-weight: 800; font-size: 0.9rem; display: block; margin-bottom: 15px; text-transform: uppercase; }
+    .detail-header h1 { font-size: clamp(2rem, 7vw, 3.2rem); font-weight: 800; line-height: 1.25; margin: 0; color: #1d1d1f; }
+    .detail-header .lead-text { color: #666; font-size: 1.25rem; line-height: 1.6; margin-top: 25px; }
+    
+    .detail-body { max-width: var(--article-width); margin: 0 auto; padding: 0 24px 100px; font-size: 1.18rem; line-height: 2.1; color: #2c2c2e; }
+    .detail-body h2 { font-size: 2.1rem; font-weight: 800; margin: 90px 0 35px; padding-bottom: 15px; border-bottom: 4px solid #f2f2f2; position: relative; }
     .detail-body h2::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100px; height: 4px; background: var(--accent); }
-    .detail-body h3 { font-size: 1.6rem; font-weight: 700; margin: 50px 0 24px; }
-    .detail-body p { margin-bottom: 35px; }
-    .summary-card { background: #f9f9fb; border-radius: 24px; padding: 40px; margin: 40px 0 60px; border: 1px solid #efeff4; border-left: 8px solid var(--accent); box-sizing: border-box; }
-    .summary-card h3 { margin: 0 0 20px 0 !important; font-size: 1.3rem; }
-    .summary-card ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
-    .summary-card li { margin-bottom: 12px; display: flex; gap: 12px; font-size: 1.05rem; align-items: flex-start; }
-    .summary-card li i { color: var(--accent); margin-top: 6px; flex-shrink: 0; }
-    .toc-container { background: #fff; border: 1px solid #e5e5e7; border-radius: 20px; padding: 30px; margin-bottom: 60px; }
-    .toc-title { font-weight: 800; margin-bottom: 15px; font-size: 1rem; }
-    #toc-list { list-style: none; padding: 0; margin: 0; }
-    #toc-list li { margin-bottom: 8px; }
-    #toc-list a { color: #666; text-decoration: none; font-size: 0.95rem; }
-    .toc-h3 { padding-left: 20px; font-size: 0.9rem !important; }
-    .table-wrapper { width: 100%; overflow-x: auto; margin: 40px 0; border-radius: 16px; border: 1px solid #e5e5e7; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
-    table { width: 100%; border-collapse: collapse; min-width: 600px; }
-    th, td { padding: 20px; text-align: left; border-bottom: 1px solid #efeff4; }
-    th { background: #f9f9fb; font-weight: 700; color: #1d1d1f; }
-    .ad-slot-detail { width: 100% !important; max-width: 100%; margin: 40px 0; min-height: 280px; text-align: center; background: #fafafa; display: block; overflow: hidden; }
+    
+    /* --- STARR 練習セクション --- */
+    .starr-section {
+        background: #f5f5f7;
+        border-radius: 30px;
+        padding: 50px;
+        margin: 80px 0;
+        border: 1px solid #e5e5e7;
+    }
+    .starr-section h2 { border: none; margin-top: 0; padding-bottom: 10px; font-size: 1.8rem; }
+    .starr-section h2::after { display: none; }
+    
+    .starr-form { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
+    .starr-group { display: flex; flex-direction: column; gap: 8px; }
+    .starr-group label { font-weight: 700; font-size: 1rem; color: #1d1d1f; display: flex; align-items: center; gap: 8px; }
+    .starr-group label span { font-size: 0.8rem; color: var(--accent); background: #fff; padding: 2px 8px; border-radius: 5px; border: 1px solid var(--accent); }
+    
+    .starr-form textarea {
+        width: 100%;
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #d2d2d7;
+        font-family: inherit;
+        font-size: 1rem;
+        resize: vertical;
+        min-height: 100px;
+        transition: border-color 0.3s;
+    }
+    .starr-form textarea:focus { outline: none; border-color: var(--accent); }
+    
+    .btn-analyze {
+        background: var(--accent);
+        color: white;
+        border: none;
+        padding: 18px;
+        border-radius: 15px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.2s, opacity 0.2s;
+        margin-top: 10px;
+    }
+    .btn-analyze:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-analyze:disabled { background: #86868b; cursor: not-allowed; }
+
+    /* 結果表示エリア */
+    #starr-result { display: none; margin-top: 40px; padding-top: 40px; border-top: 1px solid #d2d2d7; }
+    .result-card { background: #fff; border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .score-badge { display: inline-block; padding: 10px 20px; background: var(--accent); color: #fff; border-radius: 100px; font-weight: 800; font-size: 1.2rem; margin-bottom: 20px; }
+    .feedback-item { margin-bottom: 20px; font-size: 1rem; line-height: 1.6; }
+    .feedback-item strong { display: block; color: var(--accent); margin-bottom: 5px; }
+    .improved-box { background: #f0f7ff; padding: 25px; border-radius: 15px; border-left: 5px solid var(--accent); margin-top: 30px; }
+    .improved-box h4 { margin: 0 0 10px 0; color: #1d1d1f; }
+
     @media (max-width: 768px) {
-        .detail-header { padding: 60px 20px 30px; }
-        .detail-body { padding: 0 20px 80px; font-size: 1.1rem; line-height: 1.85; }
-        .detail-body h2 { font-size: 1.7rem; }
-        .summary-card { padding: 25px; border-radius: 16px; }
+        .starr-section { padding: 30px 20px; border-radius: 20px; }
     }
 </style>
 {% endblock %}
 
 {% block content %}
 <main style="width: 100%; overflow-x: hidden;">
-    <!-- Header -->
     <header class="detail-header">
-        <span class="breadcrumb">{{ category_title }} 面接対策</span>
+        <span class="breadcrumb">{{ category_title }} 面接対策ガイド</span>
         <h1>{{ item.title }}</h1>
         <p class="lead-text">{{ item.meta_description }}</p>
     </header>
 
     <div class="detail-body">
-        
-        <!-- 퀵 사마리 박스 (면접 특화로 변경) -->
-        <div class="summary-card">
-            <h3 style="margin-top:0;"><i class="fa-solid fa-bolt-lightning" style="color: #ffcc00;"></i> 面接攻略のクイックサマリー</h3>
-            <ul>
-                <li><i class="fa-solid fa-circle-check"></i> <span><strong>面接官の視点:</strong> この職種で最も警戒される地雷と、高く評価されるコアスキル</span></li>
-                <li><i class="fa-solid fa-circle-check"></i> <span><strong>頻出の技術質問:</strong> 実務未経験からシニア層まで、レベル別に絶対聞かれる技術的深掘り</span></li>
-                <li><i class="fa-solid fa-circle-check"></i> <span><strong>キラー逆質問:</strong> 面接の最後に「ウチに絶対来てほしい」と思わせる戦略的な逆質問</span></li>
-            </ul>
-        </div>
-
-        <!-- 자동 목차 -->
-        <nav class="toc-container">
-            <div class="toc-title">INDEX</div>
-            <ul id="toc-list"></ul>
+        <!-- 目次 -->
+        <nav class="toc-container" style="background: #f5f5f7; border: none; border-radius: 20px; padding: 25px; margin-bottom: 60px;">
+            <div class="toc-title" style="font-size: 0.9rem; letter-spacing: 1px; color: #86868b;">INDEX</div>
+            <ul id="toc-list" style="list-style: none; padding: 0; margin: 0;"></ul>
         </nav>
 
-        <!-- 마크다운 본문 -->
         <article id="content-main">
             {{ content | safe }}
         </article>
 
-        <!-- 관련 직업 추천 -->
+        <!-- STARR 練習セクション -->
+        <section id="practice" class="starr-section">
+            <h2>🚀 STARR式・実戦面接練習</h2>
+            <p style="font-size: 1rem; color: #666; margin-bottom: 30px;">
+                ガイドを読んだ後は、実際に回答を作成してみましょう。AIがSTARRフレームワークに基づきスコアリングし、より説得力のある回答を提案します。
+            </p>
+
+            <div class="starr-form">
+                <div class="starr-group">
+                    <label><span>S</span> Situation（状況）</label>
+                    <textarea id="input-s" placeholder="どのような状況でしたか？（プロジェクトの背景、当時の環境など）"></textarea>
+                </div>
+                <div class="starr-group">
+                    <label><span>T</span> Task（課題）</label>
+                    <textarea id="input-t" placeholder="当時、あなたに課せられた目標や解決すべき課題は何でしたか？"></textarea>
+                </div>
+                <div class="starr-group">
+                    <label><span>A</span> Action（行動）</label>
+                    <textarea id="input-a" placeholder="具体的にどのような技術を使用し、どのような行動をとりましたか？（最も重要）"></textarea>
+                </div>
+                <div class="starr-group">
+                    <label><span>R</span> Result（結果）</label>
+                    <textarea id="input-r" placeholder="その結果、どうなりましたか？（数値的な成果や具体的な変化を中心に）"></textarea>
+                </div>
+                <div class="starr-group">
+                    <label><span>R</span> Reflection（学び）</label>
+                    <textarea id="input-reflection" placeholder="この経験から何を学び、実務にどう活かせると考えていますか？"></textarea>
+                </div>
+
+                <button type="button" class="btn-analyze" onclick="analyzeAnswer()" id="btn-submit">
+                    AI面接官にフィードバックをもらう
+                </button>
+            </div>
+
+            <!-- 分析結果 -->
+            <div id="starr-result">
+                <div class="result-card">
+                    <div id="result-score" class="score-badge">採点中...</div>
+                    <p id="result-summary" style="font-weight: 700; margin-bottom: 25px;"></p>
+                    
+                    <div class="feedback-item"><strong>S 状況の評価</strong> <span id="feed-s"></span></div>
+                    <div class="feedback-item"><strong>T 課題の評価</strong> <span id="feed-t"></span></div>
+                    <div class="feedback-item"><strong>A 行動の評価</strong> <span id="feed-a"></span></div>
+                    <div class="feedback-item"><strong>R 結果の評価</strong> <span id="feed-r"></span></div>
+                    <div class="feedback-item"><strong>学び・省察の評価</strong> <span id="feed-reflection"></span></div>
+
+                    <div class="improved-box">
+                        <h4>✨ AIが提案する模範解答</h4>
+                        <p id="result-improved" style="font-size: 1rem; line-height: 1.7; color: #333; white-space: pre-wrap;"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 関連職種 -->
         <section style="margin-top: 100px;">
             <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; border-left: 6px solid var(--accent); padding-left: 20px;">関連する職種の面接対策</h3>
             <div class="main-grid">
@@ -117,53 +171,73 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const content = document.getElementById('content-main');
-    
-    // 1. 목차 생성 로직
     const tocList = document.getElementById('toc-list');
     const headings = content.querySelectorAll('h2, h3');
-    if (headings.length === 0) {
-        document.querySelector('.toc-container').style.display = 'none';
-    } else {
-        headings.forEach((heading, index) => {
-            const id = 'anchor-' + index;
-            heading.setAttribute('id', id);
-            const li = document.createElement('li');
-            const a = document.createElement('a');
-            a.setAttribute('href', '#' + id);
-            a.textContent = heading.textContent;
-            if (heading.tagName === 'H3') a.classList.add('toc-h3');
-            li.appendChild(a);
-            tocList.appendChild(li);
-        });
-    }
-
-    // 2. 마크다운 표(table) 자동 래핑 (짤림 방지)
-    const tables = content.querySelectorAll('table');
-    tables.forEach(table => {
-        const wrapper = document.createElement('div');
-        wrapper.className = 'table-wrapper';
-        table.parentNode.insertBefore(wrapper, table);
-        wrapper.appendChild(table);
+    headings.forEach((heading, index) => {
+        const id = 'anchor-' + index;
+        heading.setAttribute('id', id);
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.setAttribute('href', '#' + id);
+        a.textContent = heading.textContent;
+        a.style.textDecoration = "none";
+        a.style.color = "#424245";
+        a.style.fontSize = "0.95rem";
+        if (heading.tagName === 'H3') li.style.paddingLeft = "15px";
+        li.appendChild(a);
+        tocList.appendChild(li);
     });
+});
 
-    // 3. Adsense 안전 호출 스크립트
-    function initAdsOnReady() {
-        const ads = document.querySelectorAll('.adsbygoogle:not([data-adsbygoogle-status="done"])');
-        ads.forEach(ad => {
-            let checkWidth = setInterval(function() {
-                if (ad.offsetWidth > 0) {
-                    try {
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    } catch (e) { console.error("AdSense error:", e); }
-                    clearInterval(checkWidth);
-                }
-            }, 100);
-            setTimeout(() => clearInterval(checkWidth), 3000);
-        });
+async function analyzeAnswer() {
+    const btn = document.getElementById('btn-submit');
+    const resultDiv = document.getElementById('starr-result');
+    const data = {
+        s: document.getElementById('input-s').value,
+        t: document.getElementById('input-t').value,
+        a: document.getElementById('input-a').value,
+        r: document.getElementById('input-r').value,
+        reflection: document.getElementById('input-reflection').value,
+        job_title: "{{ item.title }}"
+    };
+
+    if(!data.s || !data.a) {
+        alert("状況(S)と行動(A)は必ず入力してください。");
+        return;
     }
 
-    initAdsOnReady();
-    window.addEventListener('load', () => setTimeout(initAdsOnReady, 500));
-});
+    btn.disabled = true;
+    btn.innerText = "AI面接官が分析中...";
+    resultDiv.style.display = "none";
+
+    try {
+        const response = await fetch('/api/analyze-starr', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) throw new Error("분석 실패");
+        const result = await response.json();
+
+        document.getElementById('result-score').innerText = result.score + "点";
+        document.getElementById('result-summary').innerText = result.summary;
+        document.getElementById('feed-s').innerText = result.s_feedback;
+        document.getElementById('feed-t').innerText = result.t_feedback;
+        document.getElementById('feed-a').innerText = result.a_feedback;
+        document.getElementById('feed-r').innerText = result.r_feedback;
+        document.getElementById('feed-reflection').innerText = result.reflection_feedback;
+        document.getElementById('result-improved').innerText = result.improved_answer;
+
+        resultDiv.style.display = "block";
+        resultDiv.scrollIntoView({ behavior: 'smooth' });
+
+    } catch (error) {
+        alert("エラーが発生しました: " + error.message);
+    } finally {
+        btn.disabled = false;
+        btn.innerText = "AI面接官にフィードバックをもらう";
+    }
+}
 </script>
 {% endblock %}

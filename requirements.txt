@@ -3,4 +3,6 @@ uvicorn
 Jinja2
 python-frontmatter
 markdown
-Pillow
+google-genai
+firebase-admin
+python-dotenv
