@@ -240,6 +240,14 @@ async def sitemap(request: Request):
 @app.get('/robots.txt', response_class=PlainTextResponse)
 async def robots(): return "User-agent: *\nAllow: /"
 
+@app.get('/ads.txt', response_class=FileResponse)
+async def ads_txt():
+    # static 폴더 안에 ads.txt 파일이 있어야 합니다.
+    ads_path = os.path.join(STATIC_DIR, "ads.txt")
+    if os.path.exists(ads_path):
+        return ads_path
+    return Response(status_code=404)
+
 @app.get("/favicon.ico", include_in_schema=False)
 async def favicon():
     return FileResponse(os.path.join(STATIC_DIR, "img", "logo.png"))
