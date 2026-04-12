@@ -5,22 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO & SNS Meta Tags -->
-    <title>{% block title %}{% endblock %} Starful | IT面接対策バイブル</title>
-    <meta name="description" content="{% block meta_desc %}IT業界の全職種における面接頻出質問、模範解答、キラー逆質問を完全網羅。未経験からシニア層まで、ITエンジニア・デザイナー・マーケターの転職面接を攻略するためのガチ対策ガイド。{% endblock %}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{% block og_title %}{% endblock %} Starful">
-    <meta property="og:description" content="{% block og_desc %}{% endblock %}">
-    <meta property="og:url" content="{{ request.url }}">
-    <meta property="og:image" content="https://starful.biz/static/img/logo.png">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>{% block title %}{% endblock %} Starful | IT転職・面接対策バイブル</title>
+    <meta name="description" content="{% block meta_desc %}IT業界の全職種における面接頻出質問、模範解答、キラー逆質問을完全網羅。{% endblock %}">
     
-    <!-- キャノニカルタグ（検索パラメーター等による重複コンテンツ判定を防止） -->
     <link rel="canonical" href="{{ request.base_url | string }}{{ request.url.path | trim('/') }}">
 
-    <!-- Google AdSense -->
+    <!-- Google tag & Ads -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8780435268193938" crossorigin="anonymous"></script>    
-    
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CCENHDZHH"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -29,33 +20,37 @@
     gtag('config', 'G-7CCENHDZHH');
     </script>
 
-    <link rel="stylesheet" href="/static/css/style.css?v=12.0">
+    <link rel="stylesheet" href="/static/css/style.css?v=13.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     {% block head %}{% endblock %}
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <img src="/static/img/logo.png" alt="Starful" style="height: 32px;" onerror="this.style.display='none'; this.parentNode.innerText='STARFUL'">
-            </a>
-            <div class="nav-links">
-                <a href="/about">運営者情報</a>
-                <a href="/privacy">ポリシー</a>
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <a href="/" class="logo-wrapper">
+                    <img src="/static/img/logo.png" alt="Starful" class="logo-img" onerror="this.style.display='none'; this.parentNode.innerText='STARFUL'">
+                </a>
+                <div class="nav-links">
+                    <a href="/practice">AI面接官</a>
+                    <a href="/about">運営者情報</a>
+                </div>
             </div>
+            
+            {% block header_filters %}{% endblock %}
         </div>
-    </nav>
+    </header>
 
     {% block content %}{% endblock %}
 
     <footer class="footer">
-        <div class="footer-links">
-            <a href="/about">運営者情報 (About)</a>
-            <a href="/privacy">プライバシーポリシー</a>
-            <a href="https://script.google.com/macros/s/AKfycbyCLnBhulwNFERwnPIbuR_NyiXLeh_sKU05FVi0wSZGwl65B_xzFXU-YbDzLfLg3GcT3w/exec" target="_blank">お問い合わせ</a>
-        </div>
-        <p style="color: #bbb; font-size: 0.85rem;">&copy; 2026 Starful. Crafted for your future career.</p>
+        <p><strong>Starful Project</strong><br>IT転職の面接を攻略せよ。職種別ガチ面接対策</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">
+            <a href="/about" style="color: #555; margin: 0 10px;">運営者情報</a> | 
+            <a href="/privacy" style="color: #555; margin: 0 10px;">プライバシーポリシー</a> | 
+            &copy; 2026 Starful
+        </p>
     </footer>
 </body>
 </html>

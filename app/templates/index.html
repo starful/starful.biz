@@ -1,107 +1,83 @@
 {% extends "base.html" %}
 
-{% block content %}
-<header class="header">
-    <div class="logo-area">
-        <a href="/">
-            <img src="/static/img/logo.png" alt="Starful" style="height: 50px; margin-bottom: 20px;" onerror="this.style.display='none';">
-        </a>
-    </div>
-    <h1 style="letter-spacing: -0.06em;">IT転職の面接を攻略せよ。<br>職種別ガチ面接対策</h1>
-    <p>頻出質問から模範解答、キラー逆質問まで。実務経験別の面接対策バイブル。</p>
-
-    <!-- 統計バー -->
-    <div class="stats-bar">
-        <div class="stat-item">
-            <span class="stat-label">面接対策ガイド</span>
-            <span class="stat-value">{{ total_count }}職種</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-            <span class="stat-label">最終更新日</span>
-            <span class="stat-value">{{ last_updated }}</span>
-        </div>
-    </div>
-
-    <!-- ✨ NEW: AI練習機能への誘導バナー (SEO & UI) -->
-    <section style="max-width: 900px; margin: 40px auto 60px; text-align: left;">
-        <a href="/practice" style="display: block; background: linear-gradient(135deg, #007aff, #0051af); border-radius: 24px; padding: 40px; color: white; text-decoration: none; transition: transform 0.3s ease; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,122,255,0.2);">
-            <div style="position: relative; z-index: 2;">
-                <span style="background: rgba(255,255,255,0.2); padding: 5px 12px; border-radius: 100px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px;">AI INTERVIEW BETA</span>
-                <h2 style="font-size: 1.8rem; margin: 15px 0 10px; font-weight: 800;">AI面接官による回答添削 🚀</h2>
-                <p style="opacity: 0.9; font-size: 1.05rem; line-height: 1.5; max-width: 500px;">
-                    あなたのエピソードをSTARR形式で入力するだけ。AIが即座に採点し、内定率を高める模範解答を提案します。
-                </p>
-                <div style="margin-top: 25px; display: inline-flex; align-items: center; gap: 8px; font-weight: 700; background: #fff; color: #007aff; padding: 10px 20px; border-radius: 12px; font-size: 0.95rem;">
-                    今すぐ無料で試す <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-            <!-- 背景アイコン装飾 -->
-            <i class="fa-solid fa-robot" style="position: absolute; right: -20px; bottom: -20px; font-size: 10rem; opacity: 0.15; transform: rotate(-15deg);"></i>
-        </a>
-    </section>
-
-    <!-- カテゴリータブ -->
-    <div class="category-tabs-container">
-        <div class="category-tabs">
-            <button class="tab-btn active" data-filter="all">全て</button>
-            {% for category in grouped_items %}
-            <button class="tab-btn" data-filter="{{ category.slug }}">{{ category.title }}</button>
-            {% endfor %}
-        </div>
-    </div>
-
-    <!-- 検索バー -->
-    <div class="search-container">
-        <form action="/search" method="GET">
-            <input type="text" name="q" class="search-input" placeholder="職種、スキル、面接キーワードで検索..." value="{{ query if query else '' }}">
-        </form>
-    </div>
-</header>
-
-<div class="container">
+{% block header_filters %}
+<div class="theme-filter-buttons">
+    <button class="theme-button active" data-filter="all">
+        すべて <span class="count-badge" id="count-all">{{ total_count }}</span>
+    </button>
     {% for category in grouped_items %}
-        <section class="filter-section" id="section-{{ category.slug }}" style="margin-bottom: 80px;">
-            <h2 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 30px; display: flex; align-items: center; gap: 12px;">
-                <span style="width: 5px; height: 25px; background: var(--accent); border-radius: 10px;"></span>
-                {{ category.title }} 面接対策
-            </h2>
-
-            <div class="main-grid">
-                {% for item in category.job_items %}
-                    <a href="/career/{{ item.id }}" class="content-card">
-                        <div class="card-bg">
-                            <img src="/static/img/{{ item.id }}.png" alt="{{ item.title }}" onerror="this.onerror=null; this.src='https://loremflickr.com/800/600/technology,{{ item.id }}';">
-                        </div>
-                        <div class="card-overlay"></div>
-                        <div class="card-body">
-                            {% if item.tags %}
-                            <span class="category-tag">{{ item.tags[0] }}</span>
-                            {% endif %}
-                            <h3>{{ item.title }}</h3>
-                        </div>
-                    </a>
-                {% endfor %}
-            </div>
-        </section>
+    <button class="theme-button" data-filter="{{ category.slug }}">
+        {{ category.title }} <span class="count-badge">{{ category.job_items|length }}</span>
+    </button>
     {% endfor %}
 </div>
+{% endblock %}
+
+{% block content %}
+<main class="content-wrapper">
+
+    <!-- AI Banner (Japanese Version) -->
+    <section class="ai-banner">
+        <span class="ai-banner-label">AI INTERVIEW BETA</span>
+        <h2>AI面接官による実戦STARR添削 🚀</h2>
+        <p>あなたのエピソードを入力するだけ。AIが30秒で内定率を高める模範解答を提案します。面접前にぜひお試しください。</p>
+        <a href="/practice" class="ai-banner-btn" style="text-decoration: none;">
+            無料で試してみる <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i>
+        </a>
+        <i class="fa-solid fa-robot bg-icon"></i>
+    </section>
+
+    <!-- Search Bar (Japanese Version) -->
+    <div class="search-container">
+        <form action="/search" method="GET">
+            <input type="text" name="q" class="search-input" placeholder="職種、技術スタック、キーワードで検索 (例: バックエンド、React、企画)..." value="{{ query if query else '' }}">
+        </form>
+    </div>
+
+    <!-- Job Grid (Japanese Version) -->
+    <section>
+        <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--primary-color); display: flex; justify-content: space-between; align-items: flex-end;">
+            🔥 人気の職種別面接ガイド
+            <span style="font-size: 0.85rem; color: #888; font-weight: normal;">最終更新日: {{ last_updated }}</span>
+        </h3>
+        
+        <div class="job-grid" id="main-grid">
+            {% for category in grouped_items %}
+                {% for item in category.job_items %}
+                <a href="/career/{{ item.id }}" class="job-card" data-category="{{ category.slug }}">
+                    <div class="card-thumb-link">
+                        <img src="/static/img/{{ item.id }}.png" alt="{{ item.title }}" class="card-thumb" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop';">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">{{ category.title }}</div>
+                        <h3 class="card-title">{{ item.title }}</h3>
+                        <p class="card-summary">{{ item.meta_description }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
+
+</main>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const tabs = document.querySelectorAll('.tab-btn');
-    const sections = document.querySelectorAll('.filter-section');
+    const buttons = document.querySelectorAll('.theme-button');
+    const cards = document.querySelectorAll('.job-card');
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const filter = tab.getAttribute('data-filter');
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            sections.forEach(section => {
-                if (filter === 'all' || section.id === 'section-' + filter) {
-                    section.style.display = 'block';
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            buttons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const filter = this.getAttribute('data-filter');
+
+            cards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'flex';
                 } else {
-                    section.style.display = 'none';
+                    card.style.display = 'none';
                 }
             });
         });

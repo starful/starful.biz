@@ -1,22 +1,23 @@
-# 1. 기본이 될 파이썬 환경을 선택합니다.
+# 1. 파이썬 3.11 환경
 FROM python:3.11-slim
 
-# 2. 컨테이너 안에서 작업할 폴더를 만듭니다.
+# 2. 작업 디렉토리 생성
 WORKDIR /code
 
-# 3. 환경변수를 설정하여 파이썬 로그가 바로 보이게 합니다.
+# 3. 환경 변수 설정
 ENV PYTHONUNBUFFERED=1
 
-# --- [최적화 1] 라이브러리 설치 레이어를 분리하여 캐싱합니다 ---
-# 4. requirements.txt 파일만 먼저 복사합니다.
+# 4. 라이브러리 설치
 COPY requirements.txt .
-
-# 5. 라이브러리를 설치합니다. requirements.txt가 변경되지 않으면 이 단계는 캐시를 사용해 즉시 완료됩니다.
 RUN pip install --no-cache-dir -r requirements.txt
 
-# --- [최적화 2] 애플리케이션 소스 코드 복사 ---
-# 6. 나머지 모든 소스 코드를 컨테이너 안으로 복사합니다.
+# 5. 소스 코드 복사
 COPY . .
 
-# 7. 컨테이너가 시작될 때 실행할 명령어를 정의합니다.
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
+# 6. [중요] 빌드 시점에 데이터 통합 스크립트 실행 (OKOnsen 스타일)
+# 이 과정에서 app/static/json/job_data.json과 sitemap.xml이 자동 생성됩니다.
+RUN python scripts/build_data.py
+
+# 7. 포트 설정 및 실행 (app 패키지의 app 객체 실행)
+EXPOSE 8080
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
