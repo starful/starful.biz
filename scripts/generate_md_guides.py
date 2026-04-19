@@ -23,10 +23,10 @@ CSV_FILE = os.path.join(BASE_DIR, "scripts", "data", "positions.csv")
 LOG_FILE = os.path.join(BASE_DIR, "scripts", "log", "generation_log.txt")
 
 # 🎯 [핵심 설정] 한 번 실행 시 최대로 생성할 파일 개수 (원하는 숫자로 변경하세요)
-MAX_TO_GENERATE = 160
+MAX_TO_GENERATE = 10
 
 # 병렬 처리할 워커 개수 (유료 API이므로 5~10개 동시 실행 가능)
-MAX_WORKERS = 8 
+MAX_WORKERS = 5
 
 os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
