@@ -1,6 +1,6 @@
 {
   "last_updated": "2026.04.19",
-  "total_count": 167,
+  "total_count": 172,
   "jobs": [
     {
       "id": "service_planner",
@@ -320,17 +320,17 @@
     },
     {
       "id": "cpp_developer",
-      "title": "C++開発者の年収と将来性｜未経験からの習得ロードマップ",
+      "title": "C++エンジニアの年収と将来性｜未経験からのロードマップ",
       "category": "engineering",
-      "meta_description": "高い専門性が求められるC++エンジニア。低レイヤからAI、ゲーム開発まで幅広く、高年収も狙える職種です。未経験からの学習ロードマップや将来性、開発の奥深さとやりがいを徹底解説します。",
+      "meta_description": "処理速度の極致を求めるC++開発者。習得難易度は高いものの、組み込みや金融、ゲーム業界で高年収が狙える将来性抜群の職種です。未経験からプロを目指すための現実的なロードマップを詳しく解説します。",
       "tags": [
         "C++",
         "プログラミング",
         "エンジニア転職",
         "キャリアパス",
-        "組み込みシステム",
-        "ゲームエンジン",
-        "高速化"
+        "組み込み",
+        "ゲーム制作",
+        "バックエンド"
       ],
       "published": "2026-04-19",
       "link": "/career/cpp_developer"
@@ -941,17 +941,16 @@
     },
     {
       "id": "conversion_rate_optimizer",
-      "title": "CROの年収と将来性は？未経験からのロードマップを徹底解説",
+      "title": "CROの年収と将来性｜未経験からプロになるロードマップ",
       "category": "marketing",
-      "meta_description": "ユーザー行動をデータで可視化し、売上を最大化するCRO。成果がダイレクトに数字へ現れるやりがいと、高度な分析スキルが身につく魅力的な職種です。未経験からの学習法や年収、将来性を詳しく解説します。",
+      "meta_description": "サイト収益を最大化するCRO。データに基づき仮説検証を繰り返す難しさはありますが、成果が数字に直結する達成感は格別です。本記事では年収相場や将来性、未経験からの学習ロードマップを徹底解説します。",
       "tags": [
         "CRO",
-        "マーケティング",
-        "データ分析",
-        "キャリア",
-        "A/Bテスト",
         "LPO",
-        "グロースハック"
+        "A/Bテスト",
+        "データ分析",
+        "マーケティング",
+        "キャリア形成"
       ],
       "published": "2026-04-19",
       "link": "/career/conversion_rate_optimizer"
@@ -1023,6 +1022,22 @@
       "link": "/career/data_architect"
     },
     {
+      "id": "enterprise_architect",
+      "title": "EAの年収・将来性は？未経験からのロードマップ",
+      "category": "engineering",
+      "meta_description": "企業のIT戦略を担うエンタープライズアーキテクト。高年収で将来性も抜群な職種のリアルを解説。未経験から到達するためのロードマップや、経営課題を技術で解決する圧倒的なやりがいを詳しく紹介します。",
+      "tags": [
+        "ITアーキテクチャ",
+        "DX推進",
+        "キャリアアップ",
+        "高年収",
+        "経営戦略",
+        "エンジニア"
+      ],
+      "published": "2026-04-19",
+      "link": "/career/enterprise_architect"
+    },
+    {
       "id": "metaverse_developer",
       "title": "メタバース開発者の年収と将来性｜未経験からのロードマップ",
       "category": "engineering",
@@ -1073,17 +1088,16 @@
     },
     {
       "id": "database_administrator",
-      "title": "DBAの年収と将来性｜未経験から目指す完全ロードマップ",
+      "title": "DBAの年収・将来性は？未経験からのロードマップを徹底解説",
       "category": "cloud-infra",
-      "meta_description": "データの守護神、DBA。責任は重いですが、高年収と高い専門性が魅力です。クラウド化が進む今、求められるスキルは変化しています。未経験から市場価値を高めるための現実的なステップを詳しく解説します。",
+      "meta_description": "データの守護神、DBA。システム基盤を支える責任は重大ですが、高年収と安定した将来性が魅力です。未経験から市場価値を高める学習ロードマップと、現場のリアルなやりがいを詳しく解説します。",
       "tags": [
+        "DBA",
         "データベース",
+        "インフラエンジニア",
         "SQL",
-        "クラウド",
-        "インフラ",
         "キャリア",
-        "Oracle",
-        "PostgreSQL"
+        "IT資格"
       ],
       "published": "2026-04-19",
       "link": "/career/database_administrator"
@@ -1155,17 +1169,16 @@
     },
     {
       "id": "design_operations_manager",
-      "title": "DesignOpsの年収と将来性｜未経験から目指すロードマップ",
+      "title": "DesignOpsの年収・将来性は？未経験からのロードマップ",
       "category": "design",
-      "meta_description": "デザイン組織の生産性を最大化するDesignOps。その年収や将来性、未経験からの転身ロードマップを徹底解説。組織課題を解決し、クリエイティビティを支える裏方としてのやりがいと現実を伝えます。",
+      "meta_description": "デザイナーが創造性に集中できる環境を作るDesignOps。その年収や将来性、未経験からの挑戦方法を徹底解説。組織の成長を支える「デザインの守護神」としてのやりがいと、成功へのロードマップを紹介します。",
       "tags": [
         "DesignOps",
-        "デザイン経営",
-        "組織開発",
-        "プロジェクトマネジメント",
-        "キャリア",
-        "ワークフロー改善",
-        "ツール選定"
+        "デザイン組織",
+        "業務改善",
+        "マネジメント",
+        "ツール選定",
+        "キャリア"
       ],
       "published": "2026-04-19",
       "link": "/career/design_operations_manager"
@@ -1385,6 +1398,22 @@
       "link": "/career/serverless_engineer"
     },
     {
+      "id": "ethical_hacker",
+      "title": "エシカルハッカーの年収と将来性｜未経験からのロードマップ",
+      "category": "cyber-security",
+      "meta_description": "ホワイトハッカー（エシカルハッカー）の仕事は、攻撃者の視点でシステムを守る正義のハッキングです。年収1,000万超えも狙える将来性と、技術で社会を守るやりがい、未経験からのロードマップを徹底解説します。",
+      "tags": [
+        "エシカルハッカー",
+        "サイバーセキュリティ",
+        "脆弱性診断",
+        "ホワイトハッカー",
+        "キャリアパス",
+        "IT資格"
+      ],
+      "published": "2026-04-19",
+      "link": "/career/ethical_hacker"
+    },
+    {
       "id": "ui_ux_researcher",
       "title": "UI/UXリサーチャーの年収と将来性｜未経験からのロードマップ",
       "category": "design",
@@ -1416,6 +1445,22 @@
       ],
       "published": "2026-04-19",
       "link": "/career/devops_engineer"
+    },
+    {
+      "id": "e_commerce_manager",
+      "title": "ECマネージャーの年収・将来性は？未経験からのロードマップ",
+      "category": "marketing",
+      "meta_description": "ECマネージャーは売上最大化を担う司令塔。激務な一面もありますが、データに基づき成果が直結する面白さは格別です。年収アップの秘訣や未経験からの具体的なロードマップまで、業界のリアルな実態を解説します。",
+      "tags": [
+        "EC運営",
+        "Webマーケティング",
+        "D2C",
+        "キャリア形成",
+        "年収アップ",
+        "IT転職"
+      ],
+      "published": "2026-04-19",
+      "link": "/career/e_commerce_manager"
     },
     {
       "id": "data_governance_specialist",
@@ -2732,6 +2777,22 @@
       "link": "/career/crm_marketer"
     },
     {
+      "id": "event_marketer",
+      "title": "イベントマーケターの年収と将来性｜未経験からのロードマップ",
+      "category": "marketing",
+      "meta_description": "企業の成長を加速させるイベントマーケター。未経験からの挑戦方法や気になる年収、将来性を徹底解説。リアルとオンラインを融合し、顧客体験を最大化する仕事のやりがいと成功へのロードマップを紹介します。",
+      "tags": [
+        "マーケティング",
+        "イベント運営",
+        "B2B",
+        "キャリアパス",
+        "リード獲得",
+        "ウェビナー"
+      ],
+      "published": "2026-04-19",
+      "link": "/career/event_marketer"
+    },
+    {
       "id": "automation_engineer",
       "title": "オートメーションエンジニアの年収・将来性は？未経験ロードマップ",
       "category": "engineering",
@@ -2747,6 +2808,22 @@
       ],
       "published": "2026-04-19",
       "link": "/career/automation_engineer"
+    },
+    {
+      "id": "engineering_program_manager",
+      "title": "EPM(技術PM)の年収・将来性と未経験ロードマップ",
+      "category": "product-management",
+      "meta_description": "複雑な技術プロジェクトを牽引するEngineering Program Manager（EPM）。高年収と将来性が魅力の職種ですが、その実態は？未経験からのロードマップや現場のやりがいを徹底解説します。",
+      "tags": [
+        "EPM",
+        "キャリア",
+        "年収",
+        "プロジェクトマネジメント",
+        "エンジニア",
+        "スキルアップ"
+      ],
+      "published": "2026-04-19",
+      "link": "/career/engineering_program_manager"
     }
   ]
 }
