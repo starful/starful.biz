@@ -159,9 +159,6 @@ async def sitemap():
     path = os.path.join(STATIC_DIR, "sitemap.xml")
     return FileResponse(path) if os.path.exists(path) else Response(status_code=404)
 
-@app.get('/robots.txt')
-async def robots(): return PlainTextResponse("User-agent: *\nAllow: /")
-
 @app.get("/about")
 async def about_page(request: Request): 
     return templates.TemplateResponse(request=request, name="about.html")
@@ -169,3 +166,13 @@ async def about_page(request: Request):
 @app.get("/privacy")
 async def privacy_page(request: Request): 
     return templates.TemplateResponse(request=request, name="privacy.html")
+
+@app.get("/ads.txt")
+async def ads_txt():
+    path = os.path.join(STATIC_DIR, "ads.txt")
+    return FileResponse(path) if os.path.exists(path) else Response(status_code=404)
+
+# 기존에 있던 robots.txt 코드
+@app.get('/robots.txt')
+async def robots(): 
+    return PlainTextResponse("User-agent: *\nAllow: /")
