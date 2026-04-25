@@ -74,16 +74,24 @@ print_step "STEP 5 / 8  |  데이터 인덱스 빌드"
 python3 scripts/build_data.py
 print_ok "job_data.json 및 sitemap.xml 갱신 완료"
 
-# ── STEP 6: GitHub 업데이트 ────────────────────
-print_step "STEP 6 / 8  |  GitHub Push (백업)"
+# ── STEP 6: GitHub 업데이트 (수동 승인) ──────────
+print_step "STEP 6 / 8  |  Git Commit & Optional Push"
 GIT_STATUS=$(git status --porcelain)
 if [ -z "$GIT_STATUS" ]; then
     print_warn "GitHub 변경 사항 없음"
 else
     git add .
     git commit -m "$COMMIT_MSG"
-    git push origin main
-    print_ok "GitHub 업데이트 완료"
+    print_ok "로컬 커밋 완료"
+    echo ""
+    print_warn "main 브랜치 push는 수동 승인 단계입니다."
+    read -r -p "지금 origin/main으로 push 하시겠습니까? [y/N]: " PUSH_CONFIRM
+    if [[ "$PUSH_CONFIRM" =~ ^[Yy]$ ]]; then
+        git push origin main
+        print_ok "GitHub push 완료"
+    else
+        print_info "push를 건너뛰었습니다. 필요 시 수동 실행: git push origin main"
+    fi
 fi
 
 # ── STEP 7: GCS 이미지 최종 동기화 (업로드) ──────

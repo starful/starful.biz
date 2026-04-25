@@ -151,8 +151,67 @@ async def search(request: Request, q: str = ""):
 # --- 6. 기타 엔드포인트 ---
 @app.post("/api/analyze-starr")
 async def analyze_starr(request: Request, starr_data: StarrRequest):
-    # (생략: 기존 AI 로직과 동일)
-    pass
+    if ai_client is None:
+        raise HTTPException(
+            status_code=503,
+            detail="AI service is not configured. Set GEMINI_API_KEY."
+        )
+
+    prompt = f"""
+You are a senior IT interview coach.
+Evaluate the candidate's STARR response for the job title: {starr_data.job_title}.
+
+Candidate input:
+- Situation: {starr_data.s}
+- Task: {starr_data.t}
+- Action: {starr_data.a}
+- Result: {starr_data.r}
+- Reflection: {starr_data.reflection}
+
+Return ONLY valid JSON (no markdown, no extra text) using this exact schema:
+{{
+  "score": <integer 0-100>,
+  "summary": "<short overall feedback>",
+  "s_feedback": "<feedback for Situation>",
+  "t_feedback": "<feedback for Task>",
+  "a_feedback": "<feedback for Action>",
+  "r_feedback": "<feedback for Result>",
+  "reflection_feedback": "<feedback for Reflection>",
+  "improved_answer": "<a polished improved STARR answer in Japanese>"
+}}
+
+Scoring rules:
+- Prioritize clarity, impact, and measurable outcomes.
+- Give practical, interview-ready feedback.
+"""
+
+    try:
+        response = ai_client.models.generate_content(
+            model="gemini-1.5-flash",
+            contents=prompt
+        )
+        raw_text = (response.text or "").strip()
+        if not raw_text:
+            raise ValueError("Empty AI response")
+
+        # Handle responses wrapped in markdown fences.
+        cleaned = re.sub(r"^```(?:json)?\s*", "", raw_text)
+        cleaned = re.sub(r"\s*```$", "", cleaned).strip()
+
+        parsed = json.loads(cleaned)
+        feedback = StarrFeedback(**parsed)
+
+        # Clamp score to a valid range to keep UI consistent.
+        feedback.score = max(0, min(100, feedback.score))
+        return feedback
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"❌ STARR analyze error: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to analyze STARR response."
+        )
 
 @app.get("/sitemap.xml")
 async def sitemap():

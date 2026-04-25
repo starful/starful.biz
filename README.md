@@ -31,7 +31,7 @@
 
 3.  **Run the Server**
     ```bash
-    uvicorn app.main:app --reload
+    uvicorn app:app --reload
     ```
     Visit `http://127.0.0.1:8000` in your browser.
 
