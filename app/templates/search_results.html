@@ -1,23 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <div style="margin: 60px 0 40px;">
+<main class="content-wrapper">
+    <div style="margin: 20px 0 30px;">
         <a href="/" style="color: var(--accent); font-weight: 600;">← TOP</a>
         <h2 style="font-size: 2.2rem; font-weight: 900; margin-top: 10px;">
             「{{ query }}」の検索結果
             <span style="font-size: 1.2rem; color: #888; font-weight: 400; margin-left: 10px;">({{ results_count }}件)</span>
         </h2>
     </div>
-    <div class="main-grid">
+    <div class="job-grid">
         {% if items %}
             {% for item in items %}
-            <a href="/career/{{ item.id }}" class="content-card">
-                <div class="card-bg">
-                    <img src="{{ item.thumbnail if item.thumbnail else 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop' }}" 
-                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop';">
+            <a href="/career/{{ item.id }}" class="job-card">
+                <div class="card-thumb-link">
+                    <img
+                        src="/static/img/{{ item.id }}.png"
+                        alt="{{ item.title }}"
+                        class="card-thumb"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop';"
+                    >
                 </div>
-                <div class="card-overlay"></div>
-                <div class="card-body"><h3>{{ item.title }}</h3><p>{{ item.meta_description }}</p></div>
+                <div class="card-content">
+                    <div class="card-meta">{{ item.category }}</div>
+                    <h3 class="card-title">{{ item.title }}</h3>
+                    <p class="card-summary">{{ item.meta_description }}</p>
+                </div>
             </a>
             {% endfor %}
         {% else %}
@@ -26,5 +33,5 @@
             </div>
         {% endif %}
     </div>
-</div>
+</main>
 {% endblock %}
