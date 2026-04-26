@@ -3,6 +3,7 @@ import json
 import re
 from datetime import date
 from typing import List, Optional
+from urllib.parse import urljoin
 
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.templating import Jinja2Templates
@@ -25,6 +26,7 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 CONTENTS_DIR = os.path.join(BASE_DIR, "contents")   
 DATA_FILE = os.path.join(STATIC_DIR, "json", "job_data.json")
+BASE_URL = os.getenv("SITE_URL", "https://starful.biz").rstrip("/")
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
@@ -187,7 +189,7 @@ Scoring rules:
 
     try:
         response = ai_client.models.generate_content(
-            model="gemini-1.5-flash",
+            model="gemini-2.5-flash",
             contents=prompt
         )
         raw_text = (response.text or "").strip()
@@ -215,8 +217,30 @@ Scoring rules:
 
 @app.get("/sitemap.xml")
 async def sitemap():
-    path = os.path.join(STATIC_DIR, "sitemap.xml")
-    return FileResponse(path) if os.path.exists(path) else Response(status_code=404)
+    static_paths = ["/", "/practice", "/about", "/privacy"]
+    urls = []
+
+    for path in static_paths:
+        loc = BASE_URL if path == "/" else urljoin(f"{BASE_URL}/", path.lstrip("/"))
+        urls.append(
+            f"<url><loc>{loc}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>"
+        )
+
+    for job in JOB_DATA.get("jobs", []):
+        career_path = f"/career/{job.get('id', '')}"
+        loc = urljoin(f"{BASE_URL}/", career_path.lstrip("/"))
+        urls.append(
+            f"<url><loc>{loc}</loc><lastmod>{job.get('published', date.today().isoformat())}</lastmod>"
+            "<changefreq>monthly</changefreq><priority>0.7</priority></url>"
+        )
+
+    xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+        + "".join(urls) +
+        "</urlset>"
+    )
+    return Response(content=xml, media_type="application/xml")
 
 @app.get("/about")
 async def about_page(request: Request): 
@@ -234,4 +258,6 @@ async def ads_txt():
 # 기존에 있던 robots.txt 코드
 @app.get('/robots.txt')
 async def robots(): 
-    return PlainTextResponse("User-agent: *\nAllow: /")
+    return PlainTextResponse(
+        f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml"
+    )

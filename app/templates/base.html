@@ -6,9 +6,9 @@
     
     <!-- SEO & SNS Meta Tags -->
     <title>{% block title %}{% endblock %} Starful | IT転職・面接対策バイブル</title>
-    <meta name="description" content="{% block meta_desc %}IT業界の全職種における面接頻出質問、模範解答、キラー逆質問을完全網羅。{% endblock %}">
-    
-    <link rel="canonical" href="{{ request.base_url | string }}{{ request.url.path | trim('/') }}">
+    <meta name="description" content="{% block meta_desc %}IT業界の全職種における面接頻出質問、模範解答、キラー逆質問を完全網羅。{% endblock %}">
+    {% set canonical_path = '' if request.url.path == '/' else request.url.path %}
+    <link rel="canonical" href="https://starful.biz{{ canonical_path }}">
 
     <!-- Google tag & Ads -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8780435268193938" crossorigin="anonymous"></script>    
