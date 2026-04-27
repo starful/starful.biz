@@ -12,7 +12,7 @@
     "プロトタイピング",
     "ユーザー体験"
   ],
-  "meta_description": "ユーザーの心を動かす体験を作るインタラクションデザイナー。高い専門性で年収アップも狙える注目の職種です。未経験からの学習ロードマップや、AI時代の将来性、仕事のリアルなやりがいを徹底解説します。",
+  "meta_description": "IxD面接で必須のプロセス説明、リサーチとUIの切り分け、プロト検証の語り方をテンプレ化。ポートフォリオ深掘りで詰まらないフレーズをすぐコピペできる形で整理。",
   "related_jobs": [
     "ux_designer",
     "ui_designer",
@@ -30,7 +30,7 @@
   ],
   "thumbnail": "/static/img/interaction_designer.png",
   "hero_image": "/static/img/interaction_designer_hero.png",
-  "title": "インタラクションデザイナーの年収・将来性｜未経験ロードマップ"
+  "title": "インタラクションデザイナー面接｜体験設計の深掘りに落ちない答え方"
 }
 ---
 # [完全ガイド] Interaction Designer: インタラクションデザイナーの年収・将来性｜未経験ロードマップ

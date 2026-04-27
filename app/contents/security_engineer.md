@@ -11,7 +11,7 @@
     "サイバーセキュリティ",
     "IT資格"
   ],
-  "meta_description": "サイバー攻撃から企業を守るセキュリティエンジニア。専門性の高さから高年収も狙え、将来性は抜群です。未経験からの学習ロードマップや、社会の安全を支えるやりがい、現場のリアルな実態を徹底解説します。",
+  "meta_description": "インシデント対応、ゼロトラスト、脆弱性管理とネットワーク防御の境界を面接向けに整理。技術深掘りとマネジメント志望の両方で使える冒頭30秒テンプレ付き。",
   "related_jobs": [
     "infrastructure_engineer",
     "network_engineer",
@@ -28,7 +28,7 @@
   ],
   "thumbnail": "/static/img/security_engineer.png",
   "hero_image": "/static/img/security_engineer_hero.png",
-  "title": "セキュリティエンジニアの年収・将来性・未経験ロードマップ"
+  "title": "セキュリティエンジニア面接｜防御設計と実務トリアージの深掘り対策"
 }
 ---
 # [完全ガイド] Security Engineer: セキュリティエンジニアの年収・将来性・未経験ロードマップ

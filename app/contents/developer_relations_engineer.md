@@ -11,7 +11,7 @@
     "API",
     "DX"
   ],
-  "meta_description": "開発者と企業の架け橋となるDeveloper Relations Engineer。技術発信やコミュニティ形成でプロダクトの価値を最大化する、高年収で将来性抜群な職種のリアルと未経験からの挑戦方法を解説します。",
+  "meta_description": "技術広報・コミュニティ・ドキュメント改善のKPI説明、開発者体験の改善ストーリーを面接向けに短文化。エンジニア出身がDevRelへ転じる志望動機の型も収録。",
   "related_jobs": [
     "technical_evangelist",
     "community_manager",
@@ -28,7 +28,7 @@
   ],
   "thumbnail": "/static/img/developer_relations_engineer.png",
   "hero_image": "/static/img/developer_relations_engineer_hero.png",
-  "title": "DevRelの年収と将来性は？未経験からのロードマップを解説"
+  "title": "DevRel面接対策｜コミュニティ成果とDX広報の語り方サンプル"
 }
 ---
 # [完全ガイド] Developer Relations Engineer: DevRelの年収と将来性は？未経験からのロードマップを解説

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & SNS Meta Tags -->
-    <title>{% block title %}{% endblock %} Starful | IT転職・面接対策バイブル</title>
-    <meta name="description" content="{% block meta_desc %}IT業界の全職種における面接頻出質問、模範解答、キラー逆質問を完全網羅。{% endblock %}">
+    <!-- SEO & SNS Meta Tags（各テンプレで page_title / meta_desc を上書き） -->
+    <title>{% block page_title %}Starful｜IT転職の面接対策（職種別Q&A・模範回答）{% endblock %}</title>
+    <meta name="description" content="{% block meta_desc %}職種別の面接で聞かれる質問と模範回答、逆質問例を無料公開。Web・データ・デザイン・クラウドまで。今すぐ保存して転職面接の準備に。{% endblock %}">
     {% set canonical_path = '' if request.url.path == '/' else request.url.path %}
     <link rel="canonical" href="https://starful.biz{{ canonical_path }}">
 

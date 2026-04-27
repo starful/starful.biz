@@ -11,7 +11,7 @@
     "ITアーキテクト",
     "年収"
   ],
-  "meta_description": "企業のDXを加速させるクラウド移行の専門家。レガシー脱却の難しさと、移行成功時の達成感は格別です。年収1000万超えも狙える将来性と、未経験から目指すための具体的なロードマップを徹底解説します。",
+  "meta_description": "リフト&シフトと段階移行、コスト・ダウンタイム・コンプライアンスの典型シナリオを面接用に要約。PM寄り/インフラ寄りの両方から飛んでくる論点を先に押さえる。",
   "related_jobs": [
     "cloud_engineer",
     "it_architect",
@@ -29,7 +29,7 @@
   ],
   "thumbnail": "/static/img/cloud_migration_specialist.png",
   "hero_image": "/static/img/cloud_migration_specialist_hero.png",
-  "title": "クラウド移行職の年収・将来性は？未経験からのロードマップ"
+  "title": "クラウド移行・マイグレ面接｜設計判断を短時間で説明するコツ"
 }
 ---
 # [完全ガイド] Cloud Migration Specialist: クラウド移行職の年収・将来性は？未経験からのロードマップ

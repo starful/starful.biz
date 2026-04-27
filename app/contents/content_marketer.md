@@ -11,7 +11,7 @@
     "キャリアパス",
     "ロードマップ"
   ],
-  "meta_description": "コンテンツマーケターは価値ある情報で顧客を惹きつける専門職。未経験からでも年収アップが狙える一方、成果へのプレッシャーも。戦略立案から実行まで、事業成長を牽引するやりがいと将来性を徹底解説します。",
+  "meta_description": "KPI設計、CV導線、SEOとパフォーマンス広告の役割分担を面接で即答できる形に。成果が伸び悩む期の言い換えと、編集体制の質問へのサンプル回答つき。",
   "related_jobs": [
     "seo_specialist",
     "sns_marketer",
@@ -28,7 +28,7 @@
   ],
   "thumbnail": "/static/img/content_marketer.png",
   "hero_image": "/static/img/content_marketer_hero.png",
-  "title": "コンテンツマーケターの年収・将来性｜未経験からのロードマップ"
+  "title": "コンテンツマーケター面接｜成果指標と編集戦略の答え方サンプル"
 }
 ---
 # [完全ガイド] Content Marketer: コンテンツマーケターの年収・将来性｜未経験からのロードマップ

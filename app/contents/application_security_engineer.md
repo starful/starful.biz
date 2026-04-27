@@ -12,7 +12,7 @@
     "未経験",
     "キャリアパス"
   ],
-  "meta_description": "アプリの脆弱性を守る最後の砦。開発とセキュリティの橋渡し役として、高年収と将来性が約束された職種です。未経験からのロードマップや、現場のリアルなやりがい、技術的深掘りの魅力を徹底解説します。",
+  "meta_description": "SAST/DAST、脅威モデリング、セキュアSDLCの説明スクリプトを凝縮。開発チームを動かすコミュニケーション論点も。AppSec面接の典型質問を一気に潰す。",
   "related_jobs": [
     "security_analyst",
     "devops_engineer",
@@ -29,7 +29,7 @@
   ],
   "thumbnail": "/static/img/application_security_engineer.png",
   "hero_image": "/static/img/application_security_engineer_hero.png",
-  "title": "アプリセキュリティエンジニアの年収・将来性・未経験ガイド"
+  "title": "アプリセキュリティ（AppSec）面接｜脆弱性対策の答え方テンプレ"
 }
 ---
 # [完全ガイド] Application Security Engineer: アプリセキュリティエンジニアの年収・将来性・未経験ガイド

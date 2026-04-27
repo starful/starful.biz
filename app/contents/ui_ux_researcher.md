@@ -11,7 +11,7 @@
     "UXデザイン",
     "キャリアパス"
   ],
-  "meta_description": "ユーザーの声を形にするUI/UXリサーチャー。高い専門性で需要が急増中の職種です。年収や将来性、未経験からプロを目指すロードマップを徹底解説。リアルな仕事のやりがいと、成功へのステップを公開します。",
+  "meta_description": "調査設計・サンプリング・示唆出しの型を面接用に圧縮。定量だけに寄せないコツと、PdM/デザイナーとの役割調整フレーズ。リサーチャー志望の即戦力メモ。",
   "related_jobs": [
     "ux_designer",
     "product_manager",
@@ -28,7 +28,7 @@
   ],
   "thumbnail": "/static/img/ui_ux_researcher.png",
   "hero_image": "/static/img/ui_ux_researcher_hero.png",
-  "title": "UI/UXリサーチャーの年収と将来性｜未経験からのロードマップ"
+  "title": "UI/UXリサーチャー面接｜インサイト提示と再現性の説明で差をつける"
 }
 ---
 # [完全ガイド] UI/UX Researcher: UI/UXリサーチャーの年収と将来性｜未経験からのロードマップ

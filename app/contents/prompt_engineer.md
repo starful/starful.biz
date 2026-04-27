@@ -11,7 +11,7 @@
     "LLM",
     "ChatGPT"
   ],
-  "meta_description": "AIの進化を支えるプロンプトエンジニア。未経験から高年収も狙える一方、常に最新技術を追う厳しさもあります。AIの可能性を最大限に引き出すスキルを磨き、次世代のキャリアを築くロードマップを徹底解説します。",
+  "meta_description": "評価設計・Few-shot・業務導入の事例まで、プロンプト職の面接で突かれる論点を短時間で把握。LLMの限界と安全対策の言い回し例つき。志望動機にも転用可。",
   "related_jobs": [
     "data_scientist",
     "machine_learning_engineer",
@@ -28,7 +28,7 @@
   ],
   "thumbnail": "/static/img/prompt_engineer.png",
   "hero_image": "/static/img/prompt_engineer_hero.png",
-  "title": "プロンプトエンジニアの年収・将来性・未経験からのロードマップ"
+  "title": "プロンプトエンジニア面接｜LLM評価・業務設計で聞かれること全部"
 }
 ---
 # [完全ガイド] Prompt Engineer: プロンプトエンジニアの年収・将来性・未経験からのロードマップ

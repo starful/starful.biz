@@ -11,7 +11,7 @@
     "ゲーム開発",
     "リアルタイム描画"
   ],
-  "meta_description": "視覚体験の限界に挑むグラフィックスエンジン開発者。高年収が狙える専門職のリアルな年収や将来性、未経験からプロを目指すロードマップを徹底解説。数学や物理を駆使し、世界を美しく描く究極のエンジニア職。",
+  "meta_description": "C++/Vulkan・シェーダーでよく聞かれる面接質問と回答の骨子を整理。レンダリング最適化やGPU制約の説明に自信が持てる1本。転職前に保存して弱点を潰す。",
   "related_jobs": [
     "game_developer",
     "vr_ar_engineer",
@@ -29,7 +29,7 @@
   ],
   "thumbnail": "/static/img/graphics_engine_developer.png",
   "hero_image": "/static/img/graphics_engine_developer_hero.png",
-  "title": "グラフィックス開発者の年収・将来性・未経験からのロードマップ"
+  "title": "グラフィックスエンジニア面接｜描画パイプライン深掘りの答え方【保存版】"
 }
 ---
 # [完全ガイド] Graphics Engine Developer: グラフィックス開発者の年収・将来性・未経験からのロードマップ

@@ -12,7 +12,7 @@
     "デザイン思考",
     "転職"
   ],
-  "meta_description": "ユーザー体験を形にするUI/UXデザイナー。高い将来性と年収が魅力ですが、現実は緻密な分析も不可欠。未経験からプロを目指すための具体的なロードマップと、この職種ならではのやりがいを徹底解説します。",
+  "meta_description": "デザインプロセス、A/Bテストとの役割分担、開発Handoffの深掘りに備えた短文テンプレ。ポートフォリオ1枚目から最後まで面接官が見る観点を先回りで解説。",
   "related_jobs": [
     "product_manager",
     "frontend_developer",
@@ -29,7 +29,7 @@
   ],
   "thumbnail": "/static/img/ui_ux_designer.png",
   "hero_image": "/static/img/ui_ux_designer_hero.png",
-  "title": "UI/UXデザイナーの年収と将来性｜未経験からのロードマップ"
+  "title": "UI/UXデザイナー面接｜プロセス説明と指標の話し方で差をつける"
 }
 ---
 # [完全ガイド] UI/UX Designer: UI/UXデザイナーの面接対策｜採用担当が教える合格へのロードマップ

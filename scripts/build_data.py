@@ -45,7 +45,7 @@ def main():
                     "id": filename.replace('.md', ''),
                     "title": meta.get('title', 'No Title'),
                     "category": meta.get('category', 'engineering'), # 기본값
-                    "meta_description": meta.get('meta_description', '')[:120],
+                    "meta_description": meta.get('meta_description', '')[:160],
                     "tags": meta.get('tags', []),
                     "published": str(meta.get('published_at', datetime.now().strftime('%Y-%m-%d'))),
                     "link": f"/career/{filename.replace('.md', '')}"

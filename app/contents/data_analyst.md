@@ -12,7 +12,7 @@
     "BIツール",
     "キャリアパス"
   ],
-  "meta_description": "データの力で経営を動かすデータアナリスト。年収アップの秘訣や将来性、未経験から即戦力になるための学習ロードマップを徹底解説。泥臭い分析の現実と、意思決定を支える大きなやりがいをリアルに伝えます。",
+  "meta_description": "SQL・集計・仮説検証からステークホルダー説明まで、DA面接の頻出トピックを回答レベルで整理。数字のストーリー化と逆質問例で当日の話し方を固める。",
   "related_jobs": [
     "data_scientist",
     "data_engineer",
@@ -29,7 +29,7 @@
   ],
   "thumbnail": "/static/img/data_analyst.png",
   "hero_image": "/static/img/data_analyst_hero.png",
-  "title": "データアナリストの年収と将来性｜未経験からの完全ロードマップ"
+  "title": "データアナリスト面接｜SQL・施策提案で聞かれること一気読み"
 }
 ---
 # [完全ガイド] Data Analyst: データアナリストの年収と将来性｜未経験からの完全ロードマップ

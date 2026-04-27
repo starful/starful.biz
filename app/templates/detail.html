@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
+{% block page_title %}{{ item.title }}｜面接Q&A・模範回答【Starful】{% endblock %}
+{% block meta_desc %}{{ item.meta_description }}{% endblock %}
+
 {% block head %}
-<title>{{ item.title }} | Starful</title>
-<meta name="description" content="{{ item.meta_description }}">
 <style>
     :root { --article-width: 820px; }
 
