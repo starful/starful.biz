@@ -36,6 +36,28 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=TEMPLATE_DIR)
 templates.env.globals["site_url"] = BASE_URL
 
+_CATEGORY_LABELS_JA: Dict[str, str] = {
+    "engineering": "エンジニアリング",
+    "ai-data": "AI・データ",
+    "design": "デザイン",
+    "marketing": "マーケティング",
+    "cloud-infra": "クラウド・インフラ",
+    "product-management": "プロダクト",
+    "cyber-security": "セキュリティ",
+    "sales-bizdev": "ビジネス開発",
+    "customer-success": "カスタマーサクセス",
+    "content-strategy": "コンテンツ",
+}
+
+
+def category_label_ja(slug: Optional[str]) -> str:
+    if not slug:
+        return ""
+    return _CATEGORY_LABELS_JA.get(str(slug).lower(), slug)
+
+
+templates.env.globals["category_label_ja"] = category_label_ja
+
 
 @app.middleware("http")
 async def force_https(request: Request, call_next):
@@ -205,16 +227,16 @@ def score_job_for_terms(job: dict, terms: Set[str]) -> int:
 @app.get("/")
 async def home(request: Request):
     category_list = [
-        {"slug": "engineering", "title": "Engineering"},
-        {"slug": "ai-data", "title": "AI & Data"},
-        {"slug": "design", "title": "Design"},
-        {"slug": "marketing", "title": "Marketing"},
-        {"slug": "cloud-infra", "title": "Cloud & Infra"},
-        {"slug": "product-management", "title": "Product"},
-        {"slug": "cyber-security", "title": "Security"},
-        {"slug": "sales-bizdev", "title": "Business Development"},
-        {"slug": "customer-success", "title": "Customer Success"},
-        {"slug": "content-strategy", "title": "Content Strategy"}
+        {"slug": "engineering", "title": "エンジニアリング"},
+        {"slug": "ai-data", "title": "AI・データ"},
+        {"slug": "design", "title": "デザイン"},
+        {"slug": "marketing", "title": "マーケティング"},
+        {"slug": "cloud-infra", "title": "クラウド・インフラ"},
+        {"slug": "product-management", "title": "プロダクト"},
+        {"slug": "cyber-security", "title": "セキュリティ"},
+        {"slug": "sales-bizdev", "title": "ビジネス開発"},
+        {"slug": "customer-success", "title": "カスタマーサクセス"},
+        {"slug": "content-strategy", "title": "コンテンツ"},
     ]
     
     grouped_items = []

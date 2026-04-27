@@ -11,7 +11,7 @@
 <style>
     .practice-container { max-width: 850px; margin: 40px auto; padding: 0 20px 100px; }
     
-    /* 돌아가기 버튼 스타일 */
+    /* 戻るリンク */
     .back-nav { margin-bottom: 30px; }
     .btn-back { 
         display: inline-flex; align-items: center; gap: 8px; 
@@ -25,7 +25,7 @@
     .page-header h1 { font-size: 2.8rem; font-weight: 900; color: #1d1d1f; letter-spacing: -0.02em; }
     .page-header p { color: #6e6e73; font-size: 1.15rem; margin-top: 15px; line-height: 1.5; }
 
-    /* STARR 입력 폼 카드 스타일 */
+    /* STARRフォームカード */
     .starr-form-card { 
         background: #ffffff; border-radius: 32px; padding: 50px 40px; 
         border: 1px solid #e5e5e7; box-shadow: 0 20px 60px rgba(0,0,0,0.05);
@@ -58,7 +58,7 @@
     }
     .btn-submit:hover { opacity: 0.9; transform: translateY(-2px); }
 
-    /* 로딩 및 모달 */
+    /* ローディング・モーダル */
     #loading-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.9); z-index: 9999; flex-direction: column; align-items: center; justify-content: center; }
     .spinner { width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid var(--accent-color); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px; }
     @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
@@ -71,7 +71,7 @@
 {% block content %}
 <div class="practice-container">
     
-    <!-- 🔙 이전 페이지로 돌아가기 (history.back 활용) -->
+    <!-- 前ページへ（history.back） -->
     <nav class="back-nav">
         <a href="javascript:history.back();" class="btn-back">
             <i class="fa-solid fa-chevron-left"></i> 前のページに戻る
@@ -111,14 +111,14 @@
     </div>
 </div>
 
-<!-- 로딩 레이어 -->
+<!-- ローディング -->
 <div id="loading-overlay">
     <div class="spinner"></div>
     <h3 style="font-weight: 800;">AI面接官が回答を分析しています...</h3>
     <p style="color: #86868b; margin-top: 10px;">通常15〜20秒ほどかかります</p>
 </div>
 
-<!-- 결과 모달 -->
+<!-- 結果モーダル -->
 <div id="result-modal">
     <div class="modal-content">
         <span onclick="document.getElementById('result-modal').style.display='none'" style="position:absolute; top:25px; right:35px; font-size:2.5rem; cursor:pointer; color:#86868b;">&times;</span>
@@ -176,6 +176,13 @@ async function startAnalysis() {
         `;
         document.getElementById('res-improved').innerText = result.improved_answer;
         document.getElementById('result-modal').style.display = 'block';
+        if (typeof gtag === 'function') {
+            gtag('event', 'starr_analyze_success', {
+                event_category: 'practice',
+                event_label: 'starr_complete',
+                value: Math.round(result.score)
+            });
+        }
     } catch (e) {
         alert(e.message || "エラーが発生しました。");
     } finally {

@@ -1,4 +1,4 @@
-/* --- 1. 디자인 시스템 & 전역 설정 --- */
+/* --- 1. デザインシステム・全体 --- */
 :root {
     --primary-color: #1d1d1f;
     --accent-color: #007aff;
@@ -19,14 +19,15 @@ body {
     background-color: var(--bg-color);
     background-image: radial-gradient(#e5e5e5 1px, transparent 1px);
     background-size: 20px 20px;
-    word-break: break-all;      
-    overflow-wrap: break-word;  
+    word-break: normal;
+    overflow-wrap: anywhere;
+    line-break: strict;
 }
 
 a { text-decoration: none; color: inherit; }
 * { box-sizing: border-box; }
 
-/* --- 2. Header & Navigation --- */
+/* --- 2. ヘッダー・ナビ --- */
 header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -41,7 +42,7 @@ header {
 .nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--text-gray); }
 .nav-links a:hover { color: var(--accent-color); }
 
-/* --- 3. 가로 스크롤 테마 필터 --- */
+/* --- 3. 横スクロールのテーマフィルタ --- */
 .theme-filter-buttons {
     display: flex; justify-content: flex-start; gap: 10px; width: 100%;
     overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 15px;
@@ -57,7 +58,7 @@ header {
 .count-badge { background-color: #eee; color: #666; font-size: 0.75rem; padding: 2px 8px; border-radius: 10px; font-weight: 800; }
 .theme-button.active .count-badge { background-color: rgba(255, 255, 255, 0.3); color: #fff; }
 
-/* --- 4. Main Content & AI Banner --- */
+/* --- 4. メイン・AIバナー --- */
 .content-wrapper { max-width: 1200px; margin: 40px auto; padding: 0 20px 80px; }
 .ai-banner {
     background: linear-gradient(135deg, #007aff, #0051af);
@@ -77,7 +78,7 @@ header {
 .search-container { margin-bottom: 40px; }
 .search-input { width: 100%; padding: 18px 25px; border-radius: 50px; border: 1px solid var(--border); outline: none; font-size: 1rem; }
 
-/* --- 5. Grid & Cards --- */
+/* --- 5. グリッド・カード --- */
 .job-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
 .job-card {
     background: #fff; border-radius: var(--radius); overflow: hidden;
@@ -92,7 +93,7 @@ header {
 .card-title { font-size: 1.25rem; font-weight: 800; color: var(--primary-color); margin: 0 0 10px 0; }
 .card-summary { font-size: 0.95rem; color: var(--text-gray); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* --- 6. Mobile & Footer --- */
+/* --- 7. モバイル・フッター --- */
 @media (max-width: 768px) {
     .logo-img { height: 32px; }
     .ai-banner { padding: 25px; }
@@ -100,7 +101,7 @@ header {
 }
 .footer { padding: 40px 20px; text-align: center; color: #888; font-size: 0.9rem; margin-top: 50px; border-top: 1px solid #eee;}
 
-/* --- 기존 Detail Page CSS 유지 --- */
+/* --- 8. 静的ページ（about / privacy）用 --- */
 .detail-body { max-width: var(--article-width); margin: 0 auto; padding: 40px 20px 100px; font-size: 1.15rem; line-height: 2.1; color: #2c2c2e; }
 .detail-body h2 { font-size: 2rem; font-weight: 800; margin: 80px 0 30px; padding-bottom: 10px; border-bottom: 4px solid #f2f2f2; position: relative; }
 .detail-body h2::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 80px; height: 4px; background: var(--accent-color); }

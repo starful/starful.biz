@@ -8,7 +8,7 @@
 {% block content %}
 <main class="content-wrapper">
     <div style="margin: 20px 0 30px;">
-        <a href="/" style="color: var(--accent); font-weight: 600;">← TOP</a>
+        <a href="/" style="color: var(--accent); font-weight: 600;">← トップへ</a>
         <h2 style="font-size: 2.2rem; font-weight: 900; margin-top: 10px;">
             「{{ query }}」の検索結果
             <span style="font-size: 1.2rem; color: #888; font-weight: 400; margin-left: 10px;">({{ results_count }}件)</span>
@@ -27,7 +27,7 @@
                     >
                 </div>
                 <div class="card-content">
-                    <div class="card-meta">{{ item.category }}</div>
+                    <div class="card-meta">{{ category_label_ja(item.category) }}</div>
                     <h3 class="card-title">{{ item.title }}</h3>
                     <p class="card-summary">{{ item.meta_description }}</p>
                 </div>
