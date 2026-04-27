@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block page_title %}ページが見つかりません（404）｜Starful{% endblock %}
+{% block meta_desc %}お探しのページは移動または削除された可能性があります。トップページから職種別の面接ガイドをお探しください。{% endblock %}
+{% block og_title %}ページが見つかりません（404）｜Starful{% endblock %}
+{% block og_desc %}お探しのページは移動または削除された可能性があります。トップページから職種別の面接ガイドをお探しください。{% endblock %}
+{% block twitter_title %}ページが見つかりません（404）｜Starful{% endblock %}
+{% block twitter_desc %}お探しのページは移動または削除された可能性があります。トップページから職種別の面接ガイドをお探しください。{% endblock %}
+
+{% block canonical_link %}
+<link rel="canonical" href="{{ site_url }}/">
+{% endblock %}
+{% block og_url %}{{ site_url }}/{% endblock %}
+
+{% block content %}
+<main class="content-wrapper" style="max-width: 640px; margin: 60px auto; padding: 0 20px 80px; text-align: center;">
+    <h1 style="font-size: 2rem; font-weight: 900; margin-bottom: 16px;">404 — ページが見つかりません</h1>
+    <p style="color: #6e6e73; line-height: 1.7; margin-bottom: 32px;">
+        URL が間違っているか、ページが移動した可能性があります。<br>
+        職種別の面接ガイドはトップページから検索できます。
+    </p>
+    <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent-color, #007aff); color: #fff; padding: 14px 28px; border-radius: 14px; font-weight: 800; text-decoration: none;">
+        <i class="fa-solid fa-house"></i> トップへ戻る
+    </a>
+</main>
+{% endblock %}

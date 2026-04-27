@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% block page_title %}「{{ query }}」の面接ガイド検索結果｜Starful{% endblock %}
 {% block meta_desc %}{% if query %}「{{ query }}」に関連するIT転職・面接ガイドを一覧表示。頻出質問と回答の型を職種別にすばやく辿れます。{% else %}キーワードで職種別の面接ガイドを検索。Web・データ・デザインなどから該当ページをすぐ開けます。{% endif %}{% endblock %}
+{% block og_title %}「{{ query }}」の面接ガイド検索結果｜Starful{% endblock %}
+{% block og_desc %}{% if query %}「{{ query }}」に関連するIT転職・面接ガイドを一覧表示。頻出質問と回答の型を職種別にすばやく辿れます。{% else %}キーワードで職種別の面接ガイドを検索。Web・データ・デザインなどから該当ページをすぐ開けます。{% endif %}{% endblock %}
+{% block twitter_title %}「{{ query }}」の面接ガイド検索結果｜Starful{% endblock %}
+{% block twitter_desc %}{% if query %}「{{ query }}」に関連するIT転職・面接ガイドを一覧表示。頻出質問と回答の型を職種別にすばやく辿れます。{% else %}キーワードで職種別の面接ガイドを検索。Web・データ・デザインなどから該当ページをすぐ開けます。{% endif %}{% endblock %}
 {% block content %}
 <main class="content-wrapper">
     <div style="margin: 20px 0 30px;">

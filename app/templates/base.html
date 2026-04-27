@@ -4,11 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & SNS Meta Tags（各テンプレで page_title / meta_desc を上書き） -->
+    <!-- SEO & SNS Meta Tags（各テンプレで page_title / meta_desc / og_* を上書き） -->
     <title>{% block page_title %}Starful｜IT転職の面接対策（職種別Q&A・模範回答）{% endblock %}</title>
     <meta name="description" content="{% block meta_desc %}職種別の面接で聞かれる質問と模範回答、逆質問例を無料公開。Web・データ・デザイン・クラウドまで。今すぐ保存して転職面接の準備に。{% endblock %}">
-    {% set canonical_path = '' if request.url.path == '/' else request.url.path %}
-    <link rel="canonical" href="https://starful.biz{{ canonical_path }}">
+    {% block canonical_link %}
+    <link rel="canonical" href="{{ site_url }}{{ request.url.path }}{% if request.url.query %}?{{ request.url.query }}{% endif %}">
+    {% endblock %}
+
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:site_name" content="Starful">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="{% block og_title %}Starful｜IT転職の面接対策（職種別Q&A・模範回答）{% endblock %}">
+    <meta property="og:description" content="{% block og_desc %}職種別の面接で聞かれる質問と模範回答、逆質問例を無料公開。Web・データ・デザイン・クラウドまで。今すぐ保存して転職面接の準備に。{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{{ site_url }}/static/img/logo.png{% endblock %}">
+    <meta property="og:url" content="{% block og_url %}{{ site_url }}{{ request.url.path }}{% if request.url.query %}?{{ request.url.query }}{% endif %}{% endblock %}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}Starful｜IT転職の面接対策（職種別Q&A・模範回答）{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_desc %}職種別の面接で聞かれる質問と模範回答、逆質問例を無料公開。Web・データ・デザイン・クラウドまで。今すぐ保存して転職面接の準備に。{% endblock %}">
+    <meta name="twitter:image" content="{% block twitter_image %}{{ site_url }}/static/img/logo.png{% endblock %}">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Starful",
+      "url": "{{ site_url }}/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site_url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    {% block structured_json %}{% endblock %}
 
     <!-- Google tag & Ads -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8780435268193938" crossorigin="anonymous"></script>    

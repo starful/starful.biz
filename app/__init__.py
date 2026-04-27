@@ -9,7 +9,9 @@ from urllib.parse import urljoin
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, Response, PlainTextResponse
+from fastapi.responses import FileResponse, Response, PlainTextResponse, RedirectResponse
+from fastapi.exception_handlers import http_exception_handler
+from starlette.exceptions import HTTPException as StarletteHTTPException
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
@@ -32,6 +34,33 @@ BASE_URL = os.getenv("SITE_URL", "https://starful.biz").rstrip("/")
 app = FastAPI()
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=TEMPLATE_DIR)
+templates.env.globals["site_url"] = BASE_URL
+
+
+@app.middleware("http")
+async def force_https(request: Request, call_next):
+    """プロキシ経由の http アクセスを https に統一（重複 URL 抑制）。"""
+    proto = (request.headers.get("x-forwarded-proto") or "").split(",")[0].strip().lower()
+    if proto == "http":
+        host = request.headers.get("x-forwarded-host") or request.headers.get("host") or ""
+        if host:
+            path = request.url.path
+            if request.url.query:
+                path = f"{path}?{request.url.query}"
+            return RedirectResponse(f"https://{host}{path}", status_code=301)
+    return await call_next(request)
+
+
+@app.exception_handler(StarletteHTTPException)
+async def starlette_http_exception_handler(request: Request, exc: StarletteHTTPException):
+    if exc.status_code == 404:
+        return templates.TemplateResponse(
+            request=request,
+            name="404.html",
+            context={},
+            status_code=404,
+        )
+    return await http_exception_handler(request, exc)
 
 # --- 2. 데이터 캐시 초기화 ---
 JOB_DATA = {"jobs": [], "last_updated": date.today().isoformat(), "total_count": 0}
@@ -121,6 +150,28 @@ def expand_query_terms(query: str) -> Set[str]:
     return terms
 
 
+def related_careers_from_meta(meta: dict) -> List[dict]:
+    """related_jobs ID を job_data からタイトル付きで解決。"""
+    ids = meta.get("related_jobs") or []
+    if not ids:
+        return []
+    by_id = {j.get("id"): j for j in JOB_DATA.get("jobs", []) if j.get("id")}
+    out: List[dict] = []
+    for rid in ids:
+        job = by_id.get(rid)
+        if job:
+            out.append({"id": rid, "title": job.get("title", rid)})
+    return out
+
+
+def absolute_static_url(path: str) -> str:
+    if not path:
+        return BASE_URL + "/static/img/logo.png"
+    if path.startswith("http://") or path.startswith("https://"):
+        return path
+    return urljoin(f"{BASE_URL}/", path.lstrip("/"))
+
+
 def score_job_for_terms(job: dict, terms: Set[str]) -> int:
     title = normalize_search_text(job.get("title", ""))
     category = normalize_search_text(job.get("category", ""))
@@ -192,15 +243,58 @@ async def career_detail(request: Request, item_id: str):
     if not os.path.exists(filepath): raise HTTPException(status_code=404)
     meta, body = parse_starful_md(filepath)
     content_html = markdown.markdown(body, extensions=['tables'])
-    
+    canonical = urljoin(f"{BASE_URL}/", f"career/{item_id}".lstrip("/"))
+    share_image = absolute_static_url(meta.get("thumbnail") or f"/static/img/{item_id}.png")
+    article_ld = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": meta.get("title", ""),
+        "description": (meta.get("meta_description") or "")[:300],
+        "image": [share_image],
+        "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
+        "author": {"@type": "Organization", "name": "Starful"},
+        "publisher": {
+            "@type": "Organization",
+            "name": "Starful",
+            "url": BASE_URL,
+        },
+    }
+    pub = meta.get("published_at")
+    if pub:
+        article_ld["datePublished"] = str(pub)
+    breadcrumb_ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "ホーム",
+                "item": f"{BASE_URL}/",
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": meta.get("title", "面接ガイド")[:80],
+                "item": canonical,
+            },
+        ],
+    }
+    json_ld_career = {"@graph": [article_ld, breadcrumb_ld]}
+
     return templates.TemplateResponse(
-        request=request, 
-        name="detail.html", 
+        request=request,
+        name="detail.html",
         context={
-            "item": meta, 
+            "item": meta,
             "content": content_html,
-            "category_title": meta.get('category', 'Career')
-        }
+            "category_title": meta.get("category", "Career"),
+            "career_id": item_id,
+            "canonical_url": canonical,
+            "share_image": share_image,
+            "related_careers": related_careers_from_meta(meta),
+            "json_ld_career": json_ld_career,
+        },
     )
 
 @app.get("/practice")

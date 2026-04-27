@@ -1,7 +1,24 @@
 {% extends "base.html" %}
+{% set _seo_title = item.title ~ '｜面接Q&A・模範回答【Starful】' %}
+{% set _seo_desc = item.meta_description %}
 
-{% block page_title %}{{ item.title }}｜面接Q&A・模範回答【Starful】{% endblock %}
-{% block meta_desc %}{{ item.meta_description }}{% endblock %}
+{% block page_title %}{{ _seo_title }}{% endblock %}
+{% block meta_desc %}{{ _seo_desc }}{% endblock %}
+{% block og_title %}{{ _seo_title }}{% endblock %}
+{% block og_desc %}{{ _seo_desc }}{% endblock %}
+{% block twitter_title %}{{ _seo_title }}{% endblock %}
+{% block twitter_desc %}{{ _seo_desc }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_image %}{{ share_image }}{% endblock %}
+{% block twitter_image %}{{ share_image }}{% endblock %}
+{% block canonical_link %}
+<link rel="canonical" href="{{ canonical_url }}">
+{% endblock %}
+{% block og_url %}{{ canonical_url }}{% endblock %}
+
+{% block structured_json %}
+<script type="application/ld+json">{{ json_ld_career | tojson }}</script>
+{% endblock %}
 
 {% block head %}
 <style>
@@ -58,6 +75,41 @@
         padding: 16px 36px; border-radius: 16px; font-weight: 800; font-size: 1.05rem; 
     }
 
+    .related-careers {
+        margin-top: 48px;
+        padding: 28px 32px;
+        background: #f9f9fb;
+        border-radius: 20px;
+        border: 1px solid #e5e5e7;
+    }
+    .related-careers h2 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        margin: 0 0 18px;
+        color: #1d1d1f;
+        border: none;
+        padding: 0;
+    }
+    .related-careers h2::after { display: none; }
+    .related-careers ul { list-style: none; padding: 0; margin: 0; }
+    .related-careers li { margin-bottom: 10px; }
+    .related-careers li:last-child { margin-bottom: 0; }
+    .related-careers a {
+        display: block;
+        padding: 14px 18px;
+        background: #fff;
+        border-radius: 12px;
+        text-decoration: none;
+        color: var(--accent-color);
+        font-weight: 700;
+        border: 1px solid #e5e5e7;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .related-careers a:hover {
+        box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        transform: translateY(-1px);
+    }
+
     @media (max-width: 768px) {
         .article-wrapper { margin: 20px 10px 60px; border-radius: 20px; }
         .detail-header { padding: 40px 20px 20px; }
@@ -80,6 +132,17 @@
             <article id="content-main">
                 {{ content | safe }}
             </article>
+
+            {% if related_careers %}
+            <nav class="related-careers" aria-label="関連する面接ガイド">
+                <h2>関連する職種の面接ガイド</h2>
+                <ul>
+                    {% for r in related_careers %}
+                    <li><a href="/career/{{ r.id }}">{{ r.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            {% endif %}
 
             <a href="/practice" class="go-practice-banner">
                 <h3>AI面接官と実戦練習を始める 🤖</h3>
