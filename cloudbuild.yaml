@@ -38,7 +38,7 @@ steps:
       # 1. GEMINI_API_KEY를 환경 변수로 연결
       # 2. starfu-biz-firebase 내용을 /secrets/FIREBASE_KEY 파일로 마운트
       - '--set-secrets'
-      - 'GEMINI_API_KEY=GEMINI_API_KEY:latest,/secrets/FIREBASE_KEY=starfu-biz-firebase:latest'
+      - 'GEMINI_API_KEY=STARFUL_BIZ_GEMINI_API_KEY:latest,/secrets/FIREBASE_KEY=starfu-biz-firebase:latest'
     waitFor: ['push-app']
 
 # 빌드 기록에 남을 이미지 리스트
