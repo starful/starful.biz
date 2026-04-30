@@ -1,66 +1,138 @@
 {% extends "base.html" %}
 
-{% block page_title %}AI面接官｜STARR添削で回答を即改善【無料・Starful】{% endblock %}
-{% block meta_desc %}STARRを入力するだけでAIが面接官視点で添削。弱点フィードバックと改善案を数十秒で取得。本番前の無料リハーサルに。{% endblock %}
-{% block og_title %}AI面接官｜STARR添削で回答を即改善【無料・Starful】{% endblock %}
-{% block og_desc %}STARRを入力するだけでAIが面接官視点で添削。弱点フィードバックと改善案を数十秒で取得。本番前の無料リハーサルに。{% endblock %}
-{% block twitter_title %}AI面接官｜STARR添削で回答を即改善【無料・Starful】{% endblock %}
-{% block twitter_desc %}STARRを入力するだけでAIが面接官視点で添削。弱点フィードバックと改善案を数十秒で取得。本番前の無料リハーサルに。{% endblock %}
+{% block page_title %}AI面接官＆職務経歴書｜STARR添削と箇条書き【Starful】{% endblock %}
+{% block meta_desc %}職種を選びSTARRを入力。AI面接フィードバックと、職務経歴書に使える箇条書き4行を同時に作成。無料で本番前の準備に。{% endblock %}
+{% block og_title %}AI面接官＆職務経歴書｜STARR添削と箇条書き【Starful】{% endblock %}
+{% block og_desc %}職種を選びSTARRを入力。AI面接フィードバックと、職務経歴書に使える箇条書き4行を同時に作成。{% endblock %}
+{% block twitter_title %}AI面接官＆職務経歴書｜STARR添削と箇条書き【Starful】{% endblock %}
+{% block twitter_desc %}職種を選びSTARRを入力。AI面接フィードバックと、職務経歴書に使える箇条書き4行を同時に作成。{% endblock %}
 
 {% block head %}
 <style>
-    .practice-container { max-width: 850px; margin: 40px auto; padding: 0 20px 100px; }
-    
-    /* 戻るリンク */
+    .practice-wrap { max-width: 1200px; margin: 40px auto; padding: 0 20px 100px; }
+
     .back-nav { margin-bottom: 30px; }
-    .btn-back { 
-        display: inline-flex; align-items: center; gap: 8px; 
+    .btn-back {
+        display: inline-flex; align-items: center; gap: 8px;
         color: #86868b; text-decoration: none; font-size: 0.95rem; font-weight: 600;
         transition: color 0.2s;
         cursor: pointer;
     }
     .btn-back:hover { color: var(--accent-color); }
 
-    .page-header { text-align: center; margin-bottom: 50px; }
-    .page-header h1 { font-size: 2.8rem; font-weight: 900; color: #1d1d1f; letter-spacing: -0.02em; }
-    .page-header p { color: #6e6e73; font-size: 1.15rem; margin-top: 15px; line-height: 1.5; }
+    .page-header { text-align: center; margin-bottom: 40px; }
+    .page-header h1 { font-size: 2.4rem; font-weight: 900; color: #1d1d1f; letter-spacing: -0.02em; }
+    .page-header p { color: #6e6e73; font-size: 1.05rem; margin-top: 12px; line-height: 1.6; }
 
-    /* STARRフォームカード */
-    .starr-form-card { 
-        background: #ffffff; border-radius: 32px; padding: 50px 40px; 
-        border: 1px solid #e5e5e7; box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    .practice-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        align-items: start;
     }
-    
-    .starr-group { margin-bottom: 35px; }
-    .starr-group:last-child { margin-bottom: 0; }
+    @media (max-width: 960px) {
+        .practice-grid { grid-template-columns: 1fr; }
+    }
 
-    .starr-group label { 
-        display: flex; align-items: center; gap: 12px; 
-        font-weight: 800; font-size: 1.1rem; color: #1d1d1f; margin-bottom: 15px;
+    .panel {
+        background: #ffffff;
+        border-radius: 28px;
+        padding: 36px 32px;
+        border: 1px solid #e5e5e7;
+        box-shadow: 0 16px 48px rgba(0,0,0,0.06);
     }
-    .starr-group label span { 
-        background: #f5f5f7; color: #1d1d1f; width: 34px; height: 34px; 
+    .panel h2 {
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: #1d1d1f;
+        margin: 0 0 20px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .panel-note {
+        font-size: 0.88rem;
+        color: #6e6e73;
+        margin: -8px 0 20px 0;
+        line-height: 1.5;
+    }
+
+    .job-row { margin-bottom: 28px; }
+    .job-row label { display: block; font-weight: 800; font-size: 0.95rem; margin-bottom: 10px; color: #1d1d1f; }
+    .job-row input[type="text"] {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 14px;
+        border: 1px solid #d2d2d7;
+        font-size: 1rem;
+        background: #fbfbfd;
+        font-family: inherit;
+        box-sizing: border-box;
+    }
+    .job-row input:focus {
+        outline: none;
+        border-color: var(--accent-color);
+        background: #fff;
+        box-shadow: 0 0 0 4px rgba(0,122,255,0.1);
+    }
+
+    .starr-group { margin-bottom: 28px; }
+    .starr-group:last-of-type { margin-bottom: 24px; }
+    .starr-group label {
+        display: flex; align-items: center; gap: 12px;
+        font-weight: 800; font-size: 1.05rem; color: #1d1d1f; margin-bottom: 12px;
+    }
+    .starr-group label span {
+        background: #f5f5f7; color: #1d1d1f; width: 34px; height: 34px;
         display: flex; align-items: center; justify-content: center;
         border-radius: 10px; font-size: 0.95rem; border: 1px solid #d2d2d7;
     }
-
     .starr-group textarea {
-        width: 100%; padding: 22px; border-radius: 18px; border: 1px solid #d2d2d7;
-        font-size: 1.05rem; line-height: 1.7; outline: none; transition: all 0.2s ease;
-        background: #fbfbfd; font-family: inherit; resize: vertical; min-height: 120px;
+        width: 100%; padding: 18px; border-radius: 16px; border: 1px solid #d2d2d7;
+        font-size: 1rem; line-height: 1.65; outline: none; transition: all 0.2s ease;
+        background: #fbfbfd; font-family: inherit; resize: vertical; min-height: 100px;
+        box-sizing: border-box;
     }
-    .starr-group textarea:focus { border-color: var(--accent-color); background: #fff; box-shadow: 0 0 0 4px rgba(0,122,255,0.1); }
+    .starr-group textarea:focus {
+        border-color: var(--accent-color); background: #fff;
+        box-shadow: 0 0 0 4px rgba(0,122,255,0.1);
+    }
 
     .btn-submit {
-        width: 100%; background: var(--accent-color); color: #fff; border: none; padding: 22px;
-        border-radius: 18px; font-size: 1.25rem; font-weight: 800; cursor: pointer;
-        display: flex; align-items: center; justify-content: center; gap: 12px; transition: all 0.2s;
+        width: 100%; background: var(--accent-color); color: #fff; border: none; padding: 18px;
+        border-radius: 16px; font-size: 1.1rem; font-weight: 800; cursor: pointer;
+        display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.2s;
     }
-    .btn-submit:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-submit:hover { opacity: 0.92; transform: translateY(-1px); }
 
-    /* ローディング・モーダル */
-    #loading-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.9); z-index: 9999; flex-direction: column; align-items: center; justify-content: center; }
-    .spinner { width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid var(--accent-color); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px; }
+    .resume-placeholder {
+        color: #86868b;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        padding: 20px;
+        background: #f5f5f7;
+        border-radius: 16px;
+        border: 1px dashed #d2d2d7;
+    }
+    .resume-list { margin: 0; padding-left: 1.2rem; line-height: 1.75; font-size: 0.98rem; color: #1d1d1f; }
+    .resume-list li { margin-bottom: 12px; }
+
+    .btn-copy {
+        margin-top: 20px;
+        width: 100%;
+        padding: 14px;
+        border-radius: 14px;
+        border: 2px solid var(--accent-color);
+        background: #fff;
+        color: var(--accent-color);
+        font-weight: 800;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    .btn-copy:hover { background: #f0f7ff; }
+
+    #loading-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.92); z-index: 9999; flex-direction: column; align-items: center; justify-content: center; }
+    .spinner { width: 48px; height: 48px; border: 4px solid #f3f3f3; border-top: 4px solid var(--accent-color); border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
     @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
     #result-modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:10000; overflow-y:auto; backdrop-filter: blur(8px); padding: 20px; }
@@ -69,9 +141,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="practice-container">
-    
-    <!-- 前ページへ（history.back） -->
+<div class="practice-wrap">
     <nav class="back-nav">
         <a href="javascript:history.back();" class="btn-back">
             <i class="fa-solid fa-chevron-left"></i> 前のページに戻る
@@ -79,50 +149,75 @@
     </nav>
 
     <div class="page-header">
-        <h1>AI面接官</h1>
-        <p>あなたのエピソードをSTARR形式で入力してください。<br>AIがプロの視点で分析し、合格に強い回答へとブラッシュアップします。</p>
+        <h1>AI面接官 ＋ 職務経歴書</h1>
+        <p>職種を選んで STARR を入力すると、面接用フィードバックと職務経歴書向け箇条書き（4行）を表示します。<br>履歴書の行はテンプレート生成です。数値・事実は必ずご自身で確認してください。</p>
     </div>
 
-    <div class="starr-form-card">
-        <div class="starr-group">
-            <label><span>S</span> Situation（状況）</label>
-            <textarea id="input-s" placeholder="どのような状況でしたか？プロジェクトの背景や当時の環境について記入してください。"></textarea>
-        </div>
-        <div class="starr-group">
-            <label><span>T</span> Task（課題）</label>
-            <textarea id="input-t" placeholder="解決すべき課題や、あなたに任された目標は何でしたか？"></textarea>
-        </div>
-        <div class="starr-group">
-            <label><span>A</span> Action（行動）</label>
-            <textarea id="input-a" placeholder="具体的にどのような行動を取りましたか？（使用した技術や工夫した点など）"></textarea>
-        </div>
-        <div class="starr-group">
-            <label><span>R</span> Result（結果）</label>
-            <textarea id="input-r" placeholder="どのような成果が得られましたか？（数値で示せる実績など）"></textarea>
-        </div>
-        <div class="starr-group">
-            <label><span>R</span> Reflection（学び）</label>
-            <textarea id="input-reflection" placeholder="この経験から何を学び、実務でどのように活かせると考えますか？"></textarea>
+    <div class="practice-grid">
+        <div class="panel">
+            <h2><i class="fa-solid fa-pen-to-square" style="color: var(--accent-color);"></i> 入力</h2>
+            <p class="panel-note">まず職種を選ぶか自由入力してください。続けて STARR を埋め、「診断する」を押します。</p>
+
+            <div class="job-row">
+                <label for="job_title_input">ポジション（職種）</label>
+                <input type="text" id="job_title_input" list="job_title_list" placeholder="職種を検索または入力（例: Backend Engineer）" autocomplete="off">
+                <datalist id="job_title_list">
+                    {% for c in career_options %}
+                    <option value="{{ c.title }}"></option>
+                    {% endfor %}
+                </datalist>
+            </div>
+
+            <div class="starr-group">
+                <label><span>S</span> Situation（状況）</label>
+                <textarea id="input-s" placeholder="どのような状況でしたか？プロジェクトの背景や当時の環境について記入してください。"></textarea>
+            </div>
+            <div class="starr-group">
+                <label><span>T</span> Task（課題）</label>
+                <textarea id="input-t" placeholder="解決すべき課題や、あなたに任された目標は何でしたか？"></textarea>
+            </div>
+            <div class="starr-group">
+                <label><span>A</span> Action（行動）</label>
+                <textarea id="input-a" placeholder="具体的にどのような行動を取りましたか？（使用した技術や工夫した点など）"></textarea>
+            </div>
+            <div class="starr-group">
+                <label><span>R</span> Result（結果）</label>
+                <textarea id="input-r" placeholder="どのような成果が得られましたか？（数値で示せる実績など）"></textarea>
+            </div>
+            <div class="starr-group">
+                <label><span>R</span> Reflection（学び）</label>
+                <textarea id="input-reflection" placeholder="この経験から何を学び、実務でどのように活かせると考えますか？"></textarea>
+            </div>
+
+            <button type="button" class="btn-submit" onclick="startAnalysis()">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> AI面接官に診断（履歴書4行も生成）
+            </button>
         </div>
 
-        <button class="btn-submit" onclick="startAnalysis()">
-            <i class="fa-solid fa-wand-magic-sparkles"></i> AI面接官に診断してもらう
-        </button>
+        <div class="panel">
+            <h2><i class="fa-solid fa-file-lines" style="color: var(--accent-color);"></i> 職務経歴書（箇条書き）</h2>
+            <p class="panel-note">左の入力と職種に基づき、職務経歴書に貼り付けやすい4行を生成します。AI分析後に表示されます。</p>
+            <div id="resume-output">
+                <div class="resume-placeholder" id="resume-placeholder">
+                    左で職種と STARR を入力し、「診断する」を押すと、ここに4行が表示されます。
+                </div>
+                <ul class="resume-list" id="resume-list" style="display:none;"></ul>
+                <button type="button" class="btn-copy" id="btn-copy-resume" style="display:none;" onclick="copyResumeBullets()">4行をコピー</button>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- ローディング -->
 <div id="loading-overlay">
     <div class="spinner"></div>
     <h3 style="font-weight: 800;">AI面接官が回答を分析しています...</h3>
-    <p style="color: #86868b; margin-top: 10px;">通常15〜20秒ほどかかります</p>
+    <p style="color: #86868b; margin-top: 10px;">通常15〜25秒ほどかかります</p>
 </div>
 
-<!-- 結果モーダル -->
 <div id="result-modal">
     <div class="modal-content">
         <span onclick="document.getElementById('result-modal').style.display='none'" style="position:absolute; top:25px; right:35px; font-size:2.5rem; cursor:pointer; color:#86868b;">&times;</span>
-        
+
         <div style="background: linear-gradient(135deg, #007aff, #0051af); color:#fff; padding:35px; border-radius:24px; text-align:center; margin-bottom:40px;">
             <p style="margin:0; font-weight:700; opacity:0.8; font-size: 1rem;">面接突破予想スコア</p>
             <h2 id="res-score" style="font-size:4rem; margin:10px 0 0 0; font-weight: 900;">0</h2>
@@ -140,17 +235,113 @@
 </div>
 
 <script>
-async function startAnalysis() {
-    const data = {
+const DRAFT_KEY = 'starful_starr_practice_v1';
+let lastResumeLines = [];
+
+function resolveJobTitle() {
+    return document.getElementById('job_title_input').value.trim();
+}
+
+const careerOptions = [
+{% for c in career_options %}
+    { id: {{ c.id|tojson }}, title: {{ c.title|tojson }} },
+{% endfor %}
+];
+
+function refreshJobTitleSuggestions(query) {
+    const datalist = document.getElementById('job_title_list');
+    if (!datalist) return;
+    const q = (query || '').trim().toLowerCase();
+    const matches = careerOptions.filter((opt) => {
+        if (!q) return true;
+        return opt.title.toLowerCase().includes(q) || opt.id.toLowerCase().includes(q);
+    }).slice(0, 40);
+
+    datalist.innerHTML = matches.map((opt) => `<option value="${escapeHtml(opt.title)}"></option>`).join('');
+}
+
+function collectStarrPayload() {
+    return {
         s: document.getElementById('input-s').value,
         t: document.getElementById('input-t').value,
         a: document.getElementById('input-a').value,
         r: document.getElementById('input-r').value,
         reflection: document.getElementById('input-reflection').value,
-        job_title: "IT Professional"
+        job_title: resolveJobTitle()
     };
+}
 
-    if(!data.s || !data.a) return alert("状況(S)と行動(A)は必ず入力してください。");
+function saveDraft() {
+    try {
+        localStorage.setItem(DRAFT_KEY, JSON.stringify({
+            job_title: document.getElementById('job_title_input').value,
+            ...collectStarrPayload()
+        }));
+    } catch (e) { /* ignore */ }
+}
+
+function loadDraft() {
+    try {
+        const raw = localStorage.getItem(DRAFT_KEY);
+        if (!raw) return;
+        const d = JSON.parse(raw);
+        if (d.job_title != null) document.getElementById('job_title_input').value = d.job_title;
+        if (d.s != null) document.getElementById('input-s').value = d.s;
+        if (d.t != null) document.getElementById('input-t').value = d.t;
+        if (d.a != null) document.getElementById('input-a').value = d.a;
+        if (d.r != null) document.getElementById('input-r').value = d.r;
+        if (d.reflection != null) document.getElementById('input-reflection').value = d.reflection;
+    } catch (e) { /* ignore */ }
+}
+
+['input-s','input-t','input-a','input-r','input-reflection','job_title_input'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', saveDraft);
+    if (el && el.tagName === 'TEXTAREA') el.addEventListener('blur', saveDraft);
+});
+document.getElementById('job_title_input').addEventListener('input', (e) => {
+    refreshJobTitleSuggestions(e.target.value);
+});
+
+function renderResumeBullets(bullets) {
+    lastResumeLines = bullets || [];
+    const ph = document.getElementById('resume-placeholder');
+    const ul = document.getElementById('resume-list');
+    const btn = document.getElementById('btn-copy-resume');
+    if (!lastResumeLines.length) {
+        ph.style.display = 'block';
+        ul.style.display = 'none';
+        btn.style.display = 'none';
+        return;
+    }
+    ph.style.display = 'none';
+    ul.style.display = 'block';
+    btn.style.display = 'block';
+    ul.innerHTML = '';
+    lastResumeLines.forEach(line => {
+        const li = document.createElement('li');
+        li.textContent = line;
+        ul.appendChild(li);
+    });
+}
+
+function copyResumeBullets() {
+    if (!lastResumeLines.length) return;
+    const text = lastResumeLines.map((l, i) => '・' + l).join('\n');
+    navigator.clipboard.writeText(text).then(() => {
+        const b = document.getElementById('btn-copy-resume');
+        const prev = b.textContent;
+        b.textContent = 'コピーしました';
+        setTimeout(() => { b.textContent = prev; }, 2000);
+    }).catch(() => alert('コピーに失敗しました。手動で選択してください。'));
+}
+
+async function startAnalysis() {
+    const data = collectStarrPayload();
+    if (!data.job_title) {
+        return alert('職種・ポジションを一覧から選ぶか、自由入力してください。');
+    }
+    if (!data.s || !data.a) return alert('状況(S)と行動(A)は必ず入力してください。');
 
     document.getElementById('loading-overlay').style.display = 'flex';
 
@@ -162,20 +353,34 @@ async function startAnalysis() {
         });
         const result = await response.json();
         if (!response.ok) {
-            throw new Error(result.detail || "分析に失敗しました。");
+            throw new Error(result.detail || '分析に失敗しました。');
         }
-        
-        document.getElementById('res-score').innerText = result.score + " / 100";
+
+        document.getElementById('res-score').innerText = result.score + ' / 100';
         document.getElementById('res-summary').innerText = result.summary;
-        document.getElementById('res-details').innerHTML = `
-            <strong>S (状況):</strong> ${result.s_feedback}<br>
-            <strong>T (課題):</strong> ${result.t_feedback}<br>
-            <strong>A (行動):</strong> ${result.a_feedback}<br>
-            <strong>R (結果):</strong> ${result.r_feedback}<br>
-            <strong>Reflection (学び):</strong> ${result.reflection_feedback}
-        `;
+        document.getElementById('res-details').innerHTML =
+            '<strong>S (状況):</strong> ' + escapeHtml(result.s_feedback) + '<br>' +
+            '<strong>T (課題):</strong> ' + escapeHtml(result.t_feedback) + '<br>' +
+            '<strong>A (行動):</strong> ' + escapeHtml(result.a_feedback) + '<br>' +
+            '<strong>R (結果):</strong> ' + escapeHtml(result.r_feedback) + '<br>' +
+            '<strong>Reflection (学び):</strong> ' + escapeHtml(result.reflection_feedback);
         document.getElementById('res-improved').innerText = result.improved_answer;
         document.getElementById('result-modal').style.display = 'block';
+
+        const bulletRes = await fetch('/api/shokumu-bullets', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+        const bulletJson = await bulletRes.json();
+        if (bulletRes.ok && bulletJson.bullets) {
+            renderResumeBullets(bulletJson.bullets);
+        } else {
+            renderResumeBullets([]);
+            if (!bulletRes.ok) console.warn('shokumu-bullets:', bulletJson.detail || bulletRes.status);
+        }
+
+        saveDraft();
         if (typeof gtag === 'function') {
             gtag('event', 'starr_analyze_success', {
                 event_category: 'practice',
@@ -184,10 +389,20 @@ async function startAnalysis() {
             });
         }
     } catch (e) {
-        alert(e.message || "エラーが発生しました。");
+        alert(e.message || 'エラーが発生しました。');
     } finally {
         document.getElementById('loading-overlay').style.display = 'none';
     }
 }
+
+function escapeHtml(s) {
+    if (!s) return '';
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+}
+
+loadDraft();
+refreshJobTitleSuggestions(document.getElementById('job_title_input').value);
 </script>
 {% endblock %}

@@ -31,6 +31,10 @@ CONTENTS_DIR = os.path.join(BASE_DIR, "contents")
 DATA_FILE = os.path.join(STATIC_DIR, "json", "job_data.json")
 BASE_URL = os.getenv("SITE_URL", "https://starful.biz").rstrip("/")
 
+# Firestore: サイト名 starful × 機能名 starr
+FIRESTORE_STARR_FEEDBACK_LOGS = "starful_starr_feedback_logs"
+FIRESTORE_STARR_USAGE_LIMITS = "starful_starr_usage_limits"
+
 app = FastAPI()
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=TEMPLATE_DIR)
@@ -194,6 +198,58 @@ def absolute_static_url(path: str) -> str:
     return urljoin(f"{BASE_URL}/", path.lstrip("/"))
 
 
+def get_client_ip(request: Request) -> str:
+    x_forwarded_for = request.headers.get("X-Forwarded-For")
+    if x_forwarded_for:
+        return x_forwarded_for.split(",")[0].strip()
+    if request.client:
+        return request.client.host or "unknown"
+    return "unknown"
+
+
+def _pydantic_to_dict(model: BaseModel) -> dict:
+    dump = getattr(model, "model_dump", None)
+    if callable(dump):
+        return dump()
+    return model.dict()
+
+
+def _clip_shokumu_line(text: str, max_len: int = 130) -> str:
+    t = unicodedata.normalize("NFKC", (text or "").strip())
+    t = re.sub(r"[\r\n]+", " ", t)
+    t = re.sub(r"\s+", " ", t)
+    if not t:
+        return ""
+    if len(t) > max_len:
+        return t[: max_len - 1] + "…"
+    return t
+
+
+def build_shokumu_bullets(starr: StarrRequest) -> List[str]:
+    """職務経歴書向け箇条書き4行（テンプレート・パターン3種＋学び）。"""
+    job = _clip_shokumu_line(starr.job_title, 70) or "職務"
+    s = _clip_shokumu_line(starr.s, 150)
+    t = _clip_shokumu_line(starr.t, 120)
+    a = _clip_shokumu_line(starr.a, 150)
+    r = _clip_shokumu_line(starr.r, 120)
+    ref = _clip_shokumu_line(starr.reflection, 120)
+    task_phrase = t if t else "プロジェクト・事業上の課題"
+    res_phrase = r if r else "業務・サービス上の改善につながる成果"
+    refl_phrase = ref if ref else "再現性のある改善サイクルづくり"
+
+    return [
+        f"「{s}において、{task_phrase}に対し、{a}を実施し、{res_phrase}。」",
+        f"「{job}として、課題設定から改善施策の実行までを担当。特に{a}を中心に推進。」",
+        f"「関係者と連携し、進捗管理とリスク対応を含めて推進し、{res_phrase}。」",
+        f"「本経験から{refl_phrase}について学び、以降の業務に反映。」",
+    ]
+
+
+class ShokumuBulletsResponse(BaseModel):
+    bullets: List[str]
+    job_title: str
+
+
 def score_job_for_terms(job: dict, terms: Set[str]) -> int:
     title = normalize_search_text(job.get("title", ""))
     category = normalize_search_text(job.get("category", ""))
@@ -321,7 +377,17 @@ async def career_detail(request: Request, item_id: str):
 
 @app.get("/practice")
 async def practice_page(request: Request):
-    return templates.TemplateResponse(request=request, name="practice.html")
+    career_opts = [
+        {"id": j.get("id", ""), "title": j.get("title", "")}
+        for j in JOB_DATA.get("jobs", [])
+        if j.get("title")
+    ]
+    career_opts.sort(key=lambda x: x["title"])
+    return templates.TemplateResponse(
+        request=request,
+        name="practice.html",
+        context={"career_options": career_opts},
+    )
 
 @app.get("/search")
 async def search(request: Request, q: str = ""):
@@ -353,6 +419,27 @@ async def analyze_starr(request: Request, starr_data: StarrRequest):
             status_code=503,
             detail="AI service is not configured. Set GEMINI_API_KEY."
         )
+
+    client_ip = get_client_ip(request)
+    safe_ip = client_ip.replace(".", "_").replace(":", "_")
+    today = date.today().isoformat()
+    usage_doc_id = f"{safe_ip}_{today}"
+    count = 0
+
+    if db:
+        try:
+            doc = db.collection(FIRESTORE_STARR_USAGE_LIMITS).document(usage_doc_id).get()
+            if doc.exists:
+                count = int(doc.to_dict().get("count", 0))
+            if count >= 3:
+                raise HTTPException(
+                    status_code=429,
+                    detail="本日の利用制限（3回）に達しました。明日またお試しください。",
+                )
+        except HTTPException:
+            raise
+        except Exception as e:
+            print(f"⚠️ Firestore {FIRESTORE_STARR_USAGE_LIMITS} read error: {e}")
 
     prompt = f"""
 You are a senior IT interview coach.
@@ -400,6 +487,31 @@ Scoring rules:
 
         # Clamp score to a valid range to keep UI consistent.
         feedback.score = max(0, min(100, feedback.score))
+
+        if db:
+            try:
+                db.collection(FIRESTORE_STARR_FEEDBACK_LOGS).add(
+                    {
+                        "ip": client_ip,
+                        "job_title": starr_data.job_title,
+                        "user_input": _pydantic_to_dict(starr_data),
+                        "ai_output": _pydantic_to_dict(feedback),
+                        "created_at": firestore.SERVER_TIMESTAMP,
+                    }
+                )
+                db.collection(FIRESTORE_STARR_USAGE_LIMITS).document(usage_doc_id).set(
+                    {
+                        "count": count + 1,
+                        "last_access": firestore.SERVER_TIMESTAMP,
+                    },
+                    merge=True,
+                )
+            except Exception as e:
+                print(
+                    f"⚠️ Firestore {FIRESTORE_STARR_FEEDBACK_LOGS} / "
+                    f"{FIRESTORE_STARR_USAGE_LIMITS} write error: {e}"
+                )
+
         return feedback
     except HTTPException:
         raise
@@ -409,6 +521,24 @@ Scoring rules:
             status_code=500,
             detail="Failed to analyze STARR response."
         )
+
+
+@app.post("/api/shokumu-bullets")
+async def shokumu_bullets(starr_data: StarrRequest) -> ShokumuBulletsResponse:
+    """Gemini なし。STARR＋職種から職務経歴書用箇条書き4行を生成。"""
+    if not (starr_data.s or "").strip() or not (starr_data.a or "").strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Situation(S) と Action(A) は必須です。",
+        )
+    if not (starr_data.job_title or "").strip():
+        raise HTTPException(status_code=400, detail="職種・ポジションを選択または入力してください。")
+    bullets = build_shokumu_bullets(starr_data)
+    return ShokumuBulletsResponse(
+        bullets=bullets,
+        job_title=starr_data.job_title.strip(),
+    )
+
 
 @app.get("/sitemap.xml")
 async def sitemap():
