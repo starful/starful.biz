@@ -382,3 +382,13 @@
 2026-04-19 22:33:45,647 - CREATED: app/contents/event_marketer.md
 2026-04-19 22:33:53,941 - CREATED: app/contents/engineering_program_manager.md
 2026-04-19 22:34:11,247 - CREATED: app/contents/enterprise_architect.md
+2026-05-01 10:01:57,459 - CREATED: app/contents/cpp_developer.md
+2026-05-01 10:02:00,758 - CREATED: app/contents/database_administrator.md
+2026-05-01 10:02:03,283 - CREATED: app/contents/design_operations_manager.md
+2026-05-01 10:02:06,734 - CREATED: app/contents/conversion_rate_optimizer.md
+2026-05-01 10:02:10,665 - CREATED: app/contents/cpp_developer.md
+2026-05-01 10:02:46,918 - CREATED: app/contents/flutter_developer.md
+2026-05-01 10:02:50,867 - CREATED: app/contents/functional_analyst.md
+2026-05-01 10:02:50,871 - CREATED: app/contents/ecommerce_manager.md
+2026-05-01 10:02:52,243 - CREATED: app/contents/firmware_engineer.md
+2026-05-01 10:03:03,147 - CREATED: app/contents/game_designer.md
