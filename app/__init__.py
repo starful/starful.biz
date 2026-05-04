@@ -280,6 +280,15 @@ def score_job_for_terms(job: dict, terms: Set[str]) -> int:
 
 # --- 5. 라우팅 (TypeError 해결: 인자 명시) ---
 
+@app.get("/favicon.ico")
+async def favicon_root():
+    """検索エンジン・ブラウザがドメイン直下の /favicon.ico を参照する場合用。"""
+    path = os.path.join(STATIC_DIR, "img", "favicon.ico")
+    if not os.path.isfile(path):
+        raise HTTPException(status_code=404)
+    return FileResponse(path, media_type="image/vnd.microsoft.icon")
+
+
 @app.get("/")
 async def home(request: Request):
     category_list = [
@@ -335,6 +344,10 @@ async def career_detail(request: Request, item_id: str):
             "@type": "Organization",
             "name": "Starful",
             "url": BASE_URL,
+            "logo": {
+                "@type": "ImageObject",
+                "url": f"{BASE_URL}/static/img/logo.png?v=5",
+            },
         },
     }
     pub = meta.get("published_at")

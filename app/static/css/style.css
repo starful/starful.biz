@@ -35,10 +35,40 @@ a { text-decoration: none; color: inherit; }
     border-bottom: 1px solid var(--border);
     box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
-.header-container { max-width: 1200px; margin: 0 auto; padding: 15px 20px 0; }
-.header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-.logo-img { height: 40px; width: auto; display: block; }
-.nav-links { display: flex; gap: 15px; }
+/* ロゴ中央・右ナビ。logo.png は横長トリミング済み → 高さ基準で可読サイズに */
+.header-container { max-width: 1200px; margin: 0 auto; padding: 20px 24px 0; }
+.header-top {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    column-gap: 16px;
+    margin-bottom: 16px;
+    min-height: 64px;
+}
+.logo-wrapper {
+    grid-column: 2;
+    justify-self: center;
+    line-height: 0;
+    min-width: 0;
+    max-width: 100%;
+}
+.logo-img {
+    height: clamp(44px, 6.5vw, 64px);
+    width: auto;
+    max-height: 64px;
+    max-width: min(92vw, 520px);
+    display: block;
+    object-fit: contain;
+}
+.nav-links {
+    grid-column: 3;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
 .nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--text-gray); }
 .nav-links a:hover { color: var(--accent-color); }
 
@@ -95,9 +125,23 @@ a { text-decoration: none; color: inherit; }
 
 /* --- 7. モバイル・フッター --- */
 @media (max-width: 768px) {
-    .logo-img { height: 32px; }
+    .header-container { padding: 16px 16px 0; }
+    .header-top { column-gap: 8px; margin-bottom: 14px; min-height: 52px; }
+    .nav-links { gap: 12px; }
+    .nav-links a { font-size: 0.85rem; }
+    .logo-img { height: clamp(38px, 9vw, 52px); max-height: 52px; max-width: min(94vw, 480px); }
     .ai-banner { padding: 25px; }
     .ai-banner h2 { font-size: 1.5rem; }
+}
+
+@media (max-width: 400px) {
+    .header-top {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+    .logo-wrapper { grid-column: 1; }
+    .nav-links { grid-column: 1; justify-self: center; }
+    .logo-img { height: clamp(36px, 11vw, 48px); max-height: 48px; max-width: min(96vw, 400px); }
 }
 .footer { padding: 40px 20px; text-align: center; color: #888; font-size: 0.9rem; margin-top: 50px; border-top: 1px solid #eee;}
 
