@@ -12,7 +12,7 @@
     "機械学習",
     "キャリアパス"
   ],
-  "meta_description": "膨大なデータから価値を創出するデータサイエンティスト。高年収で将来性も抜群ですが、習得スキルは多岐にわたります。未経験からプロを目指すための現実的なロードマップと、仕事の醍醐味を徹底解説します。",
+  "meta_description": "年収レンジと必要スキルのロードマップ要約に続き、面接で聞かれるビジネス寄りDS論点と短い回答の型まで。転職直前の逆チェックに使える1本。【無料・保存推奨】",
   "related_jobs": [
     "data_engineer",
     "machine_learning_engineer",
@@ -30,7 +30,7 @@
   ],
   "thumbnail": "/static/img/data_scientist.png",
   "hero_image": "/static/img/data_scientist_hero.png",
-  "title": "データサイエンティストの年収と将来性｜未経験からの完全ロードマップ"
+  "title": "データサイエンティスト｜年収・ロードマップと面接の定番Q&A"
 }
 ---
 # [完全ガイド] Data Scientist: データサイエンティストの年収と将来性｜未経験からの完全ロードマップ

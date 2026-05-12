@@ -65,7 +65,7 @@ templates.env.globals["category_label_ja"] = category_label_ja
 
 @app.middleware("http")
 async def force_https(request: Request, call_next):
-    """プロキシ経由の http アクセスを https に統一（重複 URL 抑制）。"""
+    """プロキシ経由の http アクセスを https に統一（重複 URL 抑制）。HTTPS 応答には HSTS を付与。"""
     proto = (request.headers.get("x-forwarded-proto") or "").split(",")[0].strip().lower()
     if proto == "http":
         host = request.headers.get("x-forwarded-host") or request.headers.get("host") or ""
@@ -74,7 +74,13 @@ async def force_https(request: Request, call_next):
             if request.url.query:
                 path = f"{path}?{request.url.query}"
             return RedirectResponse(f"https://{host}{path}", status_code=301)
-    return await call_next(request)
+    response = await call_next(request)
+    if proto == "https":
+        response.headers.setdefault(
+            "Strict-Transport-Security",
+            "max-age=31536000; includeSubDomains",
+        )
+    return response
 
 
 @app.exception_handler(StarletteHTTPException)

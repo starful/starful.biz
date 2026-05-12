@@ -11,7 +11,7 @@
     "ゲーム開発",
     "リアルタイム描画"
   ],
-  "meta_description": "C++/Vulkan・シェーダーでよく聞かれる面接質問と回答の骨子を整理。レンダリング最適化やGPU制約の説明に自信が持てる1本。転職前に保存して弱点を潰す。",
+  "meta_description": "グラフィックスエンジニア向け。描画パイプライン・シェーダ・GPUの面接頻出質問と30秒で答える骨子を整理。C++/Vulkan志望の転職前ガイド。【Starful】",
   "related_jobs": [
     "game_developer",
     "vr_ar_engineer",
@@ -29,7 +29,7 @@
   ],
   "thumbnail": "/static/img/graphics_engine_developer.png",
   "hero_image": "/static/img/graphics_engine_developer_hero.png",
-  "title": "グラフィックスエンジニア面接｜描画パイプライン深掘りの答え方【保存版】"
+  "title": "グラフィックスエンジニア｜面接で聞く描画・GPUの答え方"
 }
 ---
 # [完全ガイド] Graphics Engine Developer: グラフィックス開発者の年収・将来性・未経験からのロードマップ

@@ -11,7 +11,7 @@
     "LLM",
     "ChatGPT"
   ],
-  "meta_description": "評価設計・Few-shot・業務導入の事例まで、プロンプト職の面接で突かれる論点を短時間で把握。LLMの限界と安全対策の言い回し例つき。志望動機にも転用可。",
+  "meta_description": "プロンプトエンジニア：年収の目安と面接本番で聞かれる評価設計・Few-shot・安全対策を凝縮。LLM業務導入の言い回し例つき。転職前の最終確認に。【Starful】",
   "related_jobs": [
     "data_scientist",
     "machine_learning_engineer",
@@ -28,7 +28,7 @@
   ],
   "thumbnail": "/static/img/prompt_engineer.png",
   "hero_image": "/static/img/prompt_engineer_hero.png",
-  "title": "プロンプトエンジニア面接｜LLM評価・業務設計で聞かれること全部"
+  "title": "プロンプトエンジニア｜年収とLLM面接で聞かれる論点まとめ"
 }
 ---
 # [完全ガイド] Prompt Engineer: プロンプトエンジニアの年収・将来性・未経験からのロードマップ

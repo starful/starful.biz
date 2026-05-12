@@ -13,7 +13,7 @@
     "データエンジニア",
     "キャリアパス"
   ],
-  "meta_description": "dbt・ELT・オーケストレーション、データ品質とDE/DSとの境界が頻出。パイプライン設計の意思決定を面接で短く語るためのキーワード地図を1ページに凝縮。",
+  "meta_description": "アナリティクスエンジニア面接：dbt・ELT・データ品質、DE/DSとの境界を短く語るキーワード地図。パイプライン設計の意思決定例つき。転職直前の逆確認に。【保存版】",
   "related_jobs": [
     "data_engineer",
     "data_scientist",
@@ -31,7 +31,7 @@
   ],
   "thumbnail": "/static/img/analytics_engineer.png",
   "hero_image": "/static/img/analytics_engineer_hero.png",
-  "title": "アナリティクスエンジニア面接｜データ基盤とモデリングの深掘り対策"
+  "title": "アナリティクスエンジニア｜データ基盤面接の頻出論点"
 }
 ---
 # [完全ガイド] Analytics Engineer: アナリティクスエンジニアの年収・将来性・未経験ロードマップ

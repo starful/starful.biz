@@ -11,7 +11,7 @@
     "API",
     "DX"
   ],
-  "meta_description": "技術広報・コミュニティ・ドキュメント改善のKPI説明、開発者体験の改善ストーリーを面接向けに短文化。エンジニア出身がDevRelへ転じる志望動機の型も収録。",
+  "meta_description": "DevRel／技術広報の年収・キャリア像に加え、面接必須のKPI・コミュニティ成果の語り方を短文例付きで整理。エンジニア出身が転ぶ落とし穴も押さえる1ページ。【無料】",
   "related_jobs": [
     "technical_evangelist",
     "community_manager",
@@ -28,7 +28,7 @@
   ],
   "thumbnail": "/static/img/developer_relations_engineer.png",
   "hero_image": "/static/img/developer_relations_engineer_hero.png",
-  "title": "DevRel面接対策｜コミュニティ成果とDX広報の語り方サンプル"
+  "title": "DevRel面接対策｜技術広報の成果と志望動機の型"
 }
 ---
 # [完全ガイド] Developer Relations Engineer: DevRelの年収と将来性は？未経験からのロードマップを解説

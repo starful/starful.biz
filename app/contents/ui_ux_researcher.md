@@ -11,7 +11,7 @@
     "UXデザイン",
     "キャリアパス"
   ],
-  "meta_description": "調査設計・サンプリング・示唆出しの型を面接用に圧縮。定量だけに寄せないコツと、PdM/デザイナーとの役割調整フレーズ。リサーチャー志望の即戦力メモ。",
+  "meta_description": "UI/UXリサーチャー｜年収と調査設計・示唆出しを面接用に圧縮。定量だけに寄せないコツとPdM/デザイナーとの役割調整フレーズつき。当日までの復習に。【Starful】",
   "related_jobs": [
     "ux_designer",
     "product_manager",
@@ -28,7 +28,7 @@
   ],
   "thumbnail": "/static/img/ui_ux_researcher.png",
   "hero_image": "/static/img/ui_ux_researcher_hero.png",
-  "title": "UI/UXリサーチャー面接｜インサイト提示と再現性の説明で差をつける"
+  "title": "UI/UXリサーチャー｜年収とリサーチ面接の即答テンプレ"
 }
 ---
 # [完全ガイド] UI/UX Researcher: UI/UXリサーチャーの年収と将来性｜未経験からのロードマップ

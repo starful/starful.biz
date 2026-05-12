@@ -12,7 +12,7 @@
     "プロトタイピング",
     "ユーザー体験"
   ],
-  "meta_description": "IxD面接で必須のプロセス説明、リサーチとUIの切り分け、プロト検証の語り方をテンプレ化。ポートフォリオ深掘りで詰まらないフレーズをすぐコピペできる形で整理。",
+  "meta_description": "インタラクションデザイナー｜年収の目安とプロセス説明、IxD面接の定番質問＋答えの型。ポートフォリオ深掘りで使うフレーズまで1ページに圧縮。【保存推奨】",
   "related_jobs": [
     "ux_designer",
     "ui_designer",
@@ -30,7 +30,7 @@
   ],
   "thumbnail": "/static/img/interaction_designer.png",
   "hero_image": "/static/img/interaction_designer_hero.png",
-  "title": "インタラクションデザイナー面接｜体験設計の深掘りに落ちない答え方"
+  "title": "インタラクションデザイナー｜年収とIxD面接で差がつく答え方"
 }
 ---
 # [完全ガイド] Interaction Designer: インタラクションデザイナーの年収・将来性｜未経験ロードマップ

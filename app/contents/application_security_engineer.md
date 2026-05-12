@@ -12,7 +12,7 @@
     "未経験",
     "キャリアパス"
   ],
-  "meta_description": "SAST/DAST、脅威モデリング、セキュアSDLCの説明スクリプトを凝縮。開発チームを動かすコミュニケーション論点も。AppSec面接の典型質問を一気に潰す。",
+  "meta_description": "AppSec面接：SAST/DAST・脅威モデリング・セキュアSDLCを短く語る台本。開発チームを動かすコミュニケーション論点も。典型質問を素早く潰す1本。【転職対策】",
   "related_jobs": [
     "security_analyst",
     "devops_engineer",
@@ -29,7 +29,7 @@
   ],
   "thumbnail": "/static/img/application_security_engineer.png",
   "hero_image": "/static/img/application_security_engineer_hero.png",
-  "title": "アプリセキュリティ（AppSec）面接｜脆弱性対策の答え方テンプレ"
+  "title": "AppSec（アプリセキュリティ）面接｜脆弱性対策を短く語る型"
 }
 ---
 # [完全ガイド] Application Security Engineer: アプリセキュリティエンジニアの年収・将来性・未経験ガイド

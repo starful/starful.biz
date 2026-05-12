@@ -11,7 +11,7 @@
     "インフラ自動化",
     "エンジニアキャリア"
   ],
-  "meta_description": "サーバーレスエンジニアは、インフラ管理から解放され開発に集中できる職種です。高年収が狙える一方、高度な設計力が求められる現実も。未経験から市場価値を高めるための具体的なステップと魅力を解説します。",
+  "meta_description": "サーバーレス（Lambda等）の年収帯と、面接で聞かれる設計思想・コールドスタート等の論点を整理。未経験からの学習順の目安つき。運用最適化まで語れる準備に。【無料】",
   "related_jobs": [
     "cloud_architect",
     "backend_developer",
@@ -28,7 +28,7 @@
   ],
   "thumbnail": "/static/img/serverless_engineer.png",
   "hero_image": "/static/img/serverless_engineer_hero.png",
-  "title": "サーバーレスエンジニアの年収・将来性・未経験ロードマップ解説"
+  "title": "サーバーレスエンジニア｜年収・設計面接と未経験ロードマップ"
 }
 ---
 # [完全ガイド] Serverless Engineer: サーバーレスエンジニアの年収・将来性・未経験ロードマップ解説
