@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% block robots_content %}noindex, follow{% endblock %}
 {% block page_title %}ページが見つかりません（404）｜Starful{% endblock %}
 {% block meta_desc %}お探しのページは移動または削除された可能性があります。トップページから職種別の面接ガイドをお探しください。{% endblock %}
 {% block og_title %}ページが見つかりません（404）｜Starful{% endblock %}
@@ -22,5 +23,20 @@
     <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent-color, #007aff); color: #fff; padding: 14px 28px; border-radius: 14px; font-weight: 800; text-decoration: none;">
         <i class="fa-solid fa-house"></i> トップへ戻る
     </a>
+
+    {% if featured_jobs %}
+    <section style="margin-top: 48px; text-align: left; max-width: 520px; margin-left: auto; margin-right: auto;">
+        <h2 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 16px; color: #1d1d1f;">人気の面接ガイド</h2>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+            {% for job in featured_jobs[:10] %}
+            <li style="margin-bottom: 10px;">
+                <a href="/career/{{ job.id }}" style="display: block; padding: 12px 16px; background: #f9f9fb; border-radius: 12px; text-decoration: none; color: var(--accent-color, #007aff); font-weight: 700; border: 1px solid #e5e5e7;">
+                    {{ job.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
 </main>
 {% endblock %}

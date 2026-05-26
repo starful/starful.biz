@@ -41,6 +41,21 @@
         </form>
     </div>
 
+    {% if featured_jobs %}
+    <section class="featured-careers-strip" style="margin-bottom: 36px;">
+        <h3 style="font-size: 1.15rem; margin-bottom: 14px; color: var(--primary-color); font-weight: 800;">
+            📈 検索でよく見られている面接ガイド
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            {% for job in featured_jobs[:12] %}
+            <a href="/career/{{ job.id }}" style="display: inline-block; padding: 10px 16px; background: #f0f7ff; border: 1px solid #cce4ff; border-radius: 999px; text-decoration: none; color: var(--accent-color, #007aff); font-weight: 700; font-size: 0.9rem;">
+                {{ job.title | truncate(28, True, '…') }}
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
     <!-- Job Grid (Japanese Version) -->
     <section>
         <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--primary-color); display: flex; justify-content: space-between; align-items: flex-end;">

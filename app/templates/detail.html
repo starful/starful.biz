@@ -144,6 +144,17 @@
             </nav>
             {% endif %}
 
+            {% if featured_careers %}
+            <nav class="related-careers" aria-label="人気の面接ガイド">
+                <h2>人気の面接ガイド（他の職種）</h2>
+                <ul>
+                    {% for r in featured_careers %}
+                    <li><a href="/career/{{ r.id }}">{{ r.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            {% endif %}
+
             <a href="/practice" class="go-practice-banner">
                 <h3>AI面接官と実戦練習を始める 🤖</h3>
                 <p>

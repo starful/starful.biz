@@ -18,6 +18,17 @@ from dotenv import load_dotenv
 import markdown
 from google import genai
 
+from .seo_helpers import (
+    FEATURED_CAREER_SLUGS,
+    canonical_career_url,
+    extract_faq_from_markdown,
+    faq_page_json_ld,
+    featured_jobs_from_data,
+    legacy_redirect_target,
+    merge_career_json_ld,
+    resolve_career_id,
+)
+
 # Firebase 관련 라이브러리
 import firebase_admin
 from firebase_admin import credentials, firestore
@@ -64,18 +75,40 @@ templates.env.globals["category_label_ja"] = category_label_ja
 
 
 @app.middleware("http")
-async def force_https(request: Request, call_next):
-    """プロキシ経由の http アクセスを https に統一（重複 URL 抑制）。HTTPS 応答には HSTS を付与。"""
+async def seo_request_middleware(request: Request, call_next):
+    """www/http 統一、レガシー URL の 301、HTTPS 応答に HSTS。"""
+    host_header = (
+        request.headers.get("x-forwarded-host")
+        or request.headers.get("host")
+        or ""
+    ).split(",")[0].strip()
+    host_lower = host_header.lower()
+
+    if host_lower.startswith("www."):
+        apex = host_lower[4:]
+        path = request.url.path
+        if request.url.query:
+            path = f"{path}?{request.url.query}"
+        return RedirectResponse(f"https://{apex}{path}", status_code=301)
+
+    legacy_target = legacy_redirect_target(request.url.path)
+    if legacy_target is not None:
+        loc = BASE_URL if legacy_target == "/" else urljoin(f"{BASE_URL}/", legacy_target.lstrip("/"))
+        if request.url.query:
+            loc = f"{loc}?{request.url.query}"
+        return RedirectResponse(loc, status_code=301)
+
     proto = (request.headers.get("x-forwarded-proto") or "").split(",")[0].strip().lower()
-    if proto == "http":
-        host = request.headers.get("x-forwarded-host") or request.headers.get("host") or ""
-        if host:
-            path = request.url.path
-            if request.url.query:
-                path = f"{path}?{request.url.query}"
-            return RedirectResponse(f"https://{host}{path}", status_code=301)
+    if not proto and request.url.scheme:
+        proto = request.url.scheme.lower()
+    if proto == "http" and host_header:
+        path = request.url.path
+        if request.url.query:
+            path = f"{path}?{request.url.query}"
+        return RedirectResponse(f"https://{host_header}{path}", status_code=301)
+
     response = await call_next(request)
-    if proto == "https":
+    if proto == "https" or (not proto and BASE_URL.startswith("https")):
         response.headers.setdefault(
             "Strict-Transport-Security",
             "max-age=31536000; includeSubDomains",
@@ -89,7 +122,9 @@ async def starlette_http_exception_handler(request: Request, exc: StarletteHTTPE
         return templates.TemplateResponse(
             request=request,
             name="404.html",
-            context={},
+            context={
+                "featured_jobs": featured_jobs_from_data(JOB_DATA.get("jobs", [])),
+            },
             status_code=404,
         )
     return await http_exception_handler(request, exc)
@@ -320,24 +355,37 @@ async def home(request: Request):
             grouped_items.append(cat_copy)
 
     # 💡 핵심 수정: 인자를 명시적으로 전달 (request=request, name=..., context={...})
+    featured_jobs = featured_jobs_from_data(all_jobs)
+
     return templates.TemplateResponse(
         request=request, 
         name="index.html", 
         context={
             "grouped_items": grouped_items,
             "total_count": JOB_DATA.get('total_count', 0),
-            "last_updated": JOB_DATA.get('last_updated', date.today().isoformat())
+            "last_updated": JOB_DATA.get('last_updated', date.today().isoformat()),
+            "featured_jobs": featured_jobs,
         }
     )
 
 @app.get("/career/{item_id}")
 async def career_detail(request: Request, item_id: str):
-    filepath = os.path.join(CONTENTS_DIR, f"{item_id}.md")
-    if not os.path.exists(filepath): raise HTTPException(status_code=404)
+    resolved_id = resolve_career_id(item_id)
+    if resolved_id != item_id:
+        target = canonical_career_url(BASE_URL, resolved_id)
+        if request.url.query:
+            target = f"{target}?{request.url.query}"
+        return RedirectResponse(target, status_code=301)
+
+    filepath = os.path.join(CONTENTS_DIR, f"{resolved_id}.md")
+    if not os.path.exists(filepath):
+        raise HTTPException(status_code=404)
     meta, body = parse_starful_md(filepath)
     content_html = markdown.markdown(body, extensions=['tables'])
-    canonical = urljoin(f"{BASE_URL}/", f"career/{item_id}".lstrip("/"))
-    share_image = absolute_static_url(meta.get("thumbnail") or f"/static/img/{item_id}.png")
+    canonical = canonical_career_url(BASE_URL, resolved_id)
+    share_image = absolute_static_url(
+        meta.get("thumbnail") or f"/static/img/{resolved_id}.png"
+    )
     article_ld = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -377,7 +425,12 @@ async def career_detail(request: Request, item_id: str):
             },
         ],
     }
-    json_ld_career = {"@graph": [article_ld, breadcrumb_ld]}
+    faq_items = extract_faq_from_markdown(body)
+    faq_ld = faq_page_json_ld(faq_items, canonical)
+    json_ld_career = merge_career_json_ld([article_ld, breadcrumb_ld], faq_ld)
+
+    all_featured = featured_jobs_from_data(JOB_DATA.get("jobs", []))
+    featured_others = [j for j in all_featured if j.get("id") != resolved_id][:8]
 
     return templates.TemplateResponse(
         request=request,
@@ -386,10 +439,11 @@ async def career_detail(request: Request, item_id: str):
             "item": meta,
             "content": content_html,
             "category_title": meta.get("category", "Career"),
-            "career_id": item_id,
+            "career_id": resolved_id,
             "canonical_url": canonical,
             "share_image": share_image,
             "related_careers": related_careers_from_meta(meta),
+            "featured_careers": featured_others,
             "json_ld_career": json_ld_career,
         },
     )
@@ -561,21 +615,32 @@ async def shokumu_bullets(starr_data: StarrRequest) -> ShokumuBulletsResponse:
 
 @app.get("/sitemap.xml")
 async def sitemap():
-    static_paths = ["/", "/practice", "/about", "/privacy"]
+    static_paths = [
+        ("/", "daily", "1.0"),
+        ("/practice", "weekly", "0.85"),
+        ("/about", "monthly", "0.5"),
+        ("/privacy", "yearly", "0.3"),
+    ]
     urls = []
+    featured_set = set(FEATURED_CAREER_SLUGS)
 
-    for path in static_paths:
+    for path, changefreq, priority in static_paths:
         loc = BASE_URL if path == "/" else urljoin(f"{BASE_URL}/", path.lstrip("/"))
         urls.append(
-            f"<url><loc>{loc}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>"
+            f"<url><loc>{loc}</loc><changefreq>{changefreq}</changefreq>"
+            f"<priority>{priority}</priority></url>"
         )
 
     for job in JOB_DATA.get("jobs", []):
-        career_path = f"/career/{job.get('id', '')}"
+        jid = job.get("id", "")
+        if not jid:
+            continue
+        career_path = f"/career/{jid}"
         loc = urljoin(f"{BASE_URL}/", career_path.lstrip("/"))
+        priority = "0.9" if jid in featured_set else "0.7"
         urls.append(
             f"<url><loc>{loc}</loc><lastmod>{job.get('published', date.today().isoformat())}</lastmod>"
-            "<changefreq>monthly</changefreq><priority>0.7</priority></url>"
+            f"<changefreq>monthly</changefreq><priority>{priority}</priority></url>"
         )
 
     xml = (
@@ -600,8 +665,15 @@ async def ads_txt():
     return FileResponse(path) if os.path.exists(path) else Response(status_code=404)
 
 # 기존에 있던 robots.txt 코드
-@app.get('/robots.txt')
-async def robots(): 
+@app.get("/robots.txt")
+async def robots():
     return PlainTextResponse(
-        f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml"
+        "\n".join(
+            [
+                "User-agent: *",
+                "Allow: /",
+                f"Sitemap: {BASE_URL}/sitemap.xml",
+            ]
+        )
+        + "\n"
     )
