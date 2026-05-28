@@ -1,38 +1,10 @@
----json
-{
-  "category": "product-management",
-  "keywords": [
-    "AI Product Manager",
-    "AI PM",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "機械学習",
-    "生成AI",
-    "キャリアパス"
-  ],
-  "meta_description": "AIプロダクトマネージャーの年収や将来性を徹底解説。未経験から目指すロードマップや、技術とビジネスを繋ぐ難しさと醍醐味をリアルに紹介します。最先端のAI技術を社会実装する、今最も注目の職種です。",
-  "related_jobs": [
-    "data_scientist",
-    "product_manager",
-    "machine_learning_engineer"
-  ],
-  "slug": "ai_product_manager",
-  "tags": [
-    "AI",
-    "プロダクトマネジメント",
-    "キャリアパス",
-    "機械学習",
-    "生成AI",
-    "DX",
-    "IT転職"
-  ],
-  "thumbnail": "/static/img/ai_product_manager.png",
-  "hero_image": "/static/img/ai_product_manager_hero.png",
-  "title": "AI PMの年収・将来性は？未経験からのロードマップを公開"
-}
 ---
+title: プロダクトマネージャー（PdM）とは？未経験から目指すロードマップ・年収・将来性を徹底解説
+description: プロダクトマネージャー（PdM）への転職・キャリアパスを徹底解説！未経験からPdMになるためのロードマップや、気になる平均年収、将来性、仕事内容、面接対策まで網羅。開発とビジネスを繋ぐPdMのリアルな実態をお届けします。
+seo_title: プロダクトマネージャー（PdM）とは？未経験からのロードマップ・年収・将来性を解説｜Starful
+seo_description: プロダクトマネージャー（PdM）への転職・キャリアパスを徹底解説！未経験からPdMになるためのロードマップや、気になる平均年収、将来性、仕事内容、面接対策まで網羅。開発とビジネスを繋ぐPdMのリアルな実態をお届けします。
+---
+
 # [完全ガイド] AI Product Manager: AI PMの年収・将来性は？未経験からのロードマップを公開
 
 ## 導入：AI Product Managerの面接官は「ここ」を見ている

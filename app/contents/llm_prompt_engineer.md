@@ -1,36 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "LLM",
-    "プロンプトエンジニア",
-    "生成AI",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "AI開発"
-  ],
-  "meta_description": "AIの能力を最大化するプロンプトエンジニア。年収1000万超えの可能性や将来性、未経験からの学習ロードマップを解説。技術進化の速さに挑むリアルな現実と、AIを操る圧倒的なやりがいを伝えます。",
-  "related_jobs": [
-    "ai_engineer",
-    "data_scientist",
-    "machine_learning_engineer"
-  ],
-  "slug": "llm_prompt_engineer",
-  "tags": [
-    "AI",
-    "LLM",
-    "Prompt Engineering",
-    "ChatGPT",
-    "エンジニア転職",
-    "キャリア"
-  ],
-  "thumbnail": "/static/img/llm_prompt_engineer.png",
-  "hero_image": "/static/img/llm_prompt_engineer_hero.png",
-  "title": "プロンプトエンジニアの年収と将来性｜未経験ロードマップ公開"
-}
 ---
+title: プロンプトエンジニアの年収・将来性と転職面接対策｜よくある質問・回答例
+description: プロンプトエンジニアへの転職を目指す方必見！気になる平均年収や将来性、仕事内容を徹底解説。さらに、実際のLLM・AI関連の面接でよく聞かれる質問（評価設計、安全対策など）と回答例、採用担当者が見ているポイントも分かりやすくまとめました。【Starful】
+seo_title: プロンプトエンジニアの年収・将来性と転職面接対策｜よくある質問・回答例【Starful】
+seo_description: プロンプトエンジニアへの転職を目指す方必見！気になる平均年収や将来性、仕事内容を徹底解説。さらに、実際のLLM・AI関連の面接でよく聞かれる質問（評価設計、安全対策など）と回答例、採用担当者が見ているポイントも分かりやすくまとめました。【Starful】
+---
+
 # [完全ガイド] LLM Prompt Engineer: プロンプトエンジニアの年収と将来性｜未経験ロードマップ公開
 
 ## 導入：LLM Prompt Engineerの面接官は「ここ」を見ている

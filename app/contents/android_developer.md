@@ -1,38 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "Androidエンジニア",
-    "Kotlin",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "アプリ開発",
-    "エンジニア転職",
-    "Java"
-  ],
-  "meta_description": "Kotlin中心のモダンな開発が魅力のAndroidエンジニア。高い市場価値と将来性を徹底解説。未経験からプロになるための学習ロードマップも公開。アプリで世界を動かす、やりがいあるキャリアを掴みましょう。",
-  "related_jobs": [
-    "ios_developer",
-    "frontend_developer",
-    "backend_developer"
-  ],
-  "slug": "android_developer",
-  "tags": [
-    "Android",
-    "Kotlin",
-    "モバイルアプリ",
-    "エンジニアキャリア",
-    "転職ガイド",
-    "プログラミング",
-    "スマホアプリ"
-  ],
-  "thumbnail": "/static/img/android_developer.png",
-  "hero_image": "/static/img/android_developer_hero.png",
-  "title": "Androidエンジニアの年収と将来性｜未経験からのロードマップ"
-}
 ---
+title: Androidエンジニアの年収・将来性と未経験からの転職ロードマップ
+description: Androidエンジニアの平均年収や今後の将来性、未経験からプロとして活躍するための学習ロードマップを徹底解説。需要の高まるモバイルアプリ開発で市場価値の高いキャリアを築くためのステップを紹介します。
+seo_title: Androidエンジニアの年収・将来性は？未経験からの転職ロードマップ｜Starful
+seo_description: Androidエンジニアの平均年収や将来性を徹底解説！未経験からプロを目指すための具体的な学習ロードマップや面接Q&Aを紹介。 needが高まるアプリ開発スキルを身につけ、市場価値の高い転職を成功させましょう。
+---
+
 # [完全ガイド] Android Developer: Androidエンジニアの年収と将来性｜未経験からのロードマップ
 
 ## 導入：Android Developerの面接官は「ここ」を見ている

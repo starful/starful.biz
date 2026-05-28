@@ -1,0 +1,89 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Starful//SEO Work Log//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Starful SEO・サイト改善
+X-WR-TIMEZONE:Asia/Tokyo
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:JST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:starful-gsc-analysis-20260512@starful.biz
+DTSTAMP:20260512T063300Z
+DTSTART;VALUE=DATE:20260512
+DTEND;VALUE=DATE:20260513
+SUMMARY:[分析] GSC Performance・Coverage 初回分析（5/12エクスポート）
+DESCRIPTION:・クリック0・ノ출約98（3ヶ月）\n・404約129件・http/https混在\n・上位URL: data_scientist\, prompt_engineer 等\n・改善方針: メタ整備・404・canonical
+CATEGORIES:SEO,分析
+END:VEVENT
+BEGIN:VEVENT
+UID:starful-seo-meta-20260512@starful.biz
+DTSTAMP:20260512T120000Z
+DTSTART;VALUE=DATE:20260512
+DTEND;VALUE=DATE:20260513
+SUMMARY:[実装] GSC上位10職種の title/meta 改善・detail短縮・HSTS
+DESCRIPTION:・app/contents 10職種 + index/about\n・detail.html タイトル接尾辞短縮\n・job_data.json 再生成\n・コミット 2a2b8d4
+CATEGORIES:SEO,開発
+END:VEVENT
+BEGIN:VEVENT
+UID:starful-deploy-20260512@starful.biz
+DTSTAMP:20260512T134428Z
+DTSTART:20260512T134000Z
+DTEND:20260512T143000Z
+SUMMARY:[デプロイ] Cloud Run starful-biz-00146-bj8
+DESCRIPTION:・gcloud builds submit\n・Build ID: 035376c4-0f2a-4089-9af7-a3bf3f7588ec\n・GitHub main へ push 済み
+CATEGORIES:デプロイ
+END:VEVENT
+BEGIN:VEVENT
+UID:starful-gsc-compare-20260526@starful.biz
+DTSTAMP:20260526T000000Z
+DTSTART;VALUE=DATE:20260526
+DTEND;VALUE=DATE:20260527
+SUMMARY:[分析] GSC 5/12 vs 5/26 比較
+DESCRIPTION:・クリック0→1（5/13 ホーム）\n・ノ出+42%\n・色引 54→152\n・cto 転職 クエリ急増・404検証失敗
+CATEGORIES:SEO,分析
+END:VEVENT
+BEGIN:VEVENT
+UID:starful-seo-foundation-20260526@starful.biz
+DTSTAMP:20260526T110000Z
+DTSTART;VALUE=DATE:20260526
+DTEND;VALUE=DATE:20260527
+SUMMARY:[実装] SEO基盤: リダイレクト・内部リンク・FAQ schema・CTO meta
+DESCRIPTION:・app/seo_helpers.py 新規\n・/entry /archive → 301 ホーム\n・www/http 統一・スラッグエイリアス\n・ホーム/詳細/404 人気リンク\n・FAQPage JSON-LD\n・サイトマップ priority\n・コミット 2fcc170
+CATEGORIES:SEO,開発
+END:VEVENT
+BEGIN:VEVENT
+UID:starful-deploy-20260526@starful.biz
+DTSTAMP:20260526T110813Z
+DTSTART:20260526T110000Z
+DTEND:20260526T120000Z
+SUMMARY:[デプロイ] Cloud Run starful-biz-00147-zw9 + GitHub push
+DESCRIPTION:・Build ID: e5470696-1640-4045-81a1-58ab5858708f\n・origin/main 同期済み
+CATEGORIES:デプロイ
+END:VEVENT
+BEGIN:VEVENT
+UID:starful-gsc-todo-followup@starful.biz
+DTSTAMP:20260526T120000Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:[TODO] GSC: 404再検証・URL検査・サイトマップ再送信
+DESCRIPTION:・404 例URL確認→301動作\n・ホーム/cto/data_scientist 等 インデックス登録リクエスト\n・sitemap.xml 再送信\n（Google Search Console で手動）
+CATEGORIES:SEO,運用
+END:VEVENT
+BEGIN:VEVENT
+UID:starful-gsc-review-2weeks@starful.biz
+DTSTAMP:20260526T120000Z
+DTSTART;VALUE=DATE:20260609
+DTEND;VALUE=DATE:20260610
+SUMMARY:[リマインド] GSC再エクスポート・クリック/CTR確認（2週間後）
+DESCRIPTION:・Performance/Coverage を再ダウンロード\n・cto・ホーム・上位career の変化を比較
+CATEGORIES:SEO,分析
+END:VEVENT
+END:VCALENDAR

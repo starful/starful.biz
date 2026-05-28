@@ -22,8 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSV_FILE = os.path.join(BASE_DIR, "scripts", "data", "positions.csv")
 LOG_FILE = os.path.join(BASE_DIR, "scripts", "log", "generation_log.txt")
 
-# 🎯 [핵심 설정] 한 번 실행 시 최대로 생성할 파일 개수 (원하는 숫자로 변경하세요)
-MAX_TO_GENERATE = 10
+# 🎯 한 번 실행 시 최대 생성 건수 (Work Hub CONTENT_LIMIT, 0 이하 → 10)
+def _max_to_generate() -> int:
+    raw = os.getenv("CONTENT_LIMIT", "6").strip()
+    try:
+        n = int(raw)
+    except ValueError:
+        n = 6
+    return 6 if n <= 0 else n
 
 # 병렬 처리할 워커 개수 (유료 API이므로 5~10개 동시 실행 가능)
 MAX_WORKERS = 5
@@ -214,7 +220,8 @@ def main():
             positions_to_generate.append(pos)
     
     # 🎯 [핵심 변경사항] 남은 파일 개수와 설정한 최대 건수(MAX_TO_GENERATE) 중 작은 값만큼만 자르기
-    target_positions = positions_to_generate[:MAX_TO_GENERATE]
+    max_gen = _max_to_generate()
+    target_positions = positions_to_generate[:max_gen]
     
     if not target_positions:
         print("🎉 すべてのファイルが生成済みです。")
@@ -233,8 +240,8 @@ def main():
                 success_count += 1
 
     print(f"\n🎉 すべてのプロセスが完了しました。{success_count}件のファイルが新しく作成されました。")
-    if len(positions_to_generate) > MAX_TO_GENERATE:
-        remaining = len(positions_to_generate) - MAX_TO_GENERATE
+    if len(positions_to_generate) > max_gen:
+        remaining = len(positions_to_generate) - max_gen
         print(f"📌 残りの生成待ちジョブ数: {remaining}件 (再度スクリプトを実行してください)")
 
 if __name__ == "__main__":

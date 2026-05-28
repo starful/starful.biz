@@ -1,40 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "ゲーム開発者",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "Unity",
-    "Unreal Engine",
-    "C#",
-    "C++",
-    "ゲーム業界"
-  ],
-  "meta_description": "憧れのゲーム開発者へ！年収や将来性、未経験からプロになるためのロードマップを徹底解説。技術革新の速さや納期など厳しい面もありますが、自作のゲームが世界中で遊ばれる喜びは唯一無二のやりがいです。",
-  "related_jobs": [
-    "unity_engineer",
-    "backend_developer",
-    "mobile_app_developer"
-  ],
-  "slug": "game_developer",
-  "tags": [
-    "ゲーム開発",
-    "Unity",
-    "Unreal Engine",
-    "C#",
-    "C++",
-    "キャリアパス",
-    "エンジニア転職",
-    "ゲームプログラマー"
-  ],
-  "thumbnail": "/static/img/game_developer.png",
-  "hero_image": "/static/img/game_developer_hero.png",
-  "title": "ゲーム開発者の年収と将来性｜未経験からの転職ロードマップ"
-}
 ---
+title: ゲーム開発者になるには？未経験からの転職ロードマップ・年収と将来性
+description: ゲーム開発者（ゲームクリエイター）になりたい方必見！未経験から転職するための具体的なロードマップ、必要なスキル、平均年収や将来性を徹底解説します。厳しい現実ややりがい、面接対策Q&Aまで網羅。
+seo_title: ゲーム開発者になるには？未経験から転職するロードマップ・年収と将来性【Starful】
+seo_description: ゲーム開発者（ゲームクリエイター）になりたい方必見！未経験から転職するための具体的なロードマップ、必要なスキル、平均年収や将来性を徹底解説します。厳しい現実ややりがい、面接対策Q&Aまで網羅。
+---
+
 # [完全ガイド] Game Developer: ゲーム開発者の年収と将来性｜未経験からの転職ロードマップ
 
 ## 導入：Game Developerの面接官は「ここ」を見ている

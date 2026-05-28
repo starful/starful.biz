@@ -1,39 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "テスト自動化エンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "QAエンジニア",
-    "自動テスト",
-    "キャリアパス",
-    "Selenium",
-    "品質保証"
-  ],
-  "meta_description": "テスト自動化エンジニアは品質保証の要。高い需要で年収アップも狙えます。開発の効率化を支えるやりがいと、未経験からプロになるための具体的なロードマップ、将来性までリアルな実態を徹底解説します。",
-  "related_jobs": [
-    "qa_engineer",
-    "devops_engineer",
-    "backend_developer"
-  ],
-  "slug": "test_automation_engineer",
-  "tags": [
-    "テスト自動化",
-    "QA",
-    "品質保証",
-    "自動化ツール",
-    "エンジニア転職",
-    "スキルアップ",
-    "キャリア"
-  ],
-  "thumbnail": "/static/img/test_automation_engineer.png",
-  "hero_image": "/static/img/test_automation_engineer_hero.png",
-  "title": "テスト自動化エンジニアの年収・将来性｜未経験ロードマップ"
-}
 ---
+title: オートメーションエンジニアとは？仕事内容、年収・将来性と未経験からのロードマップ
+description: オートメーション（自動化）エンジニアの仕事内容、平均年収、将来性を徹底解説！未経験からプロを目指すロードマップや面接Q&Aも掲載。テスト自動化やRPA領域で需要が高まる注目職種のリアルを紹介します。
+seo_title: オートメーションエンジニアとは？仕事内容・年収・将来性と未経験ロードマップ｜Starful
+seo_description: オートメーション（自動化）エンジニアの仕事内容、平均年収、将来性を徹底解説！未経験からプロを目指すロードマップや面接Q&Aも掲載。テスト自動化やRPA領域で需要が高まる注目職種のリアルを紹介します。
+---
+
 # [完全ガイド] Test Automation Engineer: テスト自動化エンジニアの年収・将来性｜未経験ロードマップ
 
 ## 導入：Test Automation Engineerの面接官は「ここ」を見ている

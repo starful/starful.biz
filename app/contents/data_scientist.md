@@ -1,38 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "データサイエンティスト",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "データ分析",
-    "AI",
-    "機械学習",
-    "キャリアパス"
-  ],
-  "meta_description": "年収レンジと必要スキルのロードマップ要約に続き、面接で聞かれるビジネス寄りDS論点と短い回答の型まで。転職直前の逆チェックに使える1本。【無料・保存推奨】",
-  "related_jobs": [
-    "data_engineer",
-    "machine_learning_engineer",
-    "ai_analyst"
-  ],
-  "slug": "data_scientist",
-  "tags": [
-    "AI",
-    "Python",
-    "データ分析",
-    "統計学",
-    "機械学習",
-    "キャリア",
-    "転職"
-  ],
-  "thumbnail": "/static/img/data_scientist.png",
-  "hero_image": "/static/img/data_scientist_hero.png",
-  "title": "データサイエンティスト｜年収・ロードマップと面接の定番Q&A"
-}
 ---
+title: データサイエンティストのキャリアロードマップ｜年収・スキルと面接対策Q&A
+description: データサイエンティストの想定年収やキャリアロードマップ、転職面接で聞かれる定番の質問と回答のポイントを徹底解説します。
+seo_title: データサイエンティストの転職ロードマップ：年収・必要スキルと面接対策Q&A｜Starful
+seo_description: データサイエンティストへの転職・キャリアロードマップを解説！想定年収や必要スキル、面接で頻出のビジネス質問と回答の型まで、転職活動の直前に役立つ対策情報を網羅しています。
+---
+
 # [完全ガイド] Data Scientist: データサイエンティストの年収と将来性｜未経験からの完全ロードマップ
 
 ## 導入：Data Scientistの面接官は「ここ」を見ている

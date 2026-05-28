@@ -1,37 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "グラフィックスエンジン",
-    "C++",
-    "DirectX",
-    "Vulkan",
-    "レンダリング",
-    "GPU",
-    "ゲーム開発",
-    "リアルタイム描画"
-  ],
-  "meta_description": "グラフィックスエンジニア向け。描画パイプライン・シェーダ・GPUの面接頻出質問と30秒で答える骨子を整理。C++/Vulkan志望の転職前ガイド。【Starful】",
-  "related_jobs": [
-    "game_developer",
-    "vr_ar_engineer",
-    "embedded_engineer"
-  ],
-  "slug": "graphics_engine_developer",
-  "tags": [
-    "C++",
-    "DirectX",
-    "Vulkan",
-    "シェーダー",
-    "レンダリング",
-    "GPU",
-    "3D数学"
-  ],
-  "thumbnail": "/static/img/graphics_engine_developer.png",
-  "hero_image": "/static/img/graphics_engine_developer_hero.png",
-  "title": "グラフィックスエンジニア｜面接で聞く描画・GPUの答え方"
-}
 ---
+title: グラフィックスエンジニアの転職・面接対策｜描画・GPU・シェーダーの回答例
+description: グラフィックスエンジニア（プログラマー）の転職面接対策ガイド。C++やVulkan、DirectX、GPU描画パイプライン、シェーダーなど、面接で頻出する専門質問の回答例と対策ポイントを徹底解説。キャリアアップを目指すエンジニア必見。【Starful】
+seo_title: グラフィックスエンジニア転職・面接対策｜描画・GPUの質問回答例｜C++・Vulkan【Starful】
+seo_description: グラフィックスエンジニア（プログラマー）の転職面接対策ガイド。C++やVulkan、DirectX、GPU描画パイプライン、シェーダーなど、面接で頻出する専門質問の回答例と対策ポイントを徹底解説。キャリアアップを目指すエンジニア必見。【Starful】
+---
+
 # [完全ガイド] Graphics Engine Developer: グラフィックス開発者の年収・将来性・未経験からのロードマップ
 
 ## 導入：Graphics Engine Developerの面接官は「ここ」を見ている

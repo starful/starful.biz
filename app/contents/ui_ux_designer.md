@@ -1,37 +1,10 @@
----json
-{
-  "category": "design",
-  "keywords": [
-    "UI/UXデザイナー",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "キャリアパス",
-    "Figma",
-    "デザイン思考",
-    "転職"
-  ],
-  "meta_description": "デザインプロセス、A/Bテストとの役割分担、開発Handoffの深掘りに備えた短文テンプレ。ポートフォリオ1枚目から最後まで面接官が見る観点を先回りで解説。",
-  "related_jobs": [
-    "product_manager",
-    "frontend_developer",
-    "graphic_designer"
-  ],
-  "slug": "ui_ux_designer",
-  "tags": [
-    "UIデザイン",
-    "UXデザイン",
-    "キャリア形成",
-    "Webデザイン",
-    "スキルアップ",
-    "デザインツール"
-  ],
-  "thumbnail": "/static/img/ui_ux_designer.png",
-  "hero_image": "/static/img/ui_ux_designer_hero.png",
-  "title": "UI/UXデザイナー面接｜プロセス説明と指標の話し方で差をつける"
-}
 ---
+title: UI/UXデザイナー面接対策｜プロセス・成果指標の伝え方と回答例
+description: UI/UXデザイナーの転職・面接対策。よくある質問への回答テンプレート、プロセスや数値指標の伝え方、面接官に評価されるポートフォリオのポイントを解説。
+seo_title: UI/UXデザイナー面接対策｜よくある質問と回答例・ポートフォリオのコツ【Starful】
+seo_description: UI/UXデザイナーの転職面接対策。よく聞かれる質問への回答例や、デザインプロセス・成果指標の伝え方、評価されるポートフォリオのコツを徹底解説。
+---
+
 # [完全ガイド] UI/UX Designer: UI/UXデザイナーの面接対策｜採用担当が教える合格へのロードマップ
 
 ## 導入：UI/UX Designerの面接官は「ここ」を見ている

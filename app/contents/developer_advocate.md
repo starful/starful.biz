@@ -1,36 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "デベロッパーアドボケイト",
-    "DevRel",
-    "エンジニアキャリア",
-    "技術広報",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ"
-  ],
-  "meta_description": "開発者と企業の架け橋となるデベロッパーアドボケイト。高い技術力と発信力が求められる一方、年収1000万超えも狙える将来性の高い職種です。未経験からの挑戦方法やキャリアのロードマップを徹底解説します。",
-  "related_jobs": [
-    "software_engineer",
-    "technical_writer",
-    "community_manager"
-  ],
-  "slug": "developer_advocate",
-  "tags": [
-    "DevRel",
-    "デベロッパーアドボケイト",
-    "エンジニア",
-    "キャリアパス",
-    "技術発信",
-    "コミュニティ運営"
-  ],
-  "thumbnail": "/static/img/developer_advocate.png",
-  "hero_image": "/static/img/developer_advocate_hero.png",
-  "title": "デベロッパーアドボケイトの年収・将来性・未経験ロードマップ"
-}
 ---
+title: デベロッパーアドボケイト（DevRel）とは？仕事内容・年収・将来性と未経験からのロードマップ
+description: デベロッパーアドボケイト（DevRel）の仕事内容、年収、将来性を徹底解説！エンジニアから未経験で目指すためのキャリアロードマップや面接対策（Q&A）を掲載。開発者と企業の架け橋として活躍したい方は必見です。
+seo_title: デベロッパーアドボケイト(DevRel)とは？仕事内容・年収・未経験ロードマップ｜Starful
+seo_description: デベロッパーアドボケイト（DevRel）の仕事内容、年収、将来性を徹底解説！エンジニアから未経験で目指すためのキャリアロードマップや面接対策（Q&A）を掲載。開発者と企業の架け橋として活躍したい方は必見です。
+---
+
 # [完全ガイド] Developer Advocate: デベロッパーアドボケイトの年収・将来性・未経験ロードマップ
 
 ## 導入：Developer Advocateの面接官は「ここ」を見ている

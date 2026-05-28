@@ -1,35 +1,10 @@
----json
-{
-  "category": "cyber-security",
-  "keywords": [
-    "サイバーセキュリティコンサルタント",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "セキュリティエンジニア",
-    "キャリアパス",
-    "IT資格"
-  ],
-  "meta_description": "企業の重要資産をサイバー攻撃から守るセキュリティコンサルタント。高年収が期待できる一方、常に最新知識が求められる職種です。未経験からの学習ロードマップや将来性、仕事のリアルを徹底解説します。",
-  "related_jobs": [
-    "security_engineer",
-    "it_consultant",
-    "cloud_architect"
-  ],
-  "slug": "cybersecurity_consultant",
-  "tags": [
-    "セキュリティ",
-    "コンサルティング",
-    "キャリア",
-    "リスキリング",
-    "IT資格"
-  ],
-  "thumbnail": "/static/img/cybersecurity_consultant.png",
-  "hero_image": "/static/img/cybersecurity_consultant_hero.png",
-  "title": "サイバーセキュリティコンサル｜年収・将来性・未経験ロードマップ"
-}
 ---
+title: サイバーセキュリティコンサルタントの年収・将来性・未経験ロードマップ
+description: サイバーセキュリティコンサルタントの仕事内容、年収、将来性を徹底解説。IT未経験から転職を成功させるためのロードマップや面接対策Q&Aも掲載しています。
+seo_title: サイバーセキュリティコンサルタントの年収・将来性・未経験ロードマップ【Starful】
+seo_description: サイバーセキュリティコンサルタントの年収、将来性、仕事内容を徹底解説！需要が高まるセキュリティコンサルの実態や、未経験から転職を成功させるためのロードマップ、面接対策Q&Aまで役立つ情報を網羅。
+---
+
 # [完全ガイド] Cybersecurity Consultant: サイバーセキュリティコンサル｜年収・将来性・未経験ロードマップ
 
 ## 導入：Cybersecurity Consultantの面接官は「ここ」を見ている
