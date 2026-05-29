@@ -392,3 +392,9 @@
 2026-05-01 10:02:50,871 - CREATED: app/contents/ecommerce_manager.md
 2026-05-01 10:02:52,243 - CREATED: app/contents/firmware_engineer.md
 2026-05-01 10:03:03,147 - CREATED: app/contents/game_designer.md
+2026-05-29 09:16:42,327 - CREATED: app/contents/cpp_developer.md
+2026-05-29 09:16:43,338 - CREATED: app/contents/design_operations_manager.md
+2026-05-29 09:16:46,396 - CREATED: app/contents/cpp_developer.md
+2026-05-29 09:16:50,962 - CREATED: app/contents/conversion_rate_optimizer.md
+2026-05-29 09:16:51,517 - CREATED: app/contents/database_administrator.md
+2026-05-29 09:17:38,669 - CREATED: app/contents/ecommerce_manager.md

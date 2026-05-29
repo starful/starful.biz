@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026.05.26",
-  "total_count": 176,
+  "last_updated": "2026.05.29",
+  "total_count": 160,
   "jobs": [
     {
       "id": "service_planner",
@@ -15,7 +15,7 @@
         "新規事業",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/service_planner"
     },
     {
@@ -32,7 +32,7 @@
         "戦略立案",
         "KPI管理"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/growth_manager"
     },
     {
@@ -49,7 +49,7 @@
         "Python",
         "キャリア"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_visualization_engineer"
     },
     {
@@ -66,7 +66,7 @@
         "Azure",
         "GoogleCloud"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/finops_engineer"
     },
     {
@@ -83,7 +83,7 @@
         "IT転職",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/service_designer"
     },
     {
@@ -100,7 +100,7 @@
         "ITコンサル",
         "DX"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_consultant"
     },
     {
@@ -116,7 +116,7 @@
         "スキルアップ",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_analyst"
     },
     {
@@ -134,7 +134,7 @@
         "IT転職",
         "Python"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/marketing_data_analyst"
     },
     {
@@ -151,7 +151,7 @@
         "年収",
         "ロードマップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cto"
     },
     {
@@ -167,7 +167,7 @@
         "スキルアップ",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/business_planner"
     },
     {
@@ -184,7 +184,7 @@
         "メタバース",
         "ゲーム開発"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/3d_artist"
     },
     {
@@ -200,7 +200,7 @@
         "キャリアパス",
         "サイバーセキュリティ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/application_security_engineer"
     },
     {
@@ -217,7 +217,7 @@
         "キャリアパス",
         "DX"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/bi_developer"
     },
     {
@@ -233,7 +233,7 @@
         "キャリアパス",
         "ITコンプライアンス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/compliance_engineer"
     },
     {
@@ -249,7 +249,7 @@
         "IT転職",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_strategist"
     },
     {
@@ -265,7 +265,7 @@
         "エンジニア",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/director_of_engineering"
     },
     {
@@ -281,7 +281,7 @@
         "キャリアパス",
         "エンジニアリング"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/api_technical_writer"
     },
     {
@@ -298,7 +298,7 @@
         "転職",
         "キャリアパス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/network_engineer"
     },
     {
@@ -315,24 +315,24 @@
         "キャリアパス",
         "エンジニア"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cryptographer"
     },
     {
       "id": "cpp_developer",
-      "title": "C++開発者の年収・将来性・未経験からのロードマップを公開",
+      "title": "C++エンジニアの年収・将来性と未経験ロードマップ",
       "category": "engineering",
-      "meta_description": "難易度は高いが高年収と安定した将来性が魅力のC++開発。組み込みやゲーム等、多岐にわたる活躍の場と低レイヤー開発の奥深さを、未経験からの学習ロードマップと共にリアルな視点で徹底解説します。",
+      "meta_description": "C++開発者のリアルな現実とは？高難易度ゆえの圧倒的な高年収と、自動運転やゲーム開発など最先端分野での将来性を徹底解説。未経験からプロになるためのロードマップと、開発のやりがいを凝縮してお届けします。",
       "tags": [
         "C++",
-        "プログラミング",
-        "エンジニア転職",
+        "プログラミング言語",
         "キャリアパス",
-        "組み込み",
-        "ゲーム制作",
-        "低レイヤー"
+        "年収",
+        "将来性",
+        "未経験",
+        "ロードマップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cpp_developer"
     },
     {
@@ -348,7 +348,7 @@
         "Development",
         "Architecture"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_application_developer"
     },
     {
@@ -364,7 +364,7 @@
         "執筆",
         "マニュアル制作"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/technical_writer"
     },
     {
@@ -380,23 +380,8 @@
         "キャリアチェンジ",
         "データセンター"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_center_technician"
-    },
-    {
-      "id": "cybersecurity_consultant",
-      "title": "サイバーセキュリティコンサル｜年収・将来性・未経験ロードマップ",
-      "category": "cyber-security",
-      "meta_description": "企業の重要資産をサイバー攻撃から守るセキュリティコンサルタント。高年収が期待できる一方、常に最新知識が求められる職種です。未経験からの学習ロードマップや将来性、仕事のリアルを徹底解説します。",
-      "tags": [
-        "セキュリティ",
-        "コンサルティング",
-        "キャリア",
-        "リスキリング",
-        "IT資格"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/cybersecurity_consultant"
     },
     {
       "id": "customer_success_manager",
@@ -411,7 +396,7 @@
         "IT転職",
         "顧客支援"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/customer_success_manager"
     },
     {
@@ -427,7 +412,7 @@
         "年収アップ",
         "戦略立案"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/business_development_manager"
     },
     {
@@ -442,7 +427,7 @@
         "プロジェクトマネジメント",
         "要件定義"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/technical_planner"
     },
     {
@@ -459,7 +444,7 @@
         "クラウドエンジニア",
         "技術選定"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/architect"
     },
     {
@@ -475,7 +460,7 @@
         "CareerPath",
         "AppDevelopment"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/flutter_developer"
     },
     {
@@ -491,7 +476,7 @@
         "ユーザーリサーチ",
         "プロダクト開発"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/ux_planner"
     },
     {
@@ -507,7 +492,7 @@
         "未経験歓迎",
         "年収アップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/customer_support_engineer"
     },
     {
@@ -525,7 +510,7 @@
         "データ基盤",
         "エンジニア転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_engineer"
     },
     {
@@ -543,7 +528,7 @@
         "Python",
         "SQL"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_platform_engineer"
     },
     {
@@ -560,7 +545,7 @@
         "キャリアパス",
         "ライフサイエンス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/bioinformatics_scientist"
     },
     {
@@ -576,25 +561,8 @@
         "エンジニア転職",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/frontend_developer"
-    },
-    {
-      "id": "android_developer",
-      "title": "Androidエンジニアの年収と将来性｜未経験からのロードマップ",
-      "category": "engineering",
-      "meta_description": "Kotlin中心のモダンな開発が魅力のAndroidエンジニア。高い市場価値と将来性を徹底解説。未経験からプロになるための学習ロードマップも公開。アプリで世界を動かす、やりがいあるキャリアを掴みましょう。",
-      "tags": [
-        "Android",
-        "Kotlin",
-        "モバイルアプリ",
-        "エンジニアキャリア",
-        "転職ガイド",
-        "プログラミング",
-        "スマホアプリ"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/android_developer"
     },
     {
       "id": "recommendation_system_engineer",
@@ -610,7 +578,7 @@
         "キャリア",
         "アルゴリズム"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/recommendation_system_engineer"
     },
     {
@@ -626,7 +594,7 @@
         "ロードマップ",
         "DevSecOps"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/security_software_engineer"
     },
     {
@@ -644,25 +612,8 @@
         "キャリアパス",
         "エンジニア転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/mobile_developer"
-    },
-    {
-      "id": "blockchain_developer",
-      "title": "ブロックチェーンエンジニアの年収・将来性・未経験ロードマップ",
-      "category": "engineering",
-      "meta_description": "Web3時代の核心を担うブロックチェーンエンジニア。高年収と圧倒的な将来性が魅力ですが、学習難易度も高め。未経験からスマートコントラクト開発に挑戦する現実的なステップと、開発の醍醐味を徹底解説します。",
-      "tags": [
-        "Blockchain",
-        "Web3",
-        "Solidity",
-        "Ethereum",
-        "Smart Contract",
-        "Rust",
-        "Go"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/blockchain_developer"
     },
     {
       "id": "security_engineer",
@@ -677,7 +628,7 @@
         "ITキャリア",
         "ネットワーク"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/security_engineer"
     },
     {
@@ -692,7 +643,7 @@
         "スキルアップ",
         "転職ガイド"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/game_designer"
     },
     {
@@ -708,7 +659,7 @@
         "スキルアップ",
         "年収"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/firmware_engineer"
     },
     {
@@ -724,7 +675,7 @@
         "マーケティング",
         "統計学"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/performance_analyst"
     },
     {
@@ -740,7 +691,7 @@
         "IT業界",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/director_of_product_management"
     },
     {
@@ -756,7 +707,7 @@
         "転職",
         "メールマーケティング"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/email_marketing_specialist"
     },
     {
@@ -771,7 +722,7 @@
         "プロダクトマネジメント",
         "キャリアパス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/design_system_manager"
     },
     {
@@ -787,25 +738,8 @@
         "スキルアップ",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/ux_strategist"
-    },
-    {
-      "id": "data_scientist",
-      "title": "データサイエンティスト｜年収・ロードマップと面接の定番Q&A",
-      "category": "ai-data",
-      "meta_description": "年収レンジと必要スキルのロードマップ要約に続き、面接で聞かれるビジネス寄りDS論点と短い回答の型まで。転職直前の逆チェックに使える1本。【無料・保存推奨】",
-      "tags": [
-        "AI",
-        "Python",
-        "データ分析",
-        "統計学",
-        "機械学習",
-        "キャリア",
-        "転職"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/data_scientist"
     },
     {
       "id": "site_reliability_engineer",
@@ -821,7 +755,7 @@
         "DevOps",
         "信頼性"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/site_reliability_engineer"
     },
     {
@@ -838,7 +772,7 @@
         "キャリア",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/analytics_engineer"
     },
     {
@@ -854,7 +788,7 @@
         "製造業",
         "DX"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/electrical_engineer"
     },
     {
@@ -870,25 +804,8 @@
         "グラフィックデザイン",
         "UI/UX"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/brand_designer"
-    },
-    {
-      "id": "ai_product_manager",
-      "title": "AI PMの年収・将来性は？未経験からのロードマップを公開",
-      "category": "product-management",
-      "meta_description": "AIプロダクトマネージャーの年収や将来性を徹底解説。未経験から目指すロードマップや、技術とビジネスを繋ぐ難しさと醍醐味をリアルに紹介します。最先端のAI技術を社会実装する、今最も注目の職種です。",
-      "tags": [
-        "AI",
-        "プロダクトマネジメント",
-        "キャリアパス",
-        "機械学習",
-        "生成AI",
-        "DX",
-        "IT転職"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/ai_product_manager"
     },
     {
       "id": "bi_analyst",
@@ -903,7 +820,7 @@
         "SQL",
         "データ可視化"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/bi_analyst"
     },
     {
@@ -919,7 +836,7 @@
         "効率化",
         "BPR"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/operations_planner"
     },
     {
@@ -935,7 +852,7 @@
         "IT業界",
         "開発管理"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/technical_program_manager"
     },
     {
@@ -952,7 +869,7 @@
         "IT転職",
         "サイト管理"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/web_master"
     },
     {
@@ -968,7 +885,7 @@
         "キャリアアップ",
         "IT資格"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_architect"
     },
     {
@@ -983,24 +900,24 @@
         "キャリア形成",
         "認定資格"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/scrum_master"
     },
     {
       "id": "conversion_rate_optimizer",
-      "title": "CROの年収・将来性は？未経験からの合格ロードマップを解説",
+      "title": "CROとは？未経験からのロードマップ・年収・将来性を解説",
       "category": "marketing",
-      "meta_description": "サイトの成約率を最大化するCRO。データに基づき仮説検証を繰り返す泥臭さと、数字が跳ねた瞬間の快感は格別です。未経験からの年収アップ術や将来性、習得すべきスキルのロードマップを詳しく解説します。",
+      "meta_description": "CRO（コンバージョン改善）はデータと心理学で売上を最大化する仕事。地道な分析とテストの連続という現実もありますが、成果が数字で直結するやりがいは抜群！未経験からのロードマップや年収を解説します。",
       "tags": [
         "CRO",
-        "LPO",
-        "ABテスト",
         "マーケティング",
         "データ分析",
-        "キャリアパス",
-        "UIUX"
+        "A/Bテスト",
+        "キャリア",
+        "年収",
+        "未経験"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/conversion_rate_optimizer"
     },
     {
@@ -1016,7 +933,7 @@
         "キャリアパス",
         "転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/bi_engineer"
     },
     {
@@ -1032,7 +949,7 @@
         "組織開発",
         "経営"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/head_of_design"
     },
     {
@@ -1049,7 +966,7 @@
         "React",
         "Next.js"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/frontend_architect"
     },
     {
@@ -1066,7 +983,7 @@
         "将来性",
         "データ活用"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_architect"
     },
     {
@@ -1082,7 +999,7 @@
         "経営戦略",
         "エンジニア"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/enterprise_architect"
     },
     {
@@ -1098,7 +1015,7 @@
         "Web3",
         "3D制作"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/metaverse_developer"
     },
     {
@@ -1114,7 +1031,7 @@
         "転職",
         "デジタルマーケティング"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/social_media_manager"
     },
     {
@@ -1131,23 +1048,24 @@
         "キャリア形成",
         "デジタルマーケティング"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/content_planner"
     },
     {
       "id": "database_administrator",
-      "title": "DBAの年収・将来性は？未経験からのロードマップを徹底解説",
+      "title": "DBA（データベース管理者）の年収・将来性と未経験ロードマップ",
       "category": "cloud-infra",
-      "meta_description": "データの守護神、DBA（データベース管理者）の仕事とは？高年収が狙える理由や、クラウド化に伴う将来性の変化、未経験から専門家を目指すための具体的なロードマップを、現場のリアルな視点で詳しく解説します。",
+      "meta_description": "「データの守護神」であるDBA（データベース管理者）。障害対応のプレッシャーというリアルな現実と、システムの根幹を支える圧倒的なやりがいを徹底解説。未経験から高年収を狙うためのロードマップも紹介！",
       "tags": [
-        "データベース",
         "DBA",
+        "データベース",
         "インフラエンジニア",
-        "SQL",
-        "クラウド",
-        "キャリアパス"
+        "キャリアパス",
+        "未経験歓迎",
+        "年収アップ",
+        "資格対策"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/database_administrator"
     },
     {
@@ -1163,7 +1081,7 @@
         "キャリア",
         "未経験"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/content_marketer"
     },
     {
@@ -1180,7 +1098,7 @@
         "キャリア",
         "転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/blue_team_engineer"
     },
     {
@@ -1196,7 +1114,7 @@
         "データ分析",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/digital_marketing_manager"
     },
     {
@@ -1212,23 +1130,24 @@
         "SRE",
         "キャリアパス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/web_performance_engineer"
     },
     {
       "id": "design_operations_manager",
-      "title": "DesignOpsの年収・将来性は？未経験からのロードマップ",
+      "title": "DesignOpsの将来性と年収は？未経験からのロードマップ",
       "category": "design",
-      "meta_description": "デザイン組織の生産性を最大化するDesignOps。現場の課題解決から文化構築まで、そのリアルな役割と高年収を狙える将来性を解説。未経験からの挑戦ルートやキャリアロードマップも網羅的に紹介します。",
+      "meta_description": "デザイン組織の生産性を最大化するDesignOps。調整業務の多さというリアルな壁を越え、デザイナーが輝く環境を創るやりがい、気になる年収や未経験からのキャリアロードマップを徹底解説します。",
       "tags": [
         "DesignOps",
-        "デザインマネジメント",
-        "組織開発",
-        "業務効率化",
-        "キャリア",
-        "デザインシステム"
+        "デザイン組織",
+        "キャリアアップ",
+        "年収",
+        "未経験歓迎",
+        "ロードマップ",
+        "プロダクトデザイン"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/design_operations_manager"
     },
     {
@@ -1245,7 +1164,7 @@
         "Career Path",
         "DevSecOps"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_security_engineer"
     },
     {
@@ -1262,7 +1181,7 @@
         "SRE",
         "DX"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/technical_operations_manager"
     },
     {
@@ -1278,7 +1197,7 @@
         "プロダクトマネジメント",
         "コンテンツ制作"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/game_planner"
     },
     {
@@ -1295,7 +1214,7 @@
         "高年収",
         "ITコンサルタント"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/chief_data_officer"
     },
     {
@@ -1312,7 +1231,7 @@
         "マネジメント",
         "年収アップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/project_manager"
     },
     {
@@ -1328,24 +1247,8 @@
         "ビッグデータ",
         "アノテーション"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_curator"
-    },
-    {
-      "id": "llm_prompt_engineer",
-      "title": "プロンプトエンジニアの年収と将来性｜未経験ロードマップ公開",
-      "category": "ai-data",
-      "meta_description": "AIの能力を最大化するプロンプトエンジニア。年収1000万超えの可能性や将来性、未経験からの学習ロードマップを解説。技術進化の速さに挑むリアルな現実と、AIを操る圧倒的なやりがいを伝えます。",
-      "tags": [
-        "AI",
-        "LLM",
-        "Prompt Engineering",
-        "ChatGPT",
-        "エンジニア転職",
-        "キャリア"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/llm_prompt_engineer"
     },
     {
       "id": "seo_specialist",
@@ -1360,7 +1263,7 @@
         "スキルアップ",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/seo_specialist"
     },
     {
@@ -1377,7 +1280,7 @@
         "キャリアパス",
         "クラウド移行"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_database_engineer"
     },
     {
@@ -1393,7 +1296,7 @@
         "キャリア",
         "転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cybersecurity_analyst"
     },
     {
@@ -1410,7 +1313,7 @@
         "インフラエンジニア",
         "高年収"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_migration_specialist"
     },
     {
@@ -1426,7 +1329,7 @@
         "マネジメント",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/product_manager"
     },
     {
@@ -1442,24 +1345,8 @@
         "IaC",
         "Backend"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/serverless_engineer"
-    },
-    {
-      "id": "ethical_hacker",
-      "title": "エシカルハッカーの年収と将来性｜未経験からのロードマップ",
-      "category": "cyber-security",
-      "meta_description": "ホワイトハッカー（エシカルハッカー）の仕事は、攻撃者の視点でシステムを守る正義のハッキングです。年収1,000万超えも狙える将来性と、技術で社会を守るやりがい、未経験からのロードマップを徹底解説します。",
-      "tags": [
-        "エシカルハッカー",
-        "サイバーセキュリティ",
-        "脆弱性診断",
-        "ホワイトハッカー",
-        "キャリアパス",
-        "IT資格"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/ethical_hacker"
     },
     {
       "id": "ui_ux_researcher",
@@ -1474,7 +1361,7 @@
         "IT転職",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/ui_ux_researcher"
     },
     {
@@ -1491,7 +1378,7 @@
         "キャリアパス",
         "エンジニア転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/devops_engineer"
     },
     {
@@ -1507,7 +1394,7 @@
         "年収アップ",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/e_commerce_manager"
     },
     {
@@ -1522,7 +1409,7 @@
         "キャリア形成",
         "IT専門職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_governance_specialist"
     },
     {
@@ -1539,7 +1426,7 @@
         "エンジニア",
         "機械学習"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/computer_vision_engineer"
     },
     {
@@ -1556,7 +1443,7 @@
         "エンジニアキャリア",
         "Platform Engineering"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/developer_productivity_engineer"
     },
     {
@@ -1572,7 +1459,7 @@
         "年収",
         "データサイエンス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/research_scientist"
     },
     {
@@ -1589,7 +1476,7 @@
         "React",
         "キャリア"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/design_technologist"
     },
     {
@@ -1606,7 +1493,7 @@
         "スキルアップ",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/interaction_designer"
     },
     {
@@ -1623,7 +1510,7 @@
         "エンジニア転職",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/backend_developer"
     },
     {
@@ -1640,7 +1527,7 @@
         "PHP",
         "Python"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/web_developer"
     },
     {
@@ -1657,7 +1544,7 @@
         "自動化",
         "インフラエンジニア"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/iac_specialist"
     },
     {
@@ -1673,7 +1560,7 @@
         "スキルアップ",
         "データマネジメント"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_planner"
     },
     {
@@ -1689,7 +1576,7 @@
         "転職",
         "マネジメント"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/creative_director"
     },
     {
@@ -1705,7 +1592,7 @@
         "AWS",
         "キャリアパス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/big_data_engineer"
     },
     {
@@ -1722,7 +1609,7 @@
         "DevOps",
         "Career"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_engineer"
     },
     {
@@ -1739,7 +1626,7 @@
         "Python",
         "KPI"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/game_data_analyst"
     },
     {
@@ -1754,7 +1641,7 @@
         "DX",
         "業務改善"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/business_analyst"
     },
     {
@@ -1771,24 +1658,8 @@
         "Google Cloud",
         "経営戦略"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_finops_manager"
-    },
-    {
-      "id": "ui_ux_designer",
-      "title": "UI/UXデザイナー面接｜プロセス説明と指標の話し方で差をつける",
-      "category": "design",
-      "meta_description": "デザインプロセス、A/Bテストとの役割分担、開発Handoffの深掘りに備えた短文テンプレ。ポートフォリオ1枚目から最後まで面接官が見る観点を先回りで解説。",
-      "tags": [
-        "UIデザイン",
-        "UXデザイン",
-        "キャリア形成",
-        "Webデザイン",
-        "スキルアップ",
-        "デザインツール"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/ui_ux_designer"
     },
     {
       "id": "developer_relations_engineer",
@@ -1803,7 +1674,7 @@
         "コミュニティ",
         "DX"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/developer_relations_engineer"
     },
     {
@@ -1820,7 +1691,7 @@
         "年収アップ",
         "将来性"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/system_integrator"
     },
     {
@@ -1836,7 +1707,7 @@
         "IT職種図鑑",
         "編集・ライティング"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/content_strategist"
     },
     {
@@ -1853,7 +1724,7 @@
         "AI",
         "自動運転"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/robotics_software_engineer"
     },
     {
@@ -1870,25 +1741,8 @@
         "IaC",
         "キャリアパス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/platform_engineer"
-    },
-    {
-      "id": "test_automation_engineer",
-      "title": "テスト自動化エンジニアの年収・将来性｜未経験ロードマップ",
-      "category": "engineering",
-      "meta_description": "テスト自動化エンジニアは品質保証の要。高い需要で年収アップも狙えます。開発の効率化を支えるやりがいと、未経験からプロになるための具体的なロードマップ、将来性までリアルな実態を徹底解説します。",
-      "tags": [
-        "テスト自動化",
-        "QA",
-        "品質保証",
-        "自動化ツール",
-        "エンジニア転職",
-        "スキルアップ",
-        "キャリア"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/test_automation_engineer"
     },
     {
       "id": "compiler_engineer",
@@ -1904,25 +1758,8 @@
         "C++",
         "Rust"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/compiler_engineer"
-    },
-    {
-      "id": "mlops_engineer",
-      "title": "MLOpsエンジニアの年収と将来性｜未経験からのロードマップ",
-      "category": "ai-data",
-      "meta_description": "AIモデルを社会実装するMLOpsエンジニア。高年収と将来性が魅力ですが、広範な知識が求められます。未経験からの学習ロードマップや、開発と運用の架け橋となる仕事のやりがいを徹底解説します。",
-      "tags": [
-        "MLOps",
-        "AI",
-        "機械学習",
-        "エンジニア転職",
-        "キャリア",
-        "Python",
-        "Cloud"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/mlops_engineer"
     },
     {
       "id": "analytics_manager",
@@ -1936,7 +1773,7 @@
         "IT転職",
         "データ活用"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/analytics_manager"
     },
     {
@@ -1951,7 +1788,7 @@
         "スキルアップ",
         "キャリア形成"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/full_stack_developer"
     },
     {
@@ -1967,7 +1804,7 @@
         "マイコン",
         "キャリアパス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/embedded_software_engineer"
     },
     {
@@ -1983,7 +1820,7 @@
         "アプリ開発",
         "エンジニア転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/desktop_application_developer"
     },
     {
@@ -2000,7 +1837,7 @@
         "CTO",
         "VPoE"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/head_of_engineering"
     },
     {
@@ -2016,7 +1853,7 @@
         "研究職",
         "データサイエンス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/ai_researcher"
     },
     {
@@ -2032,24 +1869,8 @@
         "キャリア",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/qa_engineer"
-    },
-    {
-      "id": "economist",
-      "title": "エコノミストの年収と将来性｜未経験からの転職ロードマップ",
-      "category": "ai-data",
-      "meta_description": "経済学の知見でビジネスを動かすエコノミスト。IT業界での需要が急増する中、その年収や将来性を徹底解説。未経験から専門性を武器に活躍するためのロードマップと、データ分析のリアルな現場の魅力を紹介します。",
-      "tags": [
-        "経済学",
-        "データ分析",
-        "因果推論",
-        "キャリアパス",
-        "IT転職",
-        "統計学"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/economist"
     },
     {
       "id": "ai_ethicist",
@@ -2064,7 +1885,7 @@
         "データサイエンス",
         "責任あるAI"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/ai_ethicist"
     },
     {
@@ -2079,7 +1900,7 @@
         "IT転職",
         "デザイン組織"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/director_of_ux"
     },
     {
@@ -2095,7 +1916,7 @@
         "キャリアパス",
         "エンジニア転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_support_engineer"
     },
     {
@@ -2111,7 +1932,7 @@
         "キャリアパス",
         "年収アップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/business_systems_analyst"
     },
     {
@@ -2129,41 +1950,8 @@
         "メタバース",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/3d_modeler"
-    },
-    {
-      "id": "vpoe",
-      "title": "VPoE｜年収・役割と面接で聞かれる組織マネジメント論点",
-      "category": "engineering",
-      "meta_description": "VPoEの年収帯と役割のリアル、組織スケール・採用・評価でよく聞かれることと短い答え方。エンジニア組織責任者面接の事前チェックに使える1ページ。【無料】",
-      "tags": [
-        "VPoE",
-        "エンジニアリングマネージャー",
-        "組織マネジメント",
-        "ITキャリア",
-        "技術経営",
-        "採用"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/vpoe"
-    },
-    {
-      "id": "graphics_engine_developer",
-      "title": "グラフィックスエンジニア｜面接で聞く描画・GPUの答え方",
-      "category": "engineering",
-      "meta_description": "グラフィックスエンジニア向け。描画パイプライン・シェーダ・GPUの面接頻出質問と30秒で答える骨子を整理。C++/Vulkan志望の転職前ガイド。【Starful】",
-      "tags": [
-        "C++",
-        "DirectX",
-        "Vulkan",
-        "シェーダー",
-        "レンダリング",
-        "GPU",
-        "3D数学"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/graphics_engine_developer"
     },
     {
       "id": "concept_artist",
@@ -2178,7 +1966,7 @@
         "2Dデザイン",
         "クリエイティブ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/concept_artist"
     },
     {
@@ -2196,7 +1984,7 @@
         "Unity",
         "Unreal Engine"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/game_artist"
     },
     {
@@ -2212,7 +2000,7 @@
         "チームマネジメント",
         "IT業界"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/engineering_manager"
     },
     {
@@ -2229,7 +2017,7 @@
         "マネジメント",
         "高年収"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cio"
     },
     {
@@ -2245,7 +2033,7 @@
         "Career Path",
         "Roadmap"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/hybrid_cloud_engineer"
     },
     {
@@ -2263,7 +2051,7 @@
         "転職",
         "デジタルマーケティング"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/search_ads_specialist"
     },
     {
@@ -2280,7 +2068,7 @@
         "市場価値",
         "IT業界"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/brand_marketer"
     },
     {
@@ -2296,7 +2084,7 @@
         "IT業界",
         "転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/head_of_marketing"
     },
     {
@@ -2313,7 +2101,7 @@
         "マイクロサービス",
         "技術選定"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/backend_architect"
     },
     {
@@ -2330,7 +2118,7 @@
         "年収アップ",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/new_business_planner"
     },
     {
@@ -2346,7 +2134,7 @@
         "DX推進",
         "システム設計"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/functional_analyst"
     },
     {
@@ -2364,7 +2152,7 @@
         "プロトタイピング",
         "デジタルアート"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/creative_technologist"
     },
     {
@@ -2380,7 +2168,7 @@
         "データ分析",
         "広告運用"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/performance_marketer"
     },
     {
@@ -2396,7 +2184,7 @@
         "コミュニティ運営",
         "IT業界"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/tech_evangelist"
     },
     {
@@ -2412,7 +2200,7 @@
         "プロダクト開発",
         "DX推進"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/platform_planner"
     },
     {
@@ -2428,7 +2216,7 @@
         "設計",
         "エンジニア"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/database_developer"
     },
     {
@@ -2444,7 +2232,7 @@
         "経営層",
         "サイバーセキュリティ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/ciso"
     },
     {
@@ -2461,24 +2249,23 @@
         "IT資格",
         "脆弱性診断"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/red_team_engineer"
     },
     {
       "id": "ecommerce_manager",
-      "title": "ECマネージャーの年収と将来性｜未経験からの成功ロードマップ",
+      "title": "ECマネージャーの年収・将来性は？未経験からのロードマップ",
       "category": "marketing",
-      "meta_description": "ECマネージャーは売上最大化を担う司令塔。年収や将来性、未経験から目指すロードマップを徹底解説。分析力と企画力でブランドを成長させる、やりがいと市場価値の高いキャリアのリアルに迫ります。",
+      "meta_description": "売上直結のプレッシャーと闘いながら、自社ブランドを急成長させるECマネージャー。そのリアルなやりがいや年収、将来性を徹底解説！未経験から市場価値を高め、活躍するためのキャリアロードマップを公開します。",
       "tags": [
         "EC",
         "マーケティング",
         "キャリア",
         "年収",
-        "将来性",
         "未経験",
-        "Shopify"
+        "ロードマップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/ecommerce_manager"
     },
     {
@@ -2494,7 +2281,7 @@
         "Web3",
         "転職ガイド"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/community_manager"
     },
     {
@@ -2510,7 +2297,7 @@
         "IT転職",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/chief_product_officer"
     },
     {
@@ -2526,7 +2313,7 @@
         "Adobe Creative Cloud",
         "ポートフォリオ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/graphic_designer"
     },
     {
@@ -2542,26 +2329,8 @@
         "デザイン",
         "2Dアニメーション"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/motion_graphic_designer"
-    },
-    {
-      "id": "game_developer",
-      "title": "ゲーム開発者の年収と将来性｜未経験からの転職ロードマップ",
-      "category": "engineering",
-      "meta_description": "憧れのゲーム開発者へ！年収や将来性、未経験からプロになるためのロードマップを徹底解説。技術革新の速さや納期など厳しい面もありますが、自作のゲームが世界中で遊ばれる喜びは唯一無二のやりがいです。",
-      "tags": [
-        "ゲーム開発",
-        "Unity",
-        "Unreal Engine",
-        "C#",
-        "C++",
-        "キャリアパス",
-        "エンジニア転職",
-        "ゲームプログラマー"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/game_developer"
     },
     {
       "id": "tech_lead",
@@ -2576,7 +2345,7 @@
         "マネジメント",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/tech_lead"
     },
     {
@@ -2593,7 +2362,7 @@
         "インフラ",
         "キャリアパス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_solutions_architect"
     },
     {
@@ -2608,7 +2377,7 @@
         "プロダクトマネジメント",
         "キャリアパス"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/growth_hacker"
     },
     {
@@ -2625,7 +2394,7 @@
         "デザイン",
         "IT転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/animations_designer"
     },
     {
@@ -2642,7 +2411,7 @@
         "CNCF",
         "Go"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/cloud_native_engineer"
     },
     {
@@ -2658,7 +2427,7 @@
         "キャリアパス",
         "開発"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/erp_developer"
     },
     {
@@ -2674,24 +2443,8 @@
         "データマネジメント",
         "キャリア形成"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_quality_analyst"
-    },
-    {
-      "id": "agile_coach",
-      "title": "アジャイルコーチの年収と将来性｜未経験からのロードマップ",
-      "category": "product-management",
-      "meta_description": "組織の変革を導くアジャイルコーチ。現場の葛藤に向き合いチームの自律性を育む難しさと、プロダクトが劇的に進化する瞬間の喜びは格別です。年収相場や未経験からのロードマップまで、そのリアルを徹底解説します。",
-      "tags": [
-        "アジャイル開発",
-        "スクラム",
-        "組織開発",
-        "DX推進",
-        "コーチング",
-        "チームビルディング"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/agile_coach"
     },
     {
       "id": "computational_biologist",
@@ -2707,7 +2460,7 @@
         "機械学習",
         "生命科学"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/computational_biologist"
     },
     {
@@ -2723,7 +2476,7 @@
         "Engineering",
         "Prompt Engineering"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/prompt_engineer"
     },
     {
@@ -2739,7 +2492,7 @@
         "IT転職",
         "スキルマップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/tech_pm"
     },
     {
@@ -2756,24 +2509,8 @@
         "スキルアップ",
         "ビッグデータ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/data_modeler"
-    },
-    {
-      "id": "developer_advocate",
-      "title": "デベロッパーアドボケイトの年収・将来性・未経験ロードマップ",
-      "category": "engineering",
-      "meta_description": "開発者と企業の架け橋となるデベロッパーアドボケイト。高い技術力と発信力が求められる一方、年収1000万超えも狙える将来性の高い職種です。未経験からの挑戦方法やキャリアのロードマップを徹底解説します。",
-      "tags": [
-        "DevRel",
-        "デベロッパーアドボケイト",
-        "エンジニア",
-        "キャリアパス",
-        "技術発信",
-        "コミュニティ運営"
-      ],
-      "published": "2026-05-26",
-      "link": "/career/developer_advocate"
     },
     {
       "id": "application_architect",
@@ -2788,7 +2525,7 @@
         "技術選定",
         "DX"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/application_architect"
     },
     {
@@ -2804,7 +2541,7 @@
         "転職ガイド",
         "プロダクト開発"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/content_designer"
     },
     {
@@ -2822,7 +2559,7 @@
         "DTM",
         "オーディオエンジニア"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/sound_designer"
     },
     {
@@ -2838,7 +2575,7 @@
         "キャリアパス",
         "データ分析"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/crm_marketer"
     },
     {
@@ -2854,7 +2591,7 @@
         "リード獲得",
         "ウェビナー"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/event_marketer"
     },
     {
@@ -2871,7 +2608,7 @@
         "キャリアパス",
         "エンジニア転職"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/automation_engineer"
     },
     {
@@ -2887,7 +2624,7 @@
         "エンジニア",
         "スキルアップ"
       ],
-      "published": "2026-05-26",
+      "published": "2026-05-29",
       "link": "/career/engineering_program_manager"
     }
   ]
