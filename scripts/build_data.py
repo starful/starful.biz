@@ -1,10 +1,14 @@
 import os
 import json
 import re
+import sys
 from datetime import datetime
 
-# 경로 설정
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(BASE_DIR, "scripts"))
+from slug_utils import normalize_slug
+
+# 경로 설정
 CONTENT_DIR = os.path.join(BASE_DIR, 'app', 'contents')
 JSON_OUTPUT = os.path.join(BASE_DIR, 'app', 'static', 'json', 'job_data.json')
 SITEMAP_OUTPUT = os.path.join(BASE_DIR, 'app', 'static', 'sitemap.xml')
@@ -41,14 +45,15 @@ def main():
             meta = parse_starful_md(filepath)
             
             if meta:
+                job_id = normalize_slug(meta.get("slug") or filename.replace(".md", ""))
                 jobs.append({
-                    "id": filename.replace('.md', ''),
+                    "id": job_id,
                     "title": meta.get('title', 'No Title'),
                     "category": meta.get('category', 'engineering'), # 기본값
                     "meta_description": meta.get('meta_description', '')[:160],
                     "tags": meta.get('tags', []),
                     "published": str(meta.get('published_at', datetime.now().strftime('%Y-%m-%d'))),
-                    "link": f"/career/{filename.replace('.md', '')}"
+                    "link": f"/career/{job_id}"
                 })
 
     # 최신순 정렬

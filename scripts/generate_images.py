@@ -1,16 +1,23 @@
 import os
 import shutil
+import sys
 
-# --- 경로 설정 ---
-# 스크립트 위치 기준으로 프로젝트 루트 경로를 계산합니다.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(BASE_DIR, "scripts"))
+from slug_utils import normalize_slug
 CONTENTS_DIR = os.path.join(BASE_DIR, "app", "contents")
 IMG_DIR = os.path.join(BASE_DIR, "app", "static", "img")
 
-# 📂 기준이 되는 기본 이미지 파일명
-# 이 파일이 app/static/img/ 폴더 안에 실제로 존재해야 합니다.
-DEFAULT_IMAGE_NAME = "default.jpg"
-SOURCE_PATH = os.path.join(IMG_DIR, DEFAULT_IMAGE_NAME)
+# 📂 기준이 되는 기본 이미지 (default.png 우선, legacy default.jpg fallback)
+DEFAULT_CANDIDATES = ("default.png", "default.jpg")
+
+
+def _default_source_path() -> str | None:
+    for name in DEFAULT_CANDIDATES:
+        path = os.path.join(IMG_DIR, name)
+        if os.path.exists(path):
+            return path
+    return None
 
 def generate_images_by_copy():
     """
@@ -19,9 +26,9 @@ def generate_images_by_copy():
     """
     
     # 1. 소스 이미지 존재 확인
-    if not os.path.exists(SOURCE_PATH):
-        print(f"❌ 기본 이미지 파일을 찾을 수 없습니다: {SOURCE_PATH}")
-        print(f"💡 {IMG_DIR} 폴더 안에 {DEFAULT_IMAGE_NAME} 파일을 먼저 준비해주세요.")
+    source_path = _default_source_path()
+    if not source_path:
+        print(f"❌ 기본 이미지 파일을 찾을 수 없습니다: {IMG_DIR}/default.png (또는 default.jpg)")
         return
 
     # 2. 콘텐츠 디렉토리 존재 확인
@@ -41,7 +48,7 @@ def generate_images_by_copy():
 
     for filename in md_files:
         # 파일명에서 확장자 제거하여 slug 추출 (예: service_planner)
-        slug = filename.replace(".md", "")
+        slug = normalize_slug(filename.replace(".md", ""))
         
         # 생성될 이미지 경로 (기존 시스템과의 호환성을 위해 .png로 저장)
         target_path = os.path.join(IMG_DIR, f"{slug}.png")
@@ -54,7 +61,7 @@ def generate_images_by_copy():
         # 5. 이미지 복사 실행
         try:
             # copy2는 메타데이터(수정 시간 등)를 보존하며 파일을 복사합니다.
-            shutil.copy2(SOURCE_PATH, target_path)
+            shutil.copy2(source_path, target_path)
             copy_count += 1
             print(f"✅ 생성 완료 ({copy_count}): {slug}.png")
         except Exception as e:

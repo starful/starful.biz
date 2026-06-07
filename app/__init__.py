@@ -41,15 +41,61 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 CONTENTS_DIR = os.path.join(BASE_DIR, "contents")   
 DATA_FILE = os.path.join(STATIC_DIR, "json", "job_data.json")
 BASE_URL = os.getenv("SITE_URL", "https://starful.biz").rstrip("/")
+BRAND_LOGO_FILE = "brand_biz_mark.png"
 
 # Firestore: サイト名 starful × 機能名 starr
 FIRESTORE_STARR_FEEDBACK_LOGS = "starful_starr_feedback_logs"
 FIRESTORE_STARR_USAGE_LIMITS = "starful_starr_usage_limits"
 
+GCS_IMG_BASE = os.getenv(
+    "STARFUL_GCS_IMG_BASE", "https://storage.googleapis.com/starful-biz-assets"
+).rstrip("/")
+
+_LOCAL_IMG_NAMES = frozenset(
+    {
+        BRAND_LOGO_FILE,
+        "favicon.ico",
+        "favicon-16x16.png",
+        "favicon-32x32.png",
+        "favicon-48x48.png",
+        "apple-touch-icon.png",
+    }
+)
+
+
+def career_img_url(slug: str) -> str:
+    """커리어 카드 썸네일 — GCS 직접 참조 (okadmin 업로드 즉시 반영)."""
+    return f"{GCS_IMG_BASE}/{slug}.png"
+
+
+def gcs_or_static_img(filename: str) -> str:
+    if filename in _LOCAL_IMG_NAMES or filename.startswith(("favicon", "apple-touch")):
+        return f"/static/img/{filename}"
+    return f"{GCS_IMG_BASE}/{filename}"
+
 app = FastAPI()
+
+
+async def serve_img(filename: str, request: Request):
+    """이미지는 GCS가 기준 — okadmin 업로드 즉시 반영."""
+    local_path = os.path.join(STATIC_DIR, "img", filename)
+    if filename in _LOCAL_IMG_NAMES or filename.startswith(("favicon", "apple-touch")):
+        if os.path.isfile(local_path):
+            return FileResponse(local_path)
+    url = f"{GCS_IMG_BASE}/{filename}"
+    if request.url.query:
+        url = f"{url}?{request.url.query}"
+    headers = {"Cache-Control": "no-cache, must-revalidate"}
+    return RedirectResponse(url, status_code=302, headers=headers)
+
+
+app.add_api_route("/static/img/{filename:path}", serve_img, methods=["GET"])
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=TEMPLATE_DIR)
 templates.env.globals["site_url"] = BASE_URL
+templates.env.globals["brand_logo_file"] = BRAND_LOGO_FILE
+templates.env.globals["career_img_url"] = career_img_url
+templates.env.globals["gcs_or_static_img"] = gcs_or_static_img
 
 _CATEGORY_LABELS_JA: Dict[str, str] = {
     "engineering": "エンジニアリング",
@@ -233,9 +279,14 @@ def related_careers_from_meta(meta: dict) -> List[dict]:
 
 def absolute_static_url(path: str) -> str:
     if not path:
-        return BASE_URL + "/static/img/logo.png"
+        return f"{GCS_IMG_BASE}/{BRAND_LOGO_FILE}"
     if path.startswith("http://") or path.startswith("https://"):
         return path
+    if path.startswith("/static/img/"):
+        fname = path.rsplit("/", 1)[-1]
+        if fname in _LOCAL_IMG_NAMES or fname.startswith(("favicon", "apple-touch")):
+            return urljoin(f"{BASE_URL}/", path.lstrip("/"))
+        return f"{GCS_IMG_BASE}/{fname}"
     return urljoin(f"{BASE_URL}/", path.lstrip("/"))
 
 
@@ -400,7 +451,7 @@ async def career_detail(request: Request, item_id: str):
             "url": BASE_URL,
             "logo": {
                 "@type": "ImageObject",
-                "url": f"{BASE_URL}/static/img/logo.png?v=5",
+                "url": f"{BASE_URL}/static/img/{BRAND_LOGO_FILE}",
             },
         },
     }

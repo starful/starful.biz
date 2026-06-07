@@ -7,6 +7,8 @@ import re
 from dotenv import load_dotenv
 import concurrent.futures
 
+from slug_utils import normalize_slug, position_slug
+
 # --- .env 파일 로드 ---
 load_dotenv()
 
@@ -44,6 +46,7 @@ logging.basicConfig(
 )
 
 model = genai.GenerativeModel(MODEL_NAME)
+
 
 # --- Frontmatter 프롬프트 ---
 FRONTMATTER_PROMPT = """
@@ -183,7 +186,10 @@ def process_single_position(position):
         print(f"❌ 失敗 (Frontmatter): {position}")
         return False
         
-    slug = frontmatter.get('slug', position.lower().replace(' ', '_'))
+    slug = normalize_slug(frontmatter.get("slug") or position_slug(position))
+    frontmatter["slug"] = slug
+    frontmatter["thumbnail"] = f"/static/img/{slug}.png"
+    frontmatter["hero_image"] = f"/static/img/{slug}_hero.png"
     output_filepath = os.path.join(OUTPUT_DIR, f"{slug}.md")
 
     body = generate_body(position, frontmatter)
@@ -214,7 +220,7 @@ def main():
     # 생성되지 않은 파일 목록 필터링
     positions_to_generate = []
     for pos in positions:
-        slug = pos.replace('/', '_').replace(' ', '_').replace('(', '').replace(')', '').replace(',', '').replace('"', '').lower()
+        slug = position_slug(pos)
         filepath = os.path.join(OUTPUT_DIR, f"{slug}.md")
         if not os.path.exists(filepath):
             positions_to_generate.append(pos)
