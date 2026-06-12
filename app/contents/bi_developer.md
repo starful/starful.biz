@@ -1,39 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "BI Developer",
-    "BIエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "データ分析",
-    "SQL",
-    "Tableau",
-    "Power BI"
-  ],
-  "meta_description": "データの力で経営を支えるBIエンジニア。高年収も狙える将来性と、未経験から専門性を磨くためのロードマップを徹底解説します。可視化の先にある、ビジネスを動かす醍醐味と実務のリアルな現状をお伝えします。",
-  "related_jobs": [
-    "data_analyst",
-    "data_engineer",
-    "data_scientist"
-  ],
-  "slug": "bi_developer",
-  "tags": [
-    "BI",
-    "データ分析",
-    "SQL",
-    "Tableau",
-    "Power BI",
-    "キャリアパス",
-    "DX"
-  ],
-  "thumbnail": "/static/img/bi_developer.png",
-  "hero_image": "/static/img/bi_developer_hero.png",
-  "title": "BIエンジニアの年収・将来性は？未経験からのロードマップ"
-}
 ---
+title: BIエンジニアとは？仕事内容、年収・将来性と未経験からのロードマップ
+description: BIエンジニアの仕事内容、年収、将来性を詳しく解説します。未経験からステップアップするための学習・キャリアロードマップや、面接対策など役立つ情報を網羅しました。
+seo_title: BIエンジニアとは？仕事内容・年収・将来性と未経験からのロードマップ｜Starful
+seo_description: BIエンジニアの仕事内容や平均年収、将来性を徹底解説！必要なスキルや、未経験からBIエンジニアを目指すための具体的なキャリアロードマップ、面接対策まで網羅。データの力でビジネスを推進するBIエンジニアへの転職・キャリア形成を支援します。
+---
+
 # [完全ガイド] BI Developer: BIエンジニアの年収・将来性は？未経験からのロードマップ
 
 ## 導入：BI Developerの面接官は「ここ」を見ている

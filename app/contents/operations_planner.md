@@ -1,36 +1,10 @@
----json
-{
-  "category": "sales-bizdev",
-  "keywords": [
-    "オペレーションプランナー",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "業務改善",
-    "DX",
-    "キャリアパス"
-  ],
-  "meta_description": "業務効率化の要、オペレーションプランナー。年収や将来性、未経験から挑戦するロードマップを徹底解説。泥臭い改善の先にある、組織を動かす圧倒的なやりがいとキャリアの広がりをリアルに伝えます。",
-  "related_jobs": [
-    "business_analyst",
-    "project_manager",
-    "customer_success_manager"
-  ],
-  "slug": "operations_planner",
-  "tags": [
-    "業務改善",
-    "DX推進",
-    "キャリア形成",
-    "IT業界",
-    "効率化",
-    "BPR"
-  ],
-  "thumbnail": "/static/img/operations_planner.png",
-  "hero_image": "/static/img/operations_planner_hero.png",
-  "title": "オペレーションプランナーの年収・将来性と未経験ロードマップ"
-}
 ---
+title: オペレーションプランナーの仕事内容・年収・将来性と未経験からの転職ロードマップ
+description: オペレーションプランナー（業務設計・改善）の仕事内容、平均年収、将来性を解説。未経験から転職を目指すための具体的なキャリアロードマップを紹介します。
+seo_title: オペレーションプランナーの仕事内容・年収・将来性｜未経験からの転職ロードマップ【Starful】
+seo_description: オペレーションプランナーの仕事内容、平均年収、将来性を徹底解説！未経験から転職するためのロードマップや、面接で頻出のQ&Aを紹介。業務設計・改善スキルを活かしたキャリアパスを詳しく解説します。
+---
+
 # [完全ガイド] Operations Planner: オペレーションプランナーの年収・将来性と未経験ロードマップ
 
 ## 導入：Operations Plannerの面接官は「ここ」を見ている

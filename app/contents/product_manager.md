@@ -1,36 +1,10 @@
----json
-{
-  "category": "product-management",
-  "keywords": [
-    "プロダクトマネージャー",
-    "PdM",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "キャリアパス",
-    "IT転職"
-  ],
-  "meta_description": "プロダクトマネージャー（PdM）の年収や将来性を徹底解説。未経験から目指すためのロードマップや、開発・ビジネスの橋渡しとなる仕事のやりがい、直面する壁など、現場のリアルな実態をお伝えします。",
-  "related_jobs": [
-    "project_manager",
-    "ux_designer",
-    "sales_bizdev"
-  ],
-  "slug": "product_manager",
-  "tags": [
-    "PdM",
-    "プロダクト開発",
-    "キャリア形成",
-    "IT業界",
-    "マネジメント",
-    "スキルアップ"
-  ],
-  "thumbnail": "/static/img/product_manager.png",
-  "hero_image": "/static/img/product_manager_hero.png",
-  "title": "PdMの年収・将来性は？未経験からのロードマップを徹底解説"
-}
 ---
+title: プロダクトマネージャー(PdM)になるには？未経験からのロードマップ・年収・将来性を徹底解説
+description: プロダクトマネージャー（PdM）の仕事内容、年収、将来性を徹底解説！未経験からPdMになるための具体的なロードマップや必要なスキル、キャリアパス、面接対策まで、転職・キャリアアップに役立つ情報を紹介します。
+seo_title: プロダクトマネージャー(PdM)になるには？未経験からのロードマップ・年収・将来性｜Starful
+seo_description: プロダクトマネージャー（PdM）の仕事内容、年収、将来性を徹底解説！未経験からPdMになるための具体的なロードマップや必要なスキル、キャリアパス、面接対策まで、転職・キャリアアップに役立つ情報を紹介します。
+---
+
 # [完全ガイド] Product Manager: PdMの年収・将来性は？未経験からのロードマップを徹底解説
 
 ## 導入：Product Managerの面接官は「ここ」を見ている

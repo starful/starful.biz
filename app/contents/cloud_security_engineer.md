@@ -1,38 +1,10 @@
----json
-{
-  "category": "cyber-security",
-  "keywords": [
-    "クラウドセキュリティエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "AWS",
-    "Azure",
-    "セキュリティ対策",
-    "キャリアパス"
-  ],
-  "meta_description": "クラウド移行が加速する今、需要が急増中のクラウドセキュリティエンジニア。年収や将来性、未経験から目指すロードマップを徹底解説。企業の資産を守る守護神として、高待遇で活躍するリアルな現実を紹介します。",
-  "related_jobs": [
-    "security_analyst",
-    "cloud_architect",
-    "devops_engineer"
-  ],
-  "slug": "cloud_security_engineer",
-  "tags": [
-    "Cloud Security",
-    "Cyber Security",
-    "AWS",
-    "Azure",
-    "GCP",
-    "Career Path",
-    "DevSecOps"
-  ],
-  "thumbnail": "/static/img/cloud_security_engineer.png",
-  "hero_image": "/static/img/cloud_security_engineer_hero.png",
-  "title": "クラウドセキュリティエンジニアの年収・将来性｜未経験ロードマップ"
-}
 ---
+title: クラウドセキュリティエンジニアの仕事内容・年収・将来性｜未経験から目指すロードマップ
+description: クラウド市場の急成長に伴い、需要が急増している「クラウドセキュリティエンジニア」。本記事では、その具体的な仕事内容や平均年収、将来性、未経験から最短で目指すステップ（おすすめ資格など）を徹底解説します。
+seo_title: クラウドセキュリティエンジニアとは？仕事内容・年収・未経験ロードマップと必要資格を解説
+seo_description: クラウドセキュリティエンジニアの仕事内容、平均年収、将来性を徹底解説！未経験から目指すロードマップや、転職・キャリアアップに有利なおすすめ資格（AWS・Azure・CCSP等）を紹介します。クラウド需要が急増する今、市場価値の高いエンジニアを目指しましょう。
+---
+
 # [完全ガイド] Cloud Security Engineer: クラウドセキュリティエンジニアの年収・将来性｜未経験ロードマップ
 
 ## 導入：Cloud Security Engineerの面接官は「ここ」を見ている

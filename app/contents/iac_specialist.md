@@ -1,38 +1,10 @@
----json
-{
-  "category": "cloud-infra",
-  "keywords": [
-    "IaC",
-    "Terraform",
-    "Ansible",
-    "DevOps",
-    "クラウドインフラ",
-    "自動化",
-    "AWS",
-    "インフラエンジニア",
-    "CloudFormation"
-  ],
-  "meta_description": "クラウド全盛期に不可欠なIaCスペシャリスト。自動化による効率化と品質向上のやりがいは大きく、高年収も狙えます。未経験から市場価値を高めるための具体的なロードマップと、技術選定の現実を徹底解説。",
-  "related_jobs": [
-    "cloud_engineer",
-    "devops_engineer",
-    "site_reliability_engineer"
-  ],
-  "slug": "iac_specialist",
-  "tags": [
-    "IaC",
-    "Terraform",
-    "Ansible",
-    "AWS",
-    "DevOps",
-    "自動化",
-    "インフラエンジニア"
-  ],
-  "thumbnail": "/static/img/iac_specialist.png",
-  "hero_image": "/static/img/iac_specialist_hero.png",
-  "title": "IaCスペシャリストの年収と将来性｜未経験からのロードマップ"
-}
 ---
+title: IaCスペシャリストの年収と将来性｜未経験からクラウド・インフラエンジニアになるロードマップ
+description: IaC（Infrastructure as Code）スペシャリストの年収や将来性を解説！未経験からクラウド・インフラエンジニアとして活躍するための具体的なロードマップ、必要なスキル（Terraform等）、面接対策まで網羅。市場価値を高めて高年収を狙う秘訣をお届けします。
+seo_title: IaCスペシャリストの年収・将来性とロードマップ｜未経験からインフラエンジニアへ｜Starful
+seo_description: IaC（Infrastructure as Code）スペシャリストの年収や将来性を解説！未経験からクラウド・インフラエンジニアとして活躍するための具体的なロードマップ、必要なスキル（Terraform等）、面接対策まで網羅。市場価値を高めて高年収を狙う秘訣をお届けします。
+---
+
 # [完全ガイド] IaC Specialist: IaCスペシャリストの年収と将来性｜未経験からのロードマップ
 
 ## 導入：IaC Specialistの面接官は「ここ」を見ている

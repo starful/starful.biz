@@ -1,37 +1,10 @@
----json
-{
-  "category": "cloud-infra",
-  "keywords": [
-    "データセンター",
-    "インフラエンジニア",
-    "サーバー保守",
-    "ネットワーク運用",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "ITインフラ"
-  ],
-  "meta_description": "クラウド社会を支えるデータセンター技術者。未経験から年収アップを目指すロードマップや、AI需要で高まる将来性、物理作業と論理設定を両立する仕事のやりがいを徹底解説。ITインフラの心臓部を守るプロへ。",
-  "related_jobs": [
-    "cloud_engineer",
-    "network_engineer",
-    "infrastructure_engineer"
-  ],
-  "slug": "data_center_technician",
-  "tags": [
-    "ITインフラ",
-    "サーバー管理",
-    "ネットワーク運用",
-    "資格取得",
-    "キャリアチェンジ",
-    "データセンター"
-  ],
-  "thumbnail": "/static/img/data_center_technician.png",
-  "hero_image": "/static/img/data_center_technician_hero.png",
-  "title": "データセンター技術者の年収と将来性｜未経験からのロードマップ"
-}
 ---
+title: データセンターエンジニア（技術者）の仕事内容・年収・将来性｜未経験からのロードマップ
+description: データセンターエンジニア（技術者）の仕事内容、年収、将来性を徹底解説！未経験から運用保守へ挑戦するロードマップや、面接対策（志望動機・質問）まで網羅。ITインフラを支えるプロを目指すキャリアガイド。
+seo_title: データセンターエンジニアの仕事内容・年収・将来性｜未経験ロードマップと面接対策【Starful】
+seo_description: データセンターエンジニア（技術者）の仕事内容、年収、将来性を徹底解説！未経験から運用保守へ挑戦するロードマップや、面接対策（志望動機・質問）まで網羅。ITインフラを支えるプロを目指すキャリアガイド。
+---
+
 # [完全ガイド] Data Center Technician: データセンター技術者の年収と将来性｜未経験からのロードマップ
 
 ## 導入：Data Center Technicianの面接官は「ここ」を見ている
