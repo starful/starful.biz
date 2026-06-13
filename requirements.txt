@@ -6,3 +6,4 @@ markdown
 google-genai
 firebase-admin
 python-dotenv
+Pillow

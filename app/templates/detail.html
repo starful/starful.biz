@@ -9,8 +9,8 @@
 {% block twitter_title %}{{ _seo_title }}{% endblock %}
 {% block twitter_desc %}{{ _seo_desc }}{% endblock %}
 {% block og_type %}article{% endblock %}
-{% block og_image %}{{ share_image }}{% endblock %}
-{% block twitter_image %}{{ share_image }}{% endblock %}
+{% block og_image %}{{ og_image_abs }}{% endblock %}
+{% block twitter_image %}{{ og_image_abs }}{% endblock %}
 {% block canonical_link %}
 <link rel="canonical" href="{{ canonical_url }}">
 {% endblock %}
@@ -172,6 +172,72 @@
         border-color: #f43f5e;
     }
 
+    .share-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        margin: 48px 0 12px;
+        padding: 18px 22px;
+        background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+        border: 1px solid rgba(0, 122, 255, 0.18);
+        border-radius: 16px;
+        box-shadow: 0 8px 28px rgba(0, 122, 255, 0.08);
+    }
+    .share-bar-label {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--accent-color);
+    }
+    .share-bar-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .share-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        padding: 0 16px;
+        border: 2px solid #e5e5e7;
+        border-radius: 999px;
+        background: #fff;
+        color: #6e6e73;
+        font-size: 0.9rem;
+        font-weight: 700;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+    }
+    .share-btn:hover {
+        transform: translateY(-1px);
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+    }
+    .share-btn:disabled { opacity: 0.85; cursor: default; }
+    .share-btn-icon {
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
+        padding: 0;
+    }
+    .share-icon {
+        display: block;
+        width: 18px;
+        height: 18px;
+    }
+    .share-btn-x:hover { color: #000; border-color: #cbd5e1; }
+    .share-btn-linkedin:hover { color: #0a66c2; border-color: #0a66c2; }
+    .share-bar-hint {
+        flex: 1 1 100%;
+        margin: 0;
+        font-size: 0.78rem;
+        line-height: 1.45;
+        color: #6e6e73;
+    }
+
     @media (max-width: 768px) {
         .article-wrapper { margin: 20px 10px 60px; border-radius: 20px; }
         .detail-header { padding: 40px 20px 20px; }
@@ -197,6 +263,8 @@
             <article id="content-main">
                 {{ content | safe }}
             </article>
+
+            {% include 'partials/share_bar.html' %}
 
             <section class="reaction-panel" aria-label="Page feedback">
                 <p class="reaction-panel-title">このページは役に立ちましたか？</p>

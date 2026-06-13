@@ -204,6 +204,14 @@ except Exception as e:
     print(f"⚠️ Firebase Warning: {e}")
 
 from .reactions import router as reactions_router
+from .social_share import (
+    card_page_path,
+    career_thumbnail_url,
+    detail_page_path,
+    fetch_social_jpeg,
+    load_career_meta,
+    share_context,
+)
 
 app.include_router(reactions_router, prefix="/api")
 
@@ -438,15 +446,15 @@ async def career_detail(request: Request, item_id: str):
     meta, body = parse_starful_md(filepath)
     content_html = markdown.markdown(body, extensions=['tables'])
     canonical = canonical_career_url(BASE_URL, resolved_id)
-    share_image = absolute_static_url(
-        meta.get("thumbnail") or f"/static/img/{resolved_id}.png"
-    )
+    title = meta.get("title", "面接ガイド")
+    ctx = share_context(BASE_URL, resolved_id, title)
+    social_image = ctx["og_image_abs"]
     article_ld = {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": meta.get("title", ""),
         "description": (meta.get("meta_description") or "")[:300],
-        "image": [share_image],
+        "image": [social_image],
         "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
         "author": {"@type": "Organization", "name": "Starful"},
         "publisher": {
@@ -496,10 +504,10 @@ async def career_detail(request: Request, item_id: str):
             "category_title": meta.get("category", "Career"),
             "career_id": resolved_id,
             "canonical_url": canonical,
-            "share_image": share_image,
             "related_careers": related_careers_from_meta(meta),
             "featured_careers": featured_others,
             "json_ld_career": json_ld_career,
+            **ctx,
         },
     )
 
@@ -731,4 +739,60 @@ async def robots():
             ]
         )
         + "\n"
+    )
+
+
+def _static_social_path(image_key: str) -> str | None:
+    path = os.path.join(STATIC_DIR, "social", f"{image_key}.jpg")
+    return path if os.path.isfile(path) else None
+
+
+def _social_image_headers() -> dict[str, str]:
+    return {"Cache-Control": "public, max-age=604800"}
+
+
+def _render_social_image(career_id: str) -> Response:
+    source = career_thumbnail_url(GCS_IMG_BASE, career_id)
+    data = fetch_social_jpeg(source)
+    return Response(content=data, media_type="image/jpeg", headers=_social_image_headers())
+
+
+@app.api_route("/social/{image_key}.jpg", methods=["GET", "HEAD"])
+async def social_image(image_key: str):
+    static_path = _static_social_path(image_key)
+    if static_path:
+        return FileResponse(static_path, media_type="image/jpeg", headers=_social_image_headers())
+    return _render_social_image(image_key)
+
+
+@app.api_route("/card/career/{career_id}", methods=["GET", "HEAD"])
+async def career_social_card(request: Request, career_id: str):
+    resolved_id = resolve_career_id(career_id)
+    if resolved_id != career_id:
+        target = f"{BASE_URL}{card_page_path(resolved_id)}"
+        if request.url.query:
+            target = f"{target}&{request.url.query}" if "?" in target else f"{target}?{request.url.query}"
+        return RedirectResponse(target, status_code=301)
+
+    filepath = os.path.join(CONTENTS_DIR, f"{resolved_id}.md")
+    if not os.path.exists(filepath):
+        raise HTTPException(status_code=404)
+    meta, _ = parse_starful_md(filepath)
+    title = meta.get("title", "面接ガイド")
+    ctx = share_context(BASE_URL, resolved_id, title)
+    page = f"{BASE_URL}{detail_page_path(resolved_id)}"
+    card = f"{BASE_URL}{card_page_path(resolved_id)}"
+    seo_title = f"{title}｜面接Q&A【Starful】"
+    seo_desc = meta.get("meta_description") or ""
+    return templates.TemplateResponse(
+        request=request,
+        name="social_card.html",
+        context={
+            "title": title,
+            "seo_title": seo_title,
+            "seo_desc": seo_desc,
+            "page_url": page,
+            "card_url": card,
+            **ctx,
+        },
     )
