@@ -110,10 +110,75 @@
         transform: translateY(-1px);
     }
 
+    .reaction-panel {
+        margin-top: 48px;
+        margin-bottom: 8px;
+        padding: 28px 32px 32px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 122, 255, 0.14);
+        background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+        box-shadow: 0 8px 28px rgba(0, 122, 255, 0.08);
+        text-align: center;
+    }
+    .reaction-panel-title {
+        margin: 0 0 8px;
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: #1d1d1f;
+        letter-spacing: -0.02em;
+    }
+    .reaction-panel-subtitle {
+        margin: 0 0 22px;
+        font-size: 0.95rem;
+        color: #6e6e73;
+    }
+    .reaction-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .reaction-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-width: 140px;
+        padding: 14px 32px;
+        border-radius: 999px;
+        border: 2px solid #e5e5e7;
+        background: #fff;
+        color: #6e6e73;
+        font-size: 1.05rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    }
+    .reaction-btn i { font-size: 1.25rem; }
+    .reaction-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+    .reaction-btn.active-like {
+        background: var(--accent-color);
+        color: #fff;
+        border-color: var(--accent-color);
+    }
+    .reaction-btn.active-dislike {
+        background: #f43f5e;
+        color: #fff;
+        border-color: #f43f5e;
+    }
+
     @media (max-width: 768px) {
         .article-wrapper { margin: 20px 10px 60px; border-radius: 20px; }
         .detail-header { padding: 40px 20px 20px; }
         .detail-body { padding: 20px 20px 40px; font-size: 1.05rem; }
+        .reaction-panel { margin-top: 36px; padding: 24px 20px 28px; }
+        .reaction-panel-title { font-size: 1.15rem; }
+        .reaction-btn { min-width: 0; flex: 1 1 120px; max-width: 200px; padding: 12px 20px; }
     }
 </style>
 {% endblock %}
@@ -132,6 +197,21 @@
             <article id="content-main">
                 {{ content | safe }}
             </article>
+
+            <section class="reaction-panel" aria-label="Page feedback">
+                <p class="reaction-panel-title">このページは役に立ちましたか？</p>
+                <p class="reaction-panel-subtitle">フィードバックはコンテンツ改善に活用します</p>
+                <div class="reaction-container">
+                    <button id="btn-like" class="reaction-btn" type="button" onclick="toggleReaction('like')" aria-label="Like">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span id="count-like">0</span>
+                    </button>
+                    <button id="btn-dislike" class="reaction-btn" type="button" onclick="toggleReaction('dislike')" aria-label="Dislike">
+                        <i class="fa-solid fa-thumbs-down"></i>
+                        <span id="count-dislike">0</span>
+                    </button>
+                </div>
+            </section>
 
             {% if related_careers %}
             <nav class="related-careers" aria-label="関連する面接ガイド">
@@ -169,4 +249,59 @@
     </div>
 
 </main>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function () {
+    const itemSlug = {{ career_id | tojson }};
+
+    document.addEventListener("DOMContentLoaded", async function () {
+        try {
+            const res = await fetch("/api/reactions/" + encodeURIComponent(itemSlug));
+            const data = await res.json();
+            document.getElementById("count-like").innerText = data.likes || 0;
+            document.getElementById("count-dislike").innerText = data.dislikes || 0;
+            const myReaction = localStorage.getItem("reaction_" + itemSlug);
+            if (myReaction === "like") {
+                document.getElementById("btn-like").classList.add("active-like");
+            } else if (myReaction === "dislike") {
+                document.getElementById("btn-dislike").classList.add("active-dislike");
+            }
+        } catch (error) {
+            console.error("Failed to load reactions:", error);
+        }
+    });
+
+    window.toggleReaction = async function (type) {
+        const btnLike = document.getElementById("btn-like");
+        const btnDislike = document.getElementById("btn-dislike");
+        btnLike.style.pointerEvents = "none";
+        btnDislike.style.pointerEvents = "none";
+        try {
+            const res = await fetch("/api/" + type + "/" + encodeURIComponent(itemSlug), { method: "POST" });
+            const data = await res.json();
+            if (data.status === "success") {
+                document.getElementById("count-like").innerText = data.likes;
+                document.getElementById("count-dislike").innerText = data.dislikes;
+                btnLike.classList.remove("active-like");
+                btnDislike.classList.remove("active-dislike");
+                localStorage.removeItem("reaction_" + itemSlug);
+                if (data.current_type === "like") {
+                    btnLike.classList.add("active-like");
+                    localStorage.setItem("reaction_" + itemSlug, "like");
+                } else if (data.current_type === "dislike") {
+                    btnDislike.classList.add("active-dislike");
+                    localStorage.setItem("reaction_" + itemSlug, "dislike");
+                }
+            }
+        } catch (error) {
+            console.error("Failed to post reaction:", error);
+        } finally {
+            btnLike.style.pointerEvents = "auto";
+            btnDislike.style.pointerEvents = "auto";
+        }
+    };
+})();
+</script>
 {% endblock %}

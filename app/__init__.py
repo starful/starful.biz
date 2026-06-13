@@ -203,6 +203,10 @@ try:
 except Exception as e:
     print(f"⚠️ Firebase Warning: {e}")
 
+from .reactions import router as reactions_router
+
+app.include_router(reactions_router, prefix="/api")
+
 ai_client = None
 if os.getenv("GEMINI_API_KEY"):
     ai_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
