@@ -28,6 +28,7 @@ from .seo_helpers import (
     merge_career_json_ld,
     resolve_career_id,
 )
+from .content_new import enrich_items
 
 # Firebase 관련 라이브러리
 import firebase_admin
@@ -411,14 +412,13 @@ async def home(request: Request):
     grouped_items = []
     all_jobs = JOB_DATA.get('jobs', [])
     for cat in category_list:
-        items = [j for j in all_jobs if j.get('category', '').lower() == cat['slug'].lower()]
+        items = enrich_items([j for j in all_jobs if j.get('category', '').lower() == cat['slug'].lower()])
         if items:
             cat_copy = cat.copy()
             cat_copy['job_items'] = items
             grouped_items.append(cat_copy)
 
-    # 💡 핵심 수정: 인자를 명시적으로 전달 (request=request, name=..., context={...})
-    featured_jobs = featured_jobs_from_data(all_jobs)
+    featured_jobs = enrich_items(featured_jobs_from_data(all_jobs))
 
     return templates.TemplateResponse(
         request=request, 

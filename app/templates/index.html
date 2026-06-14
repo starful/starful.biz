@@ -66,12 +66,13 @@
         <div class="job-grid" id="main-grid">
             {% for category in grouped_items %}
                 {% for item in category.job_items %}
-                <a href="/career/{{ item.id }}" class="job-card" data-category="{{ category.slug }}">
-                    <div class="card-thumb-link">
+                <a href="/career/{{ item.id }}" class="job-card{% if item.is_new %} is-new{% endif %}" data-category="{{ category.slug }}">
+                    <div class="card-thumb-link card-visual">
                         <img src="{{ career_img_url(item.id) }}" alt="{{ item.title }}" class="card-thumb" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop';">
+                        {% if item.is_new %}<span class="badge-new">New</span>{% endif %}
                     </div>
                     <div class="card-content">
-                        <div class="card-meta">{{ category.title }}</div>
+                        <div class="card-meta">{{ category.title }}{% if item.published %} · <span class="published-date">{{ item.published }}</span>{% endif %}</div>
                         <h3 class="card-title">{{ item.title }}</h3>
                         <p class="card-summary">{{ item.meta_description }}</p>
                     </div>
