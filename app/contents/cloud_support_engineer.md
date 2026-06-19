@@ -1,36 +1,10 @@
----json
-{
-  "category": "cloud-infra",
-  "keywords": [
-    "クラウドサポートエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "AWS",
-    "Azure",
-    "キャリアパス"
-  ],
-  "meta_description": "クラウドサポートエンジニアのリアルな年収や将来性を徹底解説。未経験からAWS等のプロを目指すロードマップも公開。技術的難題を解決する達成感と、市場価値を高め続けるキャリアの魅力を詳しく紹介します。",
-  "related_jobs": [
-    "cloud_engineer",
-    "site_reliability_engineer",
-    "customer_success_engineer"
-  ],
-  "slug": "cloud_support_engineer",
-  "tags": [
-    "クラウド",
-    "インフラ",
-    "AWS",
-    "Azure",
-    "キャリアパス",
-    "エンジニア転職"
-  ],
-  "thumbnail": "/static/img/cloud_support_engineer.png",
-  "hero_image": "/static/img/cloud_support_engineer_hero.png",
-  "title": "クラウドサポートエンジニアの年収・将来性・未経験ロードマップ"
-}
 ---
+title: クラウドサポートエンジニアの年収・将来性・未経験ロードマップ＆面接対策
+description: クラウドサポートエンジニアのリアルな年収や将来性、未経験からAWS等のプロになるロードマップを徹底解説。面接対策Q&Aも掲載。
+seo_title: クラウドサポートエンジニアの年収・将来性は？未経験ロードマップ＆面接Q&A【Starful】
+seo_description: クラウドサポートエンジニアの平均年収や将来性を徹底解説！「きつい」という噂の真相、未経験からAWS等のプロを目指すステップバイステップのロードマップ、さらに面接で聞かれるQ&Aまで網羅。キャリアアップを目指す方必見のガイドです。
+---
+
 # [完全ガイド] Cloud Support Engineer: クラウドサポートエンジニアの年収・将来性・未経験ロードマップ
 
 ## 導入：Cloud Support Engineerの面接官は「ここ」を見ている

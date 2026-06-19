@@ -1,37 +1,10 @@
----json
-{
-  "category": "cloud-infra",
-  "keywords": [
-    "DevOpsエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "CI/CD",
-    "Kubernetes",
-    "AWS"
-  ],
-  "meta_description": "開発と運用の架け橋となるDevOpsエンジニア。自動化による効率化は大きなやりがいです。高年収で将来性も抜群な本職種のリアルな現状と、未経験から最短で目指すためのロードマップを徹底解説します。",
-  "related_jobs": [
-    "site_reliability_engineer",
-    "cloud_engineer",
-    "backend_developer"
-  ],
-  "slug": "devops_engineer",
-  "tags": [
-    "DevOps",
-    "クラウド",
-    "自動化",
-    "CI/CD",
-    "SRE",
-    "キャリアパス",
-    "エンジニア転職"
-  ],
-  "thumbnail": "/static/img/devops_engineer.png",
-  "hero_image": "/static/img/devops_engineer_hero.png",
-  "title": "DevOpsエンジニアの年収・将来性は？未経験からのロードマップ"
-}
 ---
+title: DevOpsエンジニアの年収・将来性と、未経験からのロードマップ
+description: DevOpsエンジニアの年収や将来性、未経験から最短で転職するためのロードマップを徹底解説。市場価値を高めるスキルと面接対策もご紹介します。
+seo_title: 【未経験から】DevOpsエンジニアの年収・将来性とロードマップ｜Starful
+seo_description: DevOpsエンジニアのリアルな年収や将来性を徹底解説！未経験から最短で目指すロードマップと、実際の面接対策（Q&A）を分かりやすく紹介します。市場価値の高いエンジニアへの第一歩を踏み出しましょう。
+---
+
 # [完全ガイド] DevOps Engineer: DevOpsエンジニアの年収・将来性は？未経験からのロードマップ
 
 ## 導入：DevOps Engineerの面接官は「ここ」を見ている

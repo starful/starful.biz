@@ -1,36 +1,10 @@
----json
-{
-  "category": "design",
-  "keywords": [
-    "モーショングラフィックデザイナー",
-    "動画制作",
-    "After Effects",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "キャリアパス"
-  ],
-  "meta_description": "映像に命を吹き込むモーショングラフィックデザイナー。需要急増中の年収や将来性を徹底解説！未経験からプロになるための学習ロードマップや、制作のやりがい、厳しい現実までリアルな実態をお届けします。",
-  "related_jobs": [
-    "video_editor",
-    "ui_ux_designer",
-    "graphic_designer"
-  ],
-  "slug": "motion_graphic_designer",
-  "tags": [
-    "After Effects",
-    "映像制作",
-    "動画広告",
-    "キャリアアップ",
-    "デザイン",
-    "2Dアニメーション"
-  ],
-  "thumbnail": "/static/img/motion_graphic_designer.png",
-  "hero_image": "/static/img/motion_graphic_designer_hero.png",
-  "title": "モーションデザイナーの年収・将来性は？未経験ロードマップを解説"
-}
 ---
+title: モーションデザイナーの年収・将来性は？未経験ロードマップを解説
+description: モーショングラフィックデザイナーの年収や将来性は？未経験からプロを目指す完全ロードマップに加え、仕事のやりがいや「きつい」と言われる現実まで徹底解説。キャリアチェンジを考えている方は必見です！
+seo_title: モーションデザイナーの将来性と現実｜未経験からプロになるロードマップ【Starful】
+seo_description: モーショングラフィックデザイナーの年収や将来性は？未経験からプロを目指す完全ロードマップに加え、仕事のやりがいや「きつい」と言われる現実まで徹底解説。キャリアチェンジを考えている方は必見です！
+---
+
 # [完全ガイド] Motion Graphic Designer: モーションデザイナーの年収・将来性は？未経験ロードマップを解説
 
 ## 導入：Motion Graphic Designerの面接官は「ここ」を見ている

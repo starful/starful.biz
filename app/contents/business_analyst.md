@@ -1,35 +1,10 @@
----json
-{
-  "category": "product-management",
-  "keywords": [
-    "ビジネスアナリスト",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "ITキャリア",
-    "DX推進",
-    "スキル"
-  ],
-  "meta_description": "ビジネスアナリストの年収や将来性を徹底解説。未経験からITの架け橋として活躍するためのロードマップを公開します。現場のリアルな課題解決のやりがいと、DX時代に求められる必須スキルを凝縮しました。",
-  "related_jobs": [
-    "data_analyst",
-    "product_manager",
-    "it_consultant"
-  ],
-  "slug": "business_analyst",
-  "tags": [
-    "ビジネスアナリスト",
-    "キャリアパス",
-    "要件定義",
-    "DX",
-    "業務改善"
-  ],
-  "thumbnail": "/static/img/business_analyst.png",
-  "hero_image": "/static/img/business_analyst_hero.png",
-  "title": "ビジネスアナリストの年収と将来性｜未経験からのロードマップ"
-}
 ---
+title: ビジネスアナリストの年収と将来性｜未経験からのキャリアロードマップ
+description: 未経験からビジネスアナリスト（BA）を目指す方向けに、平均年収、将来性、具体的な仕事内容、必要なスキル、そして転職面接対策までを徹底解説します。
+seo_title: ビジネスアナリストとは？年収・将来性と未経験からの転職ロードマップ｜Starful
+seo_description: ビジネスアナリスト（BA）の年収や将来性、仕事内容を徹底解説！未経験から市場価値の高いIT人材になるためのステップ、必須スキル、面接対策を凝縮。DX時代にキャリアアップを目指す方必見です。
+---
+
 # [完全ガイド] Business Analyst: ビジネスアナリストの年収と将来性｜未経験からのロードマップ
 
 ## 導入：Business Analystの面接官は「ここ」を見ている

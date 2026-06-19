@@ -1,36 +1,10 @@
----json
-{
-  "category": "cyber-security",
-  "keywords": [
-    "サイバーセキュリティアナリスト",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "セキュリティエンジニア",
-    "キャリアパス",
-    "IT資格"
-  ],
-  "meta_description": "巧妙化するサイバー攻撃から組織を守るサイバーセキュリティアナリスト。未経験からの挑戦、気になる年収や将来性、具体的な学習ロードマップを徹底解説。守りの要として、社会貢献度の高いキャリアを築けます。",
-  "related_jobs": [
-    "security_engineer",
-    "network_engineer",
-    "cloud_architect"
-  ],
-  "slug": "cybersecurity_analyst",
-  "tags": [
-    "セキュリティ",
-    "ITインフラ",
-    "脆弱性診断",
-    "ネットワーク",
-    "キャリア",
-    "転職"
-  ],
-  "thumbnail": "/static/img/cybersecurity_analyst.png",
-  "hero_image": "/static/img/cybersecurity_analyst_hero.png",
-  "title": "サイバーセキュリティアナリストの年収・将来性・未経験ロードマップ"
-}
 ---
+title: サイバーセキュリティアナリストの年収・将来性は？未経験から目指すロードマップ
+description: 【未経験からプロへ】サイバーセキュリティアナリストの年収、将来性、具体的なキャリアロードマップを徹底解説！IT初心者から需要急増中のセキュリティエンジニアを目指すための必須スキルや面接対策Q&Aを網羅。
+seo_title: サイバーセキュリティアナリストの年収・将来性は？未経験ロードマップ＆面接対策【Starful】
+seo_description: 【未経験からプロへ】サイバーセキュリティアナリストの年収、将来性、具体的なキャリアロードマップを徹底解説！IT初心者から需要急増中のセキュリティエンジニアを目指すための必須スキルや面接対策Q&Aを網羅。
+---
+
 # [完全ガイド] Cybersecurity Analyst: サイバーセキュリティアナリストの年収・将来性・未経験ロードマップ
 
 ## 導入：Cybersecurity Analystの面接官は「ここ」を見ている

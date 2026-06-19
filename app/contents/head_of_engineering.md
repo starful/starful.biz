@@ -1,39 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "Head of Engineering",
-    "エンジニア組織",
-    "VPoE",
-    "CTO",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "マネジメント",
-    "キャリアパス"
-  ],
-  "meta_description": "エンジニア組織の舵取りを担うHead of Engineering。技術選定から採用、組織文化の構築まで、その役割は多岐にわたります。高年収が期待できる一方、責任も重大。未経験からのロードマップや将来性を徹底解説します。",
-  "related_jobs": [
-    "cto",
-    "vpoe",
-    "engineering_manager"
-  ],
-  "slug": "head_of_engineering",
-  "tags": [
-    "エンジニアリングマネージャー",
-    "組織開発",
-    "採用",
-    "キャリア",
-    "経営",
-    "CTO",
-    "VPoE"
-  ],
-  "thumbnail": "/static/img/head_of_engineering.png",
-  "hero_image": "/static/img/head_of_engineering_hero.png",
-  "title": "Head of Engineeringの年収・将来性・未経験ロードマップ"
-}
 ---
+title: Head of Engineeringの年収・将来性は？未経験からのロードマップ＆面接対策
+description: Head of Engineeringの年収相場や将来性、エンジニアからキャリアアップするためのロードマップを徹底解説！必要なスキルや面接対策も網羅。
+seo_title: Head of Engineeringの年収・将来性は？未経験からのロードマップ＆面接対策【Starful】
+seo_description: Head of Engineeringの年収相場や将来性、エンジニアからキャリアアップするためのロードマップを徹底解説！開発組織のトップに必要なスキルや、面接での質問・回答例も網羅しています。
+---
+
 # [完全ガイド] Head of Engineering: Head of Engineeringの年収・将来性・未経験ロードマップ
 
 ## 導入：Head of Engineeringの面接官は「ここ」を見ている
