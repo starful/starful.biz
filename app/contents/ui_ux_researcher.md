@@ -1,36 +1,10 @@
----json
-{
-  "category": "design",
-  "keywords": [
-    "UI/UXリサーチャー",
-    "ユーザーリサーチ",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "UXデザイン",
-    "キャリアパス"
-  ],
-  "meta_description": "UI/UXリサーチャー｜年収と調査設計・示唆出しを面接用に圧縮。定量だけに寄せないコツとPdM/デザイナーとの役割調整フレーズつき。当日までの復習に。【Starful】",
-  "related_jobs": [
-    "ux_designer",
-    "product_manager",
-    "service_designer"
-  ],
-  "slug": "ui_ux_researcher",
-  "tags": [
-    "UI/UX",
-    "ユーザーリサーチ",
-    "デザイン思考",
-    "キャリア形成",
-    "IT転職",
-    "スキルアップ"
-  ],
-  "thumbnail": "/static/img/ui_ux_researcher.png",
-  "hero_image": "/static/img/ui_ux_researcher_hero.png",
-  "title": "UI/UXリサーチャー｜年収とリサーチ面接の即答テンプレ"
-}
 ---
+title: UI/UXリサーチャーの年収・キャリア・面接対策｜即答テンプレート
+description: UI/UX（UX）リサーチャーの年収相場、キャリアパス、転職面接の質問対策を徹底解説。調査設計や示唆出しのコツ、面接で使える即答テンプレートも掲載。PdMやデザイナーとの役割分担も紹介。
+seo_title: UI/UXリサーチャーの年収・キャリア・転職面接対策｜即答テンプレート【Starful】
+seo_description: UI/UX（UX）リサーチャーの年収相場、キャリアパス、転職面接の質問対策を徹底解説。調査設計や示唆出しのコツ、面接で使える即答テンプレートも掲載。PdMやデザイナーとの役割分担も紹介。
+---
+
 # [完全ガイド] UI/UX Researcher: UI/UXリサーチャーの年収と将来性｜未経験からのロードマップ
 
 ## 導入：UI/UX Researcherの面接官は「ここ」を見ている

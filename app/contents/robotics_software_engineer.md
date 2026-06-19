@@ -1,37 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "ロボティクスソフトウェアエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "ROS",
-    "C++",
-    "SLAM"
-  ],
-  "meta_description": "物理世界を動かすロボティクスソフトウェアエンジニア。高年収と高い将来性が魅力ですが、習得難易度も高め。本記事では未経験からのロードマップや開発のやりがいなど、現場のリアルな実態を徹底解説します。",
-  "related_jobs": [
-    "embedded_engineer",
-    "ai_engineer",
-    "backend_developer"
-  ],
-  "slug": "robotics_software_engineer",
-  "tags": [
-    "ロボティクス",
-    "エンジニア",
-    "キャリア",
-    "ROS",
-    "組み込み",
-    "AI",
-    "自動運転"
-  ],
-  "thumbnail": "/static/img/robotics_software_engineer.png",
-  "hero_image": "/static/img/robotics_software_engineer_hero.png",
-  "title": "ロボティクスエンジニアの年収・将来性・未経験ロードマップ"
-}
 ---
+title: ロボティクスソフトウェアエンジニアの年収・将来性と未経験ロードマップ
+description: 需要が急増するロボティクスソフトウェアエンジニアの年収や将来性、未経験からプロになるためのステップを解説。C++/PythonやROSなど必要なスキルも紹介します。
+seo_title: ロボティクスソフトウェアエンジニアの年収・将来性と未経験ロードマップ｜Starful
+seo_description: ロボティクスソフトウェアエンジニアの年収、将来性、未経験から目指すロードマップを徹底解説！ロボット開発に必要なスキルや具体的なキャリアパス、仕事内容、転職のポイントまで、現役視点で分かりやすく紹介します。
+---
+
 # [完全ガイド] Robotics Software Engineer: ロボティクスエンジニアの年収・将来性・未経験ロードマップ
 
 ## 導入：Robotics Software Engineerの面接官は「ここ」を見ている

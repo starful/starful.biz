@@ -1,38 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "オートメーションエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "テスト自動化",
-    "CI/CD",
-    "Python",
-    "RPA"
-  ],
-  "meta_description": "開発効率を最大化するオートメーションエンジニア。年収や将来性、未経験からの学習ロードマップを徹底解説。自動化の力でビジネスを加速させる、現代のIT現場で最も求められる職種のリアルとやりがいを伝えます。",
-  "related_jobs": [
-    "qa_engineer",
-    "site_reliability_engineer",
-    "devops_engineer"
-  ],
-  "slug": "automation_engineer",
-  "tags": [
-    "自動化",
-    "QA",
-    "CI/CD",
-    "Python",
-    "RPA",
-    "キャリアパス",
-    "エンジニア転職"
-  ],
-  "thumbnail": "/static/img/automation_engineer.png",
-  "hero_image": "/static/img/automation_engineer_hero.png",
-  "title": "オートメーションエンジニアの年収・将来性は？未経験ロードマップ"
-}
 ---
+title: オートメーションエンジニア（自動化エンジニア）の年収・将来性と未経験ロードマップ
+description: オートメーションエンジニア（自動化エンジニア）の年収や将来性、未経験から目指すための学習ロードマップを徹底解説。テスト自動化の仕事内容や面接対策Q&Aも紹介します。
+seo_title: オートメーションエンジニア(自動化)の年収・将来性｜未経験ロードマップ【Starful】
+seo_description: オートメーションエンジニア（自動化エンジニア）の年収や将来性、未経験から目指すための学習ロードマップを徹底解説。テスト自動化の仕事内容や面接対策Q&Aも網羅しています。
+---
+
 # [完全ガイド] Automation Engineer: オートメーションエンジニアの年収・将来性は？未経験ロードマップ
 
 ## 導入：Automation Engineerの面接官は「ここ」を見ている

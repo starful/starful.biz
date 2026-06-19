@@ -1,36 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "Director of Engineering",
-    "DoE",
-    "エンジニアマネージャー",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "キャリアパス"
-  ],
-  "meta_description": "開発組織を牽引するDirector of Engineering。高年収のリアルから、未経験マネージャーが目指すためのロードマップまで徹底解説。技術と経営を繋ぐ難しさと、組織成長を支える圧倒的なやりがいを伝えます。",
-  "related_jobs": [
-    "engineering_manager",
-    "cto",
-    "product_manager"
-  ],
-  "slug": "director_of_engineering",
-  "tags": [
-    "マネジメント",
-    "キャリア",
-    "高年収",
-    "組織開発",
-    "エンジニア",
-    "IT転職"
-  ],
-  "thumbnail": "/static/img/director_of_engineering.png",
-  "hero_image": "/static/img/director_of_engineering_hero.png",
-  "title": "Director of Engineeringの年収・将来性・未経験ロードマップ"
-}
 ---
+title: Director of Engineering(DoE)の役割・年収・CTOやVPoEとの違い
+description: 開発組織を牽引するDirector of Engineering（DoE）の役割、想定年収、CTOやVPoEとの違い、具体的なキャリアロードマップについて分かりやすく解説します。
+seo_title: Director of Engineering(DoE)とは？役割・年収・CTOやVPoEとの違い｜Starful
+seo_description: Director of Engineering（DoE）の役割や平均年収、CTO・VPoEとの違いを徹底解説！エンジニアリングマネージャーからDoEを目指すロードマップや、面接対策Q&Aも紹介します。
+---
+
 # [完全ガイド] Director of Engineering: Director of Engineeringの年収・将来性・未経験ロードマップ
 
 ## 導入：Director of Engineeringの面接官は「ここ」を見ている

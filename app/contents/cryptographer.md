@@ -1,39 +1,10 @@
----json
-{
-  "category": "cyber-security",
-  "keywords": [
-    "Cryptographer",
-    "暗号技術者",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "ブロックチェーン",
-    "量子耐性暗号",
-    "Web3",
-    "情報セキュリティ"
-  ],
-  "meta_description": "暗号技術の専門家、Cryptographer。高度な数学を駆使しWeb3や次世代セキュリティの最前線で活躍する職種です。年収1000万超も狙える将来性と、社会の安全を守るやりがい、習得への道筋を解説。",
-  "related_jobs": [
-    "security_engineer",
-    "blockchain_developer",
-    "data_scientist"
-  ],
-  "slug": "cryptographer",
-  "tags": [
-    "暗号学",
-    "サイバーセキュリティ",
-    "Web3",
-    "ブロックチェーン",
-    "数学",
-    "キャリアパス",
-    "エンジニア"
-  ],
-  "thumbnail": "/static/img/cryptographer.png",
-  "hero_image": "/static/img/cryptographer_hero.png",
-  "title": "Cryptographerの年収と将来性！未経験からのロードマップ"
-}
 ---
+title: 暗号技術者・エンジニア（Cryptographer）の年収と将来性！未経験からのロードマップ
+description: Web3やブロックチェーンの基盤を支える「暗号技術者・エンジニア（Cryptographer）」。その年収や将来性、未経験からプロを目指すための具体的な学習ロードマップ、面接対策まで徹底解説！最先端セキュリティ分野で高年収を狙うキャリアパスを紹介します。
+seo_title: 暗号技術者・エンジニア（Cryptographer）の年収と将来性！未経験からのロードマップ｜Starful
+seo_description: Web3やブロックチェーンを支える「暗号技術者・エンジニア（Cryptographer）」の年収・将来性を徹底解説！未経験から高年収を狙うための具体的な学習ロードマップや面接対策を紹介。最先端の暗号セキュリティ分野で活躍する道筋がわかります。
+---
+
 # [完全ガイド] Cryptographer: Cryptographerの年収と将来性！未経験からのロードマップ
 
 ## 導入：Cryptographerの面接官は「ここ」を見ている

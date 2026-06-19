@@ -1,39 +1,10 @@
----json
-{
-  "category": "cloud-infra",
-  "keywords": [
-    "クラウドエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "AWS",
-    "Azure",
-    "GCP",
-    "キャリアパス",
-    "IT資格"
-  ],
-  "meta_description": "クラウドエンジニアは企業のDXを支える要です。未経験からの挑戦は学習量も多いですが、高年収と圧倒的な将来性が魅力。技術進化の最前線でインフラを設計する、やりがいと市場価値の高め方を徹底解説します。",
-  "related_jobs": [
-    "site_reliability_engineer",
-    "backend_developer",
-    "cyber_security_specialist"
-  ],
-  "slug": "cloud_engineer",
-  "tags": [
-    "Cloud",
-    "AWS",
-    "Azure",
-    "GCP",
-    "Infrastructure",
-    "DevOps",
-    "Career"
-  ],
-  "thumbnail": "/static/img/cloud_engineer.png",
-  "hero_image": "/static/img/cloud_engineer_hero.png",
-  "title": "クラウドエンジニアの年収・将来性は？未経験からのロードマップ"
-}
 ---
+title: クラウドエンジニアとは？未経験から転職するロードマップ・年収・将来性を徹底解説
+description: IT未経験から需要の高いクラウドエンジニアになるための仕事内容、平均年収、将来性、必要な資格、具体的な勉強ロードマップを分かりやすく解説します。
+seo_title: クラウドエンジニアとは？未経験からのロードマップ・年収・将来性・資格｜Starful
+seo_description: クラウドエンジニアの仕事内容や平均年収、将来性を徹底解説！未経験から目指すための勉強ロードマップ、おすすめの資格、転職方法を紹介します。IT未経験から市場価値の高いエンジニアへキャリアアップしたい方は必見です。
+---
+
 # [完全ガイド] Cloud Engineer: クラウドエンジニアの年収・将来性は？未経験からのロードマップ
 
 ## 導入：Cloud Engineerの面接官は「ここ」を見ている

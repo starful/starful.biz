@@ -1,39 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "Chief Data Officer",
-    "CDO",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "データ戦略",
-    "経営層",
-    "DX",
-    "データガバナンス"
-  ],
-  "meta_description": "CDO（最高データ責任者）は企業のデータ戦略を統括する経営の要です。高年収が期待できる一方、組織変革の難しさも。未経験からのロードマップや将来性、データで未来を創るやりがいを徹底解説します。",
-  "related_jobs": [
-    "data_scientist",
-    "data_analyst",
-    "data_engineer"
-  ],
-  "slug": "chief_data_officer",
-  "tags": [
-    "CDO",
-    "データマネジメント",
-    "経営戦略",
-    "DX推進",
-    "キャリアパス",
-    "高年収",
-    "ITコンサルタント"
-  ],
-  "thumbnail": "/static/img/chief_data_officer.png",
-  "hero_image": "/static/img/chief_data_officer_hero.png",
-  "title": "Chief Data Officerの年収・将来性・未経験ロードマップ"
-}
 ---
+title: CDO（最高データ責任者）とは？Chief Data Officerの年収・役割・キャリアパス
+description: CDO（最高データ責任者/Chief Data Officer）の役割、年収、必要なスキル、キャリアパスを徹底解説！データ戦略を統括する経営幹部としての仕事内容や将来性、転職を成功させるためのロードマップを紹介します。
+seo_title: CDO（最高データ責任者）とは？Chief Data Officerの年収・役割・キャリアパス｜Starful
+seo_description: CDO（最高データ責任者/Chief Data Officer）の役割、年収、必要なスキル、キャリアパスを徹底解説！データ戦略を統括する経営幹部としての仕事内容や将来性、転職を成功させるためのロードマップを紹介します。
+---
+
 # [完全ガイド] Chief Data Officer: Chief Data Officerの年収・将来性・未経験ロードマップ
 
 ## 導入：Chief Data Officerの面接官は「ここ」を見ている

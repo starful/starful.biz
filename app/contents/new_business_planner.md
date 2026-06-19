@@ -1,38 +1,10 @@
----json
-{
-  "category": "sales-bizdev",
-  "keywords": [
-    "新規事業企画",
-    "年収",
-    "未経験",
-    "将来性",
-    "ロードマップ",
-    "事業開発",
-    "BizDev",
-    "キャリアパス",
-    "0から1"
-  ],
-  "meta_description": "0から1を創る新規事業企画。市場価値が高く高年収も狙えますが、泥臭い検証の連続という現実も。未経験から挑戦するためのロードマップと、事業が形になる圧倒的なやりがいを徹底解説します。",
-  "related_jobs": [
-    "product_manager",
-    "business_development",
-    "marketing_specialist"
-  ],
-  "slug": "new_business_planner",
-  "tags": [
-    "新規事業",
-    "キャリアチェンジ",
-    "事業開発",
-    "BizDev",
-    "企画職",
-    "年収アップ",
-    "スキルアップ"
-  ],
-  "thumbnail": "/static/img/new_business_planner.png",
-  "hero_image": "/static/img/new_business_planner_hero.png",
-  "title": "未経験から新規事業企画へ！年収・将来性と成功ロードマップ"
-}
 ---
+title: 未経験から新規事業企画へ転職！年収・キャリアパスと成功ロードマップ
+description: 未経験から新規事業企画（事業開発）に転職する方法を徹底解説！必要なスキルや向いている人の特徴、年収・キャリアパス、選考を突破する志望動機・面接対策まで網羅。市場価値を高めたい方必見のロードマップを紹介します。
+seo_title: 未経験から新規事業企画へ転職！必要なスキル・年収と志望動機｜面接Q&A【Starful】
+seo_description: 未経験から新規事業企画（事業開発）に転職する方法を徹底解説！必要なスキルや向いている人の特徴、年収・キャリアパス、選考を突破する志望動機・面接対策まで網羅。市場価値を高めたい方必見のロードマップを紹介します。
+---
+
 # [完全ガイド] New Business Planner: 未経験から新規事業企画へ！年収・将来性と成功ロードマップ
 
 ## 導入：New Business Plannerの面接官は「ここ」を見ている
