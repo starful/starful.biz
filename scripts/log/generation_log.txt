@@ -410,3 +410,9 @@
 2026-06-19 11:16:06,057 - CREATED: app/contents/database_administrator.md
 2026-06-19 11:16:09,640 - CREATED: app/contents/conversion_rate_optimizer.md
 2026-06-19 11:17:11,323 - CREATED: app/contents/game_producer.md
+2026-06-23 20:12:24,255 - CREATED: app/contents/database_administrator.md
+2026-06-23 20:12:24,534 - CREATED: app/contents/cpp_developer.md
+2026-06-23 20:12:26,295 - CREATED: app/contents/cro_specialist.md
+2026-06-23 20:12:26,537 - CREATED: app/contents/cpp_developer.md
+2026-06-23 20:12:29,867 - CREATED: app/contents/design_operations_manager.md
+2026-06-23 20:13:21,209 - CREATED: app/contents/game_qa_tester.md
