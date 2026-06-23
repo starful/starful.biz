@@ -5,7 +5,7 @@ import re
 
 # favicon-32x32, apple-touch-icon 등 표준 웹 아이콘은 하이픈 유지
 PROTECTED_ASSET_PREFIXES = ("favicon", "apple-touch")
-PROTECTED_ASSET_NAMES = frozenset({"default", "default_og", "logo"})
+PROTECTED_ASSET_NAMES = frozenset({"default", "default_og", "logo", "brand_biz_mark"})
 
 
 def is_protected_asset(stem: str) -> bool:

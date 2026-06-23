@@ -1,6 +1,13 @@
 # scripts/resize_images.py
 import os
 import shutil
+import sys
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, SCRIPT_DIR)
+
+from slug_utils import is_protected_asset  # noqa: E402
+
 try:
     from PIL import Image
 except ImportError:
@@ -39,11 +46,12 @@ def resize_images():
     total_saved_space = 0
 
     for filename in files:
+        name_only, ext = os.path.splitext(filename)
+        if is_protected_asset(name_only):
+            continue
+
         filepath = os.path.join(IMG_DIR, filename)
         backup_filepath = os.path.join(BACKUP_DIR, filename)
-        
-        # 파일명(확장자 제외) 추출
-        name_only, ext = os.path.splitext(filename)
         # 새로 저장될 PNG 파일 경로 (기존 확장자가 뭐든 무조건 .png로 저장)
         new_png_filepath = os.path.join(IMG_DIR, f"{name_only}.png")
 
