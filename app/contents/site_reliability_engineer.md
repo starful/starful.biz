@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/site_reliability_engineer.png",
   "hero_image": "/static/img/site_reliability_engineer_hero.png",
-  "title": "SREの年収・将来性は？未経験からのロードマップを徹底解説"
+  "title": "SREの年収・将来性は？未経験からのロードマップを徹底解説",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Site Reliability Engineer: SREの年収・将来性は？未経験からのロードマップを徹底解説

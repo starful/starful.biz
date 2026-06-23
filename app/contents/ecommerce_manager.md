@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/ecommerce_manager.png",
   "hero_image": "/static/img/ecommerce_manager_hero.png",
-  "title": "ECマネージャーの年収・将来性は？未経験からのロードマップ"
+  "title": "ECマネージャーの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-05-29"
 }
 ---
 # [完全ガイド] E-commerce Manager: ECマネージャーの年収・将来性は？未経験からのロードマップ

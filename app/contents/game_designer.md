@@ -27,7 +27,8 @@
   ],
   "thumbnail": "/static/img/game_designer.png",
   "hero_image": "/static/img/game_designer_hero.png",
-  "title": "ゲームデザイナーの年収・将来性は？未経験からのロードマップ"
+  "title": "ゲームデザイナーの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-05-01"
 }
 ---
 # [完全ガイド] Game Designer: ゲームデザイナーの年収・将来性は？未経験からのロードマップ

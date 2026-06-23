@@ -27,7 +27,8 @@
   ],
   "thumbnail": "/static/img/data_governance_specialist.png",
   "hero_image": "/static/img/data_governance_specialist_hero.png",
-  "title": "データガバナンスの年収と将来性は？未経験からのロードマップ"
+  "title": "データガバナンスの年収と将来性は？未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Data Governance Specialist: データガバナンスの年収と将来性は？未経験からのロードマップ

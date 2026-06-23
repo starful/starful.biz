@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/ux_strategist.png",
   "hero_image": "/static/img/ux_strategist_hero.png",
-  "title": "UXストラテジストの年収・将来性は？未経験からのロードマップ"
+  "title": "UXストラテジストの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] UX Strategist: UXストラテジストの年収・将来性は？未経験からのロードマップ

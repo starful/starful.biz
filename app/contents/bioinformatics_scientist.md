@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/bioinformatics_scientist.png",
   "hero_image": "/static/img/bioinformatics_scientist_hero.png",
-  "title": "バイオインフォの年収・将来性｜未経験からのロードマップ"
+  "title": "バイオインフォの年収・将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Bioinformatics Scientist: バイオインフォの年収・将来性｜未経験からのロードマップ

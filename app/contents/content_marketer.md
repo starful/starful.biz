@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/content_marketer.png",
   "hero_image": "/static/img/content_marketer_hero.png",
-  "title": "コンテンツマーケター面接｜成果指標と編集戦略の答え方サンプル"
+  "title": "コンテンツマーケター面接｜成果指標と編集戦略の答え方サンプル",
+  "published_at": "2026-04-28"
 }
 ---
 # [完全ガイド] Content Marketer: コンテンツマーケターの年収・将来性｜未経験からのロードマップ

@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/data_platform_engineer.png",
   "hero_image": "/static/img/data_platform_engineer_hero.png",
-  "title": "データプラットフォームエンジニアの年収・将来性・未経験ロードマップ"
+  "title": "データプラットフォームエンジニアの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Data Platform Engineer: データプラットフォームエンジニアの年収・将来性・未経験ロードマップ

@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/concept_artist.png",
   "hero_image": "/static/img/concept_artist_hero.png",
-  "title": "コンセプトアーティストの年収と将来性｜未経験からのロードマップ"
+  "title": "コンセプトアーティストの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Concept Artist: コンセプトアーティストの年収と将来性｜未経験からのロードマップ

@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/embedded_software_engineer.png",
   "hero_image": "/static/img/embedded_software_engineer_hero.png",
-  "title": "組み込みエンジニアの年収・将来性は？未経験からのロードマップ"
+  "title": "組み込みエンジニアの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Embedded Software Engineer: 組み込みエンジニアの年収・将来性は？未経験からのロードマップ

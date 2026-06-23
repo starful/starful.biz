@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/functional_analyst.png",
   "hero_image": "/static/img/functional_analyst_hero.png",
-  "title": "Functional Analystの年収・将来性・未経験ロードマップ"
+  "title": "Functional Analystの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-05-01"
 }
 ---
 # [完全ガイド] Functional Analyst: Functional Analystの年収・将来性・未経験ロードマップ

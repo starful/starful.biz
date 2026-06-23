@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/service_planner.png",
   "hero_image": "/static/img/service_planner_hero.png",
-  "title": "サービスプランナーの年収と将来性｜未経験からのロードマップ"
+  "title": "サービスプランナーの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Service Planner: サービスプランナーの年収と将来性｜未経験からのロードマップ

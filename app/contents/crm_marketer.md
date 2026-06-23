@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/crm_marketer.png",
   "hero_image": "/static/img/crm_marketer_hero.png",
-  "title": "CRMマーケターの年収・将来性は？未経験からのロードマップ"
+  "title": "CRMマーケターの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] CRM Marketer: CRMマーケターの年収・将来性は？未経験からのロードマップ

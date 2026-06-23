@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/director_of_ux.png",
   "hero_image": "/static/img/director_of_ux_hero.png",
-  "title": "Director of UXの年収・将来性・未経験からのロードマップ"
+  "title": "Director of UXの年収・将来性・未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Director of UX: Director of UXの年収・将来性・未経験からのロードマップ

@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/head_of_design.png",
   "hero_image": "/static/img/head_of_design_hero.png",
-  "title": "Head of Designの年収・将来性は？未経験からのロードマップ"
+  "title": "Head of Designの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Head of Design: Head of Designの年収・将来性は？未経験からのロードマップ

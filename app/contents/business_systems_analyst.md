@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/business_systems_analyst.png",
   "hero_image": "/static/img/business_systems_analyst_hero.png",
-  "title": "BSAの年収と将来性は？未経験から目指す完全ロードマップ"
+  "title": "BSAの年収と将来性は？未経験から目指す完全ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Business Systems Analyst: BSAの年収と将来性は？未経験から目指す完全ロードマップ

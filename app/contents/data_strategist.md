@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/data_strategist.png",
   "hero_image": "/static/img/data_strategist_hero.png",
-  "title": "データストラテジストの年収・将来性は？未経験ロードマップ解説"
+  "title": "データストラテジストの年収・将来性は？未経験ロードマップ解説",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Data Strategist: データストラテジストの年収・将来性は？未経験ロードマップ解説

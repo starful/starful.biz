@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/serverless_engineer.png",
   "hero_image": "/static/img/serverless_engineer_hero.png",
-  "title": "サーバーレスエンジニア｜年収・設計面接と未経験ロードマップ"
+  "title": "サーバーレスエンジニア｜年収・設計面接と未経験ロードマップ",
+  "published_at": "2026-05-12"
 }
 ---
 # [完全ガイド] Serverless Engineer: サーバーレスエンジニアの年収・将来性・未経験ロードマップ解説

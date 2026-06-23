@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/qa_engineer.png",
   "hero_image": "/static/img/qa_engineer_hero.png",
-  "title": "QAエンジニアの年収・将来性は？未経験からのロードマップ解説"
+  "title": "QAエンジニアの年収・将来性は？未経験からのロードマップ解説",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] QA Engineer: QAエンジニアの年収・将来性は？未経験からのロードマップ解説

@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/cpp_developer.png",
   "hero_image": "/static/img/cpp_developer_hero.png",
-  "title": "C++エンジニアの年収と将来性！未経験からのロードマップ"
+  "title": "C++エンジニアの年収と将来性！未経験からのロードマップ",
+  "published_at": "2026-06-23"
 }
 ---
 # [完全ガイド] C++ Developer: C++エンジニアの年収と将来性！未経験からのロードマップ

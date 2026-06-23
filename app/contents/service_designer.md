@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/service_designer.png",
   "hero_image": "/static/img/service_designer_hero.png",
-  "title": "サービスデザイナーの年収と将来性｜未経験からのロードマップ"
+  "title": "サービスデザイナーの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Service Designer: サービスデザイナーの面接対策｜圧倒的ボリュームで徹底解説

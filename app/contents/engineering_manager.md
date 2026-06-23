@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/engineering_manager.png",
   "hero_image": "/static/img/engineering_manager_hero.png",
-  "title": "年収1000万超？EMの将来性と未経験からのロードマップを公開"
+  "title": "年収1000万超？EMの将来性と未経験からのロードマップを公開",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Engineering Manager: 年収1000万超？EMの将来性と未経験からのロードマップを公開

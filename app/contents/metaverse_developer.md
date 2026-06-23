@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/metaverse_developer.png",
   "hero_image": "/static/img/metaverse_developer_hero.png",
-  "title": "メタバース開発者の年収と将来性｜未経験からのロードマップ"
+  "title": "メタバース開発者の年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Metaverse Developer: メタバース開発者の年収と将来性｜未経験からのロードマップ

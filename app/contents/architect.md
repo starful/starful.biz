@@ -31,7 +31,8 @@
   ],
   "thumbnail": "/static/img/architect.png",
   "hero_image": "/static/img/architect_hero.png",
-  "title": "年収1000万超？アーキテクトの将来性と未経験ロードマップ"
+  "title": "年収1000万超？アーキテクトの将来性と未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Architect: 年収1000万超？アーキテクトの将来性と未経験ロードマップ

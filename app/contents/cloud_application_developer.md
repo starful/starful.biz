@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/cloud_application_developer.png",
   "hero_image": "/static/img/cloud_application_developer_hero.png",
-  "title": "クラウド開発者の年収と将来性は？未経験からのロードマップを解説"
+  "title": "クラウド開発者の年収と将来性は？未経験からのロードマップを解説",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Cloud Application Developer: クラウド開発者の年収と将来性は？未経験からのロードマップを解説

@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/hybrid_cloud_engineer.png",
   "hero_image": "/static/img/hybrid_cloud_engineer_hero.png",
-  "title": "ハイブリッドクラウド：年収・将来性と未経験ロードマップ"
+  "title": "ハイブリッドクラウド：年収・将来性と未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Hybrid Cloud Engineer: ハイブリッドクラウド：年収・将来性と未経験ロードマップ

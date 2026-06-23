@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/data_planner.png",
   "hero_image": "/static/img/data_planner_hero.png",
-  "title": "データプランナーの年収・将来性は？未経験からの挑戦ロードマップ"
+  "title": "データプランナーの年収・将来性は？未経験からの挑戦ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Data Planner: データプランナーの年収・将来性は？未経験からの挑戦ロードマップ

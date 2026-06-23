@@ -31,7 +31,8 @@
   ],
   "thumbnail": "/static/img/system_integrator.png",
   "hero_image": "/static/img/system_integrator_hero.png",
-  "title": "SIerの年収・将来性は？未経験からのロードマップを徹底解説"
+  "title": "SIerの年収・将来性は？未経験からのロードマップを徹底解説",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] System Integrator: SIerの年収・将来性は？未経験からのロードマップを徹底解説

@@ -27,7 +27,8 @@
   ],
   "thumbnail": "/static/img/customer_support_engineer.png",
   "hero_image": "/static/img/customer_support_engineer_hero.png",
-  "title": "CSエンジニアの年収と将来性｜未経験からの転職ロードマップ"
+  "title": "CSエンジニアの年収と将来性｜未経験からの転職ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Customer Support Engineer: CSエンジニアの年収と将来性｜未経験からの転職ロードマップ

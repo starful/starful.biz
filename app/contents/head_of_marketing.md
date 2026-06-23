@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/head_of_marketing.png",
   "hero_image": "/static/img/head_of_marketing_hero.png",
-  "title": "Head of Marketingの年収と将来性｜未経験からのロードマップ"
+  "title": "Head of Marketingの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Head of Marketing: Head of Marketingの年収と将来性｜未経験からのロードマップ

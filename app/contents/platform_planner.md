@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/platform_planner.png",
   "hero_image": "/static/img/platform_planner_hero.png",
-  "title": "プラットフォームプランナーの年収と将来性｜未経験ロードマップ"
+  "title": "プラットフォームプランナーの年収と将来性｜未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Platform Planner: プラットフォームプランナーの年収と将来性｜未経験ロードマップ

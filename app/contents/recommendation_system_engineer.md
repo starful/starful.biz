@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/recommendation_system_engineer.png",
   "hero_image": "/static/img/recommendation_system_engineer_hero.png",
-  "title": "レコメンドエンジニアの年収と将来性｜未経験からのロードマップ"
+  "title": "レコメンドエンジニアの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Recommendation System Engineer: レコメンドエンジニアの面接対策｜圧倒的ボリュームの選考突破バイブル

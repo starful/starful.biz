@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/customer_success_manager.png",
   "hero_image": "/static/img/customer_success_manager_hero.png",
-  "title": "カスタマーサクセス年収・将来性・未経験ロードマップを徹底解説"
+  "title": "カスタマーサクセス年収・将来性・未経験ロードマップを徹底解説",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Customer Success Manager: カスタマーサクセス年収・将来性・未経験ロードマップを徹底解説

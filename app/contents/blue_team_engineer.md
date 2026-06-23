@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/blue_team_engineer.png",
   "hero_image": "/static/img/blue_team_engineer_hero.png",
-  "title": "ブルーチームエンジニア｜年収・将来性と未経験ロードマップ"
+  "title": "ブルーチームエンジニア｜年収・将来性と未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Blue Team Engineer: ブルーチームエンジニア｜年収・将来性と未経験ロードマップ

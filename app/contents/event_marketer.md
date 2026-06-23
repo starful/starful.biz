@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/event_marketer.png",
   "hero_image": "/static/img/event_marketer_hero.png",
-  "title": "イベントマーケターの年収と将来性｜未経験からのロードマップ"
+  "title": "イベントマーケターの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-04-19"
 }
 ---
 # [完全ガイド] Event Marketer: イベントマーケターの年収と将来性｜未経験からのロードマップ

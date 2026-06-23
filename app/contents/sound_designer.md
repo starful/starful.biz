@@ -32,7 +32,8 @@
   ],
   "thumbnail": "/static/img/sound_designer.png",
   "hero_image": "/static/img/sound_designer_hero.png",
-  "title": "未経験からサウンドデザイナーへ！年収・将来性とロードマップ"
+  "title": "未経験からサウンドデザイナーへ！年収・将来性とロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Sound Designer: 未経験からサウンドデザイナーへ！年収・将来性とロードマップ

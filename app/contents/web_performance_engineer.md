@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/web_performance_engineer.png",
   "hero_image": "/static/img/web_performance_engineer_hero.png",
-  "title": "Web Performance Engineerの年収・将来性・未経験ロードマップ"
+  "title": "Web Performance Engineerの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Web Performance Engineer: Web Performance Engineerの年収・将来性・未経験ロードマップ

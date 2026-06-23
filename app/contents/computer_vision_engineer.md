@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/computer_vision_engineer.png",
   "hero_image": "/static/img/computer_vision_engineer_hero.png",
-  "title": "コンピュータビジョンエンジニアの年収・将来性・未経験ロードマップ"
+  "title": "コンピュータビジョンエンジニアの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Computer Vision Engineer: コンピュータビジョンエンジニアの年収・将来性・未経験ロードマップ

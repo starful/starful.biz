@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/content_designer.png",
   "hero_image": "/static/img/content_designer_hero.png",
-  "title": "コンテンツデザイナーの年収と将来性｜未経験からのロードマップ"
+  "title": "コンテンツデザイナーの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Content Designer: コンテンツデザイナーの年収と将来性｜未経験からのロードマップ

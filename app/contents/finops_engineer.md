@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/finops_engineer.png",
   "hero_image": "/static/img/finops_engineer_hero.png",
-  "title": "FinOpsエンジニアの年収と将来性｜未経験からのロードマップ"
+  "title": "FinOpsエンジニアの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] FinOps Engineer: FinOpsエンジニアの年収と将来性｜未経験からのロードマップ

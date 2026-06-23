@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/performance_analyst.png",
   "hero_image": "/static/img/performance_analyst_hero.png",
-  "title": "パフォーマンスアナリストの年収・将来性は？未経験ロードマップ"
+  "title": "パフォーマンスアナリストの年収・将来性は？未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Performance Analyst: パフォーマンスアナリストの面接対策・完全無欠のバイブル

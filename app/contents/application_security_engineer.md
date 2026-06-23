@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/application_security_engineer.png",
   "hero_image": "/static/img/application_security_engineer_hero.png",
-  "title": "AppSec（アプリセキュリティ）面接｜脆弱性対策を短く語る型"
+  "title": "AppSec（アプリセキュリティ）面接｜脆弱性対策を短く語る型",
+  "published_at": "2026-05-12"
 }
 ---
 # [完全ガイド] Application Security Engineer: アプリセキュリティエンジニアの年収・将来性・未経験ガイド

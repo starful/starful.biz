@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/content_planner.png",
   "hero_image": "/static/img/content_planner_hero.png",
-  "title": "未経験からコンテンツプランナー！年収・将来性とロードマップ"
+  "title": "未経験からコンテンツプランナー！年収・将来性とロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Content Planner: 未経験からコンテンツプランナー！年収・将来性とロードマップ

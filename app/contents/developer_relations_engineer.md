@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/developer_relations_engineer.png",
   "hero_image": "/static/img/developer_relations_engineer_hero.png",
-  "title": "DevRel面接対策｜技術広報の成果と志望動機の型"
+  "title": "DevRel面接対策｜技術広報の成果と志望動機の型",
+  "published_at": "2026-05-12"
 }
 ---
 # [完全ガイド] Developer Relations Engineer: DevRelの年収と将来性は？未経験からのロードマップを解説

@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/web_developer.png",
   "hero_image": "/static/img/web_developer_hero.png",
-  "title": "Webデベロッパーの年収と将来性｜未経験からの最短ロードマップ"
+  "title": "Webデベロッパーの年収と将来性｜未経験からの最短ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Web Developer: Webデベロッパーの年収と将来性｜未経験からの最短ロードマップ

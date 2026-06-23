@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/project_manager.png",
   "hero_image": "/static/img/project_manager_hero.png",
-  "title": "プロジェクトマネージャーの年収・将来性・未経験ロードマップ"
+  "title": "プロジェクトマネージャーの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Project Manager: プロジェクトマネージャーの年収・将来性・未経験ロードマップ

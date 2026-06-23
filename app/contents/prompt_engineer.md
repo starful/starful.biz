@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/prompt_engineer.png",
   "hero_image": "/static/img/prompt_engineer_hero.png",
-  "title": "プロンプトエンジニア｜年収とLLM面接で聞かれる論点まとめ"
+  "title": "プロンプトエンジニア｜年収とLLM面接で聞かれる論点まとめ",
+  "published_at": "2026-05-12"
 }
 ---
 # [完全ガイド] Prompt Engineer: プロンプトエンジニアの年収・将来性・未経験からのロードマップ

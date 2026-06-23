@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/social_media_manager.png",
   "hero_image": "/static/img/social_media_manager_hero.png",
-  "title": "SNSマネージャーの年収と将来性｜未経験からのロードマップ"
+  "title": "SNSマネージャーの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Social Media Manager: SNSマネージャーの年収と将来性｜未経験からのロードマップ

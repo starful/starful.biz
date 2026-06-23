@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/game_artist.png",
   "hero_image": "/static/img/game_artist_hero.png",
-  "title": "ゲームアーティストの年収・将来性は？未経験からのロードマップ"
+  "title": "ゲームアーティストの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Game Artist: ゲームアーティストの年収・将来性は？未経験からのロードマップ

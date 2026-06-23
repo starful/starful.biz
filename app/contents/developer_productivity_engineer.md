@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/developer_productivity_engineer.png",
   "hero_image": "/static/img/developer_productivity_engineer_hero.png",
-  "title": "DPEの年収・将来性は？未経験からのロードマップを徹底解説"
+  "title": "DPEの年収・将来性は？未経験からのロードマップを徹底解説",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Developer Productivity Engineer: DPEの年収・将来性は？未経験からのロードマップを徹底解説

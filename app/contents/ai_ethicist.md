@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/ai_ethicist.png",
   "hero_image": "/static/img/ai_ethicist_hero.png",
-  "title": "AI倫理士の年収と将来性｜未経験からの転職ロードマップ"
+  "title": "AI倫理士の年収と将来性｜未経験からの転職ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] AI Ethicist: AI倫理士の年収と将来性｜未経験からの転職ロードマップ

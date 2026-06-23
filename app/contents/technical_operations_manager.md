@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/technical_operations_manager.png",
   "hero_image": "/static/img/technical_operations_manager_hero.png",
-  "title": "Technical Operations Managerの年収・将来性・未経験ロードマップ"
+  "title": "Technical Operations Managerの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Technical Operations Manager: Technical Operations Managerの年収・将来性・未経験ロードマップ

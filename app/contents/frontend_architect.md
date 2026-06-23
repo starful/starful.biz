@@ -31,7 +31,8 @@
   ],
   "thumbnail": "/static/img/frontend_architect.png",
   "hero_image": "/static/img/frontend_architect_hero.png",
-  "title": "フロントエンドアーキテクトの年収・将来性・未経験ロードマップ"
+  "title": "フロントエンドアーキテクトの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Frontend Architect: フロントエンドアーキテクトの年収・将来性・未経験ロードマップ

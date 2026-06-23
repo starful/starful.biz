@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/platform_engineer.png",
   "hero_image": "/static/img/platform_engineer_hero.png",
-  "title": "プラットフォームエンジニアの年収と将来性｜未経験ロードマップ"
+  "title": "プラットフォームエンジニアの年収と将来性｜未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Platform Engineer: プラットフォームエンジニアの年収と将来性｜未経験ロードマップ

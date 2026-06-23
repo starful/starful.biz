@@ -32,7 +32,8 @@
   ],
   "thumbnail": "/static/img/marketing_data_analyst.png",
   "hero_image": "/static/img/marketing_data_analyst_hero.png",
-  "title": "マーケデータアナリストの年収・将来性・未経験ロードマップ"
+  "title": "マーケデータアナリストの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Marketing Data Analyst: マーケデータアナリストの年収・将来性・未経験ロードマップ

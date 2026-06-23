@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/content_strategist.png",
   "hero_image": "/static/img/content_strategist_hero.png",
-  "title": "コンテントストラテジストの年収・将来性・未経験ロードマップ"
+  "title": "コンテントストラテジストの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Content Strategist: コンテントストラテジストの年収・将来性・未経験ロードマップ

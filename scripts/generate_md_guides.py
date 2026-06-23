@@ -7,7 +7,10 @@ import re
 from dotenv import load_dotenv
 import concurrent.futures
 
+from datetime import datetime
+
 from slug_utils import normalize_slug, position_slug
+from md_metadata import read_starful_md, published_date, write_starful_md
 
 # --- .env 파일 로드 ---
 load_dotenv()
@@ -64,7 +67,8 @@ FRONTMATTER_PROMPT = """
   "tags": [{{関連タグを5〜10個}}],
   "thumbnail": "/static/img/{{slug}}.png",
   "hero_image": "/static/img/{{slug}}_hero.png",
-  "title": "{{クリック率を高めるロングテールタイトル（日本語30字以内）}}"
+  "title": "{{クリック率を高めるロングテールタイトル（日本語30字以内）}}",
+  "published_at": "{{YYYY-MM-DD形式の公開日。新規記事は今日の日付}}"
 }}
 ---
 """
@@ -192,16 +196,21 @@ def process_single_position(position):
     frontmatter["hero_image"] = f"/static/img/{slug}_hero.png"
     output_filepath = os.path.join(OUTPUT_DIR, f"{slug}.md")
 
+    existing = read_starful_md(output_filepath)
+    if existing:
+        old_meta, _ = existing
+        frontmatter["published_at"] = published_date(old_meta, output_filepath)
+    else:
+        today = datetime.now().strftime("%Y-%m-%d")
+        frontmatter["published_at"] = str(frontmatter.get("published_at") or today)[:10]
+
     body = generate_body(position, frontmatter)
     if not body:
         print(f"❌ 失敗 (本文): {position}")
         return False
 
-    frontmatter_str = f"---json\n{json.dumps(frontmatter, ensure_ascii=False, indent=2)}\n---\n"
-    
     try:
-        with open(output_filepath, 'w', encoding='utf-8') as f:
-            f.write(frontmatter_str + body)
+        write_starful_md(output_filepath, frontmatter, body)
         print(f"✅ 完了: {position}")
         logging.info(output_filepath)
         return True
@@ -217,10 +226,14 @@ def main():
     df = pd.read_csv(CSV_FILE)
     positions = df['position_name'].tolist()
     
-    # 생성되지 않은 파일 목록 필터링
+    # 생성되지 않은 파일 목록 필터링 (CSV 중복·slug 기준)
     positions_to_generate = []
+    seen_slugs: set[str] = set()
     for pos in positions:
         slug = position_slug(pos)
+        if slug in seen_slugs:
+            continue
+        seen_slugs.add(slug)
         filepath = os.path.join(OUTPUT_DIR, f"{slug}.md")
         if not os.path.exists(filepath):
             positions_to_generate.append(pos)

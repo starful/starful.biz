@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/interaction_designer.png",
   "hero_image": "/static/img/interaction_designer_hero.png",
-  "title": "インタラクションデザイナー｜年収とIxD面接で差がつく答え方"
+  "title": "インタラクションデザイナー｜年収とIxD面接で差がつく答え方",
+  "published_at": "2026-05-12"
 }
 ---
 # [完全ガイド] Interaction Designer: インタラクションデザイナーの年収・将来性｜未経験ロードマップ

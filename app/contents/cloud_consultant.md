@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/cloud_consultant.png",
   "hero_image": "/static/img/cloud_consultant_hero.png",
-  "title": "クラウドコンサルタントの年収と将来性｜未経験からのロードマップ"
+  "title": "クラウドコンサルタントの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Cloud Consultant: クラウドコンサルタントの年収と将来性｜未経験からのロードマップ

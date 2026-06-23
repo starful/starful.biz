@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/game_planner.png",
   "hero_image": "/static/img/game_planner_hero.png",
-  "title": "ゲームプランナーの年収と将来性｜未経験からの攻略ロードマップ"
+  "title": "ゲームプランナーの年収と将来性｜未経験からの攻略ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Game Planner: ゲームプランナーの年収と将来性｜未経験からの攻略ロードマップ

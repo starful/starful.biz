@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/conversion_rate_optimizer.png",
   "hero_image": "/static/img/conversion_rate_optimizer_hero.png",
-  "title": "CROの将来性と年収は？未経験からプロになるロードマップ"
+  "title": "CROの将来性と年収は？未経験からプロになるロードマップ",
+  "published_at": "2026-06-19"
 }
 ---
 # [完全ガイド] Conversion Rate Optimizer (CRO): CROの将来性と年収は？未経験からプロになるロードマップ

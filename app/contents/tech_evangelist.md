@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/tech_evangelist.png",
   "hero_image": "/static/img/tech_evangelist_hero.png",
-  "title": "テックエバンジェリストの年収と将来性｜未経験からのロードマップ"
+  "title": "テックエバンジェリストの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Tech Evangelist: テックエバンジェリストの年収と将来性｜未経験からのロードマップ

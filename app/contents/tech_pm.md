@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/tech_pm.png",
   "hero_image": "/static/img/tech_pm_hero.png",
-  "title": "Tech PMの年収と将来性｜未経験からの完全ロードマップ"
+  "title": "Tech PMの年収と将来性｜未経験からの完全ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Tech PM: Tech PMの年収と将来性｜未経験からの完全ロードマップ

@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/flutter_developer.png",
   "hero_image": "/static/img/flutter_developer_hero.png",
-  "title": "Flutterエンジニアの年収と将来性｜未経験からのロードマップ"
+  "title": "Flutterエンジニアの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-05-01"
 }
 ---
 # [完全ガイド] Flutter Developer: Flutterエンジニアの年収と将来性｜未経験からのロードマップ

@@ -31,7 +31,8 @@
   ],
   "thumbnail": "/static/img/search_ads_specialist.png",
   "hero_image": "/static/img/search_ads_specialist_hero.png",
-  "title": "Search Ads Specialistの年収・将来性・未経験ロードマップ"
+  "title": "Search Ads Specialistの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Search Ads Specialist: Search Ads Specialistの年収・将来性・未経験ロードマップ

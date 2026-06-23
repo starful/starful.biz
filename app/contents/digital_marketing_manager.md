@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/digital_marketing_manager.png",
   "hero_image": "/static/img/digital_marketing_manager_hero.png",
-  "title": "デジタルマーケマネージャーの年収・将来性と未経験ロードマップ"
+  "title": "デジタルマーケマネージャーの年収・将来性と未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Digital Marketing Manager: デジタルマーケマネージャーの年収・将来性と未経験ロードマップ

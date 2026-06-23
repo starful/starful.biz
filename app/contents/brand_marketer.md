@@ -31,7 +31,8 @@
   ],
   "thumbnail": "/static/img/brand_marketer.png",
   "hero_image": "/static/img/brand_marketer_hero.png",
-  "title": "ブランドマーケターの年収と将来性｜未経験からのロードマップ"
+  "title": "ブランドマーケターの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Brand Marketer: ブランドマーケターの年収と将来性｜未経験からのロードマップ

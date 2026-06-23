@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/data_modeler.png",
   "hero_image": "/static/img/data_modeler_hero.png",
-  "title": "データモデラーの年収・将来性は？未経験からのロードマップ"
+  "title": "データモデラーの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Data Modeler: データモデラーの年収・将来性は？未経験からのロードマップ

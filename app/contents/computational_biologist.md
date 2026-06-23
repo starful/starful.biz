@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/computational_biologist.png",
   "hero_image": "/static/img/computational_biologist_hero.png",
-  "title": "コンピュテーショナルバイオロジストの年収・将来性・未経験ガイド"
+  "title": "コンピュテーショナルバイオロジストの年収・将来性・未経験ガイド",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Computational Biologist: コンピュテーショナルバイオロジストの年収・将来性・未経験ガイド

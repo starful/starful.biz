@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/director_of_product_management.png",
   "hero_image": "/static/img/director_of_product_management_hero.png",
-  "title": "Director of PMの年収・将来性・未経験ロードマップ"
+  "title": "Director of PMの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Director of Product Management: Director of PMの年収・将来性・未経験ロードマップ

@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/game_qa_tester.png",
   "hero_image": "/static/img/game_qa_tester_hero.png",
-  "title": "ゲームQAテスター未経験ロードマップ！年収と将来性を解説"
+  "title": "ゲームQAテスター未経験ロードマップ！年収と将来性を解説",
+  "published_at": "2026-06-23"
 }
 ---
 # [完全ガイド] Game QA Tester: ゲームQAテスター未経験ロードマップ！年収と将来性を解説

@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/web_master.png",
   "hero_image": "/static/img/web_master_hero.png",
-  "title": "Webマスターの年収・将来性は？未経験からのロードマップ"
+  "title": "Webマスターの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Web Master: Webマスターの年収・将来性は？未経験からのロードマップ

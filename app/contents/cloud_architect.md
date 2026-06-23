@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/cloud_architect.png",
   "hero_image": "/static/img/cloud_architect_hero.png",
-  "title": "クラウドアーキテクトの年収・将来性！未経験からのロードマップ"
+  "title": "クラウドアーキテクトの年収・将来性！未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Cloud Architect: クラウドアーキテクトの年収・将来性！未経験からのロードマップ

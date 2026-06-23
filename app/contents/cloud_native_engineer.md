@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/cloud_native_engineer.png",
   "hero_image": "/static/img/cloud_native_engineer_hero.png",
-  "title": "年収1000万も！クラウドネイティブエンジニア将来性とロードマップ"
+  "title": "年収1000万も！クラウドネイティブエンジニア将来性とロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Cloud Native Engineer: 年収1000万も！クラウドネイティブエンジニア将来性とロードマップ

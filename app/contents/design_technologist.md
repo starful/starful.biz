@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/design_technologist.png",
   "hero_image": "/static/img/design_technologist_hero.png",
-  "title": "デザインテクノロジストの年収・将来性！未経験ロードマップ"
+  "title": "デザインテクノロジストの年収・将来性！未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Design Technologist: デザインテクノロジストの年収・将来性！未経験ロードマップ

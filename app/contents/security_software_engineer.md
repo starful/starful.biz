@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/security_software_engineer.png",
   "hero_image": "/static/img/security_software_engineer_hero.png",
-  "title": "セキュリティエンジニアの年収と将来性｜未経験からのロードマップ"
+  "title": "セキュリティエンジニアの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Security Software Engineer: セキュリティエンジニアの年収と将来性｜未経験からのロードマップ

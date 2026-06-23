@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/brand_designer.png",
   "hero_image": "/static/img/brand_designer_hero.png",
-  "title": "ブランドデザイナーの年収と将来性｜未経験からのロードマップ"
+  "title": "ブランドデザイナーの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Brand Designer: ブランドデザイナーの年収と将来性｜未経験からのロードマップ

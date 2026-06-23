@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/erp_developer.png",
   "hero_image": "/static/img/erp_developer_hero.png",
-  "title": "ERP開発者の年収・将来性・未経験からのロードマップ徹底ガイド"
+  "title": "ERP開発者の年収・将来性・未経験からのロードマップ徹底ガイド",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] ERP Developer: ERP開発者の年収・将来性・未経験からのロードマップ徹底ガイド

@@ -31,7 +31,8 @@
   ],
   "thumbnail": "/static/img/game_data_analyst.png",
   "hero_image": "/static/img/game_data_analyst_hero.png",
-  "title": "ゲームデータアナリストの年収・将来性・未経験ロードマップ"
+  "title": "ゲームデータアナリストの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Game Data Analyst: ゲームデータアナリストの年収・将来性・未経験ロードマップ

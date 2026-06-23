@@ -27,7 +27,8 @@
   ],
   "thumbnail": "/static/img/scrum_master.png",
   "hero_image": "/static/img/scrum_master_hero.png",
-  "title": "スクラムマスターの年収と将来性｜未経験からのロードマップ"
+  "title": "スクラムマスターの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Scrum Master: スクラムマスターの年収と将来性｜未経験からのロードマップ

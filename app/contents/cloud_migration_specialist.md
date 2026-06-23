@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/cloud_migration_specialist.png",
   "hero_image": "/static/img/cloud_migration_specialist_hero.png",
-  "title": "クラウド移行・マイグレ面接｜設計判断を短時間で説明するコツ"
+  "title": "クラウド移行・マイグレ面接｜設計判断を短時間で説明するコツ",
+  "published_at": "2026-04-28"
 }
 ---
 # [完全ガイド] Cloud Migration Specialist: クラウド移行職の年収・将来性は？未経験からのロードマップ

@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/bi_engineer.png",
   "hero_image": "/static/img/bi_engineer_hero.png",
-  "title": "BIエンジニアの年収と将来性｜未経験からの完全ロードマップ"
+  "title": "BIエンジニアの年収と将来性｜未経験からの完全ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] BI Engineer: BIエンジニアの面接対策｜採用担当が教える合格への全技術

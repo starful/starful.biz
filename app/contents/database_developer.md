@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/database_developer.png",
   "hero_image": "/static/img/database_developer_hero.png",
-  "title": "データベース開発者の年収・将来性・未経験からのロードマップ"
+  "title": "データベース開発者の年収・将来性・未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Database Developer: データベース開発者の年収・将来性・未経験からのロードマップ

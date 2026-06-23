@@ -32,7 +32,8 @@
   ],
   "thumbnail": "/static/img/mobile_developer.png",
   "hero_image": "/static/img/mobile_developer_hero.png",
-  "title": "モバイル開発者の年収と将来性！未経験から目指すロードマップ"
+  "title": "モバイル開発者の年収と将来性！未経験から目指すロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Mobile Developer: モバイル開発者の年収と将来性！未経験から目指すロードマップ

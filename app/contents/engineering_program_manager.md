@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/engineering_program_manager.png",
   "hero_image": "/static/img/engineering_program_manager_hero.png",
-  "title": "EPM(技術PM)の年収・将来性と未経験ロードマップ"
+  "title": "EPM(技術PM)の年収・将来性と未経験ロードマップ",
+  "published_at": "2026-04-19"
 }
 ---
 # [完全ガイド] Engineering Program Manager: EPM(技術PM)の年収・将来性と未経験ロードマップ

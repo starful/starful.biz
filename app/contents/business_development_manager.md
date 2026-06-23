@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/business_development_manager.png",
   "hero_image": "/static/img/business_development_manager_hero.png",
-  "title": "BDMの年収と将来性は？未経験からの転職ロードマップを解説"
+  "title": "BDMの年収と将来性は？未経験からの転職ロードマップを解説",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Business Development Manager: BDMの年収と将来性は？未経験からの転職ロードマップを解説

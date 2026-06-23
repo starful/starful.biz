@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/cloud_finops_manager.png",
   "hero_image": "/static/img/cloud_finops_manager_hero.png",
-  "title": "Cloud FinOps Managerの年収・将来性・未経験ロードマップ"
+  "title": "Cloud FinOps Managerの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Cloud FinOps Manager: Cloud FinOps Managerの年収・将来性・未経験ロードマップ

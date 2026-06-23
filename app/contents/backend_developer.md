@@ -31,7 +31,8 @@
   ],
   "thumbnail": "/static/img/backend_developer.png",
   "hero_image": "/static/img/backend_developer_hero.png",
-  "title": "バックエンドエンジニアの年収と将来性｜未経験からのロードマップ"
+  "title": "バックエンドエンジニアの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Backend Developer: バックエンドエンジニアの年収と将来性｜未経験からのロードマップ

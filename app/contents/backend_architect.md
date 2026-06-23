@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/backend_architect.png",
   "hero_image": "/static/img/backend_architect_hero.png",
-  "title": "バックエンドアーキテクト：年収・将来性・未経験ロードマップ"
+  "title": "バックエンドアーキテクト：年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Backend Architect: バックエンドアーキテクト：年収・将来性・未経験ロードマップ

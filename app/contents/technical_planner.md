@@ -26,7 +26,8 @@
   ],
   "thumbnail": "/static/img/technical_planner.png",
   "hero_image": "/static/img/technical_planner_hero.png",
-  "title": "テクニカルプランナーの年収・将来性と未経験からのロードマップ"
+  "title": "テクニカルプランナーの年収・将来性と未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Technical Planner: テクニカルプランナーの年収・将来性と未経験からのロードマップ

@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/data_quality_analyst.png",
   "hero_image": "/static/img/data_quality_analyst_hero.png",
-  "title": "データ品質アナリストの年収・将来性は？未経験ロードマップ"
+  "title": "データ品質アナリストの年収・将来性は？未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Data Quality Analyst: データ品質アナリストの年収・将来性は？未経験ロードマップ

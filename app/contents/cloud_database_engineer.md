@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/cloud_database_engineer.png",
   "hero_image": "/static/img/cloud_database_engineer_hero.png",
-  "title": "クラウドDBエンジニアの年収と将来性｜未経験からのロードマップ"
+  "title": "クラウドDBエンジニアの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Cloud Database Engineer: クラウドDBエンジニアの年収と将来性｜未経験からのロードマップ

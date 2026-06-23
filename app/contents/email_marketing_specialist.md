@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/email_marketing_specialist.png",
   "hero_image": "/static/img/email_marketing_specialist_hero.png",
-  "title": "メールマーケの年収・将来性は？未経験からのロードマップを解説"
+  "title": "メールマーケの年収・将来性は？未経験からのロードマップを解説",
+  "published_at": "2026-04-19"
 }
 ---
 # [完全ガイド] Email Marketing Specialist: メールマーケの年収・将来性は？未経験からのロードマップを解説

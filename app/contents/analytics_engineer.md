@@ -31,7 +31,8 @@
   ],
   "thumbnail": "/static/img/analytics_engineer.png",
   "hero_image": "/static/img/analytics_engineer_hero.png",
-  "title": "アナリティクスエンジニア｜データ基盤面接の頻出論点"
+  "title": "アナリティクスエンジニア｜データ基盤面接の頻出論点",
+  "published_at": "2026-05-12"
 }
 ---
 # [完全ガイド] Analytics Engineer: アナリティクスエンジニアの年収・将来性・未経験ロードマップ

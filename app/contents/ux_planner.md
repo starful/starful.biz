@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/ux_planner.png",
   "hero_image": "/static/img/ux_planner_hero.png",
-  "title": "未経験からUXプランナーへ！年収・将来性と合格ロードマップ"
+  "title": "未経験からUXプランナーへ！年収・将来性と合格ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] UX Planner: 未経験からUXプランナーへ！年収・将来性と合格ロードマップ

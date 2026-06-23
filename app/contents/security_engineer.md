@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/security_engineer.png",
   "hero_image": "/static/img/security_engineer_hero.png",
-  "title": "セキュリティエンジニア面接｜防御設計と実務トリアージの深掘り対策"
+  "title": "セキュリティエンジニア面接｜防御設計と実務トリアージの深掘り対策",
+  "published_at": "2026-04-28"
 }
 ---
 # [完全ガイド] Security Engineer: セキュリティエンジニアの年収・将来性・未経験ロードマップ

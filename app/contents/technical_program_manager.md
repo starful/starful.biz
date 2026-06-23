@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/technical_program_manager.png",
   "hero_image": "/static/img/technical_program_manager_hero.png",
-  "title": "TPMの年収・将来性は？未経験からのロードマップを公開"
+  "title": "TPMの年収・将来性は？未経験からのロードマップを公開",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Technical Program Manager: TPMの年収・将来性は？未経験からのロードマップを公開

@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/electrical_engineer.png",
   "hero_image": "/static/img/electrical_engineer_hero.png",
-  "title": "電気エンジニアの年収・将来性は？未経験からのロードマップ"
+  "title": "電気エンジニアの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-04-19"
 }
 ---
 # [完全ガイド] Electrical Engineer: 電気エンジニアの採用面接・完全無欠の対策バイブル

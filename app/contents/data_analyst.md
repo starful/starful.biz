@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/data_analyst.png",
   "hero_image": "/static/img/data_analyst_hero.png",
-  "title": "データアナリスト面接｜SQL・施策提案で聞かれること一気読み"
+  "title": "データアナリスト面接｜SQL・施策提案で聞かれること一気読み",
+  "published_at": "2026-04-28"
 }
 ---
 # [完全ガイド] Data Analyst: データアナリストの年収と将来性｜未経験からの完全ロードマップ

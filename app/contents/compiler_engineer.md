@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/compiler_engineer.png",
   "hero_image": "/static/img/compiler_engineer_hero.png",
-  "title": "コンパイラエンジニアの年収・将来性・未経験からのロードマップ"
+  "title": "コンパイラエンジニアの年収・将来性・未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Compiler Engineer: コンパイラエンジニアの年収・将来性・未経験からのロードマップ

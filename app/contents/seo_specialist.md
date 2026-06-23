@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/seo_specialist.png",
   "hero_image": "/static/img/seo_specialist_hero.png",
-  "title": "SEOスペシャリストの年収・将来性は？未経験ロードマップを解説"
+  "title": "SEOスペシャリストの年収・将来性は？未経験ロードマップを解説",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] SEO Specialist: SEOスペシャリストの面接対策・完全無欠のバイブル

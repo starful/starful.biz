@@ -27,7 +27,8 @@
   ],
   "thumbnail": "/static/img/desktop_application_developer.png",
   "hero_image": "/static/img/desktop_application_developer_hero.png",
-  "title": "デスクトップアプリ開発の年収・将来性・未経験ロードマップ"
+  "title": "デスクトップアプリ開発の年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Desktop Application Developer: デスクトップアプリ開発の年収・将来性・未経験ロードマップ

@@ -27,7 +27,8 @@
   ],
   "thumbnail": "/static/img/analytics_manager.png",
   "hero_image": "/static/img/analytics_manager_hero.png",
-  "title": "アナリティクスマネージャーの年収・将来性・未経験ロードマップ"
+  "title": "アナリティクスマネージャーの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Analytics Manager: アナリティクスマネージャーの年収・将来性・未経験ロードマップ

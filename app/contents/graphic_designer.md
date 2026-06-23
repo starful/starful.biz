@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/graphic_designer.png",
   "hero_image": "/static/img/graphic_designer_hero.png",
-  "title": "グラフィックデザイナー面接｜ポートフォリオ深掘りに落ちない話の型"
+  "title": "グラフィックデザイナー面接｜ポートフォリオ深掘りに落ちない話の型",
+  "published_at": "2026-04-28"
 }
 ---
 # [完全ガイド] Graphic Designer: グラフィックデザイナーの年収・将来性は？未経験からのロードマップ

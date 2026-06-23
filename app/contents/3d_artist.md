@@ -30,7 +30,8 @@
   ],
   "thumbnail": "/static/img/3d_artist.png",
   "hero_image": "/static/img/3d_artist_hero.png",
-  "title": "3Dアーティストの年収と将来性は？未経験からのロードマップ"
+  "title": "3Dアーティストの年収と将来性は？未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] 3D Artist: 3Dアーティストの採用面接を突破する完全無欠のバイブル

@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/database_administrator.png",
   "hero_image": "/static/img/database_administrator_hero.png",
-  "title": "未経験からDBAへ！年収・将来性と合格ロードマップ"
+  "title": "未経験からDBAへ！年収・将来性と合格ロードマップ",
+  "published_at": "2026-06-23"
 }
 ---
 # [完全ガイド] DBA: 未経験からDBAへ！年収・将来性と合格ロードマップ

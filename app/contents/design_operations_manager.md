@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/design_operations_manager.png",
   "hero_image": "/static/img/design_operations_manager_hero.png",
-  "title": "DesignOpsの年収と将来性！未経験からのロードマップ"
+  "title": "DesignOpsの年収と将来性！未経験からのロードマップ",
+  "published_at": "2026-06-23"
 }
 ---
 # [完全ガイド] Design Operations Manager (DesignOps): DesignOpsの年収と将来性！未経験からのロードマップ

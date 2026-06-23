@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/data_curator.png",
   "hero_image": "/static/img/data_curator_hero.png",
-  "title": "データキュレーターの年収と将来性｜未経験からのロードマップ"
+  "title": "データキュレーターの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Data Curator: データキュレーターの面接対策｜圧倒的ボリュームで徹底解説

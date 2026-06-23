@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/application_architect.png",
   "hero_image": "/static/img/application_architect_hero.png",
-  "title": "アプリケーションアーキテクト年収・将来性・未経験ロードマップ"
+  "title": "アプリケーションアーキテクト年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Application Architect: アプリケーションアーキテクト年収・将来性・未経験ロードマップ

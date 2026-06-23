@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/enterprise_architect.png",
   "hero_image": "/static/img/enterprise_architect_hero.png",
-  "title": "EAの年収・将来性は？未経験からのロードマップ"
+  "title": "EAの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-04-19"
 }
 ---
 # [完全ガイド] Enterprise Architect: EAの年収・将来性は？未経験からのロードマップ

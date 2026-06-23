@@ -31,7 +31,8 @@
   ],
   "thumbnail": "/static/img/growth_manager.png",
   "hero_image": "/static/img/growth_manager_hero.png",
-  "title": "グロースマネージャーの年収・将来性は？未経験からのロードマップ"
+  "title": "グロースマネージャーの年収・将来性は？未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Growth Manager: グロースマネージャーの年収・将来性は？未経験からのロードマップ

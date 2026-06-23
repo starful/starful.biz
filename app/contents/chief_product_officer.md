@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/chief_product_officer.png",
   "hero_image": "/static/img/chief_product_officer_hero.png",
-  "title": "CPOの年収・将来性は？未経験からのロードマップを徹底解説"
+  "title": "CPOの年収・将来性は？未経験からのロードマップを徹底解説",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Chief Product Officer: CPOの年収・将来性は？未経験からのロードマップを徹底解説

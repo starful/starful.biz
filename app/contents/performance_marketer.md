@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/performance_marketer.png",
   "hero_image": "/static/img/performance_marketer_hero.png",
-  "title": "パフォーマンスマーケターの年収と将来性！未経験からのロードマップ"
+  "title": "パフォーマンスマーケターの年収と将来性！未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Performance Marketer: パフォーマンスマーケターの年収と将来性！未経験からのロードマップ

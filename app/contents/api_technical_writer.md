@@ -28,7 +28,8 @@
   ],
   "thumbnail": "/static/img/api_technical_writer.png",
   "hero_image": "/static/img/api_technical_writer_hero.png",
-  "title": "APIテクニカルライターの年収・将来性・未経験ロードマップ"
+  "title": "APIテクニカルライターの年収・将来性・未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] API Technical Writer: APIテクニカルライターの年収・将来性・未経験ロードマップ

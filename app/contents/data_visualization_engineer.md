@@ -31,7 +31,8 @@
   ],
   "thumbnail": "/static/img/data_visualization_engineer.png",
   "hero_image": "/static/img/data_visualization_engineer_hero.png",
-  "title": "データビジュアライゼーションエンジニア：年収・将来性・手順"
+  "title": "データビジュアライゼーションエンジニア：年収・将来性・手順",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Data Visualization Engineer: データビジュアライゼーションエンジニア：年収・将来性・手順

@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/animations_designer.png",
   "hero_image": "/static/img/animations_designer_hero.png",
-  "title": "アニメーションデザイナーの年収・将来性は？未経験ロードマップ"
+  "title": "アニメーションデザイナーの年収・将来性は？未経験ロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] Animations Designer: アニメーションデザイナーの年収・将来性は？未経験ロードマップ

@@ -29,7 +29,8 @@
   ],
   "thumbnail": "/static/img/bi_analyst.png",
   "hero_image": "/static/img/bi_analyst_hero.png",
-  "title": "BIアナリストの年収と将来性｜未経験からのロードマップ"
+  "title": "BIアナリストの年収と将来性｜未経験からのロードマップ",
+  "published_at": "2026-03-22"
 }
 ---
 # [完全ガイド] BI Analyst: BIアナリストの年収と将来性｜未経験からのロードマップ
