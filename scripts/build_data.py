@@ -69,7 +69,7 @@ def main():
             "link": f"/career/{job_id}",
         })
 
-    jobs.sort(key=lambda x: x['published'], reverse=True)
+    jobs.sort(key=lambda x: (x['published'], x['id']), reverse=True)
 
     final_data = {
         "last_updated": datetime.now().strftime("%Y.%m.%d"),

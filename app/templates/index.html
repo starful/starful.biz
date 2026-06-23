@@ -48,8 +48,9 @@
         </h3>
         <div style="display: flex; flex-wrap: wrap; gap: 10px;">
             {% for job in featured_jobs[:12] %}
-            <a href="/career/{{ job.id }}" style="display: inline-block; padding: 10px 16px; background: #f0f7ff; border: 1px solid #cce4ff; border-radius: 999px; text-decoration: none; color: var(--accent-color, #007aff); font-weight: 700; font-size: 0.9rem;">
+            <a href="/career/{{ job.id }}" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; background: #f0f7ff; border: 1px solid #cce4ff; border-radius: 999px; text-decoration: none; color: var(--accent-color, #007aff); font-weight: 700; font-size: 0.9rem;">
                 {{ job.title | truncate(28, True, '…') }}
+                {% if job.is_new %}<span class="badge-new">New</span>{% endif %}
             </a>
             {% endfor %}
         </div>

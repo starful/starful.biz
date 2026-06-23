@@ -413,6 +413,7 @@ async def home(request: Request):
     all_jobs = JOB_DATA.get('jobs', [])
     for cat in category_list:
         items = enrich_items([j for j in all_jobs if j.get('category', '').lower() == cat['slug'].lower()])
+        items.sort(key=lambda x: (x.get('published', ''), x.get('id', '')), reverse=True)
         if items:
             cat_copy = cat.copy()
             cat_copy['job_items'] = items
