@@ -66,13 +66,27 @@ _LOCAL_IMG_NAMES = frozenset(
 
 def career_img_url(slug: str) -> str:
     """커리어 카드 썸네일 — GCS 직접 참조 (okadmin 업로드 즉시 반영)."""
-    return f"{GCS_IMG_BASE}/{slug}.png"
+    _ensure_jobs_cache()
+    published = ""
+    for job in JOB_DATA.get("jobs", []):
+        if job.get("id") == slug:
+            published = str(job.get("published") or "")
+            break
+    base = f"{GCS_IMG_BASE}/{slug}.png"
+    v = str(published).strip()[:10]
+    if len(v) >= 8:
+        return f"{base}?v={v}"
+    return base
 
 
-def gcs_or_static_img(filename: str) -> str:
+def gcs_or_static_img(filename: str, cache_v: str | None = None) -> str:
     if filename in _LOCAL_IMG_NAMES or filename.startswith(("favicon", "apple-touch")):
         return f"/static/img/{filename}"
-    return f"{GCS_IMG_BASE}/{filename}"
+    url = f"{GCS_IMG_BASE}/{filename}"
+    v = str(cache_v or "").strip()[:10]
+    if len(v) >= 8:
+        return f"{url}?v={v}"
+    return url
 
 app = FastAPI()
 
@@ -178,14 +192,35 @@ async def starlette_http_exception_handler(request: Request, exc: StarletteHTTPE
 
 # --- 2. 데이터 캐시 초기화 ---
 JOB_DATA = {"jobs": [], "last_updated": date.today().isoformat(), "total_count": 0}
+_JOB_CACHE_MTIME: float = 0.0
+
+
+def _ensure_jobs_cache() -> None:
+    global JOB_DATA, _JOB_CACHE_MTIME
+    if not os.path.exists(DATA_FILE):
+        return
+    try:
+        mtime = os.path.getmtime(DATA_FILE)
+    except OSError:
+        return
+    if mtime <= _JOB_CACHE_MTIME:
+        return
+    try:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            JOB_DATA = json.load(f)
+        _JOB_CACHE_MTIME = mtime
+    except Exception as e:
+        print(f"❌ [Error] Failed to reload job JSON: {e}")
+
 
 @app.on_event("startup")
 async def startup_event():
-    global JOB_DATA
+    global JOB_DATA, _JOB_CACHE_MTIME
     if os.path.exists(DATA_FILE):
         try:
             with open(DATA_FILE, 'r', encoding='utf-8') as f:
                 JOB_DATA = json.load(f)
+                _JOB_CACHE_MTIME = os.path.getmtime(DATA_FILE)
                 print(f"✅ [Success] Loaded {JOB_DATA.get('total_count', 0)} jobs.")
         except Exception as e:
             print(f"❌ [Error] Failed to load JSON: {e}")
@@ -396,6 +431,7 @@ async def favicon_root():
 
 @app.get("/")
 async def home(request: Request):
+    _ensure_jobs_cache()
     category_list = [
         {"slug": "engineering", "title": "エンジニアリング"},
         {"slug": "ai-data", "title": "AI・データ"},
@@ -434,6 +470,7 @@ async def home(request: Request):
 
 @app.get("/career/{item_id}")
 async def career_detail(request: Request, item_id: str):
+    _ensure_jobs_cache()
     resolved_id = resolve_career_id(item_id)
     if resolved_id != item_id:
         target = canonical_career_url(BASE_URL, resolved_id)
@@ -446,6 +483,13 @@ async def career_detail(request: Request, item_id: str):
         raise HTTPException(status_code=404)
     meta, body = parse_starful_md(filepath)
     content_html = markdown.markdown(body, extensions=['tables'])
+    cache_v = str(meta.get("published_at") or "")[:10]
+    if len(cache_v) >= 8:
+        content_html = re.sub(
+            r'(/static/img/[^"\'?\s>]+)',
+            lambda m: m.group(1) if "?v=" in m.group(1) else f"{m.group(1)}?v={cache_v}",
+            content_html,
+        )
     canonical = canonical_career_url(BASE_URL, resolved_id)
     title = meta.get("title", "面接ガイド")
     ctx = share_context(BASE_URL, resolved_id, title)
@@ -528,6 +572,7 @@ async def practice_page(request: Request):
 
 @app.get("/search")
 async def search(request: Request, q: str = ""):
+    _ensure_jobs_cache()
     terms = expand_query_terms(q)
     if not terms:
         results = []
