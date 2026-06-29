@@ -11,6 +11,7 @@ from datetime import datetime
 
 from slug_utils import normalize_slug, position_slug
 from md_metadata import read_starful_md, published_date, write_starful_md
+from topic_queue_csv import resolve as resolve_queue_csv
 
 # --- .env 파일 로드 ---
 load_dotenv()
@@ -25,6 +26,10 @@ MODEL_NAME = "gemini-flash-latest"
 OUTPUT_DIR = "app/contents/"
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSV_FILE = os.path.join(BASE_DIR, "scripts", "data", "positions.csv")
+
+
+def _positions_csv_path() -> str:
+    return resolve_queue_csv("positions", CSV_FILE)
 LOG_FILE = os.path.join(BASE_DIR, "scripts", "log", "generation_log.txt")
 
 # 🎯 한 번 실행 시 최대 생성 건수 (Work Hub CONTENT_LIMIT, 0 이하 → 10)
@@ -219,11 +224,12 @@ def process_single_position(position):
         return False
 
 def main():
-    if not os.path.exists(CSV_FILE):
-        print(f"エラー: CSVファイル '{CSV_FILE}' が見つかりません。")
+    csv_path = _positions_csv_path()
+    if not os.path.exists(csv_path):
+        print(f"エラー: CSVファイル '{csv_path}' が見つかりません。")
         return
 
-    df = pd.read_csv(CSV_FILE)
+    df = pd.read_csv(csv_path)
     positions = df['position_name'].tolist()
     
     # 생성되지 않은 파일 목록 필터링 (CSV 중복·slug 기준)
