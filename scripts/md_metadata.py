@@ -22,6 +22,8 @@ def parse_starful_md(raw: str) -> tuple[dict[str, Any], str] | None:
 
 
 def read_starful_md(filepath: str) -> tuple[dict[str, Any], str] | None:
+    if not os.path.isfile(filepath):
+        return None
     with open(filepath, encoding="utf-8") as f:
         return parse_starful_md(f.read())
 

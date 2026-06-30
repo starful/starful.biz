@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026.06.23",
-  "total_count": 123,
+  "last_updated": "2026.07.01",
+  "total_count": 127,
   "jobs": [
     {
       "id": "game_qa_tester",
@@ -21,33 +21,31 @@
     },
     {
       "id": "design_operations_manager",
-      "title": "DesignOpsの年収と将来性！未経験からのロードマップ",
+      "title": "DesignOpsの年収・将来性と未経験ロードマップ",
       "category": "design",
-      "meta_description": "デザイン組織の生産性を最大化するDesignOps。調整業務の多さというリアルな壁を乗り越え、デザイナーが輝く環境を創るやりがいは格別です。年収や将来性、未経験からのロードマップを徹底解説します。",
+      "meta_description": "デザイン組織の生産性を最大化するDesignOps。そのリアルな業務とやりがい、気になる年収や将来性、未経験からプロフェッショナルを目指すための具体的なキャリアロードマップを徹底解説します！",
       "tags": [
         "DesignOps",
-        "デザイン組織",
-        "キャリアパス",
         "デザインマネジメント",
-        "UIUXデザイン",
-        "プロダクト開発"
+        "キャリアパス",
+        "UIUX",
+        "組織開発"
       ],
       "published": "2026-06-23",
       "link": "/career/design_operations_manager"
     },
     {
       "id": "database_administrator",
-      "title": "未経験からDBAへ！年収・将来性と合格ロードマップ",
+      "title": "DBAの将来性と年収は？未経験から目指すロードマップ",
       "category": "cloud-infra",
-      "meta_description": "企業の命運を握るデータを守るDBA（データベース管理者）。未経験からの目指し方、気になる年収や将来性、ロードマップを徹底解説！責任は重大ですが、それ以上のやりがいと高い市場価値が得られる職種です。",
+      "meta_description": "データの守護神であるDBA（データベース管理者）。障害対応のプレッシャーはありますが、企業の根幹を支えるやりがいは絶大です。未経験からのロードマップ、気になる年収や将来性までリアルな現実を徹底解説！",
       "tags": [
         "DBA",
-        "データベース",
-        "キャリアパス",
-        "インフラ",
-        "資格",
-        "未経験",
-        "年収"
+        "Database",
+        "CloudInfra",
+        "CareerPath",
+        "SQL",
+        "Oracle"
       ],
       "published": "2026-06-23",
       "link": "/career/database_administrator"
@@ -71,16 +69,16 @@
     },
     {
       "id": "cpp_developer",
-      "title": "C++エンジニアの年収と将来性！未経験からのロードマップ",
+      "title": "C++開発者の年収と将来性は？未経験からのロードマップ",
       "category": "engineering",
-      "meta_description": "C++開発者のリアルな現実とやりがいを徹底解説！高い年収を狙える理由や将来性、未経験からプロになるためのロードマップまで紹介します。ハードウェア制御からゲーム開発まで、市場価値の高いスキルを身につけよう。",
+      "meta_description": "難解とされるC++開発者のリアルな現実とは？高年収を狙える理由や将来性、未経験からプロになるためのロードマップを徹底解説。ゲームや組み込み、金融システムで活躍するエンジニアのやりがいと魅力を紹介します。",
       "tags": [
         "C++",
-        "バックエンドエンジニア",
-        "組み込みエンジニア",
-        "ゲーム開発",
+        "プログラミング言語",
         "キャリアパス",
-        "エンジニア転職"
+        "エンジニア転職",
+        "ゲーム開発",
+        "組み込みシステム"
       ],
       "published": "2026-06-23",
       "link": "/career/cpp_developer"
@@ -103,16 +101,16 @@
     },
     {
       "id": "conversion_rate_optimizer",
-      "title": "CROの将来性と年収は？未経験からプロになるロードマップ",
+      "title": "CROの年収と将来性は？未経験から活躍するロードマップ",
       "category": "marketing",
-      "meta_description": "データと心理学で売上を最大化するCRO（コンバージョン率最適化）。泥臭い分析の先にある劇的な成果がやりがいです。未経験からの挑戦方法や将来性、リアルな年収水準まで徹底解説します！",
+      "meta_description": "データからユーザー心理を読み解き、Webサイトの成果を最大化するCRO（コンバージョン率最適化）。泥臭い分析の先にある、数字が跳ね上がった瞬間の快感と、市場価値が高まり続けるキャリアの魅力を徹底解説！",
       "tags": [
         "CRO",
         "Webマーケティング",
         "データ分析",
-        "LPO",
-        "キャリアアップ",
-        "UIUX改善"
+        "キャリアパス",
+        "ABテスト",
+        "LPO"
       ],
       "published": "2026-06-19",
       "link": "/career/conversion_rate_optimizer"
@@ -2017,6 +2015,69 @@
       ],
       "published": "2026-03-22",
       "link": "/career/3d_artist"
+    },
+    {
+      "id": "mobile_engineer",
+      "title": "モバイルエンジニアの年収と将来性！未経験ロードマップ公開",
+      "category": "engineering",
+      "meta_description": "スマホ需要で注目のモバイルエンジニア。開発の難しさと楽しさのリアルな現実、気になる年収や将来性を解説します。未経験から活躍するための具体的な学習ロードマップも大公開！",
+      "tags": [
+        "iOS",
+        "Android",
+        "Swift",
+        "Kotlin",
+        "Flutter",
+        "キャリアパス",
+        "アプリ開発"
+      ],
+      "published": "2024-10-24",
+      "link": "/career/mobile_engineer"
+    },
+    {
+      "id": "solutions_architect",
+      "title": "ソリューションアーキテクトの年収・将来性・未経験ロードマップ",
+      "category": "cloud-infra",
+      "meta_description": "企業の課題をクラウドで解決するソリューションアーキテクト。高い専門性が求められる厳しさの反面、高年収と圧倒的な将来性が魅力です。未経験から目指すための具体的なキャリアロードマップを徹底解説！",
+      "tags": [
+        "AWS",
+        "Azure",
+        "クラウドインフラ",
+        "キャリアパス",
+        "ITコンサルタント",
+        "システム設計"
+      ],
+      "published": "2024-05-20",
+      "link": "/career/solutions_architect"
+    },
+    {
+      "id": "ios_engineer",
+      "title": "iOSエンジニアの年収と将来性！未経験からのロードマップ",
+      "category": "engineering",
+      "meta_description": "Swiftでのアプリ開発を担うiOSエンジニア。高い需要と高年収が魅力の一方、OSアップデートへの迅速な対応など技術追従の厳しさも。未経験からプロになるためのロードマップと将来性をリアルに解説します！",
+      "tags": [
+        "iOS",
+        "Swift",
+        "MobileApp",
+        "CareerPath",
+        "Engineering"
+      ],
+      "published": "2024-05-15",
+      "link": "/career/ios_engineer"
+    },
+    {
+      "id": "android_engineer",
+      "title": "Androidエンジニアの将来性と年収は？未経験ロードマップ",
+      "category": "engineering",
+      "meta_description": "Kotlin開発が主流のAndroidエンジニア。需要高騰による高い将来性と年収の魅力、未経験からプロになるための現実的なロードマップを徹底解説！開発のやりがいとリアルな壁を包み隠さずお届けします。",
+      "tags": [
+        "Android",
+        "Kotlin",
+        "アプリ開発",
+        "キャリアパス",
+        "エンジニア転職"
+      ],
+      "published": "2024-05-15",
+      "link": "/career/android_engineer"
     }
   ]
 }
