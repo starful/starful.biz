@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026.07.01",
-  "total_count": 127,
+  "last_updated": "2026.07.04",
+  "total_count": 113,
   "jobs": [
     {
       "id": "game_qa_tester",
@@ -21,31 +21,33 @@
     },
     {
       "id": "design_operations_manager",
-      "title": "DesignOpsの年収・将来性と未経験ロードマップ",
+      "title": "DesignOpsの年収と将来性！未経験からのロードマップ",
       "category": "design",
-      "meta_description": "デザイン組織の生産性を最大化するDesignOps。そのリアルな業務とやりがい、気になる年収や将来性、未経験からプロフェッショナルを目指すための具体的なキャリアロードマップを徹底解説します！",
+      "meta_description": "デザイン組織の生産性を最大化するDesignOps。業務効率化のリアルな課題と、組織成長を支えるやりがいを徹底解説！気になる年収や将来性、未経験からのロードマップまで、キャリアの疑問に答えます。",
       "tags": [
         "DesignOps",
         "デザインマネジメント",
         "キャリアパス",
-        "UIUX",
-        "組織開発"
+        "年収",
+        "未経験",
+        "プロダクト開発"
       ],
       "published": "2026-06-23",
       "link": "/career/design_operations_manager"
     },
     {
       "id": "database_administrator",
-      "title": "DBAの将来性と年収は？未経験から目指すロードマップ",
+      "title": "DBAとは？未経験からのロードマップと気になる年収・将来性",
       "category": "cloud-infra",
-      "meta_description": "データの守護神であるDBA（データベース管理者）。障害対応のプレッシャーはありますが、企業の根幹を支えるやりがいは絶大です。未経験からのロードマップ、気になる年収や将来性までリアルな現実を徹底解説！",
+      "meta_description": "データの守護神であるDBA（データベース管理者）の仕事とは？未経験からのロードマップ、気になる年収や将来性、そしてシステムを裏から支えるリアルなやりがいと厳しい現実までを徹底解説します。",
       "tags": [
         "DBA",
-        "Database",
-        "CloudInfra",
-        "CareerPath",
-        "SQL",
-        "Oracle"
+        "データベース",
+        "インフラエンジニア",
+        "キャリアパス",
+        "未経験歓迎",
+        "クラウド移行",
+        "SQL"
       ],
       "published": "2026-06-23",
       "link": "/career/database_administrator"
@@ -69,15 +71,15 @@
     },
     {
       "id": "cpp_developer",
-      "title": "C++開発者の年収と将来性は？未経験からのロードマップ",
+      "title": "C++エンジニアの年収・将来性は？未経験ロードマップを解説",
       "category": "engineering",
-      "meta_description": "難解とされるC++開発者のリアルな現実とは？高年収を狙える理由や将来性、未経験からプロになるためのロードマップを徹底解説。ゲームや組み込み、金融システムで活躍するエンジニアのやりがいと魅力を紹介します。",
+      "meta_description": "C++エンジニアのリアルな年収や将来性を徹底解剖！習得難易度は高いものの、自動運転やゲーム開発など最先端分野で需要が尽きない魅力的な職種です。未経験からプロになるためのロードマップも詳しく解説します。",
       "tags": [
         "C++",
         "プログラミング言語",
         "キャリアパス",
         "エンジニア転職",
-        "ゲーム開発",
+        "バックエンド",
         "組み込みシステム"
       ],
       "published": "2026-06-23",
@@ -101,16 +103,17 @@
     },
     {
       "id": "conversion_rate_optimizer",
-      "title": "CROの年収と将来性は？未経験から活躍するロードマップ",
+      "title": "CROの年収・将来性は？未経験からプロへのロードマップ",
       "category": "marketing",
-      "meta_description": "データからユーザー心理を読み解き、Webサイトの成果を最大化するCRO（コンバージョン率最適化）。泥臭い分析の先にある、数字が跳ね上がった瞬間の快感と、市場価値が高まり続けるキャリアの魅力を徹底解説！",
+      "meta_description": "CRO（コンバージョン率最適化）は、データと心理学で売上を最大化する職種。泥臭い検証の先にある、成果が数値で直結する圧倒的な面白さを徹底解説。未経験から高年収を狙うロードマップも紹介します！",
       "tags": [
         "CRO",
-        "Webマーケティング",
+        "マーケティング",
         "データ分析",
-        "キャリアパス",
-        "ABテスト",
-        "LPO"
+        "キャリア",
+        "未経験",
+        "年収",
+        "将来性"
       ],
       "published": "2026-06-19",
       "link": "/career/conversion_rate_optimizer"
@@ -553,38 +556,6 @@
       "link": "/career/technical_program_manager"
     },
     {
-      "id": "technical_planner",
-      "title": "テクニカルプランナーの年収・将来性と未経験からのロードマップ",
-      "category": "product-management",
-      "meta_description": "技術とビジネスを繋ぐテクニカルプランナー。開発の難しさを理解しつつ最適な提案を行う役割は、DX推進で需要が急増中。年収アップの秘訣や未経験からの学習ロードマップなど、現場のリアルを徹底解説します。",
-      "tags": [
-        "IT企画",
-        "DX",
-        "キャリアアップ",
-        "プロジェクトマネジメント",
-        "要件定義"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/technical_planner"
-    },
-    {
-      "id": "technical_operations_manager",
-      "title": "Technical Operations Managerの年収・将来性・未経験ロードマップ",
-      "category": "engineering",
-      "meta_description": "開発と運用の架け橋となるTechnical Operations Manager。高い年収と将来性を誇るこの職種のリアルな業務内容や、未経験から目指すためのロードマップを徹底解説。技術で組織を支える醍醐味を伝えます。",
-      "tags": [
-        "IT運用",
-        "マネジメント",
-        "キャリア",
-        "エンジニア",
-        "業務改善",
-        "SRE",
-        "DX"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/technical_operations_manager"
-    },
-    {
       "id": "tech_pm",
       "title": "Tech PMの年収と将来性｜未経験からの完全ロードマップ",
       "category": "product-management",
@@ -716,22 +687,6 @@
       ],
       "published": "2026-03-22",
       "link": "/career/service_designer"
-    },
-    {
-      "id": "seo_specialist",
-      "title": "SEOスペシャリストの年収・将来性は？未経験ロードマップを解説",
-      "category": "marketing",
-      "meta_description": "検索アルゴリズムを読み解き、サイト成長を牽引するSEOスペシャリスト。変動の激しい厳しい世界ですが、施策が数字に直結する達成感は格別です。年収アップの秘訣や未経験からの習得ロードマップを徹底解説します。",
-      "tags": [
-        "SEO",
-        "マーケティング",
-        "Google Analytics",
-        "キャリア形成",
-        "スキルアップ",
-        "IT転職"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/seo_specialist"
     },
     {
       "id": "security_software_engineer",
@@ -997,22 +952,6 @@
       ],
       "published": "2026-03-22",
       "link": "/career/head_of_marketing"
-    },
-    {
-      "id": "head_of_design",
-      "title": "Head of Designの年収・将来性は？未経験からのロードマップ",
-      "category": "design",
-      "meta_description": "デザイン組織を統括するHead of Design。経営視点での意思決定という重責はありますが、プロダクトの未来を創る手応えは格別です。年収相場や必要なスキル、未経験からの歩み方を徹底解説します。",
-      "tags": [
-        "デザイン",
-        "マネジメント",
-        "キャリア",
-        "UI/UX",
-        "組織開発",
-        "経営"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/head_of_design"
     },
     {
       "id": "growth_manager",
@@ -1295,22 +1234,6 @@
       "link": "/career/data_visualization_engineer"
     },
     {
-      "id": "data_strategist",
-      "title": "データストラテジストの年収・将来性は？未経験ロードマップ解説",
-      "category": "ai-data",
-      "meta_description": "データの価値をビジネス成果へ繋ぐデータストラテジスト。高年収が狙える将来性と、未経験から目指すためのロードマップを徹底解説。現場のリアルな苦労と、変革を主導する圧倒的なやりがいを伝えます。",
-      "tags": [
-        "データストラテジスト",
-        "キャリアパス",
-        "データ活用",
-        "DX推進",
-        "IT転職",
-        "スキルアップ"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/data_strategist"
-    },
-    {
       "id": "data_quality_analyst",
       "title": "データ品質アナリストの年収・将来性は？未経験ロードマップ",
       "category": "ai-data",
@@ -1343,22 +1266,6 @@
       ],
       "published": "2026-03-22",
       "link": "/career/data_platform_engineer"
-    },
-    {
-      "id": "data_planner",
-      "title": "データプランナーの年収・将来性は？未経験からの挑戦ロードマップ",
-      "category": "ai-data",
-      "meta_description": "データ活用でビジネスを動かすデータプランナー。年収や将来性、未経験からの習得ロードマップを解説します。分析結果を施策に繋げる難しさと、事業成長を牽引する圧倒的なやりがいをリアルに伝えます。",
-      "tags": [
-        "データサイエンス",
-        "DX推進",
-        "ビジネスインテリジェンス",
-        "キャリア形成",
-        "スキルアップ",
-        "データマネジメント"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/data_planner"
     },
     {
       "id": "data_modeler",
@@ -1423,38 +1330,6 @@
       ],
       "published": "2026-03-22",
       "link": "/career/customer_support_engineer"
-    },
-    {
-      "id": "customer_success_manager",
-      "title": "カスタマーサクセス年収・将来性・未経験ロードマップを徹底解説",
-      "category": "customer-success",
-      "meta_description": "SaaS業界で需要急増中のカスタマーサクセス。未経験からの転職方法、気になる年収や将来性を徹底解説します。顧客の成功を導き、事業成長を支えるやりがいと、理想のキャリアを築くロードマップを公開中。",
-      "tags": [
-        "CSM",
-        "SaaS",
-        "カスタマーサクセス",
-        "キャリアパス",
-        "IT転職",
-        "顧客支援"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/customer_success_manager"
-    },
-    {
-      "id": "crm_marketer",
-      "title": "CRMマーケターの年収・将来性は？未経験からのロードマップ",
-      "category": "marketing",
-      "meta_description": "CRMマーケターは、データに基づき顧客との絆を深める重要職。LTV向上に直結するやりがいと、高い市場価値が魅力です。年収事情や将来性、未経験からプロになるためのロードマップを徹底解説します。",
-      "tags": [
-        "CRM",
-        "デジタルマーケティング",
-        "LTV",
-        "MAツール",
-        "キャリアパス",
-        "データ分析"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/crm_marketer"
     },
     {
       "id": "content_strategist",
@@ -1572,23 +1447,6 @@
       "link": "/career/compliance_engineer"
     },
     {
-      "id": "compiler_engineer",
-      "title": "コンパイラエンジニアの年収・将来性・未経験からのロードマップ",
-      "category": "engineering",
-      "meta_description": "コンピュータの根幹を支えるコンパイラエンジニア。高度な専門性が求められる一方、AIや半導体需要で年収は上昇傾向です。未経験からの挑戦は険しいですが、技術の深淵に触れる唯一無二のやりがいを解説します。",
-      "tags": [
-        "コンパイラ",
-        "LLVM",
-        "低レイヤ",
-        "エンジニア転職",
-        "キャリアパス",
-        "C++",
-        "Rust"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/compiler_engineer"
-    },
-    {
       "id": "cloud_solutions_architect",
       "title": "クラウドアーキテクトの年収・将来性・未経験からのロードマップ",
       "category": "cloud-infra",
@@ -1657,23 +1515,6 @@
       "link": "/career/cloud_database_engineer"
     },
     {
-      "id": "cloud_consultant",
-      "title": "クラウドコンサルタントの年収と将来性｜未経験からのロードマップ",
-      "category": "cloud-infra",
-      "meta_description": "クラウド導入の羅針盤となるクラウドコンサルタント。高年収と将来性が魅力ですが、技術とビジネスの両立が求められる厳しさも。未経験から市場価値を高めるロードマップと仕事のリアルなやりがいを解説します。",
-      "tags": [
-        "クラウド",
-        "AWS",
-        "Azure",
-        "キャリア",
-        "年収",
-        "ITコンサル",
-        "DX"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/cloud_consultant"
-    },
-    {
       "id": "cloud_architect",
       "title": "クラウドアーキテクトの年収・将来性！未経験からのロードマップ",
       "category": "cloud-infra",
@@ -1704,22 +1545,6 @@
       ],
       "published": "2026-03-22",
       "link": "/career/cloud_application_developer"
-    },
-    {
-      "id": "chief_product_officer",
-      "title": "CPOの年収・将来性は？未経験からのロードマップを徹底解説",
-      "category": "product-management",
-      "meta_description": "プロダクトの最高責任者であるCPO。高年収と将来性が魅力ですが、その責任は重大です。未経験から目指すためのロードマップや、現場のリアルなやりがいを徹底解説。プロダクトで世界を変えたい方必見の内容です。",
-      "tags": [
-        "CPO",
-        "プロダクトマネジメント",
-        "キャリア",
-        "経営層",
-        "IT転職",
-        "スキルアップ"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/chief_product_officer"
     },
     {
       "id": "business_systems_analyst",
@@ -1804,23 +1629,6 @@
       "link": "/career/blue_team_engineer"
     },
     {
-      "id": "bioinformatics_scientist",
-      "title": "バイオインフォの年収・将来性｜未経験からのロードマップ",
-      "category": "ai-data",
-      "meta_description": "生命科学とITの融合。バイオインフォマティクス・サイエンティストの年収や将来性を徹底解説。未経験から創薬やゲノム解析の最前線へ進むためのロードマップも紹介。社会貢献度の高い仕事のリアルを伝えます。",
-      "tags": [
-        "バイオインフォマティクス",
-        "ゲノム解析",
-        "創薬",
-        "Python",
-        "データサイエンス",
-        "キャリアパス",
-        "ライフサイエンス"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/bioinformatics_scientist"
-    },
-    {
       "id": "big_data_engineer",
       "title": "ビッグデータエンジニアの年収・将来性・未経験ロードマップ",
       "category": "ai-data",
@@ -1835,72 +1643,6 @@
       ],
       "published": "2026-03-22",
       "link": "/career/big_data_engineer"
-    },
-    {
-      "id": "bi_engineer",
-      "title": "BIエンジニアの年収と将来性｜未経験からの完全ロードマップ",
-      "category": "ai-data",
-      "meta_description": "データの力で経営判断を支えるBIエンジニア。気になる年収や将来性、未経験からの学習ロードマップを徹底解説。ビジネスの核心に触れるやりがいと、需要が急増する市場価値のリアルを現役視点で紹介します。",
-      "tags": [
-        "BI",
-        "データ可視化",
-        "SQL",
-        "データマネジメント",
-        "キャリアパス",
-        "転職"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/bi_engineer"
-    },
-    {
-      "id": "bi_analyst",
-      "title": "BIアナリストの年収と将来性｜未経験からのロードマップ",
-      "category": "ai-data",
-      "meta_description": "BIアナリストはデータを武器に経営判断を支える司令塔。未経験からでもSQLやBIツールを習得し、高年収を目指せる将来性抜群の職種です。現場のリアルな苦労と、分析が成果に繋がるやりがいを徹底解説します。",
-      "tags": [
-        "BIツール",
-        "データサイエンス",
-        "キャリアチェンジ",
-        "DX推進",
-        "SQL",
-        "データ可視化"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/bi_analyst"
-    },
-    {
-      "id": "backend_developer",
-      "title": "バックエンドエンジニアの年収と将来性｜未経験からのロードマップ",
-      "category": "engineering",
-      "meta_description": "システムの根幹を支えるバックエンドエンジニア。年収1000万超えも狙える将来性と、複雑なロジックを解くやりがいが魅力です。未経験からプロを目指すための具体的な学習ロードマップと開発の現実を徹底解説。",
-      "tags": [
-        "バックエンド",
-        "サーバーサイド",
-        "キャリアパス",
-        "プログラミング",
-        "データベース",
-        "エンジニア転職",
-        "スキルアップ"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/backend_developer"
-    },
-    {
-      "id": "backend_architect",
-      "title": "バックエンドアーキテクト：年収・将来性・未経験ロードマップ",
-      "category": "engineering",
-      "meta_description": "システムの根幹を設計するバックエンドアーキテクト。責任は重大ですが、大規模基盤を支える達成感は格別です。年収1000万超も狙える将来性と、未経験から目指すためのロードマップを徹底解説します。",
-      "tags": [
-        "バックエンド",
-        "アーキテクチャ",
-        "システム設計",
-        "キャリアパス",
-        "AWS",
-        "マイクロサービス",
-        "技術選定"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/backend_architect"
     },
     {
       "id": "architect",
@@ -2032,6 +1774,38 @@
       ],
       "published": "2024-10-24",
       "link": "/career/mobile_engineer"
+    },
+    {
+      "id": "go_developer",
+      "title": "Goエンジニアの年収と将来性は？未経験からのロードマップ",
+      "category": "engineering",
+      "meta_description": "需要が急増するGoエンジニア。並行処理の強みから大規模開発で重宝され高年収を狙える一方、ポインタ等の概念理解が必要です。未経験から市場価値を高めるロードマップと、開発のリアルなやりがいを解説します。",
+      "tags": [
+        "Go",
+        "Golang",
+        "バックエンド",
+        "キャリアパス",
+        "プログラミング学習",
+        "エンジニア転職"
+      ],
+      "published": "2024-10-24",
+      "link": "/career/go_developer"
+    },
+    {
+      "id": "game_systems_designer",
+      "title": "ゲームシステムデザイナーの年収と将来性！未経験ロードマップ",
+      "category": "design",
+      "meta_description": "ゲームの面白さを論理的に設計するゲームシステムデザイナー。仕様作成の泥臭い現実と、プレイヤーを熱狂させるやりがいを解説。未経験から年収アップを目指すロードマップも紹介します。",
+      "tags": [
+        "ゲーム開発",
+        "ゲームデザイン",
+        "キャリアパス",
+        "職種研究",
+        "年収",
+        "未経験歓迎"
+      ],
+      "published": "2024-10-24",
+      "link": "/career/game_systems_designer"
     },
     {
       "id": "solutions_architect",

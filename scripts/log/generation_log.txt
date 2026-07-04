@@ -437,3 +437,9 @@
 2026-07-01 07:34:49,097 - CREATED: app/contents/ios_engineer.md
 2026-07-01 07:34:53,756 - CREATED: app/contents/mobile_engineer.md
 2026-07-01 07:35:44,706 - CREATED: app/contents/conversion_rate_optimizer.md
+2026-07-04 11:01:51,544 - CREATED: app/contents/cpp_developer.md
+2026-07-04 11:01:53,710 - CREATED: app/contents/conversion_rate_optimizer.md
+2026-07-04 11:01:54,148 - CREATED: app/contents/design_operations_manager.md
+2026-07-04 11:01:54,859 - CREATED: app/contents/database_administrator.md
+2026-07-04 11:01:58,155 - CREATED: app/contents/game_systems_designer.md
+2026-07-04 11:02:44,913 - CREATED: app/contents/go_developer.md
