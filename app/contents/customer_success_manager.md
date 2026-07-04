@@ -1,39 +1,10 @@
----json
-{
-  "category": "customer-success",
-  "keywords": [
-    "カスタマーサクセス",
-    "CSM",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "SaaS",
-    "キャリアパス",
-    "IT転職",
-    "LTV"
-  ],
-  "meta_description": "SaaS業界で需要急増中のカスタマーサクセス。未経験からの転職方法、気になる年収や将来性を徹底解説します。顧客の成功を導き、事業成長を支えるやりがいと、理想のキャリアを築くロードマップを公開中。",
-  "related_jobs": [
-    "account_manager",
-    "product_manager",
-    "sales_enablement"
-  ],
-  "slug": "customer_success_manager",
-  "tags": [
-    "CSM",
-    "SaaS",
-    "カスタマーサクセス",
-    "キャリアパス",
-    "IT転職",
-    "顧客支援"
-  ],
-  "thumbnail": "/static/img/customer_success_manager.png",
-  "hero_image": "/static/img/customer_success_manager_hero.png",
-  "title": "カスタマーサクセス年収・将来性・未経験ロードマップを徹底解説",
-  "published_at": "2026-03-22"
-}
 ---
+title: 未経験からカスタマーサクセス（CS）へ転職！年収・将来性・キャリアパスを徹底解説
+description: 未経験からカスタマーサクセス（CS）への転職を成功させるロードマップ！気になる年収や将来性、やりがい、実際の面接対策（Q&A）まで徹底解説します。SaaS業界で需要が高まるCS職で理想のキャリアを築くためのノウハウが満載です。
+seo_title: 【未経験から】カスタマーサクセス（CS）転職ロードマップ｜年収・将来性・面接対策【Starful】
+seo_description: 未経験からカスタマーサクセス（CS）への転職を成功させるロードマップ！気になる年収や将来性、やりがい、実際の面接対策（Q&A）まで徹底解説します。SaaS業界で需要が高まるCS職で理想のキャリアを築くためのノウハウが満載です。
+---
+
 # [完全ガイド] Customer Success Manager: カスタマーサクセス年収・将来性・未経験ロードマップを徹底解説
 
 ## 導入：Customer Success Managerの面接官は「ここ」を見ている

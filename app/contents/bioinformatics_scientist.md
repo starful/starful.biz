@@ -1,38 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "バイオインフォマティクス",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "ゲノム解析",
-    "創薬",
-    "データサイエンス"
-  ],
-  "meta_description": "生命科学とITの融合。バイオインフォマティクス・サイエンティストの年収や将来性を徹底解説。未経験から創薬やゲノム解析の最前線へ進むためのロードマップも紹介。社会貢献度の高い仕事のリアルを伝えます。",
-  "related_jobs": [
-    "data_scientist",
-    "machine_learning_engineer",
-    "research_scientist"
-  ],
-  "slug": "bioinformatics_scientist",
-  "tags": [
-    "バイオインフォマティクス",
-    "ゲノム解析",
-    "創薬",
-    "Python",
-    "データサイエンス",
-    "キャリアパス",
-    "ライフサイエンス"
-  ],
-  "thumbnail": "/static/img/bioinformatics_scientist.png",
-  "hero_image": "/static/img/bioinformatics_scientist_hero.png",
-  "title": "バイオインフォの年収・将来性｜未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: バイオインフォマティクスサイエンティストの年収・将来性｜未経験からのロードマップ
+description: バイオインフォマティクス・サイエンティストの年収や将来性、仕事内容を解説！未経験からゲノム解析や創薬の最前線へ転職するためのロードマップ、面接対策Q&Aを紹介します。
+seo_title: バイオインフォマティクスサイエンティストの年収・将来性｜未経験から転職するロードマップ【Starful】
+seo_description: バイオインフォマティクス・サイエンティストの年収や将来性、仕事内容を徹底解説。未経験からゲノム解析や創薬分野へ転職・キャリアチェンジするための学習ロードマップと面接対策を紹介します。
+---
+
 # [完全ガイド] Bioinformatics Scientist: バイオインフォの年収・将来性｜未経験からのロードマップ
 
 ## 導入：Bioinformatics Scientistの面接官は「ここ」を見ている

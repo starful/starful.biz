@@ -1,37 +1,10 @@
----json
-{
-  "category": "marketing",
-  "keywords": [
-    "SEOスペシャリスト",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "検索エンジン最適化",
-    "キャリアパス",
-    "デジタルマーケティング"
-  ],
-  "meta_description": "検索アルゴリズムを読み解き、サイト成長を牽引するSEOスペシャリスト。変動の激しい厳しい世界ですが、施策が数字に直結する達成感は格別です。年収アップの秘訣や未経験からの習得ロードマップを徹底解説します。",
-  "related_jobs": [
-    "content_marketer",
-    "web_marketer",
-    "data_analyst"
-  ],
-  "slug": "seo_specialist",
-  "tags": [
-    "SEO",
-    "マーケティング",
-    "Google Analytics",
-    "キャリア形成",
-    "スキルアップ",
-    "IT転職"
-  ],
-  "thumbnail": "/static/img/seo_specialist.png",
-  "hero_image": "/static/img/seo_specialist_hero.png",
-  "title": "SEOスペシャリストの年収・将来性は？未経験ロードマップを解説",
-  "published_at": "2026-03-22"
-}
 ---
+title: SEOスペシャリストとは？仕事内容・年収・将来性、未経験からのロードマップを解説
+description: SEOスペシャリストの仕事内容、平均年収、将来性を徹底解説！未経験からプロになるためのロードマップや必要なスキル、キャリアパス、面接対策まで詳しく紹介します。SEO業界で活躍したい方、年収アップを目指す方は必見です。
+seo_title: SEOスペシャリストとは？仕事内容・年収・将来性と未経験ロードマップ｜Starful
+seo_description: SEOスペシャリストの仕事内容、平均年収、将来性を徹底解説！未経験からプロになるためのロードマップや必要なスキル、キャリアパス、面接対策まで詳しく紹介します。SEO業界で活躍したい方、年収アップを目指す方は必見です。
+---
+
 # [完全ガイド] SEO Specialist: SEOスペシャリストの面接対策・完全無欠のバイブル
 
 ## 導入：SEO Specialistの面接官は「ここ」を見ている

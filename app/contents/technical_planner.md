@@ -1,35 +1,10 @@
----json
-{
-  "category": "product-management",
-  "keywords": [
-    "テクニカルプランナー",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "IT企画",
-    "キャリアパス"
-  ],
-  "meta_description": "技術とビジネスを繋ぐテクニカルプランナー。開発の難しさを理解しつつ最適な提案を行う役割は、DX推進で需要が急増中。年収アップの秘訣や未経験からの学習ロードマップなど、現場のリアルを徹底解説します。",
-  "related_jobs": [
-    "product_manager",
-    "systems_engineer",
-    "it_consultant"
-  ],
-  "slug": "technical_planner",
-  "tags": [
-    "IT企画",
-    "DX",
-    "キャリアアップ",
-    "プロジェクトマネジメント",
-    "要件定義"
-  ],
-  "thumbnail": "/static/img/technical_planner.png",
-  "hero_image": "/static/img/technical_planner_hero.png",
-  "title": "テクニカルプランナーの年収・将来性と未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: テクニカルプランナーの仕事内容・年収・将来性｜未経験からの転職ロードマップ
+description: テクニカルプランナーの仕事内容、平均年収、将来性を徹底解説！未経験から転職するためのロードマップや必要なスキル、面接対策（Q&A）まで網羅。DX推進で需要が高まる注目職種へのキャリアパスを紹介します。
+seo_title: テクニカルプランナーとは？仕事内容・年収・将来性と未経験からの転職ロードマップ｜Starful
+seo_description: テクニカルプランナーの仕事内容、平均年収、将来性を徹底解説！未経験から転職するためのロードマップや必要なスキル、面接対策（Q&A）まで網羅。DX推進で需要が高まる注目職種へのキャリアパスを紹介します。
+---
+
 # [完全ガイド] Technical Planner: テクニカルプランナーの年収・将来性と未経験からのロードマップ
 
 ## 導入：Technical Plannerの面接官は「ここ」を見ている

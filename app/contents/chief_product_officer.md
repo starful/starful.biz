@@ -1,37 +1,10 @@
----json
-{
-  "category": "product-management",
-  "keywords": [
-    "CPO",
-    "Chief Product Officer",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "プロダクトマネジメント",
-    "キャリアパス"
-  ],
-  "meta_description": "プロダクトの最高責任者であるCPO。高年収と将来性が魅力ですが、その責任は重大です。未経験から目指すためのロードマップや、現場のリアルなやりがいを徹底解説。プロダクトで世界を変えたい方必見の内容です。",
-  "related_jobs": [
-    "product_manager",
-    "cto",
-    "ceo"
-  ],
-  "slug": "chief_product_officer",
-  "tags": [
-    "CPO",
-    "プロダクトマネジメント",
-    "キャリア",
-    "経営層",
-    "IT転職",
-    "スキルアップ"
-  ],
-  "thumbnail": "/static/img/chief_product_officer.png",
-  "hero_image": "/static/img/chief_product_officer_hero.png",
-  "title": "CPOの年収・将来性は？未経験からのロードマップを徹底解説",
-  "published_at": "2026-03-22"
-}
 ---
+title: CPO（最高プロダクト責任者）とは？仕事内容・年収やキャリアパスを徹底解説
+description: CPO（最高プロダクト責任者）の役割や具体的な仕事内容、平均年収、求められるスキルを徹底解説！プロダクトマネージャー（PM）等からCPOを目指すためのキャリアパスやロードマップも紹介します。CPOへのキャリアアップを目指す方必見です。
+seo_title: CPOとは？最高プロダクト責任者の仕事内容・年収・キャリアパスを解説｜Starful
+seo_description: CPO（最高プロダクト責任者）の役割や具体的な仕事内容、平均年収、求められるスキルを徹底解説！プロダクトマネージャー（PM）等からCPOを目指すためのキャリアパスやロードマップも紹介します。CPOへのキャリアアップを目指す方必見です。
+---
+
 # [完全ガイド] Chief Product Officer: CPOの年収・将来性は？未経験からのロードマップを徹底解説
 
 ## 導入：Chief Product Officerの面接官は「ここ」を見ている

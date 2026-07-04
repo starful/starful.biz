@@ -1,38 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "BIアナリスト",
-    "データ分析",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "SQL",
-    "Tableau",
-    "Power BI"
-  ],
-  "meta_description": "BIアナリストはデータを武器に経営判断を支える司令塔。未経験からでもSQLやBIツールを習得し、高年収を目指せる将来性抜群の職種です。現場のリアルな苦労と、分析が成果に繋がるやりがいを徹底解説します。",
-  "related_jobs": [
-    "data_analyst",
-    "data_scientist",
-    "data_engineer"
-  ],
-  "slug": "bi_analyst",
-  "tags": [
-    "BIツール",
-    "データサイエンス",
-    "キャリアチェンジ",
-    "DX推進",
-    "SQL",
-    "データ可視化"
-  ],
-  "thumbnail": "/static/img/bi_analyst.png",
-  "hero_image": "/static/img/bi_analyst_hero.png",
-  "title": "BIアナリストの年収と将来性｜未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: BIアナリストとは？仕事内容・年収・将来性と未経験からの転職ロードマップ
+description: BIアナリストの仕事内容、平均年収、将来性を徹底解説！未経験からSQLやTableauなどのBIツールを習得し、転職を成功させるためのロードマップや面接対策（Q&A）を掲載。データ分析を武器に高年収キャリアを目指す方は必見です。
+seo_title: BIアナリストとは？仕事内容・年収・将来性と未経験からの転職ロードマップ【Starful】
+seo_description: BIアナリストの仕事内容、平均年収、将来性を徹底解説！未経験からSQLやTableauなどのBIツールを習得し、転職を成功させるためのロードマップや面接対策（Q&A）を掲載。データ分析を武器に高年収キャリアを目指す方は必見です。
+---
+
 # [完全ガイド] BI Analyst: BIアナリストの年収と将来性｜未経験からのロードマップ
 
 ## 導入：BI Analystの面接官は「ここ」を見ている

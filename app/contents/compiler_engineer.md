@@ -1,38 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "コンパイラエンジニア",
-    "LLVM",
-    "GCC",
-    "低レイヤ",
-    "最適化",
-    "年収",
-    "キャリアパス",
-    "プログラミング言語"
-  ],
-  "meta_description": "コンピュータの根幹を支えるコンパイラエンジニア。高度な専門性が求められる一方、AIや半導体需要で年収は上昇傾向です。未経験からの挑戦は険しいですが、技術の深淵に触れる唯一無二のやりがいを解説します。",
-  "related_jobs": [
-    "embedded_engineer",
-    "backend_developer",
-    "ai_engineer"
-  ],
-  "slug": "compiler_engineer",
-  "tags": [
-    "コンパイラ",
-    "LLVM",
-    "低レイヤ",
-    "エンジニア転職",
-    "キャリアパス",
-    "C++",
-    "Rust"
-  ],
-  "thumbnail": "/static/img/compiler_engineer.png",
-  "hero_image": "/static/img/compiler_engineer_hero.png",
-  "title": "コンパイラエンジニアの年収・将来性・未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: コンパイラエンジニアとは？仕事内容・年収・将来性と未経験からのロードマップ
+description: コンパイラエンジニアの仕事内容、平均年収、将来性を徹底解説！AIや半導体需要の拡大に伴い注目が集まる専門職の魅力とは？未経験から目指すための勉強法やキャリアロードマップ、面接対策まで、転職に役立つ情報を網羅してお届けします。
+seo_title: コンパイラエンジニアとは？仕事内容・年収・将来性と未経験ロードマップ｜Starful
+seo_description: コンパイラエンジニアの仕事内容、平均年収、将来性を徹底解説！AIや半導体需要で注目が集まる専門職の魅力を紐解きます。未経験から目指すための勉強法やキャリアロードマップ、面接対策（Q&A）まで、転職に役立つ情報を網羅。
+---
+
 # [完全ガイド] Compiler Engineer: コンパイラエンジニアの年収・将来性・未経験からのロードマップ
 
 ## 導入：Compiler Engineerの面接官は「ここ」を見ている

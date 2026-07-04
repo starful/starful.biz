@@ -1,38 +1,10 @@
----json
-{
-  "category": "marketing",
-  "keywords": [
-    "CRMマーケター",
-    "CRM",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "LTV向上",
-    "マーケティングオートメーション",
-    "キャリアパス"
-  ],
-  "meta_description": "CRMマーケターは、データに基づき顧客との絆を深める重要職。LTV向上に直結するやりがいと、高い市場価値が魅力です。年収事情や将来性、未経験からプロになるためのロードマップを徹底解説します。",
-  "related_jobs": [
-    "marketing_automation_specialist",
-    "data_analyst",
-    "customer_success_manager"
-  ],
-  "slug": "crm_marketer",
-  "tags": [
-    "CRM",
-    "デジタルマーケティング",
-    "LTV",
-    "MAツール",
-    "キャリアパス",
-    "データ分析"
-  ],
-  "thumbnail": "/static/img/crm_marketer.png",
-  "hero_image": "/static/img/crm_marketer_hero.png",
-  "title": "CRMマーケターの年収・将来性は？未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: CRMマーケターとは？仕事内容・年収・将来性と未経験からの転職ロードマップ
+description: CRMマーケターの仕事内容、年収、将来性を徹底解説！未経験から転職するためのロードマップ、必要スキルや面接対策まで網羅。LTV向上を担う専門職として市場価値を高めたい方は必見です。
+seo_title: CRMマーケターとは？仕事内容・年収・将来性、未経験からの転職ロードマップ｜Starful
+seo_description: CRMマーケターの仕事内容、年収、将来性を徹底解説！未経験から転職するためのロードマップ、必要スキルや面接対策まで網羅。LTV向上を担う専門職として市場価値を高めたい方は必見です。
+---
+
 # [完全ガイド] CRM Marketer: CRMマーケターの年収・将来性は？未経験からのロードマップ
 
 ## 導入：CRM Marketerの面接官は「ここ」を見ている

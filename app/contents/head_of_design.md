@@ -1,37 +1,10 @@
----json
-{
-  "category": "design",
-  "keywords": [
-    "Head of Design",
-    "デザイン責任者",
-    "年収",
-    "将来性",
-    "未経験",
-    "キャリアパス",
-    "デザインマネジメント",
-    "ロードマップ"
-  ],
-  "meta_description": "デザイン組織を統括するHead of Design。経営視点での意思決定という重責はありますが、プロダクトの未来を創る手応えは格別です。年収相場や必要なスキル、未経験からの歩み方を徹底解説します。",
-  "related_jobs": [
-    "product_manager",
-    "ux_designer",
-    "creative_director"
-  ],
-  "slug": "head_of_design",
-  "tags": [
-    "デザイン",
-    "マネジメント",
-    "キャリア",
-    "UI/UX",
-    "組織開発",
-    "経営"
-  ],
-  "thumbnail": "/static/img/head_of_design.png",
-  "hero_image": "/static/img/head_of_design_hero.png",
-  "title": "Head of Designの年収・将来性は？未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: Head of Design（デザイン責任者）の年収・将来性とキャリアパス
+description: デザイン組織を統括する「Head of Design（デザイン責任者）」の役割、年収相場、必要なスキルを解説。キャリアパスや面接での頻出質問対策まで網羅しています。
+seo_title: Head of Design（デザイン責任者）の年収・仕事内容は？キャリアパスや面接対策も解説｜Starful
+seo_description: デザイン組織を統括する「Head of Design（デザイン責任者）」の仕事内容、年収相場、必要なスキルを解説！次のステップを目指すデザイナーのためのキャリアパスや面接対策（Q&A）まで網羅。
+---
+
 # [完全ガイド] Head of Design: Head of Designの年収・将来性は？未経験からのロードマップ
 
 ## 導入：Head of Designの面接官は「ここ」を見ている
