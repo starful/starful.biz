@@ -1,24 +1,14 @@
 import os
 
-import firebase_admin
 from fastapi import APIRouter, HTTPException, Request
 from firebase_admin import firestore
 from starlette.concurrency import run_in_threadpool
 
+from app.dependencies import db as firestore_db
+from app.utils.http import get_client_ip
+
 router = APIRouter()
 COLLECTION_NAME = os.getenv("REACTIONS_COLLECTION", "starful_biz")
-
-
-def _db():
-    try:
-        if firebase_admin._apps:
-            return firestore.client()
-    except Exception as e:
-        print(f"Reactions Firestore error: {e}")
-    return None
-
-
-from app.utils.http import get_client_ip
 
 
 def sync_process_reaction(db_client, collection_name, slug, safe_ip, new_type):
@@ -69,11 +59,10 @@ def sync_process_reaction(db_client, collection_name, slug, safe_ip, new_type):
 
 @router.get("/reactions/{slug}")
 async def get_reactions(slug: str):
-    db = _db()
-    if db is None:
+    if firestore_db is None:
         return {"likes": 0, "dislikes": 0, "error": "Database not connected"}
     try:
-        doc_ref = db.collection(COLLECTION_NAME).document(slug)
+        doc_ref = firestore_db.collection(COLLECTION_NAME).document(slug)
         doc = await run_in_threadpool(doc_ref.get)
         if doc.exists:
             data = doc.to_dict()
@@ -87,14 +76,13 @@ async def get_reactions(slug: str):
 
 
 async def process_reaction(request: Request, slug: str, reaction_type: str):
-    db = _db()
-    if db is None:
+    if firestore_db is None:
         raise HTTPException(status_code=500, detail="Database connection failed")
 
     safe_ip = get_client_ip(request).replace(".", "_").replace(":", "_")
     try:
         result, data = await run_in_threadpool(
-            sync_process_reaction, db, COLLECTION_NAME, slug, safe_ip, reaction_type
+            sync_process_reaction, firestore_db, COLLECTION_NAME, slug, safe_ip, reaction_type
         )
     except Exception:
         raise HTTPException(status_code=500, detail="Reaction processing failed")

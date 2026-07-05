@@ -5,7 +5,9 @@
   "seo_title": "AIリサーチャーの年収・将来性は？未経験からのキャリアロードマップ｜Starful",
   "seo_description": "AIリサーチャー（AI Researcher）の年収や将来性、未経験から目指すためのロードマップを徹底解説！面接対策Q&Aまで網羅した完全ガイドです。Starfulでキャリアの一歩を踏み出しましょう。",
   "meta_description": "AIリサーチャー（AI Researcher）の年収や将来性、未経験から目指すためのロードマップを徹底解説！面接対策Q&Aまで網羅した完全ガイドです。Starfulでキャリアの一歩を踏み出しましょう。",
-  "published_at": "2026-07-04"
+  "published_at": "2026-07-04",
+  "slug": "ai_researcher",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] AI Researcher: AIリサーチャーの年収・将来性は？未経験からのロードマップ

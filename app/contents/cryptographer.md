@@ -5,7 +5,9 @@
   "seo_title": "暗号技術者・エンジニア（Cryptographer）の年収と将来性！未経験からのロードマップ｜Starful",
   "seo_description": "Web3やブロックチェーンを支える「暗号技術者・エンジニア（Cryptographer）」の年収・将来性を徹底解説！未経験から高年収を狙うための具体的な学習ロードマップや面接対策を紹介。最先端の暗号セキュリティ分野で活躍する道筋がわかります。",
   "meta_description": "Web3やブロックチェーンの基盤を支える「暗号技術者・エンジニア（Cryptographer）」。その年収や将来性、未経験からプロを目指すための具体的な学習ロードマップ、面接対策まで徹底解説！最先端セキュリティ分野で高年収を狙うキャリアパスを紹介します。",
-  "published_at": "2026-06-19"
+  "published_at": "2026-06-19",
+  "slug": "cryptographer",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] Cryptographer: Cryptographerの年収と将来性！未経験からのロードマップ

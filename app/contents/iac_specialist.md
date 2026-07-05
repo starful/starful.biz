@@ -5,7 +5,9 @@
   "seo_title": "IaCスペシャリストの年収・将来性とロードマップ｜未経験からインフラエンジニアへ｜Starful",
   "seo_description": "IaC（Infrastructure as Code）スペシャリストの年収や将来性を解説！未経験からクラウド・インフラエンジニアとして活躍するための具体的なロードマップ、必要なスキル（Terraform等）、面接対策まで網羅。市場価値を高めて高年収を狙う秘訣をお届けします。",
   "meta_description": "IaC（Infrastructure as Code）スペシャリストの年収や将来性を解説！未経験からクラウド・インフラエンジニアとして活躍するための具体的なロードマップ、必要なスキル（Terraform等）、面接対策まで網羅。市場価値を高めて高年収を狙う秘訣をお届けします。",
-  "published_at": "2026-06-12"
+  "published_at": "2026-06-12",
+  "slug": "iac_specialist",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] IaC Specialist: IaCスペシャリストの年収と将来性｜未経験からのロードマップ

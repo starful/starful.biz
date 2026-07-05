@@ -5,7 +5,9 @@
   "seo_title": "【完全ガイド】ビジネスアナリストの年収・将来性と未経験ロードマップ｜Starful",
   "seo_description": "ビジネスアナリスト（BA）の平均年収や今後の将来性を徹底解説！未経験から目指すための実践的なロードマップや必要なスキルを紹介します。Starfulでキャリアパスを描きましょう。",
   "meta_description": "ビジネスアナリスト（BA）の平均年収や今後の将来性を徹底解説！未経験から目指すための実践的なロードマップや必要なスキルを紹介します。Starfulでキャリアパスを描きましょう。",
-  "published_at": "2026-07-04"
+  "published_at": "2026-07-04",
+  "slug": "business_analyst",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] Business Analyst: ビジネスアナリストの年収と将来性｜未経験からのロードマップ

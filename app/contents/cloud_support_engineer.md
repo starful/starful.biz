@@ -5,7 +5,9 @@
   "seo_title": "クラウドサポートエンジニア完全ガイド：年収・将来性・未経験ロードマップ｜Starful",
   "seo_description": "クラウドサポートエンジニア（Cloud Support Engineer）の年収、将来性、未経験から活躍するためのロードマップを徹底解説！需要が高まるクラウド業界でキャリアを築くためのステップや面接対策まで網羅した完全ガイド。",
   "meta_description": "クラウドサポートエンジニア（Cloud Support Engineer）の年収、将来性、未経験から活躍するためのロードマップを徹底解説！需要が高まるクラウド業界でキャリアを築くためのステップや面接対策まで網羅した完全ガイド。",
-  "published_at": "2026-07-04"
+  "published_at": "2026-07-04",
+  "slug": "cloud_support_engineer",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] Cloud Support Engineer: クラウドサポートエンジニアの年収・将来性・未経験ロードマップ

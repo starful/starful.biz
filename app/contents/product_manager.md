@@ -5,7 +5,9 @@
   "seo_title": "プロダクトマネージャー(PdM)とは？年収・将来性・未経験からのロードマップ【Starful】",
   "seo_description": "プロダクトマネージャー（PdM）の年収や将来性、仕事内容を徹底解説！未経験からPdMを目指すための具体的なキャリアロードマップや必要なスキル、面接対策を紹介します。",
   "meta_description": "プロダクトマネージャー（PdM）の年収や将来性、仕事内容を徹底解説！未経験からPdMを目指すための具体的なキャリアロードマップや必要なスキル、面接対策を紹介します。",
-  "published_at": "2026-06-19"
+  "published_at": "2026-06-19",
+  "slug": "product_manager",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] Product Manager: PdMの年収・将来性は？未経験からのロードマップを徹底解説

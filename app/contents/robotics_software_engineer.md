@@ -5,7 +5,9 @@
   "seo_title": "ロボティクスソフトウェアエンジニアの年収・将来性と未経験ロードマップ｜Starful",
   "seo_description": "ロボティクスソフトウェアエンジニアの年収、将来性、未経験から目指すロードマップを徹底解説！ロボット開発に必要なスキルや具体的なキャリアパス、仕事内容、転職のポイントまで、現役視点で分かりやすく紹介します。",
   "meta_description": "需要が急増するロボティクスソフトウェアエンジニアの年収や将来性、未経験からプロになるためのステップを解説。C++/PythonやROSなど必要なスキルも紹介します。",
-  "published_at": "2026-06-19"
+  "published_at": "2026-06-19",
+  "slug": "robotics_software_engineer",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] Robotics Software Engineer: ロボティクスエンジニアの年収・将来性・未経験ロードマップ

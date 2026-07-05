@@ -5,7 +5,9 @@
   "seo_title": "Androidエンジニアの年収・将来性と未経験ロードマップ｜Starful",
   "seo_description": "Androidエンジニアを目指す方へ。気になる平均年収や今後の将来性、未経験からプロのデベロッパーになるための具体的なステップとロードマップを分かりやすく解説します！",
   "meta_description": "Androidエンジニアを目指す方へ。気になる平均年収や今後の将来性、未経験からプロのデベロッパーになるための具体的なステップとロードマップを分かりやすく解説します！",
-  "published_at": "2026-06-19"
+  "published_at": "2026-06-19",
+  "slug": "android_developer",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] Android Developer: Androidエンジニアの年収と将来性｜未経験からのロードマップ

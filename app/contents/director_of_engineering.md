@@ -5,7 +5,9 @@
   "seo_title": "Director of Engineering(DoE)とは？役割・年収・CTOやVPoEとの違い｜Starful",
   "seo_description": "Director of Engineering（DoE）の役割や平均年収、CTO・VPoEとの違いを徹底解説！エンジニアリングマネージャーからDoEを目指すロードマップや、面接対策Q&Aも紹介します。",
   "meta_description": "開発組織を牽引するDirector of Engineering（DoE）の役割、想定年収、CTOやVPoEとの違い、具体的なキャリアロードマップについて分かりやすく解説します。",
-  "published_at": "2026-06-19"
+  "published_at": "2026-06-19",
+  "slug": "director_of_engineering",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] Director of Engineering: Director of Engineeringの年収・将来性・未経験ロードマップ

@@ -5,7 +5,9 @@
   "seo_title": "MLOpsエンジニアとは？仕事内容・年収・将来性と未経験ロードマップ｜Starful",
   "seo_description": "MLOpsエンジニアとは？仕事内容、平均年収、将来性、必要なスキルを解説！未経験から目指すための勉強ロードマップや、面接対策（Q&A）も紹介。AIの実装・運用を支えるキャリアの全貌がわかります。",
   "meta_description": "MLOpsエンジニアとは？仕事内容、平均年収、将来性、必要なスキルを解説！未経験から目指すための勉強ロードマップや、面接対策（Q&A）も紹介。AIの実装・運用を支えるキャリアの全貌がわかります。",
-  "published_at": "2026-05-28"
+  "published_at": "2026-05-28",
+  "slug": "mlops_engineer",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] MLOps Engineer: MLOpsエンジニアの年収と将来性｜未経験からのロードマップ

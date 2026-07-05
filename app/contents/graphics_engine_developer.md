@@ -5,7 +5,9 @@
   "seo_title": "グラフィックスエンジニア転職・面接対策｜描画・GPUの質問回答例｜C++・Vulkan【Starful】",
   "seo_description": "グラフィックスエンジニア（プログラマー）の転職面接対策ガイド。C++やVulkan、DirectX、GPU描画パイプライン、シェーダーなど、面接で頻出する専門質問の回答例と対策ポイントを徹底解説。キャリアアップを目指すエンジニア必見。【Starful】",
   "meta_description": "グラフィックスエンジニア（プログラマー）の転職面接対策ガイド。C++やVulkan、DirectX、GPU描画パイプライン、シェーダーなど、面接で頻出する専門質問の回答例と対策ポイントを徹底解説。キャリアアップを目指すエンジニア必見。【Starful】",
-  "published_at": "2026-05-28"
+  "published_at": "2026-05-28",
+  "slug": "graphics_engine_developer",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] Graphics Engine Developer: グラフィックス開発者の年収・将来性・未経験からのロードマップ

@@ -5,7 +5,9 @@
   "seo_title": "ゲーム開発者の年収・将来性は？未経験から転職するロードマップ｜Starful",
   "seo_description": "ゲーム開発者（Game Developer）の年収や今後の将来性、未経験からゲーム業界へ転職するための具体的なステップやロードマップを徹底解説します。",
   "meta_description": "ゲーム開発者（Game Developer）の年収や今後の将来性、未経験からゲーム業界へ転職するための具体的なステップやロードマップを徹底解説します。",
-  "published_at": "2026-06-12"
+  "published_at": "2026-06-12",
+  "slug": "game_developer",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] Game Developer: ゲーム開発者の年収と将来性｜未経験からの転職ロードマップ

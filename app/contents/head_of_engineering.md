@@ -5,7 +5,9 @@
   "seo_title": "Head of Engineeringの年収・将来性・ロードマップ完全ガイド｜Starful",
   "seo_description": "Head of Engineering（エンジニアリング責任者）の年収、将来性、未経験から目指すためのキャリアロードマップを徹底解説！市場価値を高め、高収入キャリアを築くための完全ガイドです。必要なスキルやステップも網羅。",
   "meta_description": "Head of Engineering（エンジニアリング責任者）の年収、将来性、未経験から目指すためのキャリアロードマップを徹底解説！市場価値を高め、高収入キャリアを築くための完全ガイドです。必要なスキルやステップも網羅。",
-  "published_at": "2026-07-04"
+  "published_at": "2026-07-04",
+  "slug": "head_of_engineering",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] Head of Engineering: Head of Engineeringの年収・将来性・未経験ロードマップ

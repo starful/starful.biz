@@ -5,7 +5,9 @@
   "seo_title": "【完全ガイド】DevOpsエンジニアの年収・将来性と未経験ロードマップ｜Starful",
   "seo_description": "DevOpsエンジニアを目指す方必見！気になる年収や将来性、未経験から活躍するための具体的なロードマップを徹底解説。必要なスキルや需要の高まりについても分かりやすくご紹介します。",
   "meta_description": "DevOpsエンジニアを目指す方必見！気になる年収や将来性、未経験から活躍するための具体的なロードマップを徹底解説。必要なスキルや需要の高まりについても分かりやすくご紹介します。",
-  "published_at": "2026-07-04"
+  "published_at": "2026-07-04",
+  "slug": "devops_engineer",
+  "category": "engineering"
 }
 ---
 # [完全ガイド] DevOps Engineer: DevOpsエンジニアの年収・将来性は？未経験からのロードマップ
