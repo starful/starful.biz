@@ -1,10 +1,13 @@
+---json
+{
+  "title": "Head of Design（デザイン責任者）の年収・将来性とキャリアパス",
+  "description": "デザイン組織を統括する「Head of Design（デザイン責任者）」の役割、年収相場、必要なスキルを解説。キャリアパスや面接での頻出質問対策まで網羅しています。",
+  "seo_title": "Head of Design（デザイン責任者）の年収・仕事内容は？キャリアパスや面接対策も解説｜Starful",
+  "seo_description": "デザイン組織を統括する「Head of Design（デザイン責任者）」の仕事内容、年収相場、必要なスキルを解説！次のステップを目指すデザイナーのためのキャリアパスや面接対策（Q&A）まで網羅。",
+  "meta_description": "デザイン組織を統括する「Head of Design（デザイン責任者）」の役割、年収相場、必要なスキルを解説。キャリアパスや面接での頻出質問対策まで網羅しています。",
+  "published_at": "2026-07-04"
+}
 ---
-title: Head of Design（デザイン責任者）の年収・将来性とキャリアパス
-description: デザイン組織を統括する「Head of Design（デザイン責任者）」の役割、年収相場、必要なスキルを解説。キャリアパスや面接での頻出質問対策まで網羅しています。
-seo_title: Head of Design（デザイン責任者）の年収・仕事内容は？キャリアパスや面接対策も解説｜Starful
-seo_description: デザイン組織を統括する「Head of Design（デザイン責任者）」の仕事内容、年収相場、必要なスキルを解説！次のステップを目指すデザイナーのためのキャリアパスや面接対策（Q&A）まで網羅。
----
-
 # [完全ガイド] Head of Design: Head of Designの年収・将来性は？未経験からのロードマップ
 
 ## 導入：Head of Designの面接官は「ここ」を見ている

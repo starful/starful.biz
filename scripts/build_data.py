@@ -4,6 +4,7 @@ import sys
 from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
 sys.path.insert(0, os.path.join(BASE_DIR, "scripts"))
 from slug_utils import normalize_slug
 from md_metadata import parse_starful_md, published_date, ensure_published_at, write_starful_md

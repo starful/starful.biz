@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Pre-generate career social card JPEGs into app/static/social at build time."""
+"""Optional: pre-generate career social JPEGs (runtime /social/ also works from GCS).
+
+Not run during Docker build — images are served from GCS at deploy time.
+Usage: python scripts/build_social_images.py
+"""
 from __future__ import annotations
 
 import os

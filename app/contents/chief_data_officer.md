@@ -1,10 +1,13 @@
+---json
+{
+  "title": "CDO（最高データ責任者）とは？Chief Data Officerの年収・役割・キャリアパス",
+  "description": "CDO（最高データ責任者/Chief Data Officer）の役割、年収、必要なスキル、キャリアパスを徹底解説！データ戦略を統括する経営幹部としての仕事内容や将来性、転職を成功させるためのロードマップを紹介します。",
+  "seo_title": "CDO（最高データ責任者）とは？Chief Data Officerの年収・役割・キャリアパス｜Starful",
+  "seo_description": "CDO（最高データ責任者/Chief Data Officer）の役割、年収、必要なスキル、キャリアパスを徹底解説！データ戦略を統括する経営幹部としての仕事内容や将来性、転職を成功させるためのロードマップを紹介します。",
+  "meta_description": "CDO（最高データ責任者/Chief Data Officer）の役割、年収、必要なスキル、キャリアパスを徹底解説！データ戦略を統括する経営幹部としての仕事内容や将来性、転職を成功させるためのロードマップを紹介します。",
+  "published_at": "2026-06-19"
+}
 ---
-title: CDO（最高データ責任者）とは？Chief Data Officerの年収・役割・キャリアパス
-description: CDO（最高データ責任者/Chief Data Officer）の役割、年収、必要なスキル、キャリアパスを徹底解説！データ戦略を統括する経営幹部としての仕事内容や将来性、転職を成功させるためのロードマップを紹介します。
-seo_title: CDO（最高データ責任者）とは？Chief Data Officerの年収・役割・キャリアパス｜Starful
-seo_description: CDO（最高データ責任者/Chief Data Officer）の役割、年収、必要なスキル、キャリアパスを徹底解説！データ戦略を統括する経営幹部としての仕事内容や将来性、転職を成功させるためのロードマップを紹介します。
----
-
 # [完全ガイド] Chief Data Officer: Chief Data Officerの年収・将来性・未経験ロードマップ
 
 ## 導入：Chief Data Officerの面接官は「ここ」を見ている

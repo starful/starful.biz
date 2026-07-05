@@ -1,10 +1,13 @@
+---json
+{
+  "title": "Technical Operations Manager（テクニカルオペレーションズマネージャー）の仕事内容・年収・未経験ロードマップ",
+  "description": "開発と運用の架け橋となるテクニカルオペレーションズマネージャー（Technical Operations Manager）の仕事内容、年収、キャリアパス、未経験ロードマップを徹底解説！",
+  "seo_title": "Technical Operations Manager(テクニカルオペレーションズ)の仕事内容・年収・未経験ロードマップ｜Starful",
+  "seo_description": "テクニカルオペレーションズマネージャー（Technical Operations Manager）の仕事内容、年収、将来性、未経験から目指すロードマップを徹底解説！開発と運用の架け橋となり、技術で組織を支えるこの職種のリアルなキャリアパスや面接対策を紹介します。",
+  "meta_description": "開発と運用の架け橋となるテクニカルオペレーションズマネージャー（Technical Operations Manager）の仕事内容、年収、キャリアパス、未経験ロードマップを徹底解説！",
+  "published_at": "2026-07-04"
+}
 ---
-title: Technical Operations Manager（テクニカルオペレーションズマネージャー）の仕事内容・年収・未経験ロードマップ
-description: 開発と運用の架け橋となるテクニカルオペレーションズマネージャー（Technical Operations Manager）の仕事内容、年収、キャリアパス、未経験ロードマップを徹底解説！
-seo_title: Technical Operations Manager(テクニカルオペレーションズ)の仕事内容・年収・未経験ロードマップ｜Starful
-seo_description: テクニカルオペレーションズマネージャー（Technical Operations Manager）の仕事内容、年収、将来性、未経験から目指すロードマップを徹底解説！開発と運用の架け橋となり、技術で組織を支えるこの職種のリアルなキャリアパスや面接対策を紹介します。
----
-
 # [完全ガイド] Technical Operations Manager: Technical Operations Managerの年収・将来性・未経験ロードマップ
 
 ## 導入：Technical Operations Managerの面接官は「ここ」を見ている

@@ -141,28 +141,41 @@ After major URL/content updates, resubmit sitemap in Google Search Console and r
 
 ## Deployment
 
-### Recommended (Cloud Build)
+Career thumbnail PNGs are stored on **GCS** (`gs://starful-biz-assets`), not in the Docker image.  
+okadmin uploads to GCS take effect immediately without redeploying Cloud Run.
+
+### Docker images
+
+- `Dockerfile.base` — Python + `pip install` (rebuild when `requirements.txt` changes)
+- `Dockerfile` — app code only, `FROM starful-web-base`
+
+Cloud Build pulls cached layers from Artifact Registry (`--cache-from`) so code-only deploys skip reinstalling dependencies.
+
+### Recommended (Cloud Build — code only, fast)
 
 ```bash
 gcloud builds submit --config cloudbuild.yaml
+# or
+./deploy.sh --deploy-only
 ```
 
-This pipeline:
+### Full pipeline (content + GCS image stubs + deploy)
 
-1. Builds and tags Docker images
-2. Pushes images to Artifact Registry
-3. Deploys `starful-biz` to Cloud Run
-4. Injects secrets into Cloud Run
+```bash
+./deploy.sh --full --with-deploy
+```
 
 ### Automation Script
 
 You can also run:
 
 ```bash
-./deploy.sh
+./deploy.sh --deploy-only    # fast: Cloud Run only
+./deploy.sh --images-only    # upload missing slug PNGs to GCS
+./deploy.sh --full --with-deploy
 ```
 
-This script orchestrates content generation, image sync/optimization, data rebuild, optional Git push confirmation, and Cloud Run deployment.
+This script orchestrates content generation, GCS image uploads, data rebuild, optional Git push, and Cloud Run deployment.
 
 ## Troubleshooting
 

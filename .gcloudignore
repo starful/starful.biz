@@ -9,3 +9,15 @@ env/
 *.pyo
 *.pyd
 .DS_Store
+docs/
+tests/
+tmp/
+app/static/img_backup/
+app/static/social/
+app/static/img/**
+!app/static/img/favicon.ico
+!app/static/img/favicon-16x16.png
+!app/static/img/favicon-32x32.png
+!app/static/img/favicon-48x48.png
+!app/static/img/apple-touch-icon.png
+!app/static/img/brand_biz_mark.png

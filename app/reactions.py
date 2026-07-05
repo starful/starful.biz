@@ -18,16 +18,7 @@ def _db():
     return None
 
 
-def get_client_ip(request: Request) -> str:
-    try:
-        x_forwarded_for = request.headers.get("X-Forwarded-For")
-        if x_forwarded_for:
-            return x_forwarded_for.split(",")[0].strip()
-        if request.client and request.client.host:
-            return request.client.host
-    except Exception:
-        pass
-    return "unknown_ip"
+from app.utils.http import get_client_ip
 
 
 def sync_process_reaction(db_client, collection_name, slug, safe_ip, new_type):

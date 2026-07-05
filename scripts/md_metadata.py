@@ -3,22 +3,13 @@ from __future__ import annotations
 
 import json
 import os
-import re
 from datetime import datetime
 from typing import Any
 
-_JSON_BLOCK = re.compile(r"---json\s*(\{.*?\})\s*---(.*)", re.DOTALL)
-
+from app.md_parser import parse_starful_md_raw
 
 def parse_starful_md(raw: str) -> tuple[dict[str, Any], str] | None:
-    match = _JSON_BLOCK.match(raw)
-    if not match:
-        return None
-    try:
-        meta = json.loads(match.group(1).strip())
-    except json.JSONDecodeError:
-        return None
-    return meta, match.group(2)
+    return parse_starful_md_raw(raw)
 
 
 def read_starful_md(filepath: str) -> tuple[dict[str, Any], str] | None:

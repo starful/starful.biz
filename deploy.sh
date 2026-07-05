@@ -1,5 +1,5 @@
 #!/bin/bash
-# 🌟 Starful deployment helper script (option style)
+# Starful deployment helper — images on GCS, code on Cloud Run
 
 set -euo pipefail
 
@@ -9,7 +9,7 @@ BLUE='\033[0;34m'; CYAN='\033[0;36m'; BOLD='\033[1m'; NC='\033[0m'
 PROJECT_ROOT="$(cd "$(dirname "$0")" && pwd)"
 COMMIT_MSG="update: auto-generated career guides, images & data $(date '+%Y-%m-%d %H:%M') (Admin Sync)"
 BUCKET_URL="${BUCKET_URL:-gs://starful-biz-assets}"
-IMAGES_DIR="app/static/img"
+STAGING_DIR="tmp/image-staging"
 CONTENT_DIR="app/contents"
 GCP_PROJECT_ID="${GCP_PROJECT_ID:-starful-258005}"
 MODE="full"
@@ -21,21 +21,24 @@ print_step() { echo ""; echo -e "${BOLD}${BLUE}━━━━━━━━━━━
 print_ok()   { echo -e "${GREEN}  ✅ $1${NC}"; }
 print_warn() { echo -e "${YELLOW}  ⚠️  $1${NC}"; }
 print_err()  { echo -e "${RED}  ❌ $1${NC}"; }
-print_info() { echo -e "  ℹ️  $1"; }
 
 usage() {
     cat <<'EOF'
 Usage: ./deploy.sh [MODE] [OPTIONS]
 
 Modes (default: full)
-  --full           Sync images + generate content + image process + build + upload
-  --content-only   Generate career guides + build only
-  --deploy-only    Trigger Cloud Build deploy only
+  --full           Generate content + GCS image stubs + build job_data.json
+  --content-only   Generate career guides + build_data only
+  --images-only    generate_images + resize_images (upload to GCS)
+  --deploy-only    Cloud Build deploy only (fast — no local images)
 
 Options
   --with-git       Commit and push generated changes
-  --with-deploy    Trigger deploy after selected mode
+  --with-deploy    Trigger Cloud Run deploy after selected mode
   --help           Show this help
+
+Career PNGs live on GCS (gs://starful-biz-assets). okadmin uploads go
+directly to the bucket — no Cloud Run redeploy needed for image changes.
 EOF
 }
 
@@ -52,15 +55,8 @@ check_env() {
     print_ok ".env 확인"
 }
 
-sync_cloud_images_to_local() {
-    print_step "STEP A  |  GCS 최신 이미지 가져오기"
-    mkdir -p "$IMAGES_DIR"
-    gsutil -m rsync -r "$BUCKET_URL" "$IMAGES_DIR"
-    print_ok "클라우드 이미지 동기화 완료"
-}
-
 generate_content() {
-    print_step "STEP B  |  커리어 가이드 생성"
+    print_step "STEP A  |  커리어 가이드 생성"
     local before_count=0
     [ -d "$CONTENT_DIR" ] && before_count=$(find "$CONTENT_DIR" -maxdepth 1 -name "*.md" | wc -l | tr -d ' ')
     python3 scripts/generate_md_guides.py
@@ -71,26 +67,21 @@ generate_content() {
 }
 
 process_images() {
-    print_step "STEP C  |  이미지 생성/최적화"
+    print_step "STEP B  |  GCS 이미지 (missing slug → default.png upload)"
+    mkdir -p "$STAGING_DIR"
     python3 scripts/generate_images.py
     python3 scripts/resize_images.py
-    print_ok "이미지 처리 완료"
+    print_ok "GCS 이미지 처리 완료"
 }
 
 build_data() {
-    print_step "STEP D  |  데이터 인덱스 빌드"
+    print_step "STEP C  |  데이터 인덱스 빌드"
     python3 scripts/build_data.py
-    print_ok "job_data.json / sitemap.xml 갱신 완료"
-}
-
-upload_images() {
-    print_step "STEP E  |  GCS 자산 최종 업로드"
-    gsutil -m rsync -r "$IMAGES_DIR" "$BUCKET_URL"
-    print_ok "GCS 업로드 완료"
+    print_ok "job_data.json 갱신 완료"
 }
 
 git_push_changes() {
-    print_step "STEP F  |  GitHub Push"
+    print_step "STEP D  |  GitHub Push"
     git add .
     if ! git diff-index --quiet HEAD --; then
         git commit -m "$COMMIT_MSG"
@@ -102,7 +93,7 @@ git_push_changes() {
 }
 
 deploy_cloud_run() {
-    print_step "STEP G  |  Cloud Build 배포"
+    print_step "STEP E  |  Cloud Build 배포 (코드만 — 경량)"
     gcloud builds submit --config cloudbuild.yaml --project "$GCP_PROJECT_ID"
     print_ok "사이트 배포 완료"
 }
@@ -111,6 +102,7 @@ for arg in "$@"; do
     case "$arg" in
         --full) MODE="full" ;;
         --content-only) MODE="content-only" ;;
+        --images-only) MODE="images-only" ;;
         --deploy-only) MODE="deploy-only" ;;
         --with-git) DO_GIT=true ;;
         --with-deploy) DO_CLOUD_DEPLOY=true ;;
@@ -131,15 +123,17 @@ require_cmd gcloud
 case "$MODE" in
     full)
         require_cmd gsutil
-        sync_cloud_images_to_local
         generate_content
         process_images
         build_data
-        upload_images
         ;;
     content-only)
         generate_content
         build_data
+        ;;
+    images-only)
+        require_cmd gsutil
+        process_images
         ;;
     deploy-only)
         DO_CLOUD_DEPLOY=true

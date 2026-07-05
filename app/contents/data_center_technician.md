@@ -1,12 +1,13 @@
+---json
+{
+  "title": "データセンター技術者の年収と将来性｜未経験からのロードマップ",
+  "description": "データセンター技術者（Data Center Technician）の年収や将来性、未経験から転職するロードマップを解説！需要が高まるITインフラ業界で活躍するための完全ガイドです。",
+  "seo_title": "データセンター技術者の年収・将来性と未経験ロードマップ｜Starful",
+  "seo_description": "データセンター技術者（Data Center Technician）の年収や将来性、未経験から転職するロードマップを解説！需要が高まるITインフラ業界で活躍するための完全ガイドです。",
+  "meta_description": "データセンター技術者（Data Center Technician）の年収や将来性、未経験から転職するロードマップを解説！需要が高まるITインフラ業界で活躍するための完全ガイドです。",
+  "published_at": "2026-07-04"
+}
 ---
-title: データセンター技術者の年収と将来性｜未経験からのロードマップ
-description: データセンター技術者（Data Center Technician）の年収や将来性、未経験から転職するロードマップを解説！需要が高まるITインフラ業界で活躍するための完全ガイドです。
-seo_title: データセンター技術者の年収・将来性と未経験ロードマップ｜Starful
-seo_description: データセンター技術者（Data Center Technician）の年収や将来性、未経験から転職するロードマップを解説！需要が高まるITインフラ業界で活躍するための完全ガイドです。
----
-
-
-
 # [完全ガイド] Data Center Technician: データセンター技術者の年収と将来性｜未経験からのロードマップ
 
 ## 導入：Data Center Technicianの面接官は「ここ」を見ている

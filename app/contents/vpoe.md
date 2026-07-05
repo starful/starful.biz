@@ -1,12 +1,13 @@
+---json
+{
+  "title": "VPoEとは？役割・年収・将来性と未経験からのロードマップ｜Starful",
+  "description": "VPoE（Vice President of Engineering）の役割、年収、将来性を徹底解説！未経験からVPoEを目指すロードマップや必要なスキル、キャリアパスをわかりやすく紹介します。エンジニアとして更なるキャリアアップを目指す方は必見です。",
+  "seo_title": "VPoEとは？役割・年収・将来性と未経験からのロードマップ｜Starful",
+  "seo_description": "VPoE（Vice President of Engineering）の役割、年収、将来性を徹底解説！未経験からVPoEを目指すロードマップや必要なスキル、キャリアパスをわかりやすく紹介します。エンジニアとして更なるキャリアアップを目指す方は必見です。",
+  "meta_description": "VPoE（Vice President of Engineering）の役割、年収、将来性を徹底解説！未経験からVPoEを目指すロードマップや必要なスキル、キャリアパスをわかりやすく紹介します。エンジニアとして更なるキャリアアップを目指す方は必見です。",
+  "published_at": "2026-06-19"
+}
 ---
-title: VPoEとは？役割・年収・将来性と未経験からのロードマップ｜Starful
-description: VPoE（Vice President of Engineering）の役割、年収、将来性を徹底解説！未経験からVPoEを目指すロードマップや必要なスキル、キャリアパスをわかりやすく紹介します。エンジニアとして更なるキャリアアップを目指す方は必見です。
-seo_title: VPoEとは？役割・年収・将来性と未経験からのロードマップ｜Starful
-seo_description: VPoE（Vice President of Engineering）の役割、年収、将来性を徹底解説！未経験からVPoEを目指すロードマップや必要なスキル、キャリアパスをわかりやすく紹介します。エンジニアとして更なるキャリアアップを目指す方は必見です。
----
-
-
-
 # [完全ガイド] VPoE: VPoEの年収・将来性は？未経験からのロードマップと役割を解説
 
 ## 導入：VPoEの面接官は「ここ」を見ている

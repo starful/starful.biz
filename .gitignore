@@ -17,3 +17,16 @@ command.txt
 script/
 
 firebase-key.json
+
+# GCS is source of truth for career PNGs (keep site icons only in repo)
+app/static/img_backup/
+app/static/social/
+tmp/
+app/static/img/*.png
+app/static/img/*.jpg
+app/static/img/*.jpeg
+app/static/img/*.webp
+!app/static/img/favicon.ico
+!app/static/img/favicon-*.png
+!app/static/img/apple-touch-icon.png
+!app/static/img/brand_biz_mark.png

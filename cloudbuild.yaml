@@ -1,47 +1,98 @@
+# Base image (requirements.txt) + app image with layer cache
+substitutions:
+  _REGION: us-central1
+  _REPO: starful-repo
+  _BASE_IMAGE: starful-web-base
+  _APP_IMAGE: starful-web
+
 steps:
-  # 1. Docker 이미지 빌드 (Build ID 태그와 latest 태그를 동시에 생성)
-  - name: 'gcr.io/cloud-builders/docker'
-    id: 'build-app'
-    args: [
-      'build',
-      '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:$BUILD_ID',
-      '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:latest',
-      '.'
-    ]
+  # 0. Pull previous images for layer cache (ignore if first build)
+  - name: gcr.io/cloud-builders/docker
+    id: pull-cache
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        docker pull ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_BASE_IMAGE}:latest || true
+        docker pull ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_APP_IMAGE}:latest || true
 
-  # 2. 빌드된 모든 태그를 Artifact Registry에 푸시 (--all-tags 옵션으로 latest 갱신)
-  - name: 'gcr.io/cloud-builders/docker'
-    id: 'push-app'
-    args: [
-      'push', 
-      '--all-tags',
-      'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web'
-    ]
-    waitFor: ['build-app']
+  # 1. Base: Python deps (cached when requirements.txt unchanged)
+  - name: gcr.io/cloud-builders/docker
+    id: build-base
+    args:
+      - build
+      - -f
+      - Dockerfile.base
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_BASE_IMAGE}:$BUILD_ID
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_BASE_IMAGE}:latest
+      - -t
+      - ${_BASE_IMAGE}:latest
+      - --cache-from
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_BASE_IMAGE}:latest
+      - .
+    waitFor:
+      - pull-cache
 
-  # 3. 푸시된 이미지를 사용하여 Cloud Run에 배포 및 보안 비밀(Secret) 설정
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    id: 'deploy-app'
+  # 2. App: copy code + build_data (uses local base tag from step 1)
+  - name: gcr.io/cloud-builders/docker
+    id: build-app
+    args:
+      - build
+      - --build-arg
+      - BASE_IMAGE=${_BASE_IMAGE}:latest
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_APP_IMAGE}:$BUILD_ID
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_APP_IMAGE}:latest
+      - --cache-from
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_BASE_IMAGE}:latest
+      - --cache-from
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_APP_IMAGE}:latest
+      - .
+    waitFor:
+      - build-base
+
+  # 3. Push images before deploy (Cloud Run needs image in registry)
+  - name: gcr.io/cloud-builders/docker
+    id: push-images
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        docker push ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_BASE_IMAGE}:$BUILD_ID
+        docker push ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_BASE_IMAGE}:latest
+        docker push ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_APP_IMAGE}:$BUILD_ID
+        docker push ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_APP_IMAGE}:latest
+    waitFor:
+      - build-app
+
+  # 4. Deploy to Cloud Run
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    id: deploy-app
     entrypoint: gcloud
     args:
-      - 'run'
-      - 'deploy'
-      - 'starful-biz'
-      - '--image'
-      - 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:$BUILD_ID'
-      - '--region'
-      - 'us-central1'
-      - '--platform'
-      - 'managed'
-      - '--allow-unauthenticated'
-      # 시크릿 매니저 연동 설정
-      # 1. GEMINI_API_KEY를 환경 변수로 연결
-      # 2. starfu-biz-firebase 내용을 /secrets/FIREBASE_KEY 파일로 마운트
-      - '--set-secrets'
-      - 'GEMINI_API_KEY=STARFUL_BIZ_GEMINI_API_KEY:latest,/secrets/FIREBASE_KEY=starfu-biz-firebase:latest'
-    waitFor: ['push-app']
+      - run
+      - deploy
+      - starful-biz
+      - --image
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_APP_IMAGE}:$BUILD_ID
+      - --region
+      - ${_REGION}
+      - --platform
+      - managed
+      - --allow-unauthenticated
+      - --set-secrets
+      - GEMINI_API_KEY=STARFUL_BIZ_GEMINI_API_KEY:latest,/secrets/FIREBASE_KEY=starfu-biz-firebase:latest
+    waitFor:
+      - push-images
 
-# 빌드 기록에 남을 이미지 리스트
 images:
-  - 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:$BUILD_ID'
-  - 'us-central1-docker.pkg.dev/$PROJECT_ID/starful-repo/starful-web:latest'
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_BASE_IMAGE}:$BUILD_ID
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_BASE_IMAGE}:latest
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_APP_IMAGE}:$BUILD_ID
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_APP_IMAGE}:latest
+
+options:
+  logging: CLOUD_LOGGING_ONLY
