@@ -208,6 +208,7 @@ async def sitemap():
         ("/practice", "weekly", "0.85"),
         ("/mbti", "weekly", "0.8"),
         ("/about", "monthly", "0.5"),
+        ("/contact", "monthly", "0.4"),
         ("/privacy", "yearly", "0.3"),
     ]
     urls = []

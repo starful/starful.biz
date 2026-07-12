@@ -83,6 +83,11 @@ async def privacy_page(request: Request):
     return templates.TemplateResponse(request=request, name="privacy.html")
 
 
+@router.get("/contact")
+async def contact_page(request: Request):
+    return templates.TemplateResponse(request=request, name="contact.html")
+
+
 @router.get("/mbti")
 async def mbti_index(request: Request):
     return templates.TemplateResponse(
