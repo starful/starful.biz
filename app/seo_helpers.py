@@ -20,8 +20,86 @@ FEATURED_CAREER_SLUGS: List[str] = [
     "analytics_engineer",
     "ui_ux_designer",
     "ethical_hacker",
-    "mlops_engineer",
+    "concept_artist",
 ]
+
+# GSC 低信号・無信号で撤退した職種 → ホームへ 301（404 増を防ぐ）
+REMOVED_CAREER_SLUGS: frozenset[str] = frozenset(
+    {
+        "3d_artist",
+        "ai_product_manager",
+        "analytics_manager",
+        "android_engineer",
+        "application_architect",
+        "architect",
+        "big_data_engineer",
+        "blue_team_engineer",
+        "brand_marketer",
+        "business_systems_analyst",
+        "cloud_application_developer",
+        "cloud_database_engineer",
+        "cloud_finops_manager",
+        "cloud_native_engineer",
+        "cloud_security_engineer",
+        "compliance_engineer",
+        "computational_biologist",
+        "content_designer",
+        "content_marketer",
+        "content_planner",
+        "content_strategist",
+        "customer_support_engineer",
+        "data_quality_analyst",
+        "database_developer",
+        "design_system_manager",
+        "desktop_application_developer",
+        "developer_advocate",
+        "digital_marketing_manager",
+        "director_of_ux",
+        "e_commerce_manager",
+        "ecommerce_manager",
+        "electrical_engineer",
+        "engineering_manager",
+        "engineering_program_manager",
+        "erp_developer",
+        "event_marketer",
+        "frontend_architect",
+        "functional_analyst",
+        "game_artist",
+        "game_data_analyst",
+        "game_designer",
+        "game_developer",
+        "game_planner",
+        "game_systems_designer",
+        "go_developer",
+        "growth_manager",
+        "hybrid_cloud_engineer",
+        "llm_prompt_engineer",
+        "marketing_data_analyst",
+        "mlops_engineer",
+        "mobile_developer",
+        "mobile_engineer",
+        "operations_planner",
+        "performance_marketer",
+        "platform_planner",
+        "project_manager",
+        "recommendation_system_engineer",
+        "scrum_master",
+        "search_ads_specialist",
+        "security_engineer",
+        "social_media_manager",
+        "solutions_architect",
+        "sound_designer",
+        "system_integrator",
+        "tech_evangelist",
+        "tech_pm",
+        "test_automation_engineer",
+        "ux_planner",
+        "ux_strategist",
+        "web_developer",
+        "web_master",
+        "web_performance_engineer",
+    }
+)
 
 # 旧URL・別名スラッグ → 現行 career ID
 CAREER_SLUG_ALIASES: Dict[str, str] = {
@@ -55,6 +133,22 @@ def legacy_redirect_target(path: str) -> Optional[str]:
 def resolve_career_id(item_id: str) -> str:
     key = (item_id or "").strip().lower()
     return CAREER_SLUG_ALIASES.get(key, item_id)
+
+
+def is_removed_career(item_id: str) -> bool:
+    key = (item_id or "").strip().lower()
+    return key in REMOVED_CAREER_SLUGS
+
+
+def legacy_query_should_drop_to_home(path: str, query: str) -> bool:
+    """True for legacy ?page= URLs that should 301 to apex home."""
+    if not query:
+        return False
+    p = (path or "/").rstrip("/") or "/"
+    if p != "/":
+        return False
+    # page=<digits> only (optionally with other junk params still drop to /)
+    return "page=" in query
 
 
 def featured_jobs_from_data(jobs: List[dict]) -> List[dict]:

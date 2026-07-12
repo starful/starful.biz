@@ -20,6 +20,8 @@ from app.seo_helpers import (
     extract_faq_from_markdown,
     faq_page_json_ld,
     featured_jobs_from_data,
+    is_removed_career,
+    legacy_query_should_drop_to_home,
     legacy_redirect_target,
     merge_career_json_ld,
     resolve_career_id,
@@ -61,6 +63,9 @@ async def seo_request_middleware(request: Request, call_next):
         if request.url.query:
             loc = f"{loc}?{request.url.query}"
         return RedirectResponse(loc, status_code=301)
+
+    if legacy_query_should_drop_to_home(request.url.path, request.url.query or ""):
+        return RedirectResponse(f"{BASE_URL}/", status_code=301)
 
     proto = (request.headers.get("x-forwarded-proto") or "").split(",")[0].strip().lower()
     if not proto and request.url.scheme:
@@ -114,6 +119,8 @@ async def favicon_root():
 async def career_detail(request: Request, item_id: str):
     ensure_jobs_cache()
     resolved_id = resolve_career_id(item_id)
+    if is_removed_career(resolved_id) or is_removed_career(item_id):
+        return RedirectResponse(f"{BASE_URL}/", status_code=301)
     if resolved_id != item_id:
         target = canonical_career_url(BASE_URL, resolved_id)
         if request.url.query:
@@ -296,6 +303,8 @@ async def social_image(image_key: str):
 @router.api_route("/card/career/{career_id}", methods=["GET", "HEAD"])
 async def career_social_card(request: Request, career_id: str):
     resolved_id = resolve_career_id(career_id)
+    if is_removed_career(resolved_id) or is_removed_career(career_id):
+        return RedirectResponse(f"{BASE_URL}/", status_code=301)
     if resolved_id != career_id:
         target = f"{BASE_URL}{card_page_path(resolved_id)}"
         if request.url.query:

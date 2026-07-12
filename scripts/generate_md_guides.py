@@ -12,6 +12,11 @@ from datetime import datetime
 from slug_utils import normalize_slug, position_slug
 from md_metadata import read_starful_md, published_date, write_starful_md
 from topic_queue_csv import resolve as resolve_queue_csv
+from content_guards import (
+    filter_related_jobs,
+    is_blocked_position,
+    is_blocked_slug,
+)
 
 # --- .env 파일 로드 ---
 load_dotenv()
@@ -67,7 +72,7 @@ FRONTMATTER_PROMPT = """
   "category": "{{engineering, ai-data, design, marketing, cloud-infra, product-management, cyber-security, sales-bizdev, customer-success, content-strategyから1つ選択}}",
   "keywords": [{{キーワードを5〜10個}}],
   "meta_description": "{{職務のリアルな現実とやりがいを含む魅力的な説明文（100字程度）}}",
-  "related_jobs": [{{関連職務のslugを2〜3個。必ずスネークケース（_）を使用すること。例：["data_scientist", "backend_developer"]}}],
+  "related_jobs": [{{関連職務のslugを2〜3個。必ずスネークケース（_）を使用すること。例：["data_scientist", "backend_developer"]。撤退済み・希少すぎる職種は避け、Starfulに既にある一般的なIT職種のみ}}],
   "slug": "{{職務名を必ずスネークケース（_）に変換したID。例：crm_marketer}}",
   "tags": [{{関連タグを5〜10個}}],
   "thumbnail": "/static/img/{{slug}}.png",
@@ -187,18 +192,29 @@ def generate_body(position_name, frontmatter_data):
         return None
 
 def process_single_position(position):
-    """개별 직무에 대한 생성 작업을 수행하는 워커 함수"""
+    """個別職務に対する生成作業を行うワーカー関数"""
     print(f"⏳ 開始: {position}")
-    
+
+    if is_blocked_position(position):
+        print(f"⏭ スキップ (GSC撤退リスト): {position}")
+        return False
+
     frontmatter = generate_frontmatter(position)
     if not frontmatter:
         print(f"❌ 失敗 (Frontmatter): {position}")
         return False
         
     slug = normalize_slug(frontmatter.get("slug") or position_slug(position))
+    if is_blocked_slug(slug):
+        print(f"⏭ スキップ (撤退slug): {position} → {slug}")
+        return False
     frontmatter["slug"] = slug
     frontmatter["thumbnail"] = f"/static/img/{slug}.png"
     frontmatter["hero_image"] = f"/static/img/{slug}_hero.png"
+    frontmatter["related_jobs"] = filter_related_jobs(
+        frontmatter.get("related_jobs"),
+        contents_dir=OUTPUT_DIR,
+    )
     output_filepath = os.path.join(OUTPUT_DIR, f"{slug}.md")
 
     existing = read_starful_md(output_filepath)
@@ -230,26 +246,36 @@ def main():
         return
 
     df = pd.read_csv(csv_path)
-    positions = df['position_name'].tolist()
+    # BOM付きヘッダ対策
+    if "position_name" not in df.columns and "\ufeffposition_name" in df.columns:
+        df = df.rename(columns={"\ufeffposition_name": "position_name"})
+    positions = df["position_name"].tolist()
     
-    # 생성되지 않은 파일 목록 필터링 (CSV 중복·slug 기준)
+    # 未生成のみ。GSC撤退リストは再生成しない
     positions_to_generate = []
     seen_slugs: set[str] = set()
+    skipped_removed = 0
     for pos in positions:
         slug = position_slug(pos)
         if slug in seen_slugs:
             continue
         seen_slugs.add(slug)
+        if is_blocked_slug(slug) or is_blocked_position(pos):
+            skipped_removed += 1
+            continue
         filepath = os.path.join(OUTPUT_DIR, f"{slug}.md")
         if not os.path.exists(filepath):
             positions_to_generate.append(pos)
+
+    if skipped_removed:
+        print(f"⏭ GSC撤退リストによりスキップ: {skipped_removed}件（再生成しません）")
     
     # 🎯 [핵심 변경사항] 남은 파일 개수와 설정한 최대 건수(MAX_TO_GENERATE) 중 작은 값만큼만 자르기
     max_gen = _max_to_generate()
     target_positions = positions_to_generate[:max_gen]
     
     if not target_positions:
-        print("🎉 すべてのファイルが生成済みです。")
+        print("🎉 すべてのファイルが生成済みです（撤退分を除く）。")
         return
 
     print(f"🚀 超高速生成を開始します。ターゲット: {len(target_positions)}件 (同時実行: {MAX_WORKERS}件)")

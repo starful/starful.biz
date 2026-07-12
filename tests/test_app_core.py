@@ -91,10 +91,22 @@ class AppCoreTests(unittest.TestCase):
         self.assertIn("/mbti/INTJ</loc>", response.text)
 
     def test_career_detail_has_mbti_reverse_link(self):
-        response = self.client.get("/career/solutions_architect")
+        response = self.client.get("/career/cloud_solutions_architect")
         self.assertEqual(response.status_code, 200)
         self.assertIn("/mbti/INTJ", response.text)
         self.assertIn("相性の良いタイプ", response.text)
+
+    def test_removed_career_redirects_home(self):
+        response = self.client.get("/career/solutions_architect", follow_redirects=False)
+        self.assertEqual(response.status_code, 301)
+        loc = response.headers.get("location", "").rstrip("/")
+        self.assertEqual(loc, "https://starful.biz")
+
+    def test_legacy_page_query_redirects_home(self):
+        response = self.client.get("/?page=1740642449", follow_redirects=False)
+        self.assertEqual(response.status_code, 301)
+        loc = response.headers.get("location", "").rstrip("/")
+        self.assertEqual(loc, "https://starful.biz")
 
 
 class MdParserTests(unittest.TestCase):
