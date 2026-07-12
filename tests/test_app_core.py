@@ -60,6 +60,42 @@ class AppCoreTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn("Sitemap: https://starful.biz/sitemap.xml", response.text)
 
+    def test_mbti_index(self):
+        response = self.client.get("/mbti")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("MBTIから探す", response.text)
+        self.assertIn("/mbti/INTJ", response.text)
+
+    def test_mbti_type_page(self):
+        response = self.client.get("/mbti/INTJ")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("INTJに向いているIT職種", response.text)
+        self.assertIn("/career/", response.text)
+        self.assertIn("FAQPage", response.text)
+        self.assertIn("よくある質問", response.text)
+        self.assertIn("チームでの働き方", response.text)
+
+    def test_mbti_type_lowercase_redirects(self):
+        response = self.client.get("/mbti/intj", follow_redirects=False)
+        self.assertEqual(response.status_code, 301)
+        self.assertIn("/mbti/INTJ", response.headers.get("location", ""))
+
+    def test_mbti_unknown_404(self):
+        response = self.client.get("/mbti/XXXX")
+        self.assertEqual(response.status_code, 404)
+
+    def test_sitemap_includes_mbti(self):
+        response = self.client.get("/sitemap.xml")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("/mbti</loc>", response.text)
+        self.assertIn("/mbti/INTJ</loc>", response.text)
+
+    def test_career_detail_has_mbti_reverse_link(self):
+        response = self.client.get("/career/solutions_architect")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("/mbti/INTJ", response.text)
+        self.assertIn("相性の良いタイプ", response.text)
+
 
 class MdParserTests(unittest.TestCase):
     def test_json_frontmatter(self):

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block page_title %}MBTIから探すIT職種｜16タイプ別の適職ガイド【Starful】{% endblock %}
+{% block meta_desc %}MBTI性格タイプから相性の良いIT職種を探せます。16タイプ別におすすめ職種と面接ガイドへつなげ、転職・キャリア検討の参考に。{% endblock %}
+{% block og_title %}MBTIから探すIT職種｜16タイプ別の適職ガイド【Starful】{% endblock %}
+{% block og_desc %}MBTI性格タイプから相性の良いIT職種を探せます。16タイプ別におすすめ職種と面接ガイドへつなげ、転職・キャリア検討の参考に。{% endblock %}
+{% block twitter_title %}MBTIから探すIT職種｜16タイプ別の適職ガイド【Starful】{% endblock %}
+{% block twitter_desc %}MBTI性格タイプから相性の良いIT職種を探せます。16タイプ別におすすめ職種と面接ガイドへつなげ、転職・キャリア検討の参考に。{% endblock %}
+
+{% block content %}
+<main class="content-wrapper mbti-page">
+    <nav class="mbti-breadcrumb" aria-label="パンくず">
+        <a href="/">ホーム</a>
+        <span aria-hidden="true">/</span>
+        <span>MBTIから探す</span>
+    </nav>
+
+    <header class="mbti-hero">
+        <p class="mbti-kicker">TYPE → CAREER</p>
+        <h1>MBTIから探すIT職種</h1>
+        <p class="mbti-lead">性格タイプの傾向から、相性の良いIT職種を見つけましょう。16タイプそれぞれに、おすすめ職種の解説・働き方の傾向・よくある質問を用意しています。気になるタイプから職種別の面接ガイドへ進めます。</p>
+    </header>
+
+    <section class="mbti-prose" style="margin-bottom: 28px;">
+        <h2 style="font-size: 1.15rem;">タイプ別ガイドの使い方</h2>
+        <p style="font-size: 0.98rem; line-height: 1.75; color: #555;">すでに自分のMBTIタイプが分かっている方は、下の一覧から該当タイプを選んでください。各ページではIT現場での働き方の傾向と、相性の良い職種を解説しています。職種名から年収・ロードマップ・面接Q&amp;Aの詳細ガイドへ移動できます。</p>
+    </section>
+
+    <section class="mbti-type-grid" aria-label="16タイプ一覧">
+        {% for t in mbti_types %}
+        <a href="/mbti/{{ t.code }}" class="mbti-type-card">
+            <span class="mbti-code">{{ t.code }}</span>
+            <span class="mbti-label">{{ t.label }}</span>
+            <span class="mbti-card-summary">{{ t.summary | truncate(72, True, '…') }}</span>
+        </a>
+        {% endfor %}
+    </section>
+
+    <p class="mbti-disclaimer">※MBTIは適職の参考情報です。採用・適性を保証するものではありません。</p>
+</main>
+{% endblock %}

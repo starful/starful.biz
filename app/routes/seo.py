@@ -25,6 +25,7 @@ from app.seo_helpers import (
     resolve_career_id,
 )
 from app.services.jobs_cache import JOB_DATA, ensure_jobs_cache, related_careers_from_meta
+from app.services.mbti import all_mbti_type_codes, types_for_career
 from app.services.media import career_img_url, gcs_or_static_img
 from app.social_share import (
     card_page_path,
@@ -64,14 +65,16 @@ async def seo_request_middleware(request: Request, call_next):
     proto = (request.headers.get("x-forwarded-proto") or "").split(",")[0].strip().lower()
     if not proto and request.url.scheme:
         proto = request.url.scheme.lower()
-    if proto == "http" and host_header:
+    host_name = host_lower.split(":")[0]
+    is_local = host_name in {"localhost", "127.0.0.1", "::1"}
+    if proto == "http" and host_header and not is_local:
         path = request.url.path
         if request.url.query:
             path = f"{path}?{request.url.query}"
         return RedirectResponse(f"https://{host_header}{path}", status_code=301)
 
     response = await call_next(request)
-    if proto == "https" or (not proto and BASE_URL.startswith("https")):
+    if not is_local and (proto == "https" or (not proto and BASE_URL.startswith("https"))):
         response.headers.setdefault(
             "Strict-Transport-Security",
             "max-age=31536000; includeSubDomains",
@@ -178,6 +181,7 @@ async def career_detail(request: Request, item_id: str):
 
     all_featured = featured_jobs_from_data(JOB_DATA.get("jobs", []))
     featured_others = [j for j in all_featured if j.get("id") != resolved_id][:8]
+    mbti_types = types_for_career(resolved_id)
 
     return templates.TemplateResponse(
         request=request,
@@ -190,6 +194,7 @@ async def career_detail(request: Request, item_id: str):
             "canonical_url": canonical,
             "related_careers": related_careers_from_meta(meta),
             "featured_careers": featured_others,
+            "mbti_types": mbti_types,
             "json_ld_career": json_ld_career,
             **ctx,
         },
@@ -201,6 +206,7 @@ async def sitemap():
     static_paths = [
         ("/", "daily", "1.0"),
         ("/practice", "weekly", "0.85"),
+        ("/mbti", "weekly", "0.8"),
         ("/about", "monthly", "0.5"),
         ("/privacy", "yearly", "0.3"),
     ]
@@ -212,6 +218,14 @@ async def sitemap():
         urls.append(
             f"<url><loc>{loc}</loc><changefreq>{changefreq}</changefreq>"
             f"<priority>{priority}</priority></url>"
+        )
+
+    today = date.today().isoformat()
+    for code in all_mbti_type_codes():
+        loc = urljoin(f"{BASE_URL}/", f"mbti/{code}")
+        urls.append(
+            f"<url><loc>{loc}</loc><lastmod>{today}</lastmod>"
+            f"<changefreq>monthly</changefreq><priority>0.75</priority></url>"
         )
 
     for job in JOB_DATA.get("jobs", []):

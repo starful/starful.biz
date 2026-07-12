@@ -292,6 +292,17 @@
             </nav>
             {% endif %}
 
+            {% if mbti_types %}
+            <nav class="related-careers mbti-career-types" aria-label="相性の良いMBTIタイプ">
+                <h2>この職種と相性の良いタイプ</h2>
+                <ul>
+                    {% for t in mbti_types %}
+                    <li><a href="/mbti/{{ t.code }}">{{ t.code }}{% if t.label %}（{{ t.label }}）{% endif %}の適職ガイド</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            {% endif %}
+
             {% if featured_careers %}
             <nav class="related-careers" aria-label="人気の面接ガイド">
                 <h2>人気の面接ガイド（他の職種）</h2>
