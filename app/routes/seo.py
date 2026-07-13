@@ -12,6 +12,7 @@ from fastapi.exception_handlers import http_exception_handler
 from fastapi.responses import FileResponse, PlainTextResponse, RedirectResponse, Response
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
+from app.affiliate import affiliate_context
 from app.config import BASE_URL, BRAND_LOGO_FILE, CONTENTS_DIR, GCS_IMG_BASE, STATIC_DIR
 from app.md_parser import parse_starful_md
 from app.seo_helpers import (
@@ -203,6 +204,11 @@ async def career_detail(request: Request, item_id: str):
             "featured_careers": featured_others,
             "mbti_types": mbti_types,
             "json_ld_career": json_ld_career,
+            **affiliate_context(
+                career_id=resolved_id,
+                category=str(meta.get("category") or ""),
+                page_kind="career",
+            ),
             **ctx,
         },
     )

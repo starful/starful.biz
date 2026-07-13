@@ -238,6 +238,58 @@
         color: #6e6e73;
     }
 
+    .affiliate-box {
+        margin: 0 0 28px;
+        padding: 22px 24px 18px;
+        background: linear-gradient(180deg, #fffbeb 0%, #fff7ed 100%);
+        border: 2px solid #f59e0b;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(245, 158, 11, 0.12);
+        text-align: center;
+    }
+    .affiliate-box__title {
+        margin: 0 0 8px;
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: #92400e;
+        line-height: 1.4;
+    }
+    .affiliate-box__desc {
+        margin: 0 auto 16px;
+        max-width: 36rem;
+        font-size: 0.9rem;
+        line-height: 1.55;
+        color: #78716c;
+    }
+    .affiliate-box__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .affiliate-box__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-size: 0.92rem;
+        font-weight: 800;
+        color: #fff !important;
+        text-decoration: none;
+        transition: transform 0.15s, background 0.15s;
+    }
+    .affiliate-box__btn:hover { transform: translateY(-2px); }
+    .affiliate-box__btn--amazon { background: #ff9900; }
+    .affiliate-box__btn--amazon:hover { background: #e88b00; }
+    .affiliate-box__btn--rakuten { background: #bf0000; }
+    .affiliate-box__btn--rakuten:hover { background: #a00000; }
+    .affiliate-box__note {
+        margin: 12px 0 0;
+        font-size: 0.75rem;
+        color: #a8a29e;
+    }
+
     @media (max-width: 768px) {
         .article-wrapper { margin: 20px 10px 60px; border-radius: 20px; }
         .detail-header { padding: 40px 20px 20px; }
@@ -245,6 +297,7 @@
         .reaction-panel { margin-top: 36px; padding: 24px 20px 28px; }
         .reaction-panel-title { font-size: 1.15rem; }
         .reaction-btn { min-width: 0; flex: 1 1 120px; max-width: 200px; padding: 12px 20px; }
+        .affiliate-box__btn { width: 100%; box-sizing: border-box; }
     }
 </style>
 {% endblock %}
@@ -260,6 +313,8 @@
         </header>
 
         <div class="detail-body">
+            {% include 'partials/affiliate_box.html' %}
+
             <article id="content-main">
                 {{ content | safe }}
             </article>

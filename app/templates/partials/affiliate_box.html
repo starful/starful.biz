@@ -1,0 +1,24 @@
+{# Amazon + Rakuten book search CTA #}
+{% if show_affiliate %}
+<aside class="affiliate-box" role="complementary" aria-label="アフィリエイトリンク">
+    <p class="affiliate-box__title">{{ affiliate_title }}</p>
+    <p class="affiliate-box__desc">{{ affiliate_desc }}</p>
+    <div class="affiliate-box__actions">
+        <a class="affiliate-box__btn affiliate-box__btn--amazon"
+           href="{{ amazon_search_url }}"
+           target="_blank"
+           rel="nofollow sponsored noopener noreferrer"
+           title="Amazonで開く（新しいタブ）">
+            {{ amazon_button_label }}
+        </a>
+        <a class="affiliate-box__btn affiliate-box__btn--rakuten"
+           href="{{ rakuten_search_url }}"
+           target="_blank"
+           rel="nofollow sponsored noopener noreferrer"
+           title="楽天で開く（新しいタブ）">
+            {{ rakuten_button_label }}
+        </a>
+    </div>
+    <p class="affiliate-box__note">{{ affiliate_note }}</p>
+</aside>
+{% endif %}

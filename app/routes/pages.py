@@ -6,6 +6,7 @@ from datetime import date
 from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import RedirectResponse
 
+from app.affiliate import affiliate_context
 from app.config import BASE_URL, CAREER_CATEGORIES
 from app.content_new import enrich_items
 from app.seo_helpers import faq_page_json_ld, featured_jobs_from_data, merge_career_json_ld
@@ -157,5 +158,9 @@ async def mbti_type_page(request: Request, type_code: str):
     return templates.TemplateResponse(
         request=request,
         name="mbti_type.html",
-        context={"mbti": payload, "json_ld_mbti": json_ld_mbti},
+        context={
+            "mbti": payload,
+            "json_ld_mbti": json_ld_mbti,
+            **affiliate_context(page_kind="mbti"),
+        },
     )

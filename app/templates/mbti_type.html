@@ -30,6 +30,8 @@
         <p class="mbti-lead">{{ mbti.summary }}</p>
     </header>
 
+    {% include 'partials/affiliate_box.html' %}
+
     {% if mbti.intro %}
     <section class="mbti-prose" aria-labelledby="mbti-intro-heading">
         <h2 id="mbti-intro-heading">{{ mbti.code }}とITキャリア</h2>
