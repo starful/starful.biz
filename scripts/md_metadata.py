@@ -1,12 +1,23 @@
 """Starful career MD ---json frontmatter helpers."""
 from __future__ import annotations
 
+import importlib.util
 import json
 import os
 from datetime import datetime
+from pathlib import Path
 from typing import Any
 
-from app.md_parser import parse_starful_md_raw
+# Load app/md_parser.py directly so build_data does not import app/__init__.py
+# (that pulls dotenv/FastAPI and breaks hub deploy on system Python).
+_MD_PARSER_PATH = Path(__file__).resolve().parents[1] / "app" / "md_parser.py"
+_spec = importlib.util.spec_from_file_location("starful_md_parser_standalone", _MD_PARSER_PATH)
+if _spec is None or _spec.loader is None:
+    raise ImportError(f"cannot load md_parser from {_MD_PARSER_PATH}")
+_md_parser = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_md_parser)
+parse_starful_md_raw = _md_parser.parse_starful_md_raw
+
 
 def parse_starful_md(raw: str) -> tuple[dict[str, Any], str] | None:
     return parse_starful_md_raw(raw)
