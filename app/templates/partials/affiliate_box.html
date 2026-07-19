@@ -8,14 +8,18 @@
            href="{{ amazon_search_url }}"
            target="_blank"
            rel="nofollow sponsored noopener noreferrer"
-           title="Amazonで開く（新しいタブ）">
+           title="Amazonで開く（新しいタブ）"
+           data-track="affiliate_amazon"
+           data-track-label="{{ affiliate_keyword }}">
             {{ amazon_button_label }}
         </a>
         <a class="affiliate-box__btn affiliate-box__btn--rakuten"
            href="{{ rakuten_search_url }}"
            target="_blank"
            rel="nofollow sponsored noopener noreferrer"
-           title="楽天で開く（新しいタブ）">
+           title="楽天で開く（新しいタブ）"
+           data-track="affiliate_rakuten"
+           data-track-label="{{ affiliate_keyword }}">
             {{ rakuten_button_label }}
         </a>
     </div>
