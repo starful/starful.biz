@@ -1,39 +1,10 @@
----json
-{
-  "category": "cloud-infra",
-  "keywords": [
-    "DBA",
-    "データベース管理者",
-    "年収",
-    "将来性",
-    "未経験",
-    "キャリアパス",
-    "ロードマップ",
-    "SQL",
-    "データベース設計"
-  ],
-  "meta_description": "データの守護神であるDBA（データベース管理者）の仕事とは？未経験からのロードマップ、気になる年収や将来性、そしてシステムを裏から支えるリアルなやりがいと厳しい現実までを徹底解説します。",
-  "related_jobs": [
-    "cloud_engineer",
-    "data_engineer",
-    "infrastructure_engineer"
-  ],
-  "slug": "database_administrator",
-  "tags": [
-    "DBA",
-    "データベース",
-    "インフラエンジニア",
-    "キャリアパス",
-    "未経験歓迎",
-    "クラウド移行",
-    "SQL"
-  ],
-  "thumbnail": "/static/img/database_administrator.png",
-  "hero_image": "/static/img/database_administrator_hero.png",
-  "title": "DBAとは？未経験からのロードマップと気になる年収・将来性",
-  "published_at": "2026-06-23"
-}
 ---
+title: データベース管理者（DBA）とは？未経験からのロードマップ、年収・将来性と仕事内容
+description: データベース管理者（DBA）の仕事内容や未経験から目指すロードマップを徹底解説！気になる年収や将来性、有利になる資格、面接対策（Q&A）まで網羅。システムを裏から支えるDBAへのキャリアパスや転職のポイントを紹介します。
+seo_title: データベース管理者（DBA）とは？未経験からのロードマップ、年収・将来性・資格を徹底解説｜Starful
+seo_description: データベース管理者（DBA）の仕事内容や未経験から目指すロードマップを徹底解説！気になる年収や将来性、有利になる資格、面接対策（Q&A）まで網羅。システムを裏から支えるDBAへのキャリアパスや転職のポイントを紹介します。
+---
+
 # [完全ガイド] DBA: DBAとは？未経験からのロードマップと気になる年収・将来性
 
 ## 導入：DBAの面接官は「ここ」を見ている

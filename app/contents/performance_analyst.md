@@ -1,37 +1,10 @@
----json
-{
-  "category": "marketing",
-  "keywords": [
-    "パフォーマンスアナリスト",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "データ分析",
-    "ROI",
-    "マーケティング"
-  ],
-  "meta_description": "広告や施策の効果を最大化するパフォーマンスアナリスト。数値の裏にある心理を読み解く難しさはありますが、成果が直結する達成感は格別です。年収事情や未経験からの挑戦方法を徹底解説します。",
-  "related_jobs": [
-    "data_analyst",
-    "digital_marketer",
-    "growth_hacker"
-  ],
-  "slug": "performance_analyst",
-  "tags": [
-    "データ分析",
-    "広告運用",
-    "キャリアパス",
-    "ROI最適化",
-    "マーケティング",
-    "統計学"
-  ],
-  "thumbnail": "/static/img/performance_analyst.png",
-  "hero_image": "/static/img/performance_analyst_hero.png",
-  "title": "パフォーマンスアナリストの年収・将来性は？未経験ロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: パフォーマンスアナリストの年収・将来性は？未経験からの転職ロードマップ
+description: 広告・マーケティング施策を最適化する「パフォーマンスアナリスト」の年収事情、将来性、未経験から転職するためのロードマップを解説。面接で役立つ実践的なQ&Aも掲載しています。
+seo_title: パフォーマンスアナリストの年収・将来性｜未経験からの転職ロードマップ＆面接対策【Starful】
+seo_description: パフォーマンスアナリストの年収・将来性を徹底解剖！未経験から転職するためのロードマップや、実際の面接に役立つ質問対策（Q&A）まで、キャリアアップに必要な情報を分かりやすく解説します。
+---
+
 # [完全ガイド] Performance Analyst: パフォーマンスアナリストの面接対策・完全無欠のバイブル
 
 ## 導入：Performance Analystの面接官は「ここ」を見ている

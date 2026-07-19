@@ -1,38 +1,10 @@
----json
-{
-  "category": "sales-bizdev",
-  "keywords": [
-    "Business Development Manager",
-    "BDM",
-    "事業開発",
-    "年収",
-    "将来性",
-    "未経験",
-    "IT業界",
-    "転職",
-    "キャリアパス"
-  ],
-  "meta_description": "IT業界のBusiness Development Manager（BDM）の年収や将来性を徹底解説。未経験から挑戦するロードマップや、事業をゼロから創り上げるリアルなやりがい、厳しさまで、キャリア形成に役立つ情報を凝縮。",
-  "related_jobs": [
-    "product_manager",
-    "account_executive",
-    "customer_success_manager"
-  ],
-  "slug": "business_development_manager",
-  "tags": [
-    "事業開発",
-    "BDM",
-    "IT転職",
-    "キャリアパス",
-    "年収アップ",
-    "戦略立案"
-  ],
-  "thumbnail": "/static/img/business_development_manager.png",
-  "hero_image": "/static/img/business_development_manager_hero.png",
-  "title": "BDMの年収と将来性は？未経験からの転職ロードマップを解説",
-  "published_at": "2026-03-22"
-}
 ---
+title: BDMの年収・将来性と転職ロードマップ！未経験から成功する面接対策Q&A
+description: BDM（ビジネスデベロップメントマネージャー）の年収や将来性を徹底解説！未経験から転職を成功させるためのロードマップから、実際の面接で役立つQ&A対策まで網羅。新規事業を創出するBDMキャリアの第一歩を踏み出しましょう。
+seo_title: BDMの年収・将来性と転職ロードマップ！未経験からの面接Q&A｜Starful
+seo_description: BDM（ビジネスデベロップメントマネージャー）の年収や将来性を徹底解説！未経験から転職を成功させるためのロードマップから、実際の面接で役立つQ&A対策まで網羅。新規事業を創出するBDMキャリアの第一歩を踏み出しましょう。
+---
+
 # [完全ガイド] Business Development Manager: BDMの年収と将来性は？未経験からの転職ロードマップを解説
 
 ## 導入：Business Development Managerの面接官は「ここ」を見ている

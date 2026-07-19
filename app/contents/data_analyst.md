@@ -1,38 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "データアナリスト",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "SQL",
-    "Python",
-    "BIツール",
-    "キャリアパス"
-  ],
-  "meta_description": "SQL・集計・仮説検証からステークホルダー説明まで、DA面接の頻出トピックを回答レベルで整理。数字のストーリー化と逆質問例で当日の話し方を固める。",
-  "related_jobs": [
-    "data_scientist",
-    "data_engineer",
-    "business_analyst"
-  ],
-  "slug": "data_analyst",
-  "tags": [
-    "データ分析",
-    "キャリアチェンジ",
-    "統計学",
-    "DX",
-    "スキルアップ",
-    "IT転職"
-  ],
-  "thumbnail": "/static/img/data_analyst.png",
-  "hero_image": "/static/img/data_analyst_hero.png",
-  "title": "データアナリスト面接｜SQL・施策提案で聞かれること一気読み",
-  "published_at": "2026-04-28"
-}
 ---
+title: データアナリストの面接対策｜頻出質問・回答例とSQL・逆質問
+description: データアナリストの面接・転職対策まとめ。SQLや仮説検証、施策提案といった技術・実務面接の質問から、志望動機や逆質問まで、頻出質問例と具体的な回答のコツを徹底解説します。
+seo_title: データアナリストの面接対策｜頻出質問・回答例、SQL、逆質問【Starful】
+seo_description: データアナリストの転職・面接対策決定版。SQLや仮説検証、施策提案などの実務質問から、志望動機や逆質問まで、頻出の質問例と具体的な回答のコツを解説。面接を有利に進めるポイントを凝縮。
+---
+
 # [完全ガイド] Data Analyst: データアナリストの年収と将来性｜未経験からの完全ロードマップ
 
 ## 導入：Data Analystの面接官は「ここ」を見ている

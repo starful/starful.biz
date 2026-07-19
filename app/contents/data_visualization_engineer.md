@@ -1,40 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "データビジュアライゼーションエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "データ分析",
-    "D3.js",
-    "Tableau",
-    "BIツール",
-    "キャリアパス"
-  ],
-  "meta_description": "膨大なデータを価値ある洞察へ変えるデータビジュアライゼーションエンジニア。高い専門性で年収アップも狙える注目の職種です。未経験からのロードマップや将来性、視覚化の醍醐味をリアルに解説します。",
-  "related_jobs": [
-    "data_analyst",
-    "data_scientist",
-    "frontend_developer"
-  ],
-  "slug": "data_visualization_engineer",
-  "tags": [
-    "データサイエンス",
-    "BI",
-    "可視化",
-    "JavaScript",
-    "SQL",
-    "Python",
-    "キャリア"
-  ],
-  "thumbnail": "/static/img/data_visualization_engineer.png",
-  "hero_image": "/static/img/data_visualization_engineer_hero.png",
-  "title": "データビジュアライゼーションエンジニア：年収・将来性・手順",
-  "published_at": "2026-03-22"
-}
 ---
+title: データビジュアライゼーションエンジニアの年収・将来性・未経験からのロードマップ
+description: データビジュアライゼーションエンジニアの仕事内容、平均年収、将来性を徹底解説！未経験からプロを目指すための学習ロードマップや必要なスキル、需要が高まるBIツール・データ分析の知識まで詳しく紹介します。キャリアアップを目指すエンジニア必見です。
+seo_title: データビジュアライゼーションエンジニアの年収・将来性｜未経験からのロードマップ【Starful】
+seo_description: データビジュアライゼーションエンジニアの仕事内容、平均年収、将来性を徹底解説！未経験からプロを目指すための学習ロードマップや必要なスキル、需要が高まるBIツール・データ分析の知識まで詳しく紹介します。キャリアアップを目指すエンジニア必見です。
+---
+
 # [完全ガイド] Data Visualization Engineer: データビジュアライゼーションエンジニア：年収・将来性・手順
 
 ## 導入：Data Visualization Engineerの面接官は「ここ」を見ている

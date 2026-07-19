@@ -1,38 +1,10 @@
----json
-{
-  "category": "cloud-infra",
-  "keywords": [
-    "ネットワークエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "CCNA",
-    "クラウド移行",
-    "ITインフラ"
-  ],
-  "meta_description": "通信の命綱を握るネットワークエンジニアの現実。未経験からの学習ロードマップや気になる年収、クラウド時代の将来性を徹底解説。社会インフラを支えるやりがいと、キャリアアップの秘訣を公開します。",
-  "related_jobs": [
-    "cloud_engineer",
-    "cyber_security_engineer",
-    "site_reliability_engineer"
-  ],
-  "slug": "network_engineer",
-  "tags": [
-    "ネットワークエンジニア",
-    "インフラエンジニア",
-    "CCNA",
-    "Cisco",
-    "クラウド",
-    "転職",
-    "キャリアパス"
-  ],
-  "thumbnail": "/static/img/network_engineer.png",
-  "hero_image": "/static/img/network_engineer_hero.png",
-  "title": "未経験から年収UP！ネットワークエンジニアの将来性とロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: ネットワークエンジニアは未経験から目指せる？年収・将来性とキャリアロードマップ
+description: 未経験からネットワークエンジニアを目指すための完全ロードマップ。年収や将来性、必要な資格から面接対策（Q&A）まで徹底解説します。
+seo_title: ネットワークエンジニアは未経験から目指せる？年収・将来性とロードマップ【Starful】
+seo_description: 未経験からネットワークエンジニアを目指す方必見！仕事内容や平均年収、将来性、具体的なキャリアロードマップを徹底解説。クラウド時代の需要や必要資格、面接での質問回答例（Q&A）まで、キャリアアップに必要な情報を分かりやすく網羅しています。
+---
+
 # [完全ガイド] Network Engineer: 未経験から年収UP！ネットワークエンジニアの将来性とロードマップ
 
 ## 導入：Network Engineerの面接官は「ここ」を見ている

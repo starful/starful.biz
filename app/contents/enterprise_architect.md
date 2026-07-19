@@ -1,38 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "エンタープライズアーキテクト",
-    "EA",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "IT戦略",
-    "DX",
-    "キャリアパス"
-  ],
-  "meta_description": "企業のIT戦略を担うエンタープライズアーキテクト。高年収で将来性も抜群な職種のリアルを解説。未経験から到達するためのロードマップや、経営課題を技術で解決する圧倒的なやりがいを詳しく紹介します。",
-  "related_jobs": [
-    "solution_architect",
-    "it_strategist",
-    "cto"
-  ],
-  "slug": "enterprise_architect",
-  "tags": [
-    "ITアーキテクチャ",
-    "DX推進",
-    "キャリアアップ",
-    "高年収",
-    "経営戦略",
-    "エンジニア"
-  ],
-  "thumbnail": "/static/img/enterprise_architect.png",
-  "hero_image": "/static/img/enterprise_architect_hero.png",
-  "title": "EAの年収・将来性は？未経験からのロードマップ",
-  "published_at": "2026-04-19"
-}
 ---
+title: エンタープライズアーキテクト(EA)の年収・将来性とは？未経験からのロードマップ
+description: エンタープライズアーキテクト（EA）の年収、将来性、仕事内容を徹底解説！未経験から目指すためのロードマップや必要なスキル、面接対策Q&Aまで網羅。ITの力で経営課題を解決する超上流キャリアの全貌を紹介します。
+seo_title: エンタープライズアーキテクト(EA)の年収・将来性は？未経験からのロードマップ｜Starful
+seo_description: エンタープライズアーキテクト（EA）の年収、将来性、仕事内容を徹底解説！未経験から目指すためのロードマップや必要なスキル、面接対策Q&Aまで網羅。ITの力で経営課題を解決する超上流キャリアの全貌を紹介します。
+---
+
 # [完全ガイド] Enterprise Architect: EAの年収・将来性は？未経験からのロードマップ
 
 ## 導入：Enterprise Architectの面接官は「ここ」を見ている

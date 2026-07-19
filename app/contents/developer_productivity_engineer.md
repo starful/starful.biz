@@ -1,39 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "Developer Productivity Engineering",
-    "DPE",
-    "生産性向上",
-    "開発者体験",
-    "DX",
-    "Platform Engineering",
-    "年収",
-    "将来性",
-    "ロードマップ"
-  ],
-  "meta_description": "開発者の生産性を最大化する「DPE」。その年収や将来性、業務のリアルなやりがいを徹底解説します。自動化やツール整備を通じて組織を支えるこの職種へ、未経験から挑戦するためのロードマップも公開中。",
-  "related_jobs": [
-    "platform_engineer",
-    "site_reliability_engineer",
-    "backend_developer"
-  ],
-  "slug": "developer_productivity_engineer",
-  "tags": [
-    "DPE",
-    "生産性向上",
-    "開発者体験",
-    "CI/CD",
-    "自動化",
-    "エンジニアキャリア",
-    "Platform Engineering"
-  ],
-  "thumbnail": "/static/img/developer_productivity_engineer.png",
-  "hero_image": "/static/img/developer_productivity_engineer_hero.png",
-  "title": "DPEの年収・将来性は？未経験からのロードマップを徹底解説",
-  "published_at": "2026-03-22"
-}
 ---
+title: DPE（開発生産性エンジニア）の年収・将来性と未経験からのロードマップ
+description: 注目が集まるDPE（開発生産性エンジニア）の仕事内容、平均年収、将来性を徹底解説！未経験からDPEを目指すための具体的なキャリアロードマップや面接対策Q&Aまで網羅。開発効率化や自動化に興味があるエンジニア必見の情報をお届けします。
+seo_title: DPE（開発生産性エンジニア）の年収・将来性は？未経験ロードマップも解説｜Starful
+seo_description: 注目が集まるDPE（開発生産性エンジニア）の仕事内容、平均年収、将来性を徹底解説！未経験からDPEを目指すための具体的なキャリアロードマップや面接対策Q&Aまで網羅。開発効率化や自動化に興味があるエンジニア必見の情報をお届けします。
+---
+
 # [完全ガイド] Developer Productivity Engineer: DPEの年収・将来性は？未経験からのロードマップを徹底解説
 
 ## 導入：Developer Productivity Engineerの面接官は「ここ」を見ている

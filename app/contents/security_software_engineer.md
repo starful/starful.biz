@@ -1,37 +1,10 @@
----json
-{
-  "category": "cyber-security",
-  "keywords": [
-    "セキュリティエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "DevSecOps",
-    "脆弱性診断",
-    "サイバーセキュリティ"
-  ],
-  "meta_description": "巧妙化するサイバー攻撃からシステムを守るセキュリティエンジニア。高い専門性が求められる一方、年収1000万超えも狙える将来性抜群の職種です。未経験からの学習ロードマップや仕事のやりがいを徹底解説します。",
-  "related_jobs": [
-    "infrastructure_engineer",
-    "backend_developer",
-    "cloud_architect"
-  ],
-  "slug": "security_software_engineer",
-  "tags": [
-    "セキュリティ",
-    "エンジニア",
-    "キャリアパス",
-    "年収",
-    "ロードマップ",
-    "DevSecOps"
-  ],
-  "thumbnail": "/static/img/security_software_engineer.png",
-  "hero_image": "/static/img/security_software_engineer_hero.png",
-  "title": "セキュリティエンジニアの年収と将来性｜未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: セキュリティエンジニアの年収・将来性は？未経験からのロードマップ【Starful】
+description: セキュリティエンジニアのリアルな年収や将来性を徹底解説！「未経験から目指せる？」「年収1000万の難易度は？」といった疑問に答えます。具体的な学習ロードマップや仕事内容、面接対策（Q&A）まで、キャリアパスのすべてを網羅。
+seo_title: セキュリティエンジニアの年収・将来性は？未経験からのロードマップ【Starful】
+seo_description: セキュリティエンジニアのリアルな年収や将来性を徹底解説！「未経験から目指せる？」「年収1000万の難易度は？」といった疑問に答えます。具体的な学習ロードマップや仕事内容、面接対策（Q&A）まで、キャリアパスのすべてを網羅。
+---
+
 # [完全ガイド] Security Software Engineer: セキュリティエンジニアの年収と将来性｜未経験からのロードマップ
 
 ## 導入：Security Software Engineerの面接官は「ここ」を見ている
