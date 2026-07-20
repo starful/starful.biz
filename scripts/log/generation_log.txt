@@ -443,3 +443,4 @@
 2026-07-04 11:01:54,859 - CREATED: app/contents/database_administrator.md
 2026-07-04 11:01:58,155 - CREATED: app/contents/game_systems_designer.md
 2026-07-04 11:02:44,913 - CREATED: app/contents/go_developer.md
+2026-07-20 09:40:20,997 - CREATED: app/contents/ai_engineer.md

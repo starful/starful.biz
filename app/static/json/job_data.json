@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026.07.19",
-  "total_count": 113,
+  "last_updated": "2026.07.20",
+  "total_count": 114,
   "jobs": [
     {
       "id": "technical_writer",
@@ -1293,6 +1293,22 @@
       ],
       "published": "2026-03-22",
       "link": "/career/ai_ethicist"
+    },
+    {
+      "id": "ai_engineer",
+      "title": "未経験からAIエンジニアに！年収・将来性とロードマップ",
+      "category": "ai-data",
+      "meta_description": "需要が急増するAIエンジニア。最先端技術を駆使するやりがいの裏にある、絶え間ない学習のリアルな現実とは？未経験から高年収を目指すための具体的なキャリアロードマップと、その将来性を徹底解説します！",
+      "tags": [
+        "AI",
+        "機械学習",
+        "Python",
+        "キャリアパス",
+        "未経験歓迎",
+        "データサイエンス"
+      ],
+      "published": "2024-04-25",
+      "link": "/career/ai_engineer"
     }
   ]
 }
