@@ -1,15 +1,10 @@
----json
-{
-  "title": "Head of Engineeringの年収・将来性・ロードマップ完全ガイド｜Starful",
-  "description": "Head of Engineering（エンジニアリング責任者）の年収、将来性、未経験から目指すためのキャリアロードマップを徹底解説！市場価値を高め、高収入キャリアを築くための完全ガイドです。必要なスキルやステップも網羅。",
-  "seo_title": "Head of Engineeringの年収・将来性・ロードマップ完全ガイド｜Starful",
-  "seo_description": "Head of Engineering（エンジニアリング責任者）の年収、将来性、未経験から目指すためのキャリアロードマップを徹底解説！市場価値を高め、高収入キャリアを築くための完全ガイドです。必要なスキルやステップも網羅。",
-  "meta_description": "Head of Engineering（エンジニアリング責任者）の年収、将来性、未経験から目指すためのキャリアロードマップを徹底解説！市場価値を高め、高収入キャリアを築くための完全ガイドです。必要なスキルやステップも網羅。",
-  "published_at": "2026-07-04",
-  "slug": "head_of_engineering",
-  "category": "engineering"
-}
 ---
+title: Head of Engineeringの年収・役割・キャリアロードマップ完全ガイド
+description: Head of Engineering（エンジニアリング責任者）の平均年収や役割、CTO・VPoEとの違いを徹底解説！求められるスキルやキャリアパス、転職面接対策まで網羅した完全ガイドです。エンジニア組織を牽引するリーダーを目指す方必見。
+seo_title: Head of Engineeringの年収・役割・キャリアパス徹底解説｜CTO/VPoEとの違いや面接対策も【Starful】
+seo_description: Head of Engineering（エンジニアリング責任者）の平均年収や役割、CTO・VPoEとの違いを徹底解説！求められるスキルやキャリアパス、転職面接対策まで網羅した完全ガイドです。エンジニア組織を牽引するリーダーを目指す方必見。
+---
+
 # [完全ガイド] Head of Engineering: Head of Engineeringの年収・将来性・未経験ロードマップ
 
 ## 導入：Head of Engineeringの面接官は「ここ」を見ている

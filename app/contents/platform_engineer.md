@@ -1,39 +1,10 @@
----json
-{
-  "category": "cloud-infra",
-  "keywords": [
-    "プラットフォームエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "DevOps",
-    "SRE",
-    "Kubernetes",
-    "クラウドネイティブ"
-  ],
-  "meta_description": "開発効率を最大化するプラットフォームエンジニア。高年収と将来性が魅力ですが、広範な技術知識が求められます。未経験からの挑戦ルートや、やりがい、キャリアのロードマップを現役視点で徹底解説します。",
-  "related_jobs": [
-    "site_reliability_engineer",
-    "cloud_engineer",
-    "backend_developer"
-  ],
-  "slug": "platform_engineer",
-  "tags": [
-    "プラットフォームエンジニア",
-    "DevOps",
-    "SRE",
-    "クラウドインフラ",
-    "Kubernetes",
-    "IaC",
-    "キャリアパス"
-  ],
-  "thumbnail": "/static/img/platform_engineer.png",
-  "hero_image": "/static/img/platform_engineer_hero.png",
-  "title": "プラットフォームエンジニアの年収と将来性｜未経験ロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: プラットフォームエンジニアとは？仕事内容・年収・未経験ロードマップ
+description: プラットフォームエンジニアの仕事内容や平均年収、将来性を徹底解説！インフラエンジニアとの違いや必要なスキル、未経験から目指すロードマップ、面接対策まで網羅的に紹介します。
+seo_title: プラットフォームエンジニアとは？仕事内容・年収・未経験ロードマップ【Starful】
+seo_description: プラットフォームエンジニアの仕事内容や平均年収、将来性を徹底解説！インフラエンジニアとの違いや必要なスキル、未経験から目指す具体的なロードマップ、面接Q&Aまで現役視点で分かりやすく紹介します。
+---
+
 # [完全ガイド] Platform Engineer: プラットフォームエンジニアの年収と将来性｜未経験ロードマップ
 
 ## 導入：Platform Engineerの面接官は「ここ」を見ている
