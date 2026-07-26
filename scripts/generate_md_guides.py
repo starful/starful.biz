@@ -1,9 +1,10 @@
 import pandas as pd
 import os
-import google.generativeai as genai
+import sys
 import logging
 import json
 import re
+from pathlib import Path
 from dotenv import load_dotenv
 import concurrent.futures
 
@@ -22,15 +23,19 @@ from content_guards import (
 load_dotenv()
 
 # --- 설정 ---
-API_KEY = os.getenv("GEMINI_API_KEY")
-if not API_KEY:
-    raise ValueError("GEMINI_API_KEYが .env ファイルに設定されていません。")
-
-genai.configure(api_key=API_KEY)
-MODEL_NAME = "gemini-flash-latest" 
 OUTPUT_DIR = "app/contents/"
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSV_FILE = os.path.join(BASE_DIR, "scripts", "data", "positions.csv")
+
+
+def _claude_md(prompt: str) -> str:
+    """MD/JSON text via Claude CLI subscription (not Claude API)."""
+    _shared = Path(__file__).resolve().parents[2] / "shared"
+    if str(_shared) not in sys.path:
+        sys.path.insert(0, str(_shared))
+    from site_llm import generate_md_text
+
+    return generate_md_text(prompt)
 
 
 def _positions_csv_path() -> str:
@@ -46,8 +51,8 @@ def _max_to_generate() -> int:
         n = 6
     return 6 if n <= 0 else n
 
-# 병렬 처리할 워커 개수 (유료 API이므로 5~10개 동시 실행 가능)
-MAX_WORKERS = 5
+# Claude CLI — keep concurrency modest
+MAX_WORKERS = 3
 
 os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -57,8 +62,6 @@ logging.basicConfig(
     format='%(asctime)s - CREATED: %(message)s',
     handlers=[logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8')]
 )
-
-model = genai.GenerativeModel(MODEL_NAME)
 
 
 # --- Frontmatter 프롬프트 ---
@@ -166,12 +169,10 @@ BODY_PROMPT = """
 
 def generate_frontmatter(position_name):
     try:
-        response = model.generate_content(
-            FRONTMATTER_PROMPT.format(position_name=position_name),
-            generation_config=genai.types.GenerationConfig(temperature=0.4)
-        )
-        json_match = re.search(r'(\{.*\})', response.text, re.DOTALL)
-        if not json_match: return None
+        text = _claude_md(FRONTMATTER_PROMPT.format(position_name=position_name))
+        json_match = re.search(r'(\{.*\})', text, re.DOTALL)
+        if not json_match:
+            return None
         return json.loads(json_match.group(0).strip())
     except Exception as e:
         print(f"[{position_name}] Frontmatter Error: {e}")
@@ -180,14 +181,9 @@ def generate_frontmatter(position_name):
 def generate_body(position_name, frontmatter_data):
     title = frontmatter_data.get('title', "詳細ガイド")
     try:
-        response = model.generate_content(
-            BODY_PROMPT.format(position_name=position_name, title_from_frontmatter=title),
-            generation_config=genai.types.GenerationConfig(
-                temperature=0.6,
-                max_output_tokens=8192
-            )
+        return _claude_md(
+            BODY_PROMPT.format(position_name=position_name, title_from_frontmatter=title)
         )
-        return response.text
     except Exception as e:
         print(f"[{position_name}] Body Error: {e}")
         return None
