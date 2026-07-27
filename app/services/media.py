@@ -48,7 +48,12 @@ async def serve_img(filename: str, request: Request):
     if filename in LOCAL_IMG_NAMES or filename.startswith(("favicon", "apple-touch")):
         if os.path.isfile(local_path):
             return FileResponse(local_path)
-    url = f"{GCS_IMG_BASE}/{filename}"
+    gcs_name = filename
+    for suffix in ("_hero.png", "_hero.jpg", "_hero.jpeg", "_hero.webp"):
+        if gcs_name.endswith(suffix):
+            gcs_name = gcs_name[: -len(suffix)] + suffix.replace("_hero", "")
+            break
+    url = f"{GCS_IMG_BASE}/{gcs_name}"
     if request.url.query:
         url = f"{url}?{request.url.query}"
     headers = {"Cache-Control": "no-cache, must-revalidate"}

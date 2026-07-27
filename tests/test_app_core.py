@@ -96,6 +96,12 @@ class AppCoreTests(unittest.TestCase):
         self.assertIn("/mbti/INTJ", response.text)
         self.assertIn("相性の良いタイプ", response.text)
 
+    def test_career_detail_shows_hero_image(self):
+        response = self.client.get("/career/cloud_solutions_architect")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('class="detail-hero"', response.text)
+        self.assertIn("/static/img/cloud_solutions_architect_hero.png", response.text)
+
     def test_removed_career_redirects_home(self):
         response = self.client.get("/career/solutions_architect", follow_redirects=False)
         self.assertEqual(response.status_code, 301)

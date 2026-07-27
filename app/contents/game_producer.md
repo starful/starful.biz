@@ -29,7 +29,7 @@
   "thumbnail": "/static/img/game_producer.png",
   "hero_image": "/static/img/game_producer_hero.png",
   "title": "ゲームプロデューサーの年収・将来性と未経験ロードマップ",
-  "published_at": "2026-06-19"
+  "published_at": "2026-07-27"
 }
 ---
 # [完全ガイド] Game Producer: ゲームプロデューサーの年収・将来性と未経験ロードマップ

@@ -39,6 +39,17 @@
     .breadcrumb { color: var(--accent-color); font-weight: 800; font-size: 0.9rem; display: block; margin-bottom: 15px; }
     .detail-header h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 800; line-height: 1.3; margin: 0; color: #1d1d1f; letter-spacing: -0.03em; }
     .lead-text { color: #6e6e73; font-size: 1.15rem; line-height: 1.6; margin-top: 20px; font-weight: 500; }
+
+    .detail-hero { margin: 0; padding: 0 50px 10px; }
+    .detail-hero img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        margin: 0;
+        object-fit: cover;
+        aspect-ratio: 4 / 3;
+    }
     
     /* 本文エリア上余白（50px→30px） */
     .detail-body { padding: 30px 50px 60px; font-size: 1.1rem; line-height: 2; color: #2c2c2e; }
@@ -293,6 +304,8 @@
     @media (max-width: 768px) {
         .article-wrapper { margin: 20px 10px 60px; border-radius: 20px; }
         .detail-header { padding: 40px 20px 20px; }
+        .detail-hero { padding: 0 20px 8px; }
+        .detail-hero img { border-radius: 16px; }
         .detail-body { padding: 20px 20px 40px; font-size: 1.05rem; }
         .reaction-panel { margin-top: 36px; padding: 24px 20px 28px; }
         .reaction-panel-title { font-size: 1.15rem; }
@@ -311,6 +324,17 @@
             <h1>{{ item.title }}</h1>
             <p class="lead-text">{{ item.meta_description }}</p>
         </header>
+
+        {% if item.hero_image %}
+        <figure class="detail-hero">
+            <img
+                src="{{ item.hero_image }}{% if item.published_at %}?v={{ item.published_at[:10] }}{% endif %}"
+                alt="{{ item.title }}"
+                loading="eager"
+                decoding="async"
+            >
+        </figure>
+        {% endif %}
 
         <div class="detail-body">
             {% include 'partials/affiliate_box.html' %}
