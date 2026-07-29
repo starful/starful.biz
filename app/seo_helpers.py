@@ -109,6 +109,8 @@ CAREER_SLUG_ALIASES: Dict[str, str] = {
     "dev_relations_engineer": "developer_relations_engineer",
     "appsec": "application_security_engineer",
     "ds": "data_scientist",
+    # GSC 404: 旧スラッグ → 現行ガイド
+    "technical_project_manager": "technical_program_manager",
 }
 
 # レガシーブログ等：プレフィックス一致でホームへ 301
@@ -120,10 +122,23 @@ LEGACY_PATH_PREFIXES: Tuple[str, ...] = (
     "/e/",
 )
 
+# 完全一致のみホームへ（/api/reactions/{slug} など実APIは除外）
+LEGACY_EXACT_PATHS: frozenset[str] = frozenset(
+    {
+        "/api",
+        "/api/",
+        "/api/reactions",
+        "/api/reactions/",
+    }
+)
+
 
 def legacy_redirect_target(path: str) -> Optional[str]:
     """Return '/' if path is a legacy blog URL that should 301 to home."""
     p = path.rstrip("/") or "/"
+    # normalize trailing slash variants for exact matches
+    if path in LEGACY_EXACT_PATHS or p in {x.rstrip("/") or "/" for x in LEGACY_EXACT_PATHS}:
+        return "/"
     for prefix in LEGACY_PATH_PREFIXES:
         if p == prefix or p.startswith(prefix + "/"):
             return "/"
@@ -149,6 +164,20 @@ def legacy_query_should_drop_to_home(path: str, query: str) -> bool:
         return False
     # page=<digits> only (optionally with other junk params still drop to /)
     return "page=" in query
+
+
+def is_junk_search_query(q: str | None) -> bool:
+    """True when Google crawled the literal SearchAction placeholder URL."""
+    s = (q or "").strip()
+    if not s:
+        return False
+    low = s.lower()
+    return (
+        "{" in s
+        or "}" in s
+        or "search_term_string" in low
+        or s in {"{search_term_string}", "%7Bsearch_term_string%7D"}
+    )
 
 
 def featured_jobs_from_data(jobs: List[dict]) -> List[dict]:

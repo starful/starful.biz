@@ -5,6 +5,7 @@ import unittest
 from fastapi.testclient import TestClient
 
 from app import BASE_URL, app
+from app.seo_helpers import CAREER_SLUG_ALIASES
 
 DATA_FILE = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
@@ -20,7 +21,12 @@ class ShareBarTests(unittest.TestCase):
     def setUpClass(cls):
         cls.client = TestClient(app)
         with open(DATA_FILE, encoding="utf-8") as handle:
-            cls.career_id = json.load(handle)["jobs"][0]["id"]
+            jobs = json.load(handle)["jobs"]
+        # Prefer a canonical slug (alias sources like ux_designer → ui_ux_designer)
+        cls.career_id = next(
+            (j["id"] for j in jobs if j.get("id") and j["id"] not in CAREER_SLUG_ALIASES),
+            jobs[0]["id"],
+        )
 
     def test_career_detail_has_share_bar(self):
         response = self.client.get(f"/career/{self.career_id}")

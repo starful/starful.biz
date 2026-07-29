@@ -9,7 +9,12 @@ from fastapi.responses import RedirectResponse
 from app.affiliate import affiliate_context
 from app.config import BASE_URL, CAREER_CATEGORIES
 from app.content_new import enrich_items
-from app.seo_helpers import faq_page_json_ld, featured_jobs_from_data, merge_career_json_ld
+from app.seo_helpers import (
+    faq_page_json_ld,
+    featured_jobs_from_data,
+    is_junk_search_query,
+    merge_career_json_ld,
+)
 from app.services.jobs_cache import JOB_DATA, ensure_jobs_cache
 from app.services.mbti import get_mbti_type, list_mbti_types, normalize_mbti_type
 from app.services.search import search_jobs
@@ -65,6 +70,8 @@ async def practice_page(request: Request):
 
 @router.get("/search")
 async def search(request: Request, q: str = ""):
+    if is_junk_search_query(q):
+        return RedirectResponse(f"{BASE_URL}/", status_code=301)
     ensure_jobs_cache()
     results = search_jobs(JOB_DATA.get("jobs", []), q)
     return templates.TemplateResponse(

@@ -21,6 +21,7 @@ from app.seo_helpers import (
     extract_faq_from_markdown,
     faq_page_json_ld,
     featured_jobs_from_data,
+    is_junk_search_query,
     is_removed_career,
     legacy_query_should_drop_to_home,
     legacy_redirect_target,
@@ -67,6 +68,12 @@ async def seo_request_middleware(request: Request, call_next):
 
     if legacy_query_should_drop_to_home(request.url.path, request.url.query or ""):
         return RedirectResponse(f"{BASE_URL}/", status_code=301)
+
+    # JSON-LD SearchAction のプレースホルダ URL がクロールされた場合
+    if request.url.path.rstrip("/") == "/search":
+        q = request.query_params.get("q")
+        if is_junk_search_query(q):
+            return RedirectResponse(f"{BASE_URL}/", status_code=301)
 
     proto = (request.headers.get("x-forwarded-proto") or "").split(",")[0].strip().lower()
     if not proto and request.url.scheme:
@@ -276,6 +283,10 @@ async def robots():
             [
                 "User-agent: *",
                 "Allow: /",
+                "Disallow: /api/",
+                "Disallow: /entry",
+                "Disallow: /archive",
+                "Disallow: /card/",
                 f"Sitemap: {BASE_URL}/sitemap.xml",
             ]
         )

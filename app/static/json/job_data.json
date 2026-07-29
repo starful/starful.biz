@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27",
+  "last_updated": "2026.07.30",
   "total_count": 113,
   "jobs": [
     {
@@ -19,6 +19,90 @@
       ],
       "published": "2026-07-27",
       "link": "/career/ux_designer"
+    },
+    {
+      "id": "game_qa_tester",
+      "title": "ゲームQAテスター未経験ロードマップ！年収と将来性を解説",
+      "category": "engineering",
+      "meta_description": "地道なバグ発見の裏にある、ゲームの完成度を極めるやりがい。未経験からゲームQAテスターとしてキャリアを築き、年収アップと将来性を手に入れるための現実的なステップとロードマップを詳しく解説します！",
+      "tags": [
+        "ゲーム開発",
+        "QA",
+        "デバッグ",
+        "キャリアチェンジ",
+        "未経験歓迎",
+        "年収アップ",
+        "IT職種図鑑"
+      ],
+      "published": "2026-07-27",
+      "link": "/career/game_qa_tester"
+    },
+    {
+      "id": "game_producer",
+      "title": "ゲームプロデューサーの年収・将来性と未経験ロードマップ",
+      "category": "product-management",
+      "meta_description": "予算や人員の管理など責任は重大ですが、自分の描いたビジョンが世界中のユーザーに届く感動は格別です。ゲームプロデューサーのリアルな年収や将来性、未経験からヒット作を生み出すキャリアパスを徹底解説します。",
+      "tags": [
+        "ゲーム業界",
+        "キャリアプラン",
+        "年収事情",
+        "未経験転職",
+        "プロダクトマネジメント",
+        "ゲーム開発"
+      ],
+      "published": "2026-07-27",
+      "link": "/career/game_producer"
+    },
+    {
+      "id": "flutter_developer",
+      "title": "Flutterエンジニアの年収と将来性｜未経験からの転職ロードマップ＆面接Q&A",
+      "category": "engineering",
+      "meta_description": "Flutterエンジニアのリアルな年収相場や将来性を徹底解説。未経験から最短で活躍・高収入を目指すロードマップと、転職を成功させる面接Q&Aを公開中。",
+      "tags": [],
+      "published": "2026-07-27",
+      "link": "/career/flutter_developer"
+    },
+    {
+      "id": "firmware_engineer",
+      "title": "ファームウェアエンジニアの年収・将来性と未経験ロードマップ",
+      "category": "engineering",
+      "meta_description": "ファームウェアエンジニアの年収や将来性、未経験から目指すロードマップを徹底解説！組み込み開発の仕事内容や必要なスキル、転職成功のコツまで網羅した完全ガイドです。",
+      "tags": [],
+      "published": "2026-07-27",
+      "link": "/career/firmware_engineer"
+    },
+    {
+      "id": "cro_specialist",
+      "title": "CROの年収と将来性は？未経験からプロになるロードマップ",
+      "category": "marketing",
+      "meta_description": "CRO（コンバージョン率最適化）は、データ分析とユーザー心理から売上を最大化する職種。泥臭い仮説検証の先にある、数字が劇的に改善した瞬間の達成感は格別です。未経験からのロードマップや年収も解説！",
+      "tags": [
+        "マーケティング",
+        "CRO",
+        "データ分析",
+        "キャリア",
+        "未経験",
+        "年収",
+        "ロードマップ"
+      ],
+      "published": "2026-07-27",
+      "link": "/career/cro_specialist"
+    },
+    {
+      "id": "ai_engineer",
+      "title": "未経験からAIエンジニアに！年収・将来性とロードマップ",
+      "category": "ai-data",
+      "meta_description": "需要が急増するAIエンジニア。最先端技術を駆使するやりがいの裏にある、絶え間ない学習のリアルな現実とは？未経験から高年収を目指すための具体的なキャリアロードマップと、その将来性を徹底解説します！",
+      "tags": [
+        "AI",
+        "機械学習",
+        "Python",
+        "キャリアパス",
+        "未経験歓迎",
+        "データサイエンス"
+      ],
+      "published": "2026-07-27",
+      "link": "/career/ai_engineer"
     },
     {
       "id": "technical_writer",
@@ -82,15 +166,6 @@
       "tags": [],
       "published": "2026-07-22",
       "link": "/career/head_of_design"
-    },
-    {
-      "id": "flutter_developer",
-      "title": "Flutterエンジニアの年収と将来性｜未経験からの転職ロードマップ＆面接Q&A",
-      "category": "engineering",
-      "meta_description": "Flutterエンジニアのリアルな年収相場や将来性を徹底解説。未経験から最短で活躍・高収入を目指すロードマップと、転職を成功させる面接Q&Aを公開中。",
-      "tags": [],
-      "published": "2026-07-27",
-      "link": "/career/flutter_developer"
     },
     {
       "id": "enterprise_architect",
@@ -426,23 +501,6 @@
       "link": "/career/ai_researcher"
     },
     {
-      "id": "game_qa_tester",
-      "title": "ゲームQAテスター未経験ロードマップ！年収と将来性を解説",
-      "category": "engineering",
-      "meta_description": "地道なバグ発見の裏にある、ゲームの完成度を極めるやりがい。未経験からゲームQAテスターとしてキャリアを築き、年収アップと将来性を手に入れるための現実的なステップとロードマップを詳しく解説します！",
-      "tags": [
-        "ゲーム開発",
-        "QA",
-        "デバッグ",
-        "キャリアチェンジ",
-        "未経験歓迎",
-        "年収アップ",
-        "IT職種図鑑"
-      ],
-      "published": "2026-07-27",
-      "link": "/career/game_qa_tester"
-    },
-    {
       "id": "design_operations_manager",
       "title": "DesignOpsの年収と将来性！未経験からのロードマップ",
       "category": "design",
@@ -457,23 +515,6 @@
       ],
       "published": "2026-06-23",
       "link": "/career/design_operations_manager"
-    },
-    {
-      "id": "cro_specialist",
-      "title": "CROの年収と将来性は？未経験からプロになるロードマップ",
-      "category": "marketing",
-      "meta_description": "CRO（コンバージョン率最適化）は、データ分析とユーザー心理から売上を最大化する職種。泥臭い仮説検証の先にある、数字が劇的に改善した瞬間の達成感は格別です。未経験からのロードマップや年収も解説！",
-      "tags": [
-        "マーケティング",
-        "CRO",
-        "データ分析",
-        "キャリア",
-        "未経験",
-        "年収",
-        "ロードマップ"
-      ],
-      "published": "2026-07-27",
-      "link": "/career/cro_specialist"
     },
     {
       "id": "cpp_developer",
@@ -575,22 +616,6 @@
       "link": "/career/motion_graphic_designer"
     },
     {
-      "id": "game_producer",
-      "title": "ゲームプロデューサーの年収・将来性と未経験ロードマップ",
-      "category": "product-management",
-      "meta_description": "予算や人員の管理など責任は重大ですが、自分の描いたビジョンが世界中のユーザーに届く感動は格別です。ゲームプロデューサーのリアルな年収や将来性、未経験からヒット作を生み出すキャリアパスを徹底解説します。",
-      "tags": [
-        "ゲーム業界",
-        "キャリアプラン",
-        "年収事情",
-        "未経験転職",
-        "プロダクトマネジメント",
-        "ゲーム開発"
-      ],
-      "published": "2026-07-27",
-      "link": "/career/game_producer"
-    },
-    {
       "id": "full_stack_developer",
       "title": "フルスタックエンジニアの年収と将来性｜未経験からのロードマップ【Starful】",
       "category": "engineering",
@@ -607,15 +632,6 @@
       "tags": [],
       "published": "2026-06-19",
       "link": "/career/frontend_developer"
-    },
-    {
-      "id": "firmware_engineer",
-      "title": "ファームウェアエンジニアの年収・将来性と未経験ロードマップ",
-      "category": "engineering",
-      "meta_description": "ファームウェアエンジニアの年収や将来性、未経験から目指すロードマップを徹底解説！組み込み開発の仕事内容や必要なスキル、転職成功のコツまで網羅した完全ガイドです。",
-      "tags": [],
-      "published": "2026-07-27",
-      "link": "/career/firmware_engineer"
     },
     {
       "id": "director_of_engineering",
@@ -1274,22 +1290,6 @@
       ],
       "published": "2026-03-22",
       "link": "/career/ai_ethicist"
-    },
-    {
-      "id": "ai_engineer",
-      "title": "未経験からAIエンジニアに！年収・将来性とロードマップ",
-      "category": "ai-data",
-      "meta_description": "需要が急増するAIエンジニア。最先端技術を駆使するやりがいの裏にある、絶え間ない学習のリアルな現実とは？未経験から高年収を目指すための具体的なキャリアロードマップと、その将来性を徹底解説します！",
-      "tags": [
-        "AI",
-        "機械学習",
-        "Python",
-        "キャリアパス",
-        "未経験歓迎",
-        "データサイエンス"
-      ],
-      "published": "2026-07-27",
-      "link": "/career/ai_engineer"
     }
   ]
 }

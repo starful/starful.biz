@@ -108,11 +108,44 @@ class AppCoreTests(unittest.TestCase):
         loc = response.headers.get("location", "").rstrip("/")
         self.assertEqual(loc, "https://starful.biz")
 
-    def test_legacy_page_query_redirects_home(self):
-        response = self.client.get("/?page=1740642449", follow_redirects=False)
+    def test_legacy_archive_redirects_home(self):
+        response = self.client.get("/archive/2025/11/17", follow_redirects=False)
         self.assertEqual(response.status_code, 301)
         loc = response.headers.get("location", "").rstrip("/")
         self.assertEqual(loc, "https://starful.biz")
+
+    def test_api_path_redirects_home(self):
+        response = self.client.get("/api/reactions/", follow_redirects=False)
+        self.assertEqual(response.status_code, 301)
+        loc = response.headers.get("location", "").rstrip("/")
+        self.assertEqual(loc, "https://starful.biz")
+
+    def test_junk_search_placeholder_redirects_home(self):
+        response = self.client.get(
+            "/search?q={search_term_string}", follow_redirects=False
+        )
+        self.assertEqual(response.status_code, 301)
+        loc = response.headers.get("location", "").rstrip("/")
+        self.assertEqual(loc, "https://starful.biz")
+
+    def test_technical_project_manager_aliases(self):
+        response = self.client.get(
+            "/career/technical_project_manager", follow_redirects=False
+        )
+        self.assertEqual(response.status_code, 301)
+        self.assertIn(
+            "/career/technical_program_manager",
+            response.headers.get("location", ""),
+        )
+
+    def test_robots_disallows_legacy_paths(self):
+        response = self.client.get("/robots.txt")
+        self.assertEqual(response.status_code, 200)
+        body = response.text
+        self.assertIn("Disallow: /api/", body)
+        self.assertIn("Disallow: /entry", body)
+        self.assertIn("Disallow: /archive", body)
+        self.assertIn("Disallow: /card/", body)
 
 
 class MdParserTests(unittest.TestCase):
