@@ -1,5 +1,13 @@
 # Starful
 
+| | |
+|--|--|
+| **Live** | [https://starful.biz](https://starful.biz) |
+| **GitHub** | [starful/starful.biz](https://github.com/starful/starful.biz) |
+| **Hub ID** | `starful.biz` |
+| **GA4** | Property `481809450` · GSC `sc-domain:starful.biz` |
+| **GCS** | `starful-biz-assets` (root prefix) · Places: `office`, `company` |
+
 Starful is a FastAPI-based web service for IT career exploration and interview preparation.  
 It serves job-specific content from Markdown files, provides an AI-powered STARR interview feedback experience, and is deployed on Google Cloud Run.
 
@@ -176,6 +184,12 @@ You can also run:
 ```
 
 This script orchestrates content generation, GCS image uploads, data rebuild, optional Git push, and Cloud Run deployment.
+
+## OK Admin (Work Hub)
+
+- **Pipeline:** `generate_md_guides` → `generate_images` → resize → normalize names → build (+ GCS normalize post-step)
+- **Git / Deploy:** **Git** tab Ship prep → Review & merge · **Deploy** tab from `main`
+- [okadmin/README.md](../okadmin/README.md)
 
 ## Troubleshooting
 
