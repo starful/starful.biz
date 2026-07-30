@@ -1,39 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "コンピュータビジョン",
-    "画像認識",
-    "AIエンジニア",
-    "ディープラーニング",
-    "OpenCV",
-    "PyTorch",
-    "キャリアパス",
-    "年収",
-    "将来性"
-  ],
-  "meta_description": "画像認識で社会を変えるコンピュータビジョンエンジニア。数学や最新論文の習得は困難ですが、自動運転や医療AIなど最先端の現場で高年収を実現できる将来性の高い職種です。未経験からの挑戦法も詳しく解説。",
-  "related_jobs": [
-    "machine_learning_engineer",
-    "data_scientist",
-    "robotics_engineer"
-  ],
-  "slug": "computer_vision_engineer",
-  "tags": [
-    "AI",
-    "画像認識",
-    "Python",
-    "Deep Learning",
-    "キャリア",
-    "エンジニア",
-    "機械学習"
-  ],
-  "thumbnail": "/static/img/computer_vision_engineer.png",
-  "hero_image": "/static/img/computer_vision_engineer_hero.png",
-  "title": "コンピュータビジョンエンジニアの年収・将来性・未経験ロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: コンピュータビジョンエンジニアの年収は？未経験ロードマップと面接Q&A完全ガイド
+description: コンピュータビジョンエンジニアの年収相場・将来性を徹底解説。未経験から目指す学習ロードマップと面接で聞かれる質問例も紹介します。
+seo_title: コンピュータビジョンエンジニアの年収・未経験ロードマップ｜面接Q&A【Starful】
+seo_description: 年収相場や将来性、未経験からのロードマップ、面接Q&Aまで一挙紹介。自動運転・医療AI分野で活躍するための第一歩をここから。
+---
+
 # [完全ガイド] Computer Vision Engineer: コンピュータビジョンエンジニアの年収・将来性・未経験ロードマップ
 
 ## 導入：Computer Vision Engineerの面接官は「ここ」を見ている

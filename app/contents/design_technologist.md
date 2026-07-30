@@ -1,39 +1,10 @@
----json
-{
-  "category": "design",
-  "keywords": [
-    "Design Technologist",
-    "デザインテクノロジスト",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "UI/UX",
-    "フロントエンド",
-    "デザインシステム"
-  ],
-  "meta_description": "デザインと開発の架け橋となるDesign Technologist。高い専門性で年収アップも狙え、将来性も抜群です。未経験からのロードマップや現場のリアルなやりがい、求められるスキルを徹底解説します。",
-  "related_jobs": [
-    "ux_designer",
-    "frontend_developer",
-    "product_designer"
-  ],
-  "slug": "design_technologist",
-  "tags": [
-    "UI/UX",
-    "フロントエンド",
-    "デザインシステム",
-    "プロトタイピング",
-    "Figma",
-    "React",
-    "キャリア"
-  ],
-  "thumbnail": "/static/img/design_technologist.png",
-  "hero_image": "/static/img/design_technologist_hero.png",
-  "title": "デザインテクノロジストの年収・将来性！未経験ロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: デザインテクノロジストとは？年収・仕事内容・なり方を解説
+description: デザインテクノロジストの年収相場や仕事内容、必要スキルを解説。未経験からのなり方・キャリアパス、面接対策まで徹底ガイド。
+seo_title: デザインテクノロジストとは？年収・仕事内容・未経験からのなり方
+seo_description: デザインテクノロジストの年収相場や仕事内容、必要スキルを解説。未経験からのなり方・キャリアパス、面接対策まで徹底ガイド。
+---
+
 # [完全ガイド] Design Technologist: デザインテクノロジストの年収・将来性！未経験ロードマップ
 
 ## 導入：Design Technologistの面接官は「ここ」を見ている

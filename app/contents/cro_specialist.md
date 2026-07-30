@@ -1,37 +1,10 @@
----json
-{
-  "category": "marketing",
-  "keywords": [
-    "CRO",
-    "コンバージョン率最適化",
-    "LPO",
-    "ABテスト",
-    "データ分析",
-    "マーケター転職",
-    "キャリアパス"
-  ],
-  "meta_description": "CRO（コンバージョン率最適化）は、データ分析とユーザー心理から売上を最大化する職種。泥臭い仮説検証の先にある、数字が劇的に改善した瞬間の達成感は格別です。未経験からのロードマップや年収も解説！",
-  "related_jobs": [
-    "web_marketer",
-    "data_analyst",
-    "ui_ux_designer"
-  ],
-  "slug": "cro_specialist",
-  "tags": [
-    "マーケティング",
-    "CRO",
-    "データ分析",
-    "キャリア",
-    "未経験",
-    "年収",
-    "ロードマップ"
-  ],
-  "thumbnail": "/static/img/cro_specialist.png",
-  "hero_image": "/static/img/cro_specialist_hero.png",
-  "title": "CROの年収と将来性は？未経験からプロになるロードマップ",
-  "published_at": "2026-07-27"
-}
 ---
+title: CROとは？年収・将来性・未経験からの転職ロードマップ完全ガイド
+description: CRO（コンバージョン率最適化）とは何か、年収相場や将来性、未経験からのキャリアロードマップをわかりやすく解説。転職面接でよく聞かれる質問と回答例も紹介します。
+seo_title: CROとは？年収・将来性・未経験からの転職ロードマップ｜Starful
+seo_description: 未経験からCRO（コンバージョン率最適化）のプロへ。年収相場・必要スキル・転職ロードマップを徹底解説。面接で聞かれるQ&Aも掲載中。
+---
+
 # [完全ガイド] Conversion Rate Optimizer (CRO): CROの年収と将来性は？未経験からプロになるロードマップ
 
 ---

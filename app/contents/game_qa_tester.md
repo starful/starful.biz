@@ -1,39 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "ゲームQAテスター",
-    "ゲームデバッガー",
-    "未経験",
-    "年収",
-    "将来性",
-    "ロードマップ",
-    "キャリアパス",
-    "品質保証",
-    "ゲーム業界"
-  ],
-  "meta_description": "地道なバグ発見の裏にある、ゲームの完成度を極めるやりがい。未経験からゲームQAテスターとしてキャリアを築き、年収アップと将来性を手に入れるための現実的なステップとロードマップを詳しく解説します！",
-  "related_jobs": [
-    "qa_engineer",
-    "game_developer",
-    "project_manager"
-  ],
-  "slug": "game_qa_tester",
-  "tags": [
-    "ゲーム開発",
-    "QA",
-    "デバッグ",
-    "キャリアチェンジ",
-    "未経験歓迎",
-    "年収アップ",
-    "IT職種図鑑"
-  ],
-  "thumbnail": "/static/img/game_qa_tester.png",
-  "hero_image": "/static/img/game_qa_tester_hero.png",
-  "title": "ゲームQAテスター未経験ロードマップ！年収と将来性を解説",
-  "published_at": "2026-07-27"
-}
 ---
+title: ゲームQAテスターとは？仕事内容・なるには・年収を未経験向けに解説【Starful】
+description: ゲームQAテスターの仕事内容、未経験からなるには何が必要かを解説。平均年収や将来性、面接でよく聞かれる質問と回答例まで網羅した実践ガイドです。
+seo_title: ゲームQAテスターとは？仕事内容・なるには・年収を未経験向けに解説【Starful】
+seo_description: ゲームQAテスターの仕事内容、未経験からなるには何が必要かを解説。平均年収や将来性、面接でよく聞かれる質問と回答例まで網羅した実践ガイドです。
+---
+
 # [完全ガイド] Game QA Tester: ゲームQAテスター未経験ロードマップ！年収と将来性を解説
 
 ## 導入：Game QA Testerの面接官は「ここ」を見ている
