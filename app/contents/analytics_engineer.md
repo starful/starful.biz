@@ -1,40 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "アナリティクスエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "dbt",
-    "データ基盤",
-    "SQL",
-    "データエンジニア",
-    "キャリアパス"
-  ],
-  "meta_description": "アナリティクスエンジニア面接：dbt・ELT・データ品質、DE/DSとの境界を短く語るキーワード地図。パイプライン設計の意思決定例つき。転職直前の逆確認に。【保存版】",
-  "related_jobs": [
-    "data_engineer",
-    "data_scientist",
-    "bi_engineer"
-  ],
-  "slug": "analytics_engineer",
-  "tags": [
-    "アナリティクスエンジニア",
-    "データ分析",
-    "dbt",
-    "SQL",
-    "データ基盤",
-    "キャリア",
-    "IT転職"
-  ],
-  "thumbnail": "/static/img/analytics_engineer.png",
-  "hero_image": "/static/img/analytics_engineer_hero.png",
-  "title": "アナリティクスエンジニア｜データ基盤面接の頻出論点",
-  "published_at": "2026-05-12"
-}
 ---
+title: アナリティクスエンジニア面接対策｜頻出質問と回答例まとめ【Starful】
+description: アナリティクスエンジニア面接でよく聞かれる質問と回答例。dbt・ELT・データ品質、DE/DSとの役割の違いを整理し、転職面接や逆質問対策に役立つポイントを解説します。
+seo_title: アナリティクスエンジニア面接｜dbt・ELT・データ品質の頻出質問と回答例【Starful】
+seo_description: アナリティクスエンジニア面接の頻出質問と回答例をキーワード別に整理。dbt・ELT・データ品質、DE/DSとの違いも解説。転職面接前のチェックに【Starful】
+---
+
 # [完全ガイド] Analytics Engineer: アナリティクスエンジニアの年収・将来性・未経験ロードマップ
 
 ## 導入：Analytics Engineerの面接官は「ここ」を見ている

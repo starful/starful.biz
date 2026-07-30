@@ -1,37 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "データキュレーター",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "AI",
-    "データマネジメント",
-    "データクレンジング"
-  ],
-  "meta_description": "AIの精度を左右するデータキュレーター。膨大なデータを整理・最適化する地道な作業の先に、AI進化の鍵を握る大きなやりがいがあります。年収や将来性、未経験からの学習ロードマップを徹底解説します。",
-  "related_jobs": [
-    "data_scientist",
-    "data_engineer",
-    "machine_learning_engineer"
-  ],
-  "slug": "data_curator",
-  "tags": [
-    "AI開発",
-    "データ活用",
-    "キャリアパス",
-    "IT転職",
-    "ビッグデータ",
-    "アノテーション"
-  ],
-  "thumbnail": "/static/img/data_curator.png",
-  "hero_image": "/static/img/data_curator_hero.png",
-  "title": "データキュレーターの年収と将来性｜未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: データキュレーターとは？仕事内容・年収・将来性｜未経験からのロードマップ【Starful】
+description: データキュレーターとは？仕事内容や年収相場、将来性、未経験からのなり方までを解説。面接でよく聞かれる質問と回答例も紹介します。
+seo_title: データキュレーターとは？仕事内容・年収・将来性｜未経験からのロードマップ【Starful】
+seo_description: データキュレーターとは？仕事内容や年収相場、将来性、未経験からのなり方までを解説。面接でよく聞かれる質問と回答例も紹介します。
+---
+
 # [完全ガイド] Data Curator: データキュレーターの面接対策｜圧倒的ボリュームで徹底解説
 
 ## 導入：Data Curatorの面接官は「ここ」を見ている

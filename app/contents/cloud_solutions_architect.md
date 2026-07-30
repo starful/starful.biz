@@ -1,40 +1,10 @@
----json
-{
-  "category": "cloud-infra",
-  "keywords": [
-    "Cloud Solutions Architect",
-    "クラウドソリューションアーキテクト",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "AWS",
-    "Azure",
-    "GCP",
-    "ITキャリア"
-  ],
-  "meta_description": "クラウドソリューションアーキテクトは企業のDXを支える設計の要。高年収で将来性も抜群です。未経験から目指すロードマップや、技術選定の難しさと達成感など、職務のリアルな現実と魅力を徹底解説します。",
-  "related_jobs": [
-    "cloud_engineer",
-    "site_reliability_engineer",
-    "it_consultant"
-  ],
-  "slug": "cloud_solutions_architect",
-  "tags": [
-    "クラウド",
-    "AWS",
-    "Azure",
-    "GCP",
-    "アーキテクチャ",
-    "インフラ",
-    "キャリアパス"
-  ],
-  "thumbnail": "/static/img/cloud_solutions_architect.png",
-  "hero_image": "/static/img/cloud_solutions_architect_hero.png",
-  "title": "クラウドアーキテクトの年収・将来性・未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: クラウドソリューションアーキテクトとは？年収・なり方ロードマップ
+description: クラウドソリューションアーキテクトの仕事内容や年収相場、未経験からのなり方、必要な資格・スキルをロードマップ形式で解説。DX時代に需要が高まるキャリアのリアルを紹介します。
+seo_title: クラウドソリューションアーキテクトの年収・なり方・資格【Starful】
+seo_description: クラウドソリューションアーキテクトとは?年収相場・未経験からのなり方・必要資格をロードマップで解説。DXを支えるキャリアのリアルと将来性をStarfulが紹介します。
+---
+
 # [完全ガイド] Cloud Solutions Architect: クラウドアーキテクトの年収・将来性・未経験からのロードマップ
 
 ## 導入：Cloud Solutions Architectの面接官は「ここ」を見ている
