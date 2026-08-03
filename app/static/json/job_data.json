@@ -1,7 +1,225 @@
 {
-  "last_updated": "2026.07.30",
-  "total_count": 113,
+  "last_updated": "2026.08.03",
+  "total_count": 114,
   "jobs": [
+    {
+      "id": "dba",
+      "title": "DBAの年収・将来性|未経験からのロードマップ",
+      "category": "cloud-infra",
+      "meta_description": "DBAはデータベースの安定稼働を支える縁の下の力持ち。障害対応のプレッシャーは大きいが、企業の心臓部を守る責任とスキルの専門性が評価され、年収アップも狙える魅力的なキャリアです。",
+      "tags": [
+        "DBA",
+        "データベース",
+        "SQL",
+        "年収",
+        "転職",
+        "未経験",
+        "インフラエンジニア",
+        "キャリアパス",
+        "クラウド",
+        "パフォーマンスチューニング"
+      ],
+      "published": "2026-08-03",
+      "link": "/career/dba"
+    },
+    {
+      "id": "ui_ux_researcher",
+      "title": "UI/UXリサーチャーの年収・キャリアパス・転職面接対策",
+      "category": "engineering",
+      "meta_description": "UI/UXリサーチャーの年収相場、キャリアパスの築き方、転職面接でよく聞かれる質問と回答テンプレートを解説。調査設計・示唆出しの実践ポイントやPdM・デザイナーとの役割分担も紹介。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/ui_ux_researcher"
+    },
+    {
+      "id": "security_software_engineer",
+      "title": "セキュリティエンジニア年収1000万は本当？未経験ロードマップ完全ガイド",
+      "category": "engineering",
+      "meta_description": "未経験からセキュリティエンジニアになれる？年収相場・将来性・学習ロードマップ・面接Q&Aを現役目線で解説。今日から始める第一歩がわかります。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/security_software_engineer"
+    },
+    {
+      "id": "network_engineer",
+      "title": "未経験からネットワークエンジニアへの転職ガイド｜年収・資格・志望動機【Starful】",
+      "category": "engineering",
+      "meta_description": "未経験からネットワークエンジニアに転職する方法を解説。年収相場やCCNAなど有利な資格、志望動機の書き方、面接Q&Aまでロードマップで紹介。IT未経験の転職をStarfulがサポートします。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/network_engineer"
+    },
+    {
+      "id": "game_qa_tester",
+      "title": "ゲームQAテスターとは？仕事内容・なるには・年収を未経験向けに解説【Starful】",
+      "category": "engineering",
+      "meta_description": "ゲームQAテスターの仕事内容、未経験からなるには何が必要かを解説。平均年収や将来性、面接でよく聞かれる質問と回答例まで網羅した実践ガイドです。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/game_qa_tester"
+    },
+    {
+      "id": "game_producer",
+      "title": "ゲームプロデューサーになるには?年収・仕事内容・将来性を徹底解説",
+      "category": "engineering",
+      "meta_description": "ゲームプロデューサーの仕事内容や年収相場、必要なスキルを解説。未経験から目指すための具体的なロードマップと、面接でよく聞かれる質問への回答例まで紹介します。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/game_producer"
+    },
+    {
+      "id": "flutter_developer",
+      "title": "Flutterエンジニアの年収は?未経験からの転職ロードマップ&面接Q&A【Starful】",
+      "category": "engineering",
+      "meta_description": "Flutterエンジニアの年収相場・将来性をプロが解説。未経験から内定までの転職ロードマップと面接Q&Aを公開中。今すぐチェック!",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/flutter_developer"
+    },
+    {
+      "id": "enterprise_architect",
+      "title": "エンタープライズアーキテクト(EA)とは？仕事内容・年収・必要資格をわかりやすく解説",
+      "category": "engineering",
+      "meta_description": "エンタープライズアーキテクト（EA）の仕事内容・平均年収・必須資格（TOGAF等）を解説。未経験からのキャリアパスと転職ロードマップが分かるガイド。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/enterprise_architect"
+    },
+    {
+      "id": "embedded_software_engineer",
+      "title": "組み込みエンジニアの年収は?未経験からの転職ロードマップと面接Q&A",
+      "category": "engineering",
+      "meta_description": "組み込みエンジニアの年収相場・将来性を徹底解説。未経験からのロードマップ、必要スキル、面接Q&Aまで実例付きで紹介します。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/embedded_software_engineer"
+    },
+    {
+      "id": "developer_productivity_engineer",
+      "title": "DPE（開発生産性エンジニア）とは？年収・将来性を徹底解説｜未経験からのロードマップ＆面接Q&A【Starful】",
+      "category": "engineering",
+      "meta_description": "DPE（開発生産性エンジニア）の仕事内容・年収・将来性をプロが解説。未経験から目指せるロードマップと面接Q&Aも掲載。開発効率化やプラットフォームエンジニアリングに興味のある方は必見です。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/developer_productivity_engineer"
+    },
+    {
+      "id": "design_technologist",
+      "title": "デザインテクノロジストとは？年収・仕事内容・なり方を解説",
+      "category": "engineering",
+      "meta_description": "デザインテクノロジストの年収相場や仕事内容、必要スキルを解説。未経験からのなり方・キャリアパス、面接対策まで徹底ガイド。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/design_technologist"
+    },
+    {
+      "id": "database_administrator",
+      "title": "データベース管理者（DBA）とは？未経験からの転職ロードマップ・資格・年収【Starful】",
+      "category": "engineering",
+      "meta_description": "DBA（データベース管理者）の仕事内容、未経験からの転職ロードマップ、必要資格、平均年収、将来性、面接対策Q&Aを解説。キャリアチェンジを目指す方は必見です。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/database_administrator"
+    },
+    {
+      "id": "data_visualization_engineer",
+      "title": "データビジュアライゼーションエンジニアとは？年収・将来性・未経験ロードマップ｜面接Q&A【Starful】",
+      "category": "engineering",
+      "meta_description": "データビジュアライゼーションエンジニアとは？年収相場・将来性・必要スキルからBIツール活用、未経験者向け学習ロードマップ、面接対策Q&Aまで徹底解説。キャリア形成に役立つ情報をStarfulが発信します。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/data_visualization_engineer"
+    },
+    {
+      "id": "data_planner",
+      "title": "データプランナーとは？仕事内容・年収・必要スキル・将来性を徹底解説｜未経験からの転職ロードマップ＆面接Q&amp;A【Starful】",
+      "category": "engineering",
+      "meta_description": "データプランナーの仕事内容・年収・必要スキル・将来性を徹底解説。未経験から転職を成功させるロードマップと面接Q&amp;Aを紹介。データ活用でキャリアアップを目指す方必見の完全ガイドです。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/data_planner"
+    },
+    {
+      "id": "data_modeler",
+      "title": "データモデラーとは？年収・将来性・必要スキルを未経験からのロードマップで解説",
+      "category": "engineering",
+      "meta_description": "データモデラーの仕事内容・年収相場・将来性を徹底解説。未経験から目指す学習ロードマップ、必要スキル、キャリアパスの実例まで現役視点で紹介します。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/data_modeler"
+    },
+    {
+      "id": "data_curator",
+      "title": "データキュレーターとは？仕事内容・年収・将来性｜未経験からのロードマップ【Starful】",
+      "category": "engineering",
+      "meta_description": "データキュレーターとは？仕事内容や年収相場、将来性、未経験からのなり方までを解説。面接でよく聞かれる質問と回答例も紹介します。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/data_curator"
+    },
+    {
+      "id": "cro_specialist",
+      "title": "CROとは？年収・将来性・未経験からの転職ロードマップ完全ガイド",
+      "category": "engineering",
+      "meta_description": "CRO（コンバージョン率最適化）とは何か、年収相場や将来性、未経験からのキャリアロードマップをわかりやすく解説。転職面接でよく聞かれる質問と回答例も紹介します。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/cro_specialist"
+    },
+    {
+      "id": "computer_vision_engineer",
+      "title": "コンピュータビジョンエンジニアの年収は？未経験ロードマップと面接Q&A完全ガイド",
+      "category": "engineering",
+      "meta_description": "コンピュータビジョンエンジニアの年収相場・将来性を徹底解説。未経験から目指す学習ロードマップと面接で聞かれる質問例も紹介します。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/computer_vision_engineer"
+    },
+    {
+      "id": "cloud_solutions_architect",
+      "title": "クラウドソリューションアーキテクトとは？年収・なり方ロードマップ",
+      "category": "engineering",
+      "meta_description": "クラウドソリューションアーキテクトの仕事内容や年収相場、未経験からのなり方、必要な資格・スキルをロードマップ形式で解説。DX時代に需要が高まるキャリアのリアルを紹介します。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/cloud_solutions_architect"
+    },
+    {
+      "id": "chief_data_officer",
+      "title": "CDO（最高データ責任者）とは？年収・必要スキル・転職ロードマップ完全ガイド｜Starful",
+      "category": "engineering",
+      "meta_description": "CDOの仕事内容・年収相場・必要スキルを完全解説。CIO/CDTOとの違いや転職成功のロードマップも紹介。データ人材のキャリア設計に役立つ実践ガイドです。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/chief_data_officer"
+    },
+    {
+      "id": "brand_designer",
+      "title": "ブランドデザイナーとは？仕事内容・年収・なるには【未経験ロードマップ】",
+      "category": "engineering",
+      "meta_description": "ブランドデザイナーの仕事内容や平均年収、必要スキルを解説。未経験からなるには何が必要か、ロードマップと面接対策も紹介します。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/brand_designer"
+    },
+    {
+      "id": "bi_engineer",
+      "title": "BIエンジニアとは？未経験から年収アップは可能？ロードマップと将来性を解説",
+      "category": "engineering",
+      "meta_description": "BIエンジニアの仕事内容・年収相場・将来性を解説。未経験からの具体的ロードマップと必須スキル、面接対策も紹介。次のキャリアの一歩をここから。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/bi_engineer"
+    },
+    {
+      "id": "analytics_engineer",
+      "title": "アナリティクスエンジニア面接対策｜頻出質問と回答例まとめ【Starful】",
+      "category": "engineering",
+      "meta_description": "アナリティクスエンジニア面接でよく聞かれる質問と回答例。dbt・ELT・データ品質、DE/DSとの役割の違いを整理し、転職面接や逆質問対策に役立つポイントを解説します。",
+      "tags": [],
+      "published": "2026-07-30",
+      "link": "/career/analytics_engineer"
+    },
     {
       "id": "ux_designer",
       "title": "UXデザイナーの年収・将来性は？未経験ロードマップ",
@@ -21,48 +239,6 @@
       "link": "/career/ux_designer"
     },
     {
-      "id": "game_qa_tester",
-      "title": "ゲームQAテスター未経験ロードマップ！年収と将来性を解説",
-      "category": "engineering",
-      "meta_description": "地道なバグ発見の裏にある、ゲームの完成度を極めるやりがい。未経験からゲームQAテスターとしてキャリアを築き、年収アップと将来性を手に入れるための現実的なステップとロードマップを詳しく解説します！",
-      "tags": [
-        "ゲーム開発",
-        "QA",
-        "デバッグ",
-        "キャリアチェンジ",
-        "未経験歓迎",
-        "年収アップ",
-        "IT職種図鑑"
-      ],
-      "published": "2026-07-27",
-      "link": "/career/game_qa_tester"
-    },
-    {
-      "id": "game_producer",
-      "title": "ゲームプロデューサーの年収・将来性と未経験ロードマップ",
-      "category": "product-management",
-      "meta_description": "予算や人員の管理など責任は重大ですが、自分の描いたビジョンが世界中のユーザーに届く感動は格別です。ゲームプロデューサーのリアルな年収や将来性、未経験からヒット作を生み出すキャリアパスを徹底解説します。",
-      "tags": [
-        "ゲーム業界",
-        "キャリアプラン",
-        "年収事情",
-        "未経験転職",
-        "プロダクトマネジメント",
-        "ゲーム開発"
-      ],
-      "published": "2026-07-27",
-      "link": "/career/game_producer"
-    },
-    {
-      "id": "flutter_developer",
-      "title": "Flutterエンジニアの年収と将来性｜未経験からの転職ロードマップ＆面接Q&A",
-      "category": "engineering",
-      "meta_description": "Flutterエンジニアのリアルな年収相場や将来性を徹底解説。未経験から最短で活躍・高収入を目指すロードマップと、転職を成功させる面接Q&Aを公開中。",
-      "tags": [],
-      "published": "2026-07-27",
-      "link": "/career/flutter_developer"
-    },
-    {
       "id": "firmware_engineer",
       "title": "ファームウェアエンジニアの年収・将来性と未経験ロードマップ",
       "category": "engineering",
@@ -70,23 +246,6 @@
       "tags": [],
       "published": "2026-07-27",
       "link": "/career/firmware_engineer"
-    },
-    {
-      "id": "cro_specialist",
-      "title": "CROの年収と将来性は？未経験からプロになるロードマップ",
-      "category": "marketing",
-      "meta_description": "CRO（コンバージョン率最適化）は、データ分析とユーザー心理から売上を最大化する職種。泥臭い仮説検証の先にある、数字が劇的に改善した瞬間の達成感は格別です。未経験からのロードマップや年収も解説！",
-      "tags": [
-        "マーケティング",
-        "CRO",
-        "データ分析",
-        "キャリア",
-        "未経験",
-        "年収",
-        "ロードマップ"
-      ],
-      "published": "2026-07-27",
-      "link": "/career/cro_specialist"
     },
     {
       "id": "ai_engineer",
@@ -168,33 +327,6 @@
       "link": "/career/head_of_design"
     },
     {
-      "id": "enterprise_architect",
-      "title": "エンタープライズアーキテクト(EA)とは？仕事内容・年収・必要資格からキャリアロードマップまで解説",
-      "category": "engineering",
-      "meta_description": "エンタープライズアーキテクト（EA）の仕事内容、平均年収、おすすめ資格（TOGAF等）、ITアーキテクトとの違いを徹底解説。未経験から目指すキャリアパスや必要スキル、転職成功のロードマップを網羅した完全ガイドです。",
-      "tags": [],
-      "published": "2026-07-22",
-      "link": "/career/enterprise_architect"
-    },
-    {
-      "id": "embedded_software_engineer",
-      "title": "組み込みエンジニアの年収・将来性と未経験からの転職ロードマップ",
-      "category": "engineering",
-      "meta_description": "組み込みエンジニアの年収相場や将来性、未経験から目指すロードマップを徹底解説！IoTや自動運転の普及で需要が高まる組み込みエンジニアのリアルなやりがい、必要なスキル、面接対策Q&Aまで網羅しています。",
-      "tags": [],
-      "published": "2026-07-22",
-      "link": "/career/embedded_software_engineer"
-    },
-    {
-      "id": "database_administrator",
-      "title": "データベース管理者（DBA）とは？未経験から転職するロードマップ・資格・年収【Starful】",
-      "category": "engineering",
-      "meta_description": "データベース管理者（DBA）の仕事内容や未経験から転職を目指すロードマップを解説！必要な資格、平均年収、将来性、面接対策Q&Aまで網羅的に紹介します。DBAへのキャリアチェンジを検討中の方はぜひ参考にしてください。",
-      "tags": [],
-      "published": "2026-07-22",
-      "link": "/career/database_administrator"
-    },
-    {
       "id": "data_analyst",
       "title": "データアナリストの面接対策｜頻出質問・回答例と志望動機・SQL試験対策",
       "category": "engineering",
@@ -231,15 +363,6 @@
       "link": "/career/chief_product_officer"
     },
     {
-      "id": "chief_data_officer",
-      "title": "CDO（最高データ責任者）とは？役割・年収・必要スキルと転職キャリアパス",
-      "category": "engineering",
-      "meta_description": "CDO（最高データ責任者 / Chief Data Officer）の役割、平均年収、必要なスキルセット、キャリアパスを徹底解説。データ駆動型経営を牽引するCDOの仕事内容やCIO・CDTOとの違い、転職を成功させるロードマップを網羅しています。",
-      "tags": [],
-      "published": "2026-07-22",
-      "link": "/career/chief_data_officer"
-    },
-    {
       "id": "business_development_manager",
       "title": "BDM（ビジネスデベロップメント）とは？仕事内容・年収と未経験からの転職ロードマップ",
       "category": "engineering",
@@ -267,33 +390,6 @@
       "link": "/career/seo_specialist"
     },
     {
-      "id": "security_software_engineer",
-      "title": "セキュリティエンジニアの年収・将来性は？未経験からのロードマップ",
-      "category": "engineering",
-      "meta_description": "セキュリティエンジニアのリアルな年収や将来性を徹底解説！「未経験から年収1000万は可能？」という疑問に答え、具体的な学習ロードマップや仕事内容、面接対策（Q&A）まで、キャリアパスのすべてを網羅。",
-      "tags": [],
-      "published": "2026-07-20",
-      "link": "/career/security_software_engineer"
-    },
-    {
-      "id": "network_engineer",
-      "title": "未経験からネットワークエンジニアになるには？年収・将来性と転職ロードマップ",
-      "category": "engineering",
-      "meta_description": "未経験からネットワークエンジニアへの転職を目指す完全ロードマップ！年収や将来性、CCNAなど有利な資格、志望動機を含む面接対策（Q&A）まで、IT転職を成功に導くポイントを徹底解説します。",
-      "tags": [],
-      "published": "2026-07-20",
-      "link": "/career/network_engineer"
-    },
-    {
-      "id": "developer_productivity_engineer",
-      "title": "DPE（開発生産性エンジニア）とは？仕事内容・年収・将来性と未経験からのロードマップ",
-      "category": "engineering",
-      "meta_description": "注目を浴びるDPE（開発生産性エンジニア）の仕事内容、平均年収、将来性を徹底解説！未経験からDPEを目指すためのロードマップや面接対策まで網羅。開発効率化や自動化、プラットフォームエンジニアリングに関心があるエンジニア必見のキャリア情報を紹介します。",
-      "tags": [],
-      "published": "2026-07-20",
-      "link": "/career/developer_productivity_engineer"
-    },
-    {
       "id": "data_architect",
       "title": "データアーキテクトとは？仕事内容・年収・資格と未経験からのロードマップ",
       "category": "engineering",
@@ -312,24 +408,6 @@
       "link": "/career/cloud_consultant"
     },
     {
-      "id": "brand_designer",
-      "title": "ブランドデザイナーの仕事内容・年収・将来性｜未経験から目指すロードマップ",
-      "category": "engineering",
-      "meta_description": "ブランドデザイナーの仕事内容、平均年収、将来性を網羅。未経験からプロを目指すロードマップ、必要なスキル、面接対策まで徹底解説。",
-      "tags": [],
-      "published": "2026-07-20",
-      "link": "/career/brand_designer"
-    },
-    {
-      "id": "bi_engineer",
-      "title": "BIエンジニアとは？未経験から目指すロードマップ・年収・将来性を徹底解説",
-      "category": "engineering",
-      "meta_description": "BIエンジニアの仕事内容、年収、将来性を徹底解説！未経験から目指すための具体的ロードマップや必須スキル、おすすめの資格、面接対策まで解説。キャリアチェンジを検討している方は必見の実践的ガイドです。",
-      "tags": [],
-      "published": "2026-07-20",
-      "link": "/career/bi_engineer"
-    },
-    {
       "id": "backend_developer",
       "title": "未経験からバックエンドエンジニアになるロードマップ｜将来性・年収・スキルを解説",
       "category": "engineering",
@@ -337,15 +415,6 @@
       "tags": [],
       "published": "2026-07-20",
       "link": "/career/backend_developer"
-    },
-    {
-      "id": "data_visualization_engineer",
-      "title": "データビジュアライゼーションエンジニアの年収・将来性・未経験からのロードマップ",
-      "category": "engineering",
-      "meta_description": "データビジュアライゼーションエンジニアの仕事内容、平均年収、将来性を徹底解説！未経験からプロを目指すための学習ロードマップや必要なスキル、需要が高まるBIツール・データ分析の知識まで詳しく紹介します。キャリアアップを目指すエンジニア必見です。",
-      "tags": [],
-      "published": "2026-07-19",
-      "link": "/career/data_visualization_engineer"
     },
     {
       "id": "customer_success_manager",
@@ -391,15 +460,6 @@
       "tags": [],
       "published": "2026-07-04",
       "link": "/career/data_strategist"
-    },
-    {
-      "id": "data_planner",
-      "title": "データプランナーとは？仕事内容・年収・将来性と未経験からの転職ロードマップ",
-      "category": "engineering",
-      "meta_description": "データプランナーの仕事内容、年収、将来性を徹底解説！未経験から転職を成功させるロードマップや必要なスキル、面接対策Q&Aまで紹介。データ活用でビジネスを動かすキャリア設計に役立つ情報を網羅しています。",
-      "tags": [],
-      "published": "2026-07-04",
-      "link": "/career/data_planner"
     },
     {
       "id": "data_center_technician",
@@ -518,17 +578,17 @@
     },
     {
       "id": "cpp_developer",
-      "title": "C++開発者の年収と将来性|未経験からのロードマップ",
+      "title": "C++開発者の年収・将来性は？未経験ロードマップ",
       "category": "engineering",
-      "meta_description": "C++開発者はゲーム・組込み・金融システムなど幅広い分野で活躍する専門職。習得難易度は高いものの年収水準は魅力的で、未経験からでも着実にステップを踏めば目指せる将来性の高いキャリアです。",
+      "meta_description": "C++開発者のリアルな年収相場や将来性、未経験からのキャリアパスまで徹底解説。ゲームや組込み開発など活躍領域が広く、地道な設計力が評価される奥深い職種です。",
       "tags": [
         "C++",
-        "システムプログラミング",
-        "組込み開発",
+        "システム開発",
+        "組込みエンジニア",
         "ゲーム開発",
         "パフォーマンスチューニング",
-        "オブジェクト指向",
-        "未経験エンジニア",
+        "低レイヤー",
+        "未経験転職",
         "キャリアパス"
       ],
       "published": "2026-06-23",
@@ -542,15 +602,6 @@
       "tags": [],
       "published": "2026-06-19",
       "link": "/career/vpoe"
-    },
-    {
-      "id": "ui_ux_researcher",
-      "title": "UI/UXリサーチャーの年収・キャリア・面接対策｜即答テンプレート",
-      "category": "engineering",
-      "meta_description": "UI/UX（UX）リサーチャーの年収相場、キャリアパス、転職面接の質問対策を徹底解説。調査設計や示唆出しのコツ、面接で使える即答テンプレートも掲載。PdMやデザイナーとの役割分担も紹介。",
-      "tags": [],
-      "published": "2026-06-19",
-      "link": "/career/ui_ux_researcher"
     },
     {
       "id": "tech_lead",
@@ -671,18 +722,18 @@
     },
     {
       "id": "conversion_rate_optimizer",
-      "title": "CROの年収・将来性｜未経験からのロードマップ",
+      "title": "CROの年収・将来性は？未経験からのロードマップ",
       "category": "marketing",
-      "meta_description": "CRO（コンバージョン率最適化）は、データと心理学を武器にWebサイトの成果を数値で証明できる職種。地道な仮説検証の先にある成功体験は格別です。未経験からの年収・将来性・転職ロードマップまで徹底解説します。",
+      "meta_description": "数字を武器に「なぜ売れないか」を突き止め、改善を繰り返すCRO。地味な検証の積み重ねの先に、事業を動かす手応えとやりがいがある仕事です。",
       "tags": [
         "CRO",
-        "コンバージョン率最適化",
+        "コンバージョン最適化",
+        "ABテスト",
         "マーケティング",
-        "データ分析",
-        "未経験",
-        "年収",
-        "将来性",
-        "ロードマップ"
+        "グロースハック",
+        "未経験転職",
+        "キャリア",
+        "データドリブン"
       ],
       "published": "2026-06-19",
       "link": "/career/conversion_rate_optimizer"
@@ -913,23 +964,6 @@
       "link": "/career/application_security_engineer"
     },
     {
-      "id": "analytics_engineer",
-      "title": "アナリティクスエンジニア｜データ基盤面接の頻出論点",
-      "category": "ai-data",
-      "meta_description": "アナリティクスエンジニア面接：dbt・ELT・データ品質、DE/DSとの境界を短く語るキーワード地図。パイプライン設計の意思決定例つき。転職直前の逆確認に。【保存版】",
-      "tags": [
-        "アナリティクスエンジニア",
-        "データ分析",
-        "dbt",
-        "SQL",
-        "データ基盤",
-        "キャリア",
-        "IT転職"
-      ],
-      "published": "2026-05-12",
-      "link": "/career/analytics_engineer"
-    },
-    {
       "id": "graphic_designer",
       "title": "グラフィックデザイナー面接｜ポートフォリオ深掘りに落ちない話の型",
       "category": "design",
@@ -1110,23 +1144,6 @@
       "link": "/career/director_of_product_management"
     },
     {
-      "id": "design_technologist",
-      "title": "デザインテクノロジストの年収・将来性！未経験ロードマップ",
-      "category": "design",
-      "meta_description": "デザインと開発の架け橋となるDesign Technologist。高い専門性で年収アップも狙え、将来性も抜群です。未経験からのロードマップや現場のリアルなやりがい、求められるスキルを徹底解説します。",
-      "tags": [
-        "UI/UX",
-        "フロントエンド",
-        "デザインシステム",
-        "プロトタイピング",
-        "Figma",
-        "React",
-        "キャリア"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/design_technologist"
-    },
-    {
       "id": "data_platform_engineer",
       "title": "データプラットフォームエンジニアの年収・将来性・未経験ロードマップ",
       "category": "ai-data",
@@ -1145,23 +1162,6 @@
       "link": "/career/data_platform_engineer"
     },
     {
-      "id": "data_modeler",
-      "title": "データモデラーの年収・将来性は？未経験からのロードマップ",
-      "category": "ai-data",
-      "meta_description": "データの設計図を描くデータモデラー。高年収が狙える将来性抜群の職種ですが、実態はどうなのか？未経験からの学習ロードマップや仕事のやりがい、現実的なキャリアパスを現役視点で徹底解説します。",
-      "tags": [
-        "データモデリング",
-        "データベース設計",
-        "DX",
-        "データ基盤",
-        "IT転職",
-        "スキルアップ",
-        "ビッグデータ"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/data_modeler"
-    },
-    {
       "id": "data_governance_specialist",
       "title": "データガバナンスの年収と将来性は？未経験からのロードマップ",
       "category": "ai-data",
@@ -1175,56 +1175,6 @@
       ],
       "published": "2026-03-22",
       "link": "/career/data_governance_specialist"
-    },
-    {
-      "id": "data_curator",
-      "title": "データキュレーターの年収と将来性｜未経験からのロードマップ",
-      "category": "ai-data",
-      "meta_description": "AIの精度を左右するデータキュレーター。膨大なデータを整理・最適化する地道な作業の先に、AI進化の鍵を握る大きなやりがいがあります。年収や将来性、未経験からの学習ロードマップを徹底解説します。",
-      "tags": [
-        "AI開発",
-        "データ活用",
-        "キャリアパス",
-        "IT転職",
-        "ビッグデータ",
-        "アノテーション"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/data_curator"
-    },
-    {
-      "id": "computer_vision_engineer",
-      "title": "コンピュータビジョンエンジニアの年収・将来性・未経験ロードマップ",
-      "category": "ai-data",
-      "meta_description": "画像認識で社会を変えるコンピュータビジョンエンジニア。数学や最新論文の習得は困難ですが、自動運転や医療AIなど最先端の現場で高年収を実現できる将来性の高い職種です。未経験からの挑戦法も詳しく解説。",
-      "tags": [
-        "AI",
-        "画像認識",
-        "Python",
-        "Deep Learning",
-        "キャリア",
-        "エンジニア",
-        "機械学習"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/computer_vision_engineer"
-    },
-    {
-      "id": "cloud_solutions_architect",
-      "title": "クラウドアーキテクトの年収・将来性・未経験からのロードマップ",
-      "category": "cloud-infra",
-      "meta_description": "クラウドソリューションアーキテクトは企業のDXを支える設計の要。高年収で将来性も抜群です。未経験から目指すロードマップや、技術選定の難しさと達成感など、職務のリアルな現実と魅力を徹底解説します。",
-      "tags": [
-        "クラウド",
-        "AWS",
-        "Azure",
-        "GCP",
-        "アーキテクチャ",
-        "インフラ",
-        "キャリアパス"
-      ],
-      "published": "2026-03-22",
-      "link": "/career/cloud_solutions_architect"
     },
     {
       "id": "cloud_architect",
