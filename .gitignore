@@ -30,3 +30,8 @@ app/static/img/*.webp
 !app/static/img/favicon-*.png
 !app/static/img/apple-touch-icon.png
 !app/static/img/brand_biz_mark.png
+
+
+
+# macOS Finder custom folder icon (Icon + CR; Icon? matches one trailing char)
+Icon?
