@@ -1,4 +1,4 @@
-"""Non-SEO page routes: home, search, practice, about, privacy, mbti."""
+"""Non-SEO page routes: home, search, about, privacy, contact, mbti."""
 from __future__ import annotations
 
 from datetime import date
@@ -53,19 +53,10 @@ async def home(request: Request):
 
 
 @router.get("/practice")
-async def practice_page(request: Request):
-    ensure_jobs_cache()
-    career_opts = [
-        {"id": j.get("id", ""), "title": j.get("title", "")}
-        for j in JOB_DATA.get("jobs", [])
-        if j.get("title")
-    ]
-    career_opts.sort(key=lambda x: x["title"])
-    return templates.TemplateResponse(
-        request=request,
-        name="practice.html",
-        context={"career_options": career_opts},
-    )
+@router.get("/practice/")
+async def practice_page_gone():
+    """Legacy STARR practice URL → MBTI hub."""
+    return RedirectResponse(f"{BASE_URL}/mbti", status_code=301)
 
 
 @router.get("/search")

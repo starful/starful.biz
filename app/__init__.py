@@ -11,7 +11,6 @@ from .config import BASE_URL, BRAND_LOGO_FILE, GCS_IMG_BASE, STATIC_DIR, categor
 from .dependencies import db  # noqa: F401 — init Firebase on import
 from .md_parser import parse_starful_md
 from .reactions import router as reactions_router
-from .routes.api_starr import router as starr_router
 from .routes.pages import router as pages_router
 from .routes.seo import register_seo
 from .services.jobs_cache import JOB_DATA, load_jobs_on_startup
@@ -41,7 +40,6 @@ templates.env.globals["category_label_ja"] = category_label_ja
 register_seo(app)
 
 app.include_router(pages_router)
-app.include_router(starr_router, prefix="/api")
 app.include_router(reactions_router, prefix="/api")
 
 __all__ = [

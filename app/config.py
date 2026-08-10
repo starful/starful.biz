@@ -16,9 +16,6 @@ DATA_FILE = os.path.join(STATIC_DIR, "json", "job_data.json")
 BASE_URL = os.getenv("SITE_URL", "https://starful.biz").rstrip("/")
 BRAND_LOGO_FILE = "brand_biz_mark.png"
 
-FIRESTORE_STARR_FEEDBACK_LOGS = "starful_starr_feedback_logs"
-FIRESTORE_STARR_USAGE_LIMITS = "starful_starr_usage_limits"
-
 GCS_IMG_BASE = os.getenv(
     "STARFUL_GCS_IMG_BASE", "https://storage.googleapis.com/starful-biz-assets"
 ).rstrip("/")

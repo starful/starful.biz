@@ -10,6 +10,7 @@ from app.config import STATIC_DIR
 from app.services.jobs_cache import JOB_DATA, ensure_jobs_cache
 
 MBTI_DATA_FILE = os.path.join(STATIC_DIR, "json", "mbti_careers.json")
+CAREER_MBTI_FILE = os.path.join(STATIC_DIR, "json", "career_mbti.json")
 MBTI_TYPE_ORDER: tuple[str, ...] = (
     "INTJ",
     "INTP",
@@ -34,6 +35,12 @@ VALID_TYPES = frozenset(MBTI_TYPE_ORDER)
 @lru_cache(maxsize=1)
 def _load_raw() -> dict[str, Any]:
     with open(MBTI_DATA_FILE, encoding="utf-8") as f:
+        return json.load(f)
+
+
+@lru_cache(maxsize=1)
+def _load_career_mbti() -> dict[str, Any]:
+    with open(CAREER_MBTI_FILE, encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -119,17 +126,38 @@ def get_mbti_type(code: str) -> dict[str, Any] | None:
     }
 
 
-def types_for_career(career_id: str, *, limit: int = 4) -> list[dict[str, str]]:
-    """Reverse lookup: which MBTI types recommend this career."""
+def types_for_career(career_id: str, *, limit: int = 3) -> list[dict[str, str]]:
+    """Career detail aptitude block: 2–3 MBTI types with short reasons."""
     if not career_id:
         return []
+
+    type_meta = _load_raw().get("types") or {}
+    career_map = (_load_career_mbti().get("careers") or {}).get(career_id) or []
     out: list[dict[str, str]] = []
-    data = _load_raw().get("types") or {}
+    for item in career_map:
+        code = normalize_mbti_type(item.get("code", ""))
+        if not code:
+            continue
+        label = (type_meta.get(code) or {}).get("label", "")
+        out.append(
+            {
+                "code": code,
+                "label": label,
+                "reason": (item.get("reason") or "").strip(),
+            }
+        )
+        if len(out) >= limit:
+            break
+
+    if out:
+        return out
+
+    # Fallback: reverse lookup from type hubs
     for code in MBTI_TYPE_ORDER:
-        entry = data.get(code) or {}
+        entry = type_meta.get(code) or {}
         ids = {c.get("id") for c in (entry.get("careers") or [])}
         if career_id in ids:
-            out.append({"code": code, "label": entry.get("label", "")})
+            out.append({"code": code, "label": entry.get("label", ""), "reason": ""})
             if len(out) >= limit:
                 break
     return out

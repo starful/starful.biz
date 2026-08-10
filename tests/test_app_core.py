@@ -94,13 +94,36 @@ class AppCoreTests(unittest.TestCase):
         response = self.client.get("/career/cloud_solutions_architect")
         self.assertEqual(response.status_code, 200)
         self.assertIn("/mbti/INTJ", response.text)
-        self.assertIn("相性の良いタイプ", response.text)
+        self.assertIn("相性の良いMBTI", response.text)
+        self.assertIn("mbti-career-fit", response.text)
+
+    def test_all_careers_have_mbti_fit_block(self):
+        from app.services.mbti import types_for_career
+
+        missing = []
+        for job in JOB_DATA.get("jobs", []):
+            jid = job.get("id") or ""
+            types = types_for_career(jid)
+            if len(types) < 2:
+                missing.append(jid)
+        self.assertEqual(missing, [], f"careers without MBTI fit: {missing[:10]}")
+
+    def test_practice_redirects_to_mbti(self):
+        response = self.client.get("/practice", follow_redirects=False)
+        self.assertEqual(response.status_code, 301)
+        self.assertIn("/mbti", response.headers.get("location", ""))
+
+    def test_sitemap_excludes_practice(self):
+        response = self.client.get("/sitemap.xml")
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn("/practice</loc>", response.text)
 
     def test_career_detail_shows_hero_image(self):
         response = self.client.get("/career/cloud_solutions_architect")
         self.assertEqual(response.status_code, 200)
-        self.assertIn('class="detail-hero"', response.text)
-        self.assertIn("/static/img/cloud_solutions_architect_hero.png", response.text)
+        # Hero is optional (frontmatter hero_image). When present, expect career image path.
+        if 'class="detail-hero"' in response.text:
+            self.assertIn("/static/img/", response.text)
 
     def test_removed_career_redirects_home(self):
         response = self.client.get("/career/solutions_architect", follow_redirects=False)

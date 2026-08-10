@@ -372,14 +372,19 @@
             {% endif %}
 
             {% if mbti_types %}
-            <nav class="related-careers mbti-career-types" aria-label="相性の良いMBTIタイプ">
-                <h2>この職種と相性の良いタイプ</h2>
-                <ul>
+            <section class="mbti-career-fit" aria-labelledby="mbti-career-fit-heading">
+                <h2 id="mbti-career-fit-heading">この職種と相性の良いMBTI</h2>
+                <p class="mbti-career-fit-lead">働き方の傾向から見た相性の目安です。詳しくはタイプ別ガイドへ進めます。</p>
+                <ul class="mbti-career-fit-list">
                     {% for t in mbti_types %}
-                    <li><a href="/mbti/{{ t.code }}">{{ t.code }}{% if t.label %}（{{ t.label }}）{% endif %}の適職ガイド</a></li>
+                    <li class="mbti-career-fit-item">
+                        <a class="mbti-career-fit-code" href="/mbti/{{ t.code }}">{{ t.code }}{% if t.label %}｜{{ t.label }}{% endif %}</a>
+                        {% if t.reason %}<p class="mbti-career-fit-reason">{{ t.reason }}</p>{% endif %}
+                    </li>
                     {% endfor %}
                 </ul>
-            </nav>
+                <p class="mbti-career-fit-more"><a href="/mbti">MBTIからIT職種を探す →</a></p>
+            </section>
             {% endif %}
 
             {% if featured_careers %}
@@ -393,14 +398,14 @@
             </nav>
             {% endif %}
 
-            <a href="/practice" class="go-practice-banner">
-                <h3>AI面接官と実戦練習を始める 🤖</h3>
+            <a href="/mbti" class="go-practice-banner go-mbti-banner">
+                <h3>MBTIから相性の良いIT職種を探す</h3>
                 <p>
-                    ガイドを読み終えたら、実際に回答を準備しましょう。<br>
-                    AI面接官があなたのエピソードを専門的に分析し、合格率を高める回答を提案します。
+                    性格タイプの傾向から、向いている職種と面接ガイドへ進めます。<br>
+                    16タイプ別の適職解説を無料で公開しています。
                 </p>
                 <span class="btn-white">
-                    AI面接練習ページへ移動する <i class="fa-solid fa-arrow-right"></i>
+                    タイプ一覧を見る <i class="fa-solid fa-arrow-right"></i>
                 </span>
             </a>
         </div>

@@ -1,11 +1,10 @@
-"""External service clients (Firebase, Gemini)."""
+"""External service clients (Firebase)."""
 from __future__ import annotations
 
 import os
 
 import firebase_admin
 from firebase_admin import credentials, firestore
-from google import genai
 
 db = None
 try:
@@ -19,7 +18,3 @@ try:
     db = firestore.client()
 except Exception as e:
     print(f"⚠️ Firebase Warning: {e}")
-
-ai_client = None
-if os.getenv("GEMINI_API_KEY"):
-    ai_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))

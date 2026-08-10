@@ -9,14 +9,14 @@
 | **GCS** | `starful-biz-assets` (root prefix) · Places: `office`, `company` |
 
 Starful is a FastAPI-based web service for IT career exploration and interview preparation.  
-It serves job-specific content from Markdown files, provides an AI-powered STARR interview feedback experience, and is deployed on Google Cloud Run.
+It serves job-specific content from Markdown files, MBTI-based career hubs, and is deployed on Google Cloud Run.
 
 ## Overview
 
 - Content-driven architecture using Markdown in `app/contents`
 - Server-rendered UI with Jinja2 templates
 - JSON index cache at `app/static/json/job_data.json`
-- STARR analysis API backed by Gemini (`gemini-2.5-flash`)
+- MBTI type hubs (`/mbti`) mapped to career guides
 - Production deployment via Cloud Build + Cloud Run
 
 ## Tech Stack
@@ -24,7 +24,6 @@ It serves job-specific content from Markdown files, provides an AI-powered STARR
 - Backend: Python, FastAPI, Uvicorn
 - Templating/UI: Jinja2, HTML, CSS
 - Content parsing: Markdown, Python JSON/frontmatter-style metadata
-- AI: Google GenAI SDK
 - Optional backend integration: Firebase Admin SDK
 - Deployment: Docker, Google Cloud Build, Cloud Run, Secret Manager
 
@@ -59,13 +58,10 @@ deploy.sh                # End-to-end automation script
 
 Create a local `.env` file in the project root.
 
-Required for STARR API:
-
-- `GEMINI_API_KEY=<your_gemini_api_key>`
-
 Optional:
 
 - `SITE_URL=https://starful.biz` (default is `https://starful.biz`)
+- `GEMINI_API_KEY=...` (used by local content generation scripts)
 
 For production, secrets are configured in `cloudbuild.yaml` and injected into Cloud Run using Secret Manager.
 
@@ -86,47 +82,17 @@ uvicorn app:app --reload
 3. Open:
 
 - Home: `http://127.0.0.1:8000/`
-- Practice page: `http://127.0.0.1:8000/practice`
+- MBTI: `http://127.0.0.1:8000/mbti`
 
 ## Core Routes
 
 - `GET /` - Home page with grouped career cards
 - `GET /career/{item_id}` - Career detail page (Markdown-rendered)
 - `GET /search?q=...` - Title-based search
-- `GET /practice` - STARR interview practice UI
-- `POST /api/analyze-starr` - AI STARR feedback endpoint
+- `GET /mbti` - MBTI type index
+- `GET /mbti/{TYPE}` - Type hub with recommended careers
 - `GET /sitemap.xml` - Dynamic sitemap
 - `GET /robots.txt` - Robots policy + sitemap reference
-
-## STARR API (Example)
-
-Endpoint:
-
-```text
-POST /api/analyze-starr
-Content-Type: application/json
-```
-
-Request body:
-
-```json
-{
-  "s": "Situation text",
-  "t": "Task text",
-  "a": "Action text",
-  "r": "Result text",
-  "reflection": "Reflection text",
-  "job_title": "Backend Engineer"
-}
-```
-
-Response fields:
-
-- `score` (0-100)
-- `summary`
-- `s_feedback`, `t_feedback`, `a_feedback`, `r_feedback`
-- `reflection_feedback`
-- `improved_answer`
 
 ## Content Workflow
 
@@ -193,10 +159,6 @@ This script orchestrates content generation, GCS image uploads, data rebuild, op
 
 ## Troubleshooting
 
-- STARR API returns `503`:
-  - `GEMINI_API_KEY` is missing in runtime environment
-- STARR API returns `500`:
-  - Check model availability and API key validity
 - `sitemap.xml` issues:
   - Verify route response at `/sitemap.xml` in production
 - Empty or stale home data:

@@ -225,7 +225,6 @@ async def career_detail(request: Request, item_id: str):
 async def sitemap():
     static_paths = [
         ("/", "daily", "1.0"),
-        ("/practice", "weekly", "0.85"),
         ("/mbti", "weekly", "0.8"),
         ("/about", "monthly", "0.5"),
         ("/contact", "monthly", "0.4"),

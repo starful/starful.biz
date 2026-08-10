@@ -518,6 +518,68 @@ a { text-decoration: none; color: inherit; }
     color: #a8a29e;
 }
 
+/* Career detail: MBTI aptitude block */
+.mbti-career-fit {
+    margin: 48px 0 40px;
+    padding: 24px 22px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+.detail-body .mbti-career-fit h2 {
+    margin: 0 0 10px;
+    font-size: 1.35rem;
+    font-weight: 800;
+    border: none;
+    padding: 0;
+}
+.detail-body .mbti-career-fit h2::after { display: none; }
+.mbti-career-fit-lead {
+    margin: 0 0 16px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: var(--text-gray);
+}
+.mbti-career-fit-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.mbti-career-fit-item {
+    padding: 14px 16px;
+    background: #f8fbff;
+    border: 1px solid #e3efff;
+    border-radius: 12px;
+}
+.mbti-career-fit-code {
+    display: inline-block;
+    font-weight: 800;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+.mbti-career-fit-code:hover { text-decoration: underline; }
+.mbti-career-fit-reason {
+    margin: 6px 0 0 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+    color: #444;
+}
+.mbti-career-fit-more {
+    margin: 16px 0 0 !important;
+    font-size: 0.92rem !important;
+}
+.mbti-career-fit-more a {
+    color: var(--accent-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+.go-mbti-banner {
+    background: linear-gradient(135deg, #1d1d1f, #3a3a3c) !important;
+}
+
 @media (max-width: 768px) {
     .mbti-home-banner {
         flex-direction: column;

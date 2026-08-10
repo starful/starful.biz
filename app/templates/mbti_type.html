@@ -3,9 +3,9 @@
 {% block page_title %}{{ mbti.code }}に向いているIT職種｜{{ mbti.label }}・面接ガイド【Starful】{% endblock %}
 {% block meta_desc %}{{ mbti.code }}（{{ mbti.label }}）に相性の良いIT職種を解説。{% for c in mbti.careers[:3] %}{{ c.name }}{% if not loop.last %}、{% endif %}{% endfor %}など。職種別の面接ガイドへ進めます。{% endblock %}
 {% block og_title %}{{ mbti.code }}に向いているIT職種｜{{ mbti.label }}【Starful】{% endblock %}
-{% block og_desc %}{{ mbti.code }}（{{ mbti.label }}）に相性の良いIT職種を詳しく解説。おすすめ職種から面接ガイド・STARR練習へつなげられます。{% endblock %}
+{% block og_desc %}{{ mbti.code }}（{{ mbti.label }}）に相性の良いIT職種を詳しく解説。おすすめ職種から面接ガイドへつなげられます。{% endblock %}
 {% block twitter_title %}{{ mbti.code }}に向いているIT職種｜{{ mbti.label }}【Starful】{% endblock %}
-{% block twitter_desc %}{{ mbti.code }}（{{ mbti.label }}）に相性の良いIT職種を詳しく解説。おすすめ職種から面接ガイド・STARR練習へつなげられます。{% endblock %}
+{% block twitter_desc %}{{ mbti.code }}（{{ mbti.label }}）に相性の良いIT職種を詳しく解説。おすすめ職種から面接ガイドへつなげられます。{% endblock %}
 
 {% block structured_json %}
 {% if json_ld_mbti %}
@@ -87,7 +87,7 @@
                 </div>
                 <div class="mbti-career-actions">
                     <a href="{{ c.link }}" class="mbti-btn mbti-btn-primary">面接ガイドを見る</a>
-                    <a href="/practice" class="mbti-btn mbti-btn-secondary">STARR練習へ</a>
+                    <a href="/mbti" class="mbti-btn mbti-btn-secondary">他のタイプを見る</a>
                 </div>
             </article>
             {% else %}
@@ -122,7 +122,7 @@
         <h2 id="mbti-closing-heading">次の一歩</h2>
         <p>{{ mbti.closing }}</p>
         <p class="mbti-closing-actions">
-            <a href="/practice" class="mbti-btn mbti-btn-primary">AI面接官でSTARR練習</a>
+            <a href="/" class="mbti-btn mbti-btn-primary">職種一覧を見る</a>
             <a href="/mbti" class="mbti-btn mbti-btn-secondary">他のタイプを見る</a>
         </p>
     </section>
