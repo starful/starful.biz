@@ -1,7 +1,79 @@
 {
-  "last_updated": "2026.08.08",
+  "last_updated": "2026.08.15",
   "total_count": 114,
   "jobs": [
+    {
+      "id": "ui_ux_researcher",
+      "title": "UI/UXリサーチャーの年収・キャリアパス・転職面接対策完全ガイド",
+      "category": "engineering",
+      "meta_description": "UI/UXリサーチャーのキャリア構築に必要な年収相場、昇進戦略、転職面接対策を完全解説。実践的なスキルと成功事例で、理想のキャリア転換を実現します。",
+      "tags": [],
+      "published": "2026-08-08",
+      "link": "/career/ui_ux_researcher"
+    },
+    {
+      "id": "tech_lead",
+      "title": "テックリード完全ガイド｜年収・必須スキル・未経験ロードマップ【Starful】",
+      "category": "engineering",
+      "meta_description": "テックリードの年収・必須スキル・キャリアパスを完全ガイド。未経験からの実践的なロードマップ付き【Starful】",
+      "tags": [],
+      "published": "2026-08-08",
+      "link": "/career/tech_lead"
+    },
+    {
+      "id": "game_qa_tester",
+      "title": "未経験からゲームQAテスターへ｜年収・仕事内容・面接対策完全ガイド【Starful】",
+      "category": "engineering",
+      "meta_description": "ゲームQAテスターになるには？年収・仕事内容・未経験からの転職ノウハウ、面接Q&Aを網羅。キャリアチェンジの実践ガイド。",
+      "tags": [],
+      "published": "2026-08-08",
+      "link": "/career/game_qa_tester"
+    },
+    {
+      "id": "data_curator",
+      "title": "データキュレーターとは？仕事内容・年収・将来性と未経験からのロードマップ【Starful】",
+      "category": "engineering",
+      "meta_description": "データキュレーション職の仕事内容、平均年収、業界展望、未経験からのキャリアアップ方法を実践的に解説します。",
+      "tags": [],
+      "published": "2026-08-08",
+      "link": "/career/data_curator"
+    },
+    {
+      "id": "cryptographer",
+      "title": "暗号技術者・エンジニア（Cryptographer）の年収・給与と将来性｜未経験からの転職ロードマップ",
+      "category": "engineering",
+      "meta_description": "Web3とブロックチェーン産業の急速な成長により、暗号技術者への需要が急増しています。このガイドでは、現実的な年収・給与情報、未経験からプロを目指すための体系的な学習ロードマップ、確実に内定を獲得するための面接対策まで、包括的にご紹介します。",
+      "tags": [],
+      "published": "2026-08-08",
+      "link": "/career/cryptographer"
+    },
+    {
+      "id": "automation_engineer",
+      "title": "オートメーションエンジニアの年収・求人と未経験キャリアロードマップ | Starful",
+      "category": "engineering",
+      "meta_description": "オートメーションエンジニアの年収・給料、求人情報、未経験から始めるキャリアパスを完全解説。転職方法と面接対策も。",
+      "tags": [],
+      "published": "2026-08-08",
+      "link": "/career/automation_engineer"
+    },
+    {
+      "id": "analytics_engineer",
+      "title": "アナリティクスエンジニア面接対策｜頻出質問から逆質問まで完全ガイド【Starful】",
+      "category": "engineering",
+      "meta_description": "転職面接対策に必要な実務的知識を完全網羅",
+      "tags": [],
+      "published": "2026-08-08",
+      "link": "/career/analytics_engineer"
+    },
+    {
+      "id": "3d_modeler",
+      "title": "3Dモデラーになるには｜年収・スキル・未経験ガイド【Starful】",
+      "category": "engineering",
+      "meta_description": "3Dモデラーの平均年収、未経験からの学習ロードマップ、必要なスキル、就職・転職対策を完全解説。需要が高い業界で、キャリアを築く実践的なガイド。",
+      "tags": [],
+      "published": "2026-08-08",
+      "link": "/career/3d_modeler"
+    },
     {
       "id": "dba",
       "title": "DBAの年収・将来性|未経験からのロードマップ",
@@ -23,15 +95,6 @@
       "link": "/career/dba"
     },
     {
-      "id": "ui_ux_researcher",
-      "title": "UI/UXリサーチャーの年収・キャリアパス・転職面接対策",
-      "category": "engineering",
-      "meta_description": "UI/UXリサーチャーの年収相場、キャリアパスの築き方、転職面接でよく聞かれる質問と回答テンプレートを解説。調査設計・示唆出しの実践ポイントやPdM・デザイナーとの役割分担も紹介。",
-      "tags": [],
-      "published": "2026-07-30",
-      "link": "/career/ui_ux_researcher"
-    },
-    {
       "id": "security_software_engineer",
       "title": "セキュリティエンジニア年収1000万は本当？未経験ロードマップ完全ガイド",
       "category": "engineering",
@@ -48,15 +111,6 @@
       "tags": [],
       "published": "2026-07-30",
       "link": "/career/network_engineer"
-    },
-    {
-      "id": "game_qa_tester",
-      "title": "ゲームQAテスターとは？仕事内容・なるには・年収を未経験向けに解説【Starful】",
-      "category": "engineering",
-      "meta_description": "ゲームQAテスターの仕事内容、未経験からなるには何が必要かを解説。平均年収や将来性、面接でよく聞かれる質問と回答例まで網羅した実践ガイドです。",
-      "tags": [],
-      "published": "2026-07-30",
-      "link": "/career/game_qa_tester"
     },
     {
       "id": "game_producer",
@@ -149,15 +203,6 @@
       "link": "/career/data_modeler"
     },
     {
-      "id": "data_curator",
-      "title": "データキュレーターとは？仕事内容・年収・将来性｜未経験からのロードマップ【Starful】",
-      "category": "engineering",
-      "meta_description": "データキュレーターとは？仕事内容や年収相場、将来性、未経験からのなり方までを解説。面接でよく聞かれる質問と回答例も紹介します。",
-      "tags": [],
-      "published": "2026-07-30",
-      "link": "/career/data_curator"
-    },
-    {
       "id": "cro_specialist",
       "title": "CROとは？年収・将来性・未経験からの転職ロードマップ完全ガイド",
       "category": "engineering",
@@ -210,15 +255,6 @@
       "tags": [],
       "published": "2026-07-30",
       "link": "/career/bi_engineer"
-    },
-    {
-      "id": "analytics_engineer",
-      "title": "アナリティクスエンジニア面接対策｜頻出質問と回答例まとめ【Starful】",
-      "category": "engineering",
-      "meta_description": "アナリティクスエンジニア面接でよく聞かれる質問と回答例。dbt・ELT・データ品質、DE/DSとの役割の違いを整理し、転職面接や逆質問対策に役立つポイントを解説します。",
-      "tags": [],
-      "published": "2026-07-30",
-      "link": "/career/analytics_engineer"
     },
     {
       "id": "ux_designer",
@@ -578,17 +614,17 @@
     },
     {
       "id": "cpp_developer",
-      "title": "C++開発者の年収・将来性は？未経験ロードマップ",
+      "title": "C++開発者の年収・将来性と未経験ロードマップ",
       "category": "engineering",
-      "meta_description": "C++開発者のリアルな年収相場や将来性、未経験からのキャリアパスまで徹底解説。ゲームや組込み開発など活躍領域が広く、地道な設計力が評価される奥深い職種です。",
+      "meta_description": "C++開発者のリアルな年収相場や需要が続く理由、未経験からの学習ロードマップまで、現場のやりがいと厳しさを交えて解説します。",
       "tags": [
         "C++",
+        "プログラミング言語",
         "システム開発",
-        "組込みエンジニア",
+        "組み込み開発",
         "ゲーム開発",
-        "パフォーマンスチューニング",
-        "低レイヤー",
-        "未経験転職",
+        "パフォーマンス",
+        "未経験エンジニア",
         "キャリアパス"
       ],
       "published": "2026-06-23",
@@ -602,15 +638,6 @@
       "tags": [],
       "published": "2026-06-19",
       "link": "/career/vpoe"
-    },
-    {
-      "id": "tech_lead",
-      "title": "テックリードの年収・将来性と未経験からのロードマップ｜Starful",
-      "category": "engineering",
-      "meta_description": "テックリード（Tech Lead）の年収、将来性、仕事内容を徹底解説！未経験から目指すための完全キャリアロードマップを公開中。必要なスキルや具体的なステップを分かりやすく紹介します。エンジニアのキャリアアップなら【Starful】へ。",
-      "tags": [],
-      "published": "2026-06-19",
-      "link": "/career/tech_lead"
     },
     {
       "id": "robotics_software_engineer",
@@ -703,15 +730,6 @@
       "link": "/career/data_engineer"
     },
     {
-      "id": "cryptographer",
-      "title": "暗号技術者・エンジニア（Cryptographer）の年収と将来性！未経験からのロードマップ",
-      "category": "engineering",
-      "meta_description": "Web3やブロックチェーンの基盤を支える「暗号技術者・エンジニア（Cryptographer）」。その年収や将来性、未経験からプロを目指すための具体的な学習ロードマップ、面接対策まで徹底解説！最先端セキュリティ分野で高年収を狙うキャリアパスを紹介します。",
-      "tags": [],
-      "published": "2026-06-19",
-      "link": "/career/cryptographer"
-    },
-    {
       "id": "creative_technologist",
       "title": "クリエイティブテクノロジストとは？仕事内容、年収、未経験から目指すロードマップ",
       "category": "engineering",
@@ -775,15 +793,6 @@
       "link": "/career/blockchain_developer"
     },
     {
-      "id": "automation_engineer",
-      "title": "オートメーションエンジニア（自動化エンジニア）の年収・将来性と未経験ロードマップ",
-      "category": "engineering",
-      "meta_description": "オートメーションエンジニア（自動化エンジニア）の年収や将来性、未経験から目指すための学習ロードマップを徹底解説。テスト自動化の仕事内容や面接対策Q&Aも紹介します。",
-      "tags": [],
-      "published": "2026-06-19",
-      "link": "/career/automation_engineer"
-    },
-    {
       "id": "android_developer",
       "title": "Androidエンジニアの年収・将来性と未経験ロードマップ｜Starful",
       "category": "engineering",
@@ -800,15 +809,6 @@
       "tags": [],
       "published": "2026-06-19",
       "link": "/career/agile_coach"
-    },
-    {
-      "id": "3d_modeler",
-      "title": "3Dモデラーになるには？未経験からプロになるロードマップ・年収・将来性を解説",
-      "category": "engineering",
-      "meta_description": "3Dモデラーになるには？未経験から活躍するロードマップ、リアルな年収や将来性を徹底解説！仕事内容や必要なスキル、独学での勉強法、面接対策まで、3Dモデラーとしてキャリアを築くための全知識を網羅しています。",
-      "tags": [],
-      "published": "2026-06-19",
-      "link": "/career/3d_modeler"
     },
     {
       "id": "iac_specialist",
