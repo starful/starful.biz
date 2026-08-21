@@ -1,38 +1,10 @@
----json
-{
-  "category": "engineering",
-  "keywords": [
-    "メタバース開発者",
-    "Unity",
-    "Unreal Engine",
-    "VR/AR",
-    "Web3",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ"
-  ],
-  "meta_description": "メタバース開発者は仮想空間を創造する最先端の職種。高い将来性と年収が魅力ですが、Unityや3D技術の習得は必須です。未経験から挑戦するためのロードマップと、開発現場のリアルなやりがいを徹底解説します。",
-  "related_jobs": [
-    "game_developer",
-    "vr_ar_engineer",
-    "blockchain_developer"
-  ],
-  "slug": "metaverse_developer",
-  "tags": [
-    "Metaverse",
-    "Unity",
-    "Unreal Engine",
-    "VR/AR",
-    "Web3",
-    "3D制作"
-  ],
-  "thumbnail": "/static/img/metaverse_developer.png",
-  "hero_image": "/static/img/metaverse_developer_hero.png",
-  "title": "メタバース開発者の年収と将来性｜未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: メタバース開発者の年収・将来性・スキルロードマップ
+description: メタバース開発者のキャリアガイド。年収・必要技術・未経験からの学習パスを完全解説。
+seo_title: メタバース開発者は稼げる？年収・将来性・必要スキル完全ガイド【2026】
+seo_description: メタバース開発者の年収・将来性・必要スキルを徹底解説。未経験から成功するロードマップと実践的な学習ガイドをご紹介。
+---
+
 # [完全ガイド] Metaverse Developer: メタバース開発者の年収と将来性｜未経験からのロードマップ
 
 ## 導入：Metaverse Developerの面接官は「ここ」を見ている
