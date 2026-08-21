@@ -1,38 +1,10 @@
----json
-{
-  "category": "cloud-infra",
-  "keywords": [
-    "SRE",
-    "サイトリライアビリティエンジニア",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "インフラエンジニア",
-    "DevOps"
-  ],
-  "meta_description": "SREの年収や将来性を徹底解説！未経験から目指すためのロードマップも公開します。システムの信頼性を支えるやりがいと、自動化を推進する技術的挑戦のリアルに迫る、エンジニア必見のキャリアガイドです。",
-  "related_jobs": [
-    "infrastructure_engineer",
-    "devops_engineer",
-    "backend_developer"
-  ],
-  "slug": "site_reliability_engineer",
-  "tags": [
-    "SRE",
-    "クラウド",
-    "自動化",
-    "インフラ",
-    "キャリアパス",
-    "DevOps",
-    "信頼性"
-  ],
-  "thumbnail": "/static/img/site_reliability_engineer.png",
-  "hero_image": "/static/img/site_reliability_engineer_hero.png",
-  "title": "SREの年収・将来性は？未経験からのロードマップを徹底解説",
-  "published_at": "2026-03-22"
-}
 ---
+title: SREの年収・将来性ガイド｜未経験からのキャリアロードマップ【Starful】
+description: SREの年収・将来性を徹底解説。未経験から目指すロードマップ、必要スキル、キャリアパスを詳しく紹介します。
+seo_title: SRE（サイト信頼性エンジニア）の年収・転職ガイド｜最新キャリアパス
+seo_description: SREの平均年収、転職ガイド、未経験から必要な学習ロードマップを完全解説。システム自動化とインフラの最前線で活躍するキャリアを紹介。
+---
+
 # [完全ガイド] Site Reliability Engineer: SREの年収・将来性は？未経験からのロードマップを徹底解説
 
 ## 導入：Site Reliability Engineerの面接官は「ここ」を見ている

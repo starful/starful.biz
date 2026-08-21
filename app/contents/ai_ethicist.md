@@ -1,37 +1,10 @@
----json
-{
-  "category": "ai-data",
-  "keywords": [
-    "AI倫理士",
-    "AI Ethicist",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "AIガバナンス",
-    "責任あるAI"
-  ],
-  "meta_description": "AIの倫理的課題を解決するAI倫理士。高い将来性と年収が魅力ですが、法規制や哲学の知識も求められる専門職です。未経験から目指すための具体的なロードマップと、社会貢献度の高い仕事のリアルを徹底解説します。",
-  "related_jobs": [
-    "data_scientist",
-    "ai_engineer",
-    "product_manager"
-  ],
-  "slug": "ai_ethicist",
-  "tags": [
-    "AI倫理",
-    "キャリアパス",
-    "AIガバナンス",
-    "IT転職",
-    "データサイエンス",
-    "責任あるAI"
-  ],
-  "thumbnail": "/static/img/ai_ethicist.png",
-  "hero_image": "/static/img/ai_ethicist_hero.png",
-  "title": "AI倫理士の年収と将来性｜未経験からの転職ロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: AI倫理士に転職するには？年収・求人・面接対策の完全ガイド
+description: AI倫理士とは、企業のAI開発における倫理的課題と法的リスク対応を専門とする職種。年収・求人情報から、未経験からの転職方法、必要なスキル・資格、面接対策まで、社会貢献度が高いこの分野の全てを詳しく解説します。
+seo_title: AI倫理士の年収・求人・転職ガイド｜面接対策も完全解説【Starful】
+seo_description: AI倫理士の仕事内容・年収相場・求人情報を完全解説。未経験からの転職方法、必要なスキル・資格、面接対策まで。社会貢献度が高い新しい職種のリアルを知ろう。
+---
+
 # [完全ガイド] AI Ethicist: AI倫理士の年収と将来性｜未経験からの転職ロードマップ
 
 ## 導入：AI Ethicistの面接官は「ここ」を見ている

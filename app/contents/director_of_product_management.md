@@ -1,37 +1,10 @@
----json
-{
-  "category": "product-management",
-  "keywords": [
-    "Director of Product Management",
-    "プロダクトマネジメント",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "キャリアパス",
-    "IT転職"
-  ],
-  "meta_description": "プロダクトの命運を握るDirector of Product Management。高年収と将来性が魅力ですが、責任も重大です。未経験からの目指し方やキャリアのロードマップ、現場のリアルなやりがいを徹底解説します。",
-  "related_jobs": [
-    "product_manager",
-    "vp_of_product",
-    "cto"
-  ],
-  "slug": "director_of_product_management",
-  "tags": [
-    "PM",
-    "プロダクトマネージャー",
-    "キャリア戦略",
-    "マネジメント職",
-    "IT業界",
-    "スキルアップ"
-  ],
-  "thumbnail": "/static/img/director_of_product_management.png",
-  "hero_image": "/static/img/director_of_product_management_hero.png",
-  "title": "Director of PMの年収・将来性・未経験ロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: Director of PMの年収・キャリアパス | 未経験からの転職ロードマップ
+description: プロダクトの命運を握るDirector of Product Management。年収相場、必要スキル、未経験からのキャリアパス、面接対策まで、実務的な視点から徹底解説します。
+seo_title: Director of PMの年収・転職ガイド | 未経験向けキャリアロードマップ【Starful】
+seo_description: Director of PMの年収相場、必要スキル、転職方法を完全ガイド。未経験からのキャリアパスと面接対策も解説。
+---
+
 # [完全ガイド] Director of Product Management: Director of PMの年収・将来性・未経験ロードマップ
 
 ## 導入：Director of Product Managementの面接官は「ここ」を見ている

@@ -1,37 +1,10 @@
----json
-{
-  "category": "product-management",
-  "keywords": [
-    "サービスプランナー",
-    "年収",
-    "将来性",
-    "未経験",
-    "ロードマップ",
-    "キャリアパス",
-    "IT業界",
-    "企画職"
-  ],
-  "meta_description": "サービスプランナーの年収や将来性を徹底解説。未経験から挑戦するためのロードマップも紹介します。ユーザーの課題を解決し、形にするやりがいは抜群。IT業界で市場価値を高めるキャリアの秘訣に迫ります。",
-  "related_jobs": [
-    "product_manager",
-    "ux_designer",
-    "business_development"
-  ],
-  "slug": "service_planner",
-  "tags": [
-    "サービス企画",
-    "プロダクト開発",
-    "キャリアチェンジ",
-    "IT転職",
-    "新規事業",
-    "スキルアップ"
-  ],
-  "thumbnail": "/static/img/service_planner.png",
-  "hero_image": "/static/img/service_planner_hero.png",
-  "title": "サービスプランナーの年収と将来性｜未経験からのロードマップ",
-  "published_at": "2026-03-22"
-}
 ---
+title: サービスプランナーの年収と将来性｜未経験からのキャリアガイド【Starful】
+description: サービスプランナーの年収、キャリアパス、未経験からの始め方を解説。
+seo_title: サービスプランナー 年収・キャリア・未経験から始めるガイド【Starful】
+seo_description: サービスプランナーの平均年収、キャリアパス、必要スキル、未経験からの挑戦法を解説。
+---
+
 # [完全ガイド] Service Planner: サービスプランナーの年収と将来性｜未経験からのロードマップ
 
 ## 導入：Service Plannerの面接官は「ここ」を見ている
