@@ -12,6 +12,7 @@ from fastapi.exception_handlers import http_exception_handler
 from fastapi.responses import FileResponse, PlainTextResponse, RedirectResponse, Response
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
+from app.a8_affiliate import a8_neuro_dive_context
 from app.affiliate import affiliate_context
 from app.config import BASE_URL, BRAND_LOGO_FILE, CONTENTS_DIR, GCS_IMG_BASE, STATIC_DIR
 from app.md_parser import parse_starful_md
@@ -216,6 +217,7 @@ async def career_detail(request: Request, item_id: str):
                 category=str(meta.get("category") or ""),
                 page_kind="career",
             ),
+            **a8_neuro_dive_context(page_kind="career"),
             **ctx,
         },
     )

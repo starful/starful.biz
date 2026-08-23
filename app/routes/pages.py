@@ -6,6 +6,7 @@ from datetime import date
 from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import RedirectResponse
 
+from app.a8_affiliate import a8_neuro_dive_context
 from app.affiliate import affiliate_context
 from app.config import BASE_URL, CAREER_CATEGORIES
 from app.content_new import enrich_items
@@ -160,5 +161,6 @@ async def mbti_type_page(request: Request, type_code: str):
             "mbti": payload,
             "json_ld_mbti": json_ld_mbti,
             **affiliate_context(page_kind="mbti"),
+            **a8_neuro_dive_context(page_kind="mbti"),
         },
     )

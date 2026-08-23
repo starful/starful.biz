@@ -518,6 +518,38 @@ a { text-decoration: none; color: inherit; }
     color: #a8a29e;
 }
 
+/* A8 Neuro Dive — 就労移行支援 (300×250) */
+.affiliate-box--a8 {
+    background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-color: #0ea5e9;
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.12);
+}
+.affiliate-box--a8 .affiliate-box__title { color: #0369a1; }
+.a8-neuro-dive__link {
+    display: inline-block;
+    margin: 4px auto 0;
+    line-height: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.a8-neuro-dive__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(14, 165, 233, 0.25);
+}
+.a8-neuro-dive__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.a8-affiliate-pixel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* Career detail: MBTI aptitude block */
 .mbti-career-fit {
     margin: 48px 0 40px;
