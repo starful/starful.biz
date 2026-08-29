@@ -24,11 +24,11 @@ def test_career_context():
     ctx = affiliate_context(career_id="seo_specialist", category="engineering")
     assert ctx["show_affiliate"] is True
     assert ctx["affiliate_keyword"] == "SEO 本"
-    assert "starful06-22" in ctx["amazon_search_url"]
     assert "hb.afl.rakuten.co.jp/hgc/" in ctx["rakuten_search_url"]
+    assert "amazon" not in ctx["rakuten_search_url"]
 
 
 def test_mbti_context():
     ctx = affiliate_context(page_kind="mbti")
     assert ctx["affiliate_keyword"] == MBTI_KEYWORD
-    assert "MBTI" in ctx["amazon_button_label"]
+    assert "MBTI" in ctx["rakuten_button_label"]

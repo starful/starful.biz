@@ -1,12 +1,11 @@
-"""Amazon Associates + Rakuten Ichiba book CTAs for Starful.biz."""
+"""Rakuten Ichiba book CTAs for Starful.biz."""
 
 from __future__ import annotations
 
 import os
 from typing import Any
-from urllib.parse import quote, quote_plus
+from urllib.parse import quote
 
-AMAZON_TAG = os.getenv("AMAZON_ASSOCIATE_TAG", "starful06-22")
 RAKUTEN_HGC = os.getenv(
     "RAKUTEN_ICHIBA_HGC", "43cde6d2.98a376f7.43cde6d3.c7b92630"
 )
@@ -15,7 +14,6 @@ _RAKUTEN_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9"
 DEFAULT_KEYWORD = "転職 本"
 MBTI_KEYWORD = "MBTI 本"
 
-# Career category slug → book search keyword
 CATEGORY_KEYWORDS: dict[str, str] = {
     "engineering": "ソフトウェアエンジニア 本",
     "ai-data": "データサイエンス 本",
@@ -29,7 +27,6 @@ CATEGORY_KEYWORDS: dict[str, str] = {
     "content-strategy": "コンテンツマーケティング 本",
 }
 
-# Specific career id overrides (more precise than category)
 CAREER_OVERRIDES: dict[str, str] = {
     "devops_engineer": "DevOps 本",
     "seo_specialist": "SEO 本",
@@ -39,15 +36,6 @@ CAREER_OVERRIDES: dict[str, str] = {
     "head_of_engineering": "エンジニアリングマネジメント 本",
     "head_of_design": "デザインマネジメント 本",
 }
-
-
-def amazon_search_url(keyword: str) -> str:
-    return (
-        "https://www.amazon.co.jp/s?k="
-        + quote_plus(keyword)
-        + "&tag="
-        + quote_plus(AMAZON_TAG)
-    )
 
 
 def rakuten_search_url(keyword: str) -> str:
@@ -78,10 +66,10 @@ def affiliate_context(
     category: str = "",
     page_kind: str = "career",
 ) -> dict[str, Any]:
-    """Template vars for Amazon + Rakuten book CTA (always shown)."""
+    """Template vars for Rakuten book search CTA."""
     if page_kind == "mbti":
         kw = MBTI_KEYWORD
-        title = "関連書籍を Amazon / 楽天で探す"
+        title = "関連書籍を楽天で探す"
         desc = (
             "このページはキャリアガイドです。ボタンを押すと新しいタブで"
             f"「{kw}」の検索結果が開きます（特定の商品ページではない場合があります）。"
@@ -90,7 +78,7 @@ def affiliate_context(
         kw = keyword or resolve_career_keyword(career_id, category=category)
         title = "関連する技術・転職の本を探す"
         desc = (
-            "面接ガイドの参考書を Amazon / 楽天で検索できます。"
+            "面接ガイドの参考書を楽天で検索できます。"
             f"「{kw}」の検索結果が新しいタブで開きます。"
         )
 
@@ -100,8 +88,6 @@ def affiliate_context(
         "affiliate_title": title,
         "affiliate_desc": desc,
         "affiliate_note": "アフィリエイトリンク · 新しいタブで開きます",
-        "amazon_search_url": amazon_search_url(kw),
         "rakuten_search_url": rakuten_search_url(kw),
-        "amazon_button_label": f"Amazonで {kw} を探す ↗",
         "rakuten_button_label": f"楽天で {kw} を探す ↗",
     }
