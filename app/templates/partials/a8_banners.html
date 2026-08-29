@@ -1,4 +1,4 @@
-{# A8.net banner grid (300×250) #}
+{# A8.net banner row (300×250) #}
 {% if show_a8_banners and a8_banners %}
 <aside class="a8-banners affiliate-box affiliate-box--a8"
        role="complementary"
@@ -9,13 +9,11 @@
     <div class="a8-banners__grid">
         {% for banner in a8_banners %}
         <div class="a8-banners__item a8-banners__item--{{ banner.id }}">
-            <p class="a8-banners__label">{{ banner.label }}</p>
-            {% if banner.desc %}<p class="a8-banners__desc">{{ banner.desc }}</p>{% endif %}
             <a class="a8-banners__link"
                href="{{ banner.click_url }}"
                target="_blank"
                rel="nofollow sponsored noopener noreferrer"
-               title="{{ banner.alt }}"
+               title="{{ banner.label }}{% if banner.desc %} — {{ banner.desc }}{% endif %}"
                data-track="affiliate_a8"
                data-track-label="{{ banner.id }}">
                 <img class="a8-banners__img"
@@ -26,6 +24,7 @@
                      loading="lazy"
                      decoding="async">
             </a>
+            <p class="a8-banners__label">{{ banner.label }}</p>
             <img class="a8-affiliate-pixel" src="{{ banner.pixel_url }}" width="1" height="1" alt="" aria-hidden="true">
         </div>
         {% endfor %}
