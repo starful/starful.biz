@@ -23,8 +23,8 @@
                      height="250"
                      loading="lazy"
                      decoding="async">
+                <span class="a8-banners__label">{{ banner.label }}</span>
             </a>
-            <p class="a8-banners__label">{{ banner.label }}</p>
             <img class="a8-affiliate-pixel" src="{{ banner.pixel_url }}" width="1" height="1" alt="" aria-hidden="true">
         </div>
         {% endfor %}

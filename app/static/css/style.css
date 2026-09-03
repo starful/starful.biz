@@ -653,14 +653,18 @@ a { text-decoration: none; color: inherit; }
     position: relative;
     flex: 1 1 0;
     min-width: 0;
-    max-width: 180px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .a8-banners__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     width: 100%;
+    text-decoration: none;
+    color: inherit;
     border-radius: 10px;
     overflow: hidden;
     background: #fff;
@@ -671,24 +675,28 @@ a { text-decoration: none; color: inherit; }
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
 }
+.a8-banners__link:hover .a8-banners__label {
+    text-decoration: underline;
+}
 .a8-banners__img {
     display: block;
     width: 100%;
     height: auto;
     aspect-ratio: 300 / 250;
     object-fit: contain;
+    background: #f1f5f9;
 }
 .a8-banners__label {
-    margin: 6px 0 0;
-    padding: 0 2px;
-    font-size: 0.62rem;
-    font-weight: 600;
-    line-height: 1.25;
-    color: #64748b;
+    display: block;
+    margin: 0;
+    padding: 8px 10px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #0369a1;
+    text-decoration: underline;
+    text-underline-offset: 2px;
     max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 .a8-banners__desc {
     display: none;
@@ -708,8 +716,8 @@ a { text-decoration: none; color: inherit; }
         padding-bottom: 4px;
     }
     .a8-banners__item {
-        flex: 0 0 38%;
-        max-width: 140px;
+        flex: 0 0 72%;
+        max-width: 300px;
         scroll-snap-align: start;
     }
 }
