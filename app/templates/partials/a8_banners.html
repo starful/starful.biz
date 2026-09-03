@@ -1,4 +1,4 @@
-{# A8.net banner row (300×250) #}
+{# A8.net partner buttons — click URL + pixel, no remote images #}
 {% if show_a8_banners and a8_banners %}
 <aside class="a8-banners affiliate-box affiliate-box--a8"
        role="complementary"
@@ -16,14 +16,10 @@
                title="{{ banner.label }}{% if banner.desc %} — {{ banner.desc }}{% endif %}"
                data-track="affiliate_a8"
                data-track-label="{{ banner.id }}">
-                <img class="a8-banners__img"
-                     src="{{ banner.image_url }}"
-                     alt="{{ banner.alt }}"
-                     width="300"
-                     height="250"
-                     loading="lazy"
-                     decoding="async">
                 <span class="a8-banners__label">{{ banner.label }}</span>
+                {% if banner.desc %}
+                <span class="a8-banners__desc">{{ banner.desc }}</span>
+                {% endif %}
             </a>
             <img class="a8-affiliate-pixel" src="{{ banner.pixel_url }}" width="1" height="1" alt="" aria-hidden="true">
         </div>
