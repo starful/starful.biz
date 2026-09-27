@@ -83,8 +83,13 @@ steps:
       - --platform
       - managed
       - --allow-unauthenticated
+      - --clear-volumes
       - --set-secrets
-      - GEMINI_API_KEY=STARFUL_BIZ_GEMINI_API_KEY:latest,/secrets/FIREBASE_KEY=starfu-biz-firebase:latest
+      - GEMINI_API_KEY=GEMINI_API_KEY:latest
+      - --memory
+      - 512Mi
+      - --cpu
+      - "1"
     waitFor:
       - push-images
 

@@ -122,6 +122,7 @@ s00000020853002,https://okpy.net/blog/hydration-endurance-pace
 s00000020853002,https://okpy.net/blog/ice-water-egg-peeling
 s00000020853002,https://okpy.net/blog/image-count-product-page
 s00000020853002,https://okpy.net/blog/inline-validation-form-completion
+s00000020853002,https://okpy.net/blog/instructor
 s00000020853002,https://okpy.net/blog/interval-training-5k-time
 s00000020853002,https://okpy.net/blog/iot領域でのpython活用方法
 s00000020853002,https://okpy.net/blog/live-chat-pricing-page
@@ -293,9 +294,11 @@ s00000020853002,https://okpy.net/blog/subscription-pause-retention
 s00000020853002,https://okpy.net/blog/terraform-aws-provider-basics
 s00000020853002,https://okpy.net/blog/terraform-cost-estimation-with-infracost
 s00000020853002,https://okpy.net/blog/terraform-cross-stack-references-and-data-source-patterns
+s00000020853002,https://okpy.net/blog/terraform-custom-provider-development-and-publishing
 s00000020853002,https://okpy.net/blog/terraform-lifecycle-hooks-and-resource-management-best-practices
 s00000020853002,https://okpy.net/blog/terraform-modules-best-practices
 s00000020853002,https://okpy.net/blog/terraform-multi-region-deployment-strategies-and-patterns
+s00000020853002,https://okpy.net/blog/terraform-performance-optimization-and-large-scale-deployments
 s00000020853002,https://okpy.net/blog/terraform-remote-operations-with-terraform-cloud
 s00000020853002,https://okpy.net/blog/terraform-secrets-management-with-hashicorp-vault
 s00000020853002,https://okpy.net/blog/terraform-security-scanning-with-tfsec-and-checkov
@@ -350,6 +353,7 @@ s00000020853002,https://okpy.net/blog/セキュリティ強化への道-aws-kms-
 s00000020853002,https://okpy.net/blog/セキュリティ監査-aws-cloudtrail-と-gcp-cloud-logging-の対決
 s00000020853002,https://okpy.net/blog/ソフトウェア開発における形式的手法-クリーンルーム開発手法
 s00000020853002,https://okpy.net/blog/テストより機能開発を優先すべきという主張への長期コスト説明
+s00000020853002,https://okpy.net/blog/テストより機能開発を優先すべきという主張への長期コスト説明-2
 s00000020853002,https://okpy.net/blog/テストデータ作成-まだ手入力で消耗していますか-python-fakerで開発を劇的に効率化しよう
 s00000020853002,https://okpy.net/blog/ディープラーニングライブラリpytorchの基本的な使い方
 s00000020853002,https://okpy.net/blog/データアーキテクチャ設計の重要性と実践
@@ -417,6 +421,7 @@ s00000020853002,https://okpy.net/blog/重要性を考える-クラウドコン�
 s00000020853002,https://okpy.net/blog/開発者の生産性を向上させるpythonのエコシステム
 s00000020853002,https://okpy.net/blog/障害対応は後付けで良いと言われたときの事前監視体制の必要性の説明
 s00000020853002,https://okpy.net/blog/障害対応は後付けで良いと言われたときの事前監視体制の必要性の説明-2
+s00000020853002,https://okpy.net/blog/障害対応は後付けで良いと言われたときの事前監視体制の必要性の説明-3
 s00000020853002,https://okpy.net/blog/音声認識サービス比較分析-aws-transcribe-vs-gcp-speech-to-text
 s00000020853002,https://okpy.net/blog/高性能なaws-ebsとgcp-persistent-diskの違い
 s00000020853002,https://okpy.net/blog/高速なデータ処理を可能にするpythonのpolarsライブラリガイド
