@@ -21,8 +21,8 @@ NEURO_DIVE_A8 = {
         "A8_NEURO_DIVE_PIXEL_URL",
         "https://www14.a8.net/0.gif?a8mat=4BACLI+2KVNX6+47GS+HVNAP",
     ),
-    "label": "Neuro Dive — IT特化型 就労移行支援",
-    "desc": "AI・データサイエンスを学べる就労移行支援事業所（パーソルダイバース）",
+    "label": "Neuro Dive",
+    "desc": "IT特化型の就労移行支援。AI・データサイエンスを学べます",
     "alt": "Neuro Dive 就労移行支援 — アフィリエイト",
 }
 
